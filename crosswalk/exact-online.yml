@@ -24,6 +24,7 @@ concepts:
       name: Name
       phone: Phone
       type: Type
+      status: Status
     core_coverage: 0.667
     evidence:
     - openapi/_original/exact-online-openapi.yml#GET /{division}/crm/Accounts

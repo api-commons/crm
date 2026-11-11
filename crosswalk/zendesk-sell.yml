@@ -52,6 +52,7 @@ concepts:
       phone: phone
       company_name: organization_name
       owner_id: owner_id
+      tags: tags
     core_coverage: 0.5
     evidence:
     - openapi/_original/zendesk-sell-openapi.yml#DELETE /v2/leads/{id}

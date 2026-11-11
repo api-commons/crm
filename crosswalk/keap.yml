@@ -66,8 +66,8 @@ concepts:
       - date_created
       - created_time
       updated_at: last_updated
-      custom_fields: custom_fields
       status: status
+      custom_fields: custom_fields
       stage_id:
       - stage_id
       - stage

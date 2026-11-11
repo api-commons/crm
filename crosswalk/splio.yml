@@ -14,11 +14,11 @@ concepts:
       custom_fields: custom_fields
     core_coverage: 0.625
     evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/contacts/bulk
     - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/contacts/{id}
     - openapi/_original/splio-customer-platform-openapi.json#GET /data/contacts
     - openapi/_original/splio-customer-platform-openapi.json#GET /data/contacts/{individual_id}
     - openapi/_original/splio-customer-platform-openapi.json#GET /data/fields/contacts
-    - openapi/_original/splio-customer-platform-openapi.json#PATCH /data/contacts/{individual_id}
   activity:
     path_segment:
     - activities

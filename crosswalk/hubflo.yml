@@ -36,6 +36,7 @@ concepts:
       owner_id: owner_id
       city: city
       country: country
+      tags: tags
     core_coverage: 0.333
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/companies

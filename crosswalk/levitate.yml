@@ -34,6 +34,7 @@ concepts:
       address: address
       phone: phoneNumbers
       description: description
+      tags: tags
     core_coverage: 0.667
     evidence:
     - openapi/_original/levitate-public-v1-openapi.json#DELETE /public/v1/Companies/{id}

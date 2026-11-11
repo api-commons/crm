@@ -11,6 +11,7 @@ concepts:
       first_name: firstName
       job_title: position
       company_id: companyId
+      tags: tagIds
     core_coverage: 0.375
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/contact-lists/{id}/contacts
@@ -34,6 +35,8 @@ concepts:
       domain: domain
       city: city
       country: country
+      status: status
+      tags: tagIds
     core_coverage: 0.333
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/companies/{id}
@@ -62,6 +65,7 @@ concepts:
       source: source
       job_title: title
       description: description
+      tags: tagIds
     core_coverage: 0.25
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/leads/{id}

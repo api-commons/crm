@@ -8,6 +8,7 @@ concepts:
     - companies
     properties:
       id: id
+      status: status
     core_coverage: 0.333
     evidence:
     - openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/companies

@@ -39,6 +39,7 @@ concepts:
       custom_fields: custom_fields
       phone: phone_numbers
       description: details
+      tags: tags
     core_coverage: 1.0
     evidence:
     - openapi/_original/copper-developer-api-openapi.yml#DELETE /companies/{id}
@@ -51,8 +52,8 @@ concepts:
     properties:
       id: id
       name: name
-      custom_fields: custom_fields
       status: status
+      custom_fields: custom_fields
       stage_id: pipeline_stage_id
       close_date: close_date
       company_id: company_id
@@ -84,6 +85,7 @@ concepts:
       job_title: title
       full_name: name
       description: details
+      tags: tags
     core_coverage: 0.75
     evidence:
     - openapi/_original/copper-developer-api-openapi.yml#DELETE /leads/{id}

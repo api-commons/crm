@@ -8,8 +8,8 @@ concepts:
     - opportunities
     properties:
       id: id
-      custom_fields: customFields
       status: status
+      custom_fields: customFields
     core_coverage: 0.25
     evidence:
     - openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/leads/{leadId}/opportunities/{opportunityId}

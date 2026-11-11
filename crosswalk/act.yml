@@ -53,8 +53,8 @@ concepts:
       id: id
       name: name
       created_at: created
-      custom_fields: customFields
       status: status
+      custom_fields: customFields
       stage_id: stage
       close_date: estimatedCloseDate
       probability: probability

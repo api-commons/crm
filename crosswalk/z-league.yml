@@ -7,7 +7,9 @@ concepts:
     path_segment:
     - leads
     properties:
-      id: id
+      id:
+      - id
+      - lead_id
       status: status
       created_at: created_at
       custom_fields: custom_fields
@@ -16,3 +18,4 @@ concepts:
     evidence:
     - openapi/_original/z-league-crm-lead-openapi.json#GET /api/agents/crm/leads
     - openapi/_original/z-league-crm-lead-openapi.json#POST /api/agents/crm/leads
+    - openapi/_original/z-league-crm-lead-openapi.json#POST /api/agents/crm/leads/bulk

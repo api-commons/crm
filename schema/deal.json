@@ -62,6 +62,17 @@
       ],
       "format": "date-time"
     },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.478,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "Status"
+      ]
+    },
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
@@ -74,17 +85,6 @@
         "fields",
         "custom",
         "properties"
-      ]
-    },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.457,
-      "x-commons-providers": 21,
-      "x-commons-spellings": [
-        "status",
-        "state",
-        "Status"
       ]
     },
     "stage_id": {

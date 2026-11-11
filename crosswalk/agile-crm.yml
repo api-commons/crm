@@ -45,7 +45,7 @@ concepts:
     - openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{contact_id}/notes
     - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{deal_id}/notes
     - openapi/_original/agile-crm-openapi.yml#GET /api/tickets/notes/{ticket_id}
-    - openapi/_original/agile-crm-openapi.yml#POST /api/notes
+    - openapi/_original/agile-crm-openapi.yml#POST /api/contacts/notes/bulk
   pipeline:
     path_segment:
     - pipelines

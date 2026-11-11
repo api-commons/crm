@@ -45,6 +45,7 @@ concepts:
       - phone_numbers
       description: description
       domain: domain
+      tags: tags
     core_coverage: 0.333
     evidence:
     - openapi/_original/salesflare-api-openapi.yml#DELETE /accounts/{account_id}
@@ -59,8 +60,8 @@ concepts:
       id: id
       name: name
       created_at: creation_date
-      custom_fields: custom
       status: status
+      custom_fields: custom
       stage_id: stage
       close_date: close_date
       currency: currency

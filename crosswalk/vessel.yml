@@ -24,10 +24,10 @@ concepts:
     core_coverage: 1.0
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contact
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contact/batch
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contacts
     - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/contact
     - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/contact
-    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/contact
   company:
     path_segment:
     - account
@@ -44,10 +44,10 @@ concepts:
     core_coverage: 1.0
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/account
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/account/batch
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/accounts
     - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/account
     - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/account
-    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/account
   deal:
     path_segment:
     - deal
@@ -63,6 +63,7 @@ concepts:
     core_coverage: 0.75
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/deal
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/deal/batch
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/deals
     - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/deal
     - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/deal
@@ -81,6 +82,7 @@ concepts:
     core_coverage: 0.5
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/lead
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/lead/batch
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/leads
     - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/lead
     - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/lead
@@ -101,10 +103,10 @@ concepts:
     core_coverage: 1.0
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/task
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/task/batch
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/tasks
     - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/task
     - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/task
-    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/task
   note:
     path_segment:
     - note
@@ -115,6 +117,7 @@ concepts:
     core_coverage: 0.5
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/note
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/note/batch
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/notes
     - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/note
     - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/note

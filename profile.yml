@@ -91,12 +91,12 @@ concepts:
       share: 0.114
       tier: long-tail
     - operation: UPDATE collection
-      providers: 7
-      share: 0.089
+      providers: 8
+      share: 0.101
       tier: long-tail
     - operation: DELETE collection
-      providers: 5
-      share: 0.063
+      providers: 7
+      share: 0.089
       tier: long-tail
     properties:
     - name: email
@@ -272,14 +272,15 @@ concepts:
       - accountName
     - name: tags
       tier: extended
-      providers: 19
-      share: 0.271
+      providers: 20
+      share: 0.286
       type: array
       spellings:
       - tags
       - tag_ids
       - label_ids
       - labels
+      - tagIds
     - name: owner_id
       tier: extended
       providers: 15
@@ -292,30 +293,30 @@ concepts:
       - assignedTo
       - user_id
       - OwnerId
-    long_tail_count: 863
+    long_tail_count: 886
     long_tail_sample:
     - is_deleted
     - mobile_phone
     - source
     - website
     - city
-    - photo_url
     - description
+    - photo_url
+    - type
     - linkedin_url
     - postal_code
     - state
-    - type
     - country
     - contact_type
     - middle_name
     - created_by
+    - status
     - suffix
     - time_zone
     - account
     - fax
     - notes
     - prefix
-    - status
     - birthday
     - department
     - gender
@@ -333,7 +334,7 @@ concepts:
     - external_id
     - groups
     - industry
-    - note
+    - key
   company:
     segments_seen:
       accounts: 27
@@ -367,16 +368,16 @@ concepts:
       share: 0.526
       tier: core
     - operation: UPDATE collection
-      providers: 4
-      share: 0.07
+      providers: 5
+      share: 0.088
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 3
+      share: 0.053
       tier: long-tail
     - operation: POST item
       providers: 3
       share: 0.053
-      tier: long-tail
-    - operation: DELETE collection
-      providers: 2
-      share: 0.035
       tier: long-tail
     properties:
     - name: id
@@ -540,12 +541,28 @@ concepts:
       spellings:
       - country
       - address1_country
-    long_tail_count: 921
+    - name: status
+      tier: extended
+      providers: 11
+      share: 0.208
+      type: string
+      spellings:
+      - status
+      - Status
+    - name: tags
+      tier: extended
+      providers: 11
+      share: 0.208
+      type: array
+      spellings:
+      - tags
+      - label_ids
+      - labels
+      - tagIds
+    long_tail_count: 924
     long_tail_sample:
     - email
     - employee_count
-    - status
-    - tags
     - is_deleted
     - photo_url
     - postal_code
@@ -579,9 +596,11 @@ concepts:
     - title
     - account_number
     - account_source
+    - action
     - additional
     - associations
     - billing_city
+    - billing_country
   deal:
     segments_seen:
       opportunities: 32
@@ -612,12 +631,16 @@ concepts:
       share: 0.623
       tier: core
     - operation: UPDATE collection
-      providers: 5
-      share: 0.094
+      providers: 6
+      share: 0.113
       tier: long-tail
     - operation: POST item
       providers: 2
       share: 0.038
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.019
       tier: long-tail
     properties:
     - name: id
@@ -667,6 +690,15 @@ concepts:
       - modifiedon
       - updated
       - update_time
+    - name: status
+      tier: extended
+      providers: 22
+      share: 0.478
+      type: string
+      spellings:
+      - status
+      - state
+      - Status
     - name: custom_fields
       tier: extended
       providers: 21
@@ -679,15 +711,6 @@ concepts:
       - fields
       - custom
       - properties
-    - name: status
-      tier: extended
-      providers: 21
-      share: 0.457
-      type: string
-      spellings:
-      - status
-      - state
-      - Status
     - name: stage_id
       tier: extended
       providers: 20
@@ -790,7 +813,7 @@ concepts:
       - probability
       - win_probability
       - Win Probability
-    long_tail_count: 594
+    long_tail_count: 599
     long_tail_sample:
     - closed_at
     - source
@@ -1021,10 +1044,18 @@ concepts:
       spellings:
       - description
       - details
-    long_tail_count: 440
+    - name: tags
+      tier: extended
+      providers: 6
+      share: 0.222
+      type: array
+      spellings:
+      - tags
+      - tagIds
+      - label_ids
+    long_tail_count: 448
     long_tail_sample:
     - is_deleted
-    - tags
     - city
     - contact_id
     - created_by
@@ -1032,6 +1063,7 @@ concepts:
     - organization_id
     - priority
     - url
+    - action
     - additional
     - address
     - addresses
@@ -1047,9 +1079,11 @@ concepts:
     - currency
     - customer_id
     - email_status
+    - error
     - expected_close_date
     - html_url
     - last_activity_at
+    - lead_ids
     - lead_source_id
     - lead_type
     - linkedin_url
@@ -1061,8 +1095,6 @@ concepts:
     - preferred_contact_method
     - remote_id
     - result
-    - stage_id
-    - type
   activity:
     segments_seen:
       activities: 31
@@ -1434,7 +1466,7 @@ concepts:
       - contact_id
       - contactId
       - person_id
-    long_tail_count: 417
+    long_tail_count: 418
     long_tail_sample:
     - custom_fields
     - tags
@@ -1619,7 +1651,7 @@ concepts:
       - AccountId
       - organization_id
       - org_id
-    long_tail_count: 201
+    long_tail_count: 202
     long_tail_sample:
     - deal_id
     - is_deleted

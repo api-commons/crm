@@ -108,8 +108,8 @@ concepts:
       name: name
       created_at: created_at
       updated_at: updated_at
-      custom_fields: custom_fields
       status: status
+      custom_fields: custom_fields
       stage_id: stage
       close_date: close_date
       company_id: account_id

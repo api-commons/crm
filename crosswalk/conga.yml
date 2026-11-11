@@ -17,11 +17,11 @@ concepts:
       address: MailingAddress
     core_coverage: 0.625
     evidence:
+    - openapi/_original/conga-data.json#DELETE /api/data/v1/Contact/bulk
     - openapi/_original/conga-data.json#DELETE /api/data/v1/Contact/{id}
     - openapi/_original/conga-data.json#GET /api/data/v1/Contact
     - openapi/_original/conga-data.json#GET /api/data/v1/Contact/{id}
-    - openapi/_original/conga-data.json#POST /api/data/v1/Contact
-    - openapi/_original/conga-data.json#PUT /api/data/v1/Contact/{id}
+    - openapi/_original/conga-data.json#PATCH /api/data/v1/Contact/bulk
   company:
     path_segment:
     - account
@@ -36,11 +36,11 @@ concepts:
       type: Type
     core_coverage: 0.333
     evidence:
+    - openapi/_original/conga-data.json#DELETE /api/data/v1/Account/bulk
     - openapi/_original/conga-data.json#DELETE /api/data/v1/Account/{id}
     - openapi/_original/conga-data.json#GET /api/data/v1/Account
     - openapi/_original/conga-data.json#GET /api/data/v1/Account/{id}
-    - openapi/_original/conga-data.json#POST /api/data/v1/Account
-    - openapi/_original/conga-data.json#PUT /api/data/v1/Account/{id}
+    - openapi/_original/conga-data.json#PATCH /api/data/v1/Account/bulk
   deal:
     path_segment:
     - opportunity
@@ -49,8 +49,8 @@ concepts:
       description: Description
     core_coverage: 0.25
     evidence:
+    - openapi/_original/conga-data.json#DELETE /api/data/v1/Opportunity/bulk
     - openapi/_original/conga-data.json#DELETE /api/data/v1/Opportunity/{id}
     - openapi/_original/conga-data.json#GET /api/data/v1/Opportunity
     - openapi/_original/conga-data.json#GET /api/data/v1/Opportunity/{id}
-    - openapi/_original/conga-data.json#POST /api/data/v1/Opportunity
-    - openapi/_original/conga-data.json#PUT /api/data/v1/Opportunity/{id}
+    - openapi/_original/conga-data.json#PATCH /api/data/v1/Opportunity/bulk

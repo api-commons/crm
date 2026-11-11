@@ -9,7 +9,9 @@ concepts:
     - contact
     properties:
       email: emails
-      id: id
+      id:
+      - id
+      - contact_id
       last_name: lastName
       first_name: firstName
       phone:
@@ -59,8 +61,8 @@ concepts:
       name: name
       created_at: createdAt
       updated_at: updatedAt
-      custom_fields: attributes
       status: status
+      custom_fields: attributes
       currency: currency
       description: description
       pipeline_id: pipelineId

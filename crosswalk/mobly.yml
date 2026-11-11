@@ -21,6 +21,7 @@ concepts:
       - companyName
       job_title: jobTitle
       description: description
+      tags: tags
     core_coverage: 0.75
     evidence:
     - openapi/_original/mobly-rest-api-v0-openapi-original.yml#DELETE /events/{eventId}/leads/{leadId}
