@@ -3,13 +3,6 @@ apis_io: https://apis.io/providers/marketo/
 context: crm
 generated: '2026-11-10'
 concepts:
-  contact:
-    path_segment:
-    - persons
-    properties: {}
-    core_coverage: 0.0
-    evidence:
-    - openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/persons
   company:
     path_segment:
     - companies

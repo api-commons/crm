@@ -3,22 +3,6 @@ apis_io: https://apis.io/providers/drippay/
 context: crm
 generated: '2026-11-10'
 concepts:
-  company:
-    path_segment:
-    - accounts
-    properties: {}
-    core_coverage: null
-    evidence:
-    - openapi/_original/drippay-openapi-original.json#GET /v1/integrations/quickbooks/accounts
-    - openapi/_original/drippay-openapi-original.json#GET /v1/integrations/xero/accounts
-    - openapi/_original/drippay-openapi-original.json#POST /v1/integrations/salesforce/{id}/sync/accounts
-  deal:
-    path_segment:
-    - opportunities
-    properties: {}
-    core_coverage: null
-    evidence:
-    - openapi/_original/drippay-openapi-original.json#POST /v1/integrations/salesforce/{id}/sync/opportunities
   lead:
     path_segment:
     - leads

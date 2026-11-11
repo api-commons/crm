@@ -34,9 +34,9 @@ concepts:
       website: website
       address: address
       city: city
-      email: email
       country: country
       owner_id: owner_id
+      email: email
     core_coverage: 0.4
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/companies

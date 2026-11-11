@@ -3,13 +3,6 @@ apis_io: https://apis.io/providers/frontline/
 context: crm
 generated: '2026-11-10'
 concepts:
-  company:
-    path_segment:
-    - accounts
-    properties: {}
-    core_coverage: 0.0
-    evidence:
-    - openapi/_original/frontline-openapi-original.yml#PUT /public/v1/channels/instagram/accounts/{instagramAccountId}
   activity:
     path_segment:
     - activities

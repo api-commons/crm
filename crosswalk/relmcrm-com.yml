@@ -28,11 +28,12 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       updated_at: updated_at
       custom_fields: custom_fields
+      domain: domain
     core_coverage: 0.8
     evidence:
     - openapi/_original/relmcrm-com-openapi.json#DELETE /companies/{id}

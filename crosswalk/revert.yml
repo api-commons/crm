@@ -27,8 +27,8 @@ concepts:
     - accounts
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       updated_at: updatedAt
       website: website

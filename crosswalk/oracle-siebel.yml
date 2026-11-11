@@ -25,12 +25,12 @@ concepts:
     path_segment:
     - account
     properties:
-      name: Name
       id: Id
+      name: Name
       description: Description
-      email: Email Address
       industry: Industry
       type: Account Type
+      email: Email Address
     core_coverage: 0.4
     evidence:
     - openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Account/Account/{AccountId}

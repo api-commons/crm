@@ -24,19 +24,19 @@ concepts:
     - accounts
     - companies
     properties:
+      id: id
       name:
       - name
       - displayName
-      id: id
       created_at: createdon
       updated_at: modifiedon
       website: websiteurl
       address: address1_line1
-      phone: telephone1
       description: description
+      phone: telephone1
       city: address1_city
-      email: emailaddress1
       country: address1_country
+      email: emailaddress1
     core_coverage: 1.0
     evidence:
     - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#GET /accounts

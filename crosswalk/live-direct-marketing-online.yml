@@ -28,11 +28,12 @@ concepts:
       name: name
       website: website
       address: address
-      phone: phone
       description: description
+      phone: phone
       city: city
       country: country
       industry: industry
+      domain: domain
     core_coverage: 0.4
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/companies/{id}

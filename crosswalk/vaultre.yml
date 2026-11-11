@@ -29,24 +29,6 @@ concepts:
     - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /categories/contact/{id}
     - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /contacts
     - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /contacts/{id}
-  company:
-    path_segment:
-    - account
-    - accounts
-    properties:
-      name: name
-      id: id
-      website: websiteUrl
-      address: address
-      phone: phoneNumbers
-      email: email
-    core_coverage: 0.6
-    evidence:
-    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /account
-    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /integrator/accounts
-    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /integrator/accounts/{id}
-    - openapi/_original/vaultre-api-v1-2-openapi.yml#GET /account
-    - openapi/_original/vaultre-api-v1-2-openapi.yml#GET /integrator/accounts
   lead:
     path_segment:
     - leads

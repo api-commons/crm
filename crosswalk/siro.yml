@@ -8,8 +8,8 @@ concepts:
     - accounts
     - organizations
     properties:
-      name: name
       id: id
+      name: name
       created_at:
       - dateCreated
       - createdAt

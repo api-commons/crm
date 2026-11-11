@@ -28,11 +28,12 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       updated_at: updatedAt
       address: address
+      domain: domainName
     core_coverage: 0.8
     evidence:
     - openapi/_original/twenty-core-api-openapi.yml#DELETE /companies/{id}

@@ -5,7 +5,6 @@ adopters:
   apis_io: https://apis.io/providers/activecampaign/
   crosswalk: crosswalk/activecampaign.yml
   concepts:
-  - company
   - pipeline
 - provider: alterestate
   apis_io: https://apis.io/providers/alterestate/
@@ -155,8 +154,6 @@ adopters:
   apis_io: https://apis.io/providers/drippay/
   crosswalk: crosswalk/drippay.yml
   concepts:
-  - company
-  - deal
   - lead
 - provider: eci-solutions
   apis_io: https://apis.io/providers/eci-solutions/
@@ -185,7 +182,6 @@ adopters:
   apis_io: https://apis.io/providers/entergram/
   crosswalk: crosswalk/entergram.yml
   concepts:
-  - company
   - contact
 - provider: erply
   apis_io: https://apis.io/providers/erply/
@@ -219,21 +215,18 @@ adopters:
   crosswalk: crosswalk/frontline.yml
   concepts:
   - activity
-  - company
   - task
 - provider: getresponse
   apis_io: https://apis.io/providers/getresponse/
   crosswalk: crosswalk/getresponse.yml
   concepts:
   - activity
-  - company
   - contact
 - provider: givebutter
   apis_io: https://apis.io/providers/givebutter/
   crosswalk: crosswalk/givebutter.yml
   concepts:
   - activity
-  - company
   - contact
 - provider: gofundme
   apis_io: https://apis.io/providers/gofundme/
@@ -355,7 +348,6 @@ adopters:
   crosswalk: crosswalk/marketo.yml
   concepts:
   - company
-  - contact
 - provider: microsoft-dynamics
   apis_io: https://apis.io/providers/microsoft-dynamics/
   crosswalk: crosswalk/microsoft-dynamics.yml
@@ -628,7 +620,6 @@ adopters:
   apis_io: https://apis.io/providers/vaultre/
   crosswalk: crosswalk/vaultre.yml
   concepts:
-  - company
   - contact
   - lead
   - note

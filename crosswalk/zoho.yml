@@ -25,12 +25,12 @@ concepts:
     - accounts
     - organizations
     properties:
-      name: companyName
       id: id
+      name: companyName
       created_at: createdTime
       website: website
-      phone: phoneNumber
       description: description
+      phone: phoneNumber
       custom_fields: customFields
       city: city
       country: country

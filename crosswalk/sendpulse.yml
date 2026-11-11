@@ -35,8 +35,8 @@ concepts:
     - account
     - companies
     properties:
-      name: companyName
       id: id
+      name: companyName
       created_at: createdAt
       updated_at: updatedAt
       address: address

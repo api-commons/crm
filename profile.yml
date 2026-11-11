@@ -10,54 +10,67 @@ thresholds:
   core: 0.5
   extended: 0.2
   min_providers: 3
+excluded:
+  company:
+    activecampaign: /profiles/{id}/accounts are AI-customization profile accounts
+    drippay: /integrations/quickbooks/accounts are accounting ledger accounts
+    entergram: /accounts are connected messaging-channel accounts
+    frontline: /channels/instagram/accounts are social channel accounts
+    givebutter: /sso/v1/account is the signed-in user's own organization
+    getresponse: /accounts is the API user's own account settings
+    vaultre: /account is the API user's own agency account
+  contact:
+    marketo: /subscriptions/{id}/persons is a dedupe subscription, not a person resource
+  deal:
+    drippay: /integrations/salesforce/{id}/sync/opportunities is a sync trigger
 concepts:
   contact:
     segments_seen:
       contacts: 54
       contact: 15
       people: 8
-      persons: 4
+      persons: 3
       person: 1
-    providers_exposing: 63
-    providers_with_readable_schema: 58
+    providers_exposing: 62
+    providers_with_readable_schema: 57
     operations:
     - operation: POST collection
-      providers: 60
+      providers: 59
       share: 0.952
-      tier: core
-    - operation: GET collection
-      providers: 55
-      share: 0.873
       tier: core
     - operation: GET item
       providers: 55
-      share: 0.873
+      share: 0.887
+      tier: core
+    - operation: GET collection
+      providers: 55
+      share: 0.887
       tier: core
     - operation: UPDATE item
       providers: 46
-      share: 0.73
+      share: 0.742
       tier: core
     - operation: DELETE item
       providers: 37
-      share: 0.587
+      share: 0.597
       tier: core
     - operation: POST item
       providers: 8
-      share: 0.127
+      share: 0.129
       tier: long-tail
     - operation: UPDATE collection
       providers: 6
-      share: 0.095
+      share: 0.097
       tier: long-tail
     - operation: DELETE collection
       providers: 6
-      share: 0.095
+      share: 0.097
       tier: long-tail
     properties:
     - name: email
       tier: core
       providers: 46
-      share: 0.793
+      share: 0.807
       type: string
       spellings:
       - email
@@ -71,7 +84,7 @@ concepts:
     - name: last_name
       tier: core
       providers: 44
-      share: 0.759
+      share: 0.772
       type: string
       spellings:
       - last_name
@@ -84,7 +97,7 @@ concepts:
     - name: first_name
       tier: core
       providers: 42
-      share: 0.724
+      share: 0.737
       type: string
       spellings:
       - first_name
@@ -96,7 +109,7 @@ concepts:
     - name: id
       tier: core
       providers: 42
-      share: 0.724
+      share: 0.737
       type: string
       spellings:
       - id
@@ -107,7 +120,7 @@ concepts:
     - name: phone
       tier: core
       providers: 37
-      share: 0.638
+      share: 0.649
       type: string
       spellings:
       - phone
@@ -121,7 +134,7 @@ concepts:
     - name: job_title
       tier: core
       providers: 33
-      share: 0.569
+      share: 0.579
       type: string
       spellings:
       - title
@@ -134,7 +147,7 @@ concepts:
     - name: created_at
       tier: core
       providers: 31
-      share: 0.534
+      share: 0.544
       type: string
       spellings:
       - created_at
@@ -148,7 +161,7 @@ concepts:
     - name: custom_fields
       tier: core
       providers: 29
-      share: 0.5
+      share: 0.509
       type: object
       spellings:
       - custom_fields
@@ -162,7 +175,7 @@ concepts:
     - name: updated_at
       tier: extended
       providers: 28
-      share: 0.483
+      share: 0.491
       type: string
       spellings:
       - updated_at
@@ -176,7 +189,7 @@ concepts:
     - name: full_name
       tier: extended
       providers: 24
-      share: 0.414
+      share: 0.421
       type: string
       spellings:
       - name
@@ -187,7 +200,7 @@ concepts:
     - name: company_id
       tier: extended
       providers: 22
-      share: 0.379
+      share: 0.386
       type: string
       spellings:
       - account_id
@@ -201,7 +214,7 @@ concepts:
     - name: address
       tier: extended
       providers: 20
-      share: 0.345
+      share: 0.351
       type: string
       spellings:
       - address
@@ -211,7 +224,7 @@ concepts:
     - name: company_name
       tier: extended
       providers: 17
-      share: 0.293
+      share: 0.298
       type: string
       spellings:
       - company
@@ -223,7 +236,7 @@ concepts:
     - name: tags
       tier: extended
       providers: 17
-      share: 0.293
+      share: 0.298
       type: array
       spellings:
       - tags
@@ -233,7 +246,7 @@ concepts:
     - name: owner_id
       tier: extended
       providers: 14
-      share: 0.241
+      share: 0.246
       type: string
       spellings:
       - owner_id
@@ -245,7 +258,7 @@ concepts:
     - name: is_deleted
       tier: extended
       providers: 12
-      share: 0.207
+      share: 0.211
       type: boolean
       spellings:
       - is_deleted
@@ -257,7 +270,7 @@ concepts:
     - name: mobile_phone
       tier: extended
       providers: 12
-      share: 0.207
+      share: 0.211
       type: string
       spellings:
       - mobilephone
@@ -267,7 +280,7 @@ concepts:
       - mobilePhone
       - cellPhone
       - cell_phone
-    long_tail_count: 739
+    long_tail_count: 737
     long_tail_sample:
     - source
     - website
@@ -311,74 +324,74 @@ concepts:
     - address1_city
   company:
     segments_seen:
-      accounts: 33
+      accounts: 27
       companies: 20
       organizations: 13
-      account: 13
+      account: 11
       company: 4
       organization: 2
-    providers_exposing: 56
-    providers_with_readable_schema: 54
+    providers_exposing: 49
+    providers_with_readable_schema: 48
     operations:
     - operation: GET collection
-      providers: 48
-      share: 0.857
+      providers: 43
+      share: 0.878
       tier: core
     - operation: POST collection
-      providers: 43
-      share: 0.768
+      providers: 41
+      share: 0.837
       tier: core
     - operation: GET item
-      providers: 38
-      share: 0.679
+      providers: 37
+      share: 0.755
       tier: core
     - operation: UPDATE item
-      providers: 33
-      share: 0.589
+      providers: 32
+      share: 0.653
       tier: core
     - operation: DELETE item
       providers: 25
-      share: 0.446
-      tier: extended
+      share: 0.51
+      tier: core
     - operation: UPDATE collection
-      providers: 5
-      share: 0.089
+      providers: 4
+      share: 0.082
       tier: long-tail
     - operation: POST item
       providers: 3
-      share: 0.054
+      share: 0.061
       tier: long-tail
     - operation: DELETE collection
       providers: 1
-      share: 0.018
+      share: 0.02
       tier: long-tail
     properties:
-    - name: name
-      tier: core
-      providers: 42
-      share: 0.778
-      type: string
-      spellings:
-      - name
-      - companyName
-      - displayName
-      - Name
-      - company_name
-      - organization_name
-      - accountName
     - name: id
       tier: core
-      providers: 41
-      share: 0.759
+      providers: 38
+      share: 0.792
       type: string
       spellings:
       - id
       - _id
       - Id
+    - name: name
+      tier: core
+      providers: 38
+      share: 0.792
+      type: string
+      spellings:
+      - name
+      - companyName
+      - Name
+      - displayName
+      - company_name
+      - organization_name
+      - accountName
     - name: created_at
       tier: core
-      providers: 37
-      share: 0.685
+      providers: 35
+      share: 0.729
       type: string
       spellings:
       - createdAt
@@ -391,8 +404,8 @@ concepts:
       - create_time
     - name: updated_at
       tier: core
-      providers: 28
-      share: 0.519
+      providers: 27
+      share: 0.562
       type: string
       spellings:
       - updated_at
@@ -403,8 +416,8 @@ concepts:
       - updated
     - name: website
       tier: core
-      providers: 27
-      share: 0.5
+      providers: 25
+      share: 0.521
       type: string
       spellings:
       - website
@@ -415,40 +428,40 @@ concepts:
       - website_url
     - name: address
       tier: extended
-      providers: 23
-      share: 0.426
+      providers: 22
+      share: 0.458
       type: string
       spellings:
       - address
       - addresses
       - address1_line1
       - BillingAddress
-    - name: phone
-      tier: extended
-      providers: 22
-      share: 0.407
-      type: string
-      spellings:
-      - phone
-      - phoneNumber
-      - telephone1
-      - phone_number
-      - Phone
-      - phoneNumbers
-      - phone_numbers
     - name: description
       tier: extended
-      providers: 19
-      share: 0.352
+      providers: 18
+      share: 0.375
       type: string
       spellings:
       - description
       - Description
       - details
+    - name: phone
+      tier: extended
+      providers: 18
+      share: 0.375
+      type: string
+      spellings:
+      - phone
+      - telephone1
+      - phone_number
+      - Phone
+      - phoneNumber
+      - phone_numbers
+      - phoneNumbers
     - name: custom_fields
       tier: extended
       providers: 16
-      share: 0.296
+      share: 0.333
       type: object
       spellings:
       - custom_fields
@@ -459,26 +472,16 @@ concepts:
       - properties
     - name: city
       tier: extended
-      providers: 14
-      share: 0.259
+      providers: 13
+      share: 0.271
       type: string
       spellings:
       - city
       - address1_city
-    - name: email
-      tier: extended
-      providers: 14
-      share: 0.259
-      type: string
-      spellings:
-      - email
-      - emailaddress1
-      - email_address
-      - Email Address
     - name: country
       tier: extended
       providers: 13
-      share: 0.241
+      share: 0.271
       type: string
       spellings:
       - country
@@ -486,26 +489,15 @@ concepts:
     - name: industry
       tier: extended
       providers: 13
-      share: 0.241
+      share: 0.271
       type: string
       spellings:
       - industry
       - Industry
-    - name: owner_id
-      tier: extended
-      providers: 13
-      share: 0.241
-      type: string
-      spellings:
-      - owner_id
-      - ownerId
-      - user_id
-      - userId
-      - OwnerId
     - name: type
       tier: extended
       providers: 13
-      share: 0.241
+      share: 0.271
       type: string
       spellings:
       - type
@@ -514,27 +506,51 @@ concepts:
       - company_type
       - Account Type
       - account_type
-    long_tail_count: 917
+    - name: owner_id
+      tier: extended
+      providers: 12
+      share: 0.25
+      type: string
+      spellings:
+      - owner_id
+      - ownerId
+      - user_id
+      - OwnerId
+    - name: email
+      tier: extended
+      providers: 11
+      share: 0.229
+      type: string
+      spellings:
+      - email
+      - emailaddress1
+      - email_address
+      - Email Address
+    - name: domain
+      tier: extended
+      providers: 10
+      share: 0.208
+      type: string
+      spellings:
+      - domain
+      - domainName
+    long_tail_count: 882
     long_tail_sample:
-    - domain
     - employee_count
+    - is_deleted
     - linkedin_url
     - postal_code
     - state
-    - is_deleted
     - annual_revenue
-    - photo_url
     - status
     - tags
-    - account_id
     - created_by
+    - photo_url
+    - account_id
     - organization_id
     - company_id
     - currency
     - fax
-    - first_name
-    - last_name
-    - owner
     - relationships
     - source
     - title
@@ -544,54 +560,58 @@ concepts:
     - contacts
     - currency_code
     - external_id
+    - first_name
     - hubspot_id
     - last_activity_at
+    - last_name
     - notes
+    - owner
     - parent_company_id
     - plan
-    - timezone
     - account_number
     - account_playbook_statuses
     - account_rule_config_statuses
     - account_source
     - account_stage_id
     - accountcategorycode
+    - additional
+    - address1_latitude
   deal:
     segments_seen:
-      opportunities: 26
+      opportunities: 25
       deals: 14
       opportunity: 5
       deal: 4
-    providers_exposing: 44
+    providers_exposing: 43
     providers_with_readable_schema: 38
     operations:
     - operation: POST collection
-      providers: 37
-      share: 0.841
+      providers: 36
+      share: 0.837
       tier: core
     - operation: GET item
       providers: 34
-      share: 0.773
+      share: 0.791
       tier: core
     - operation: GET collection
       providers: 33
-      share: 0.75
+      share: 0.767
       tier: core
     - operation: UPDATE item
       providers: 28
-      share: 0.636
+      share: 0.651
       tier: core
     - operation: DELETE item
       providers: 26
-      share: 0.591
+      share: 0.605
       tier: core
     - operation: UPDATE collection
       providers: 4
-      share: 0.091
+      share: 0.093
       tier: long-tail
     - operation: POST item
       providers: 2
-      share: 0.045
+      share: 0.047
       tier: long-tail
     properties:
     - name: name

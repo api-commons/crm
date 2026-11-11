@@ -12,9 +12,9 @@ generated. Every number below is a count of providers.
 
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| contact | 63 | 58 | email 79%, last_name 76%, first_name 72%, id 72%, phone 64%, job_title 57%, created_at 53%, custom_fields 50% | contacts 54, contact 15, people 8, persons 4 |
-| company | 56 | 54 | name 78%, id 76%, created_at 68%, updated_at 52%, website 50% | accounts 33, companies 20, organizations 13 |
-| deal | 44 | 38 | name 82%, id 79%, created_at 74%, updated_at 63% | opportunities 26, deals 14, opportunity 5 |
+| contact | 62 | 57 | email 81%, last_name 77%, first_name 74%, id 74%, phone 65%, job_title 58%, created_at 54%, custom_fields 51% | contacts 54, contact 15, people 8, persons 3 |
+| company | 49 | 48 | id 79%, name 79%, created_at 73%, updated_at 56%, website 52% | accounts 27, companies 20, organizations 13, account 11 |
+| deal | 43 | 38 | name 82%, id 79%, created_at 74%, updated_at 63% | opportunities 25, deals 14, opportunity 5, deal 4 |
 | lead | 26 | 23 | id 70%, created_at 65%, source 52% | leads 26 |
 | activity | 38 | 32 | type 69%, id 62%, created_at 53% | activities 29, activity 8 |
 | task | 38 | 34 | id 88%, subject 79%, created_at 68%, due_at 68%, status 53%, description 50% | tasks 35 |
@@ -22,7 +22,7 @@ generated. Every number below is a count of providers.
 | pipeline | 20 | 20 | id 75%, name 75% | pipelines 17 |
 
 Operations are just as settled: 95% of providers exposing contacts let you create one,
-87% list and fetch, 73% update, 59% delete. The extended tier and the long tail of every
+89% list and fetch, 74% update, 60% delete. The extended tier and the long tail of every
 concept are in [profile.yml](profile.yml).
 
 ## Artifacts
@@ -40,18 +40,25 @@ concept are in [profile.yml](profile.yml).
   which spellings mean the same field. Review it; everything else is counted.
 - [census/](census) -- the cohort and the raw census the profile is built from.
 
-## Open questions
+## Decisions
 
-- **deal or opportunity? company or account?** The market says `opportunities` (31
-  providers) more than `deals` (18), and `accounts` (46) more than `companies` (20). Both
-  counts are inflated by estates (three Microsoft Dynamics listings) and "account" also
-  means a user or billing account, so the concept names stay `deal` and `company` for now --
-  a decision to confirm, not a measurement.
-- **`accounts` is ambiguous.** Some providers' `/accounts` are login or billing accounts,
-  not customer companies. Those are in the company census today; the fix is a per-provider
-  exclusion in concepts.yml, after review.
-- **Property case is a near-tie** (snake 44, camel 41). The commons is snake_case; the
-  crosswalk carries camelCase providers without loss.
+These are calls, not measurements, recorded so they can be revisited as the method matures.
+
+- **The concepts are `deal` and `company`, not `opportunity` and `account`.** The market
+  says `opportunities` (30 providers) more than `deals` (18), and `accounts` (38) more than
+  `companies` (20). But both counts lean on enterprise estates (three Microsoft Dynamics
+  listings, Siebel, PeopleSoft), and `account` also means a login, billing or ledger
+  account, which makes it the worse common word. The crosswalk records every provider's
+  own segment, so nothing is lost.
+- **`/accounts` that are not customer companies are excluded.** Every provider counted only
+  through an ambiguous segment (accounts, people, opportunities) was reviewed by hand; nine
+  matches were something else (the API user's own account, social-channel accounts, a
+  QuickBooks ledger) and are listed with the reason under `exclude:` in
+  [concepts.yml](concepts.yml). They stay in [census/](census), out of everything built
+  from it.
+- **Properties are snake_case.** Multi-word property names are a near-tie in this cohort
+  (snake_case 44 providers, camelCase 41). The commons picks one; camelCase providers map
+  through the crosswalk without loss.
 
 ## Rebuild
 

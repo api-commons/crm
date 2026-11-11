@@ -13,15 +13,3 @@ concepts:
     evidence:
     - openapi/_original/entergram-openapi.json#GET /v1/contacts
     - openapi/_original/entergram-openapi.json#GET /v1/contacts/{contact_id}
-  company:
-    path_segment:
-    - accounts
-    properties:
-      name: displayName
-      id: id
-      created_at: createdAt
-      phone: phoneNumber
-      owner_id: userId
-    core_coverage: 0.6
-    evidence:
-    - openapi/_original/entergram-openapi.json#GET /v1/accounts

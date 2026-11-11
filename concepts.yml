@@ -136,3 +136,20 @@ concepts:
       stages: [deal_stages, pipeline_stages]
       order: [order_nr, display_order, position, sort_order]
       is_default: [default]
+
+# Providers whose matching path is NOT this concept, found by reviewing every provider
+# counted only through an ambiguous segment (accounts, people, opportunities). Each one is
+# kept in census/ and removed from the profile, schema, crosswalk and adopters.
+exclude:
+  company:
+    activecampaign: /profiles/{id}/accounts are AI-customization profile accounts
+    drippay: /integrations/quickbooks/accounts are accounting ledger accounts
+    entergram: /accounts are connected messaging-channel accounts
+    frontline: /channels/instagram/accounts are social channel accounts
+    givebutter: /sso/v1/account is the signed-in user's own organization
+    getresponse: /accounts is the API user's own account settings
+    vaultre: /account is the API user's own agency account
+  contact:
+    marketo: /subscriptions/{id}/persons is a dedupe subscription, not a person resource
+  deal:
+    drippay: /integrations/salesforce/{id}/sync/opportunities is a sync trigger

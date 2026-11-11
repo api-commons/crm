@@ -35,7 +35,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.873
+      x-commons-share: 0.887
       responses:
         '200':
           description: OK
@@ -62,7 +62,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.873
+      x-commons-share: 0.887
       responses:
         '200':
           description: OK
@@ -75,7 +75,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.73
+      x-commons-share: 0.742
       responses:
         '200':
           description: OK
@@ -93,7 +93,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.587
+      x-commons-share: 0.597
       responses:
         '200':
           description: OK
@@ -107,7 +107,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.857
+      x-commons-share: 0.878
       responses:
         '200':
           description: OK
@@ -132,7 +132,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.768
+      x-commons-share: 0.837
       responses:
         '200':
           description: OK
@@ -153,7 +153,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.679
+      x-commons-share: 0.755
       responses:
         '200':
           description: OK
@@ -166,7 +166,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.589
+      x-commons-share: 0.653
       responses:
         '200':
           description: OK
@@ -183,8 +183,8 @@ paths:
       summary: Delete a company
       tags:
       - Companies
-      x-commons-tier: extended
-      x-commons-share: 0.446
+      x-commons-tier: core
+      x-commons-share: 0.51
       responses:
         '200':
           description: OK
@@ -198,7 +198,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.841
+      x-commons-share: 0.837
       responses:
         '200':
           description: OK
@@ -217,7 +217,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.75
+      x-commons-share: 0.767
       responses:
         '200':
           description: OK
@@ -244,7 +244,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.773
+      x-commons-share: 0.791
       responses:
         '200':
           description: OK
@@ -257,7 +257,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.636
+      x-commons-share: 0.651
       responses:
         '200':
           description: OK
@@ -275,7 +275,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.591
+      x-commons-share: 0.605
       responses:
         '200':
           description: OK

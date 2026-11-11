@@ -18,20 +18,6 @@ concepts:
     - openapi/_original/getresponse-contacts-openapi.yml#GET /contacts
     - openapi/_original/getresponse-contacts-openapi.yml#GET /contacts/{contactId}
     - openapi/_original/getresponse-contacts-openapi.yml#POST /contacts
-  company:
-    path_segment:
-    - accounts
-    properties:
-      name: companyName
-      phone: phone
-      city: city
-      email: email
-    core_coverage: 0.2
-    evidence:
-    - openapi/_original/getresponse-accounts-openapi.yml#GET /accounts
-    - openapi/_original/getresponse-accounts-openapi.yml#POST /accounts
-    - openapi/_original/getresponse-open-api-original.json#GET /accounts
-    - openapi/_original/getresponse-open-api-original.json#POST /accounts
   activity:
     path_segment:
     - activities

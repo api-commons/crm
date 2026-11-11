@@ -32,8 +32,8 @@ concepts:
     path_segment:
     - organizations
     properties:
-      name: name
       id: id
+      name: name
       created_at: add_time
       updated_at: update_time
       address: address

@@ -29,10 +29,11 @@ concepts:
     path_segment:
     - accounts
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       updated_at: updated_at
+      domain: domain
     core_coverage: 0.8
     evidence:
     - openapi/_original/monaco-openapi-original.json#DELETE /v1/accounts/{account_id}

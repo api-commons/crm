@@ -31,14 +31,15 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: _id
+      name: name
       created_at: createdAt
       description: description
       custom_fields: fields
       industry: industry
-      owner_id: ownerId
       type: type
+      owner_id: ownerId
+      domain: domain
     core_coverage: 0.6
     evidence:
     - openapi/_original/lemlist-openapi-v1-legacy.json#GET /companies

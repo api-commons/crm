@@ -23,8 +23,8 @@ concepts:
     path_segment:
     - accounts
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdTime
       address: addresses
       description: description

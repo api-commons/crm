@@ -32,8 +32,8 @@ concepts:
     path_segment:
     - organization
     properties:
-      name: companyName
       id: id
+      name: companyName
       created_at: createdAt
       website: website
       description: description

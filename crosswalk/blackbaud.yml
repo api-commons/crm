@@ -29,19 +29,19 @@ concepts:
     - accounts
     - organizations
     properties:
+      id: id
       name:
       - name
       - organization_name
-      id: id
       updated_at: date_modified
       website: url
-      phone: phone_number
       description: description
+      phone: phone_number
       custom_fields: custom_fields
+      industry: industry
       email:
       - email_address
       - email
-      industry: industry
     core_coverage: 0.8
     evidence:
     - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#GET /organizations/{constituent_id}

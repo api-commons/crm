@@ -25,14 +25,14 @@ concepts:
     - account
     - companies
     properties:
+      id: id
       name:
       - companyName
       - name
-      id: id
       address: address
       custom_fields: attributes
-      email: email
       owner_id: user_id
+      email: email
     core_coverage: 0.4
     evidence:
     - openapi/_original/brevo-accounts-and-settings-openapi.yml#GET /account

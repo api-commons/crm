@@ -41,11 +41,11 @@ concepts:
     - company
     - organizations
     properties:
+      id: id
       name:
       - name
       - companyName
       - displayName
-      id: id
       created_at: createdDate
       website: websiteUrl
       address: addresses

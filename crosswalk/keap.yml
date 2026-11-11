@@ -35,16 +35,16 @@ concepts:
     - companies
     - company
     properties:
-      name: company_name
       id: id
+      name: company_name
       created_at: create_time
       updated_at: update_time
       website: website
       address: address
       phone: phone_number
       custom_fields: custom_fields
-      email: email_address
       owner_id: owner_id
+      email: email_address
     core_coverage: 1.0
     evidence:
     - openapi/_original/keap-v1-openapi.json#GET /rest/v1/companies

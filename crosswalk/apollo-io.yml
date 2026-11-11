@@ -35,11 +35,12 @@ concepts:
     - accounts
     - organizations
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       phone: phone
       owner_id: owner_id
+      domain: domain
     core_coverage: 0.6
     evidence:
     - openapi/_original/apollo-io-apollo-rest-api-openapi.json#GET /accounts/{id}

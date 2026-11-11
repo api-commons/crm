@@ -31,15 +31,15 @@ concepts:
     path_segment:
     - accounts
     properties:
-      name: name
       id: id
+      name: name
       created_at: created
       address: address
       city: city
       country: country
       industry: industry
-      owner_id: owner_id
       type: account_type
+      owner_id: owner_id
     core_coverage: 0.6
     evidence:
     - openapi/_original/pipeliner-openapi.json#DELETE /entities/Accounts/{id}

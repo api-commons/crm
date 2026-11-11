@@ -34,13 +34,13 @@ concepts:
     - account
     - accounts
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdTime
       website: website
       address: address
-      phone: phone
       description: description
+      phone: phone
       industry: industry
     core_coverage: 0.8
     evidence:
