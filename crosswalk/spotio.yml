@@ -1,7 +1,7 @@
 provider: spotio
 apis_io: https://apis.io/providers/spotio/
 context: crm
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   company:
     path_segment:

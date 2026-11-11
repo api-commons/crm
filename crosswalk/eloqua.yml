@@ -1,7 +1,7 @@
 provider: eloqua
 apis_io: https://apis.io/providers/eloqua/
 context: crm
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   contact:
     path_segment:

@@ -178,3 +178,17 @@ duplicates:
   apollo-io: [apollo-api-documentation]
   microsoft-dynamics-365: [microsoft-dynamics, microsoft-dynamics-365-sales]
   zoho-crm: [zoho]
+
+workflows:
+  - id: onboard-company-contact-deal
+    summary: Create a company, add a contact at it, and open a deal for the contact
+    steps:
+      - {op: createCompany, id: company}
+      - {op: createContact, id: contact, link: {company_id: "$steps.company.outputs.id"}}
+      - {op: createDeal, id: deal, link: {company_id: "$steps.company.outputs.id"}}
+  - id: log-follow-up
+    summary: Record a note and a follow-up task against a contact
+    steps:
+      - {op: getContact, id: contact, path: {"{contact_id}": "$inputs.contact_id"}}
+      - {op: createNote, id: note, link: {contact_id: "$steps.contact.outputs.id"}}
+      - {op: createTask, id: task, link: {contact_id: "$steps.contact.outputs.id"}}

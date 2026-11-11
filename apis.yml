@@ -12,7 +12,7 @@ tags:
 - Customer Relationship Management
 - Common Schema
 created: '2026-11-10'
-modified: '2026-11-10'
+modified: '2026-11-11'
 url: https://raw.githubusercontent.com/api-commons/crm/main/apis.yml
 specificationVersion: '0.20'
 apis:
@@ -30,6 +30,8 @@ apis:
     url: https://raw.githubusercontent.com/api-commons/crm/main/profile.yml
   - type: Adopters
     url: https://raw.githubusercontent.com/api-commons/crm/main/adopters.yml
+  - type: Arazzo
+    url: https://raw.githubusercontent.com/api-commons/crm/main/arazzo.yml
   - type: Rules
     url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
   - type: JSONSchema

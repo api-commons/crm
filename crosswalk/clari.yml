@@ -1,7 +1,7 @@
 provider: clari
 apis_io: https://apis.io/providers/clari/
 context: crm
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   deal:
     path_segment:

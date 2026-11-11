@@ -22,7 +22,7 @@ generated. Every number below is a count of providers.
 | note | 41 | 34 | id 100%, created_at 74%, content 65%, updated_at 50% | notes 39, note 4 |
 | pipeline | 25 | 21 | id 90%, name 86% | pipelines 22, pipeline 5 |
 
-Cohort: 177 providers with harvested OpenAPI, 112 crosswalks. Of the providers exposing a contact: 92% create, 90% list, 90% fetch, 75% update, 64% delete. Generated 2026-11-10 by build.py.
+Cohort: 177 providers with harvested OpenAPI, 112 crosswalks. Of the providers exposing a contact: 92% create, 90% list, 90% fetch, 75% update, 64% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

@@ -1,7 +1,7 @@
 provider: affinity
 apis_io: https://apis.io/providers/affinity/
 context: crm
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   contact:
     path_segment:

@@ -1,0 +1,94 @@
+arazzo: 1.0.1
+info:
+  title: Customer Relationship Management workflows (API Commons)
+  version: 0.1.0-draft.20261111
+  summary: Reference workflows over the common Customer Relationship Management operations.
+  description: 'Reference compositions of the operations this context''s providers share. Not measured: every step
+    is a core- or extended-tier operation of the common OpenAPI, so the workflow runs against any provider that
+    implements those operations (see crosswalk/).'
+sourceDescriptions:
+- name: crm
+  url: ./openapi.yml
+  type: openapi
+workflows:
+- workflowId: onboard-company-contact-deal
+  summary: Create a company, add a contact at it, and open a deal for the contact
+  description: Create a company, add a contact at it, and open a deal for the contact.
+  steps:
+  - stepId: company
+    operationId: createCompany
+    description: Create a company -- a core-tier operation (83% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+  - stepId: contact
+    operationId: createContact
+    description: Create a contact -- a core-tier operation (92% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        company_id: $steps.company.outputs.id
+  - stepId: deal
+    operationId: createDeal
+    description: Create a deal -- a core-tier operation (83% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        company_id: $steps.company.outputs.id
+  x-commons-tiers:
+  - core
+- workflowId: log-follow-up
+  summary: Record a note and a follow-up task against a contact
+  description: Record a note and a follow-up task against a contact.
+  inputs:
+    type: object
+    required:
+    - contact_id
+    properties:
+      contact_id:
+        type: string
+  steps:
+  - stepId: contact
+    operationId: getContact
+    description: Get a contact -- a core-tier operation (90% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: contact_id
+      in: path
+      value: $inputs.contact_id
+  - stepId: note
+    operationId: createNote
+    description: Create a note -- a core-tier operation (88% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        contact_id: $steps.contact.outputs.id
+  - stepId: task
+    operationId: createTask
+    description: Create a task -- a core-tier operation (94% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        contact_id: $steps.contact.outputs.id
+  x-commons-tiers:
+  - core

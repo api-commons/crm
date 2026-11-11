@@ -1,7 +1,7 @@
 provider: thoughtly
 apis_io: https://apis.io/providers/thoughtly/
 context: crm
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   contact:
     path_segment:
