@@ -32,9 +32,9 @@ concepts:
       description: description
       phone: phone
       industry: industry
-      domain: domain
       city: city
       country: country
+      domain: domain
       status: status
       tags: tagIds
     core_coverage: 0.333
@@ -80,8 +80,8 @@ concepts:
     properties:
       type: type
       subject: subject
-      company_id: companyId
       description: description
+      company_id: companyId
     core_coverage: 0.333
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/activities/{id}

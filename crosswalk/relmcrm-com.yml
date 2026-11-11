@@ -48,8 +48,8 @@ concepts:
       name: title
       created_at: created_at
       updated_at: updated_at
-      custom_fields: custom_fields
       stage_id: stage
+      custom_fields: custom_fields
       close_date: close_date
       company_id: company_id
       contact_id: primary_contact_id
@@ -83,8 +83,9 @@ concepts:
     - pipelines
     properties:
       id: id
-      name: name
-      stages: stages
+      name:
+      - label
+      - name
     core_coverage: 1.0
     evidence:
     - openapi/_original/relmcrm-com-openapi.json#DELETE /pipelines/{key}

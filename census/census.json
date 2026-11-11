@@ -256,8 +256,13 @@
      "POST collection"
     ],
     "properties": {
-     "contact": "object",
-     "labels": "array",
+     "id": "string",
+     "modality": "string",
+     "cached_count": "integer",
+     "name": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "user_id": "string",
      "first_name": "string",
      "last_name": "string",
      "organization_name": "string",
@@ -275,14 +280,10 @@
      "other_phone": "string",
      "typed_custom_fields": "object",
      "run_dedupe": "boolean",
-     "id": "string",
-     "name": "string",
      "owner_id": "string",
      "linkedin_url": "string",
      "phone_numbers": "array",
-     "label_ids": "array",
-     "created_at": "string",
-     "updated_at": "string"
+     "label_ids": "array"
     },
     "evidence": [
      "openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /contacts/{contact_id}",
@@ -302,8 +303,13 @@
      "POST collection"
     ],
     "properties": {
-     "contact": "object",
-     "labels": "array",
+     "id": "string",
+     "modality": "string",
+     "cached_count": "integer",
+     "name": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "user_id": "string",
      "first_name": "string",
      "last_name": "string",
      "organization_name": "string",
@@ -321,14 +327,10 @@
      "other_phone": "string",
      "typed_custom_fields": "object",
      "run_dedupe": "boolean",
-     "id": "string",
-     "name": "string",
      "owner_id": "string",
      "linkedin_url": "string",
      "phone_numbers": "array",
-     "label_ids": "array",
-     "created_at": "string",
-     "updated_at": "string"
+     "label_ids": "array"
     },
     "evidence": [
      "openapi/_original/apollo-io-apollo-rest-api-openapi.json#GET /contacts/{contact_id}",
@@ -503,24 +505,22 @@
      "PUT item"
     ],
     "properties": {
-     "contacts": "array",
-     "count": "integer",
-     "id": "integer",
      "attributes": "object",
+     "createdAt": "string",
      "email": "string",
      "emailBlacklisted": "boolean",
-     "ext_id": "string",
+     "id": "integer",
      "listIds": "array",
+     "listUnsubscribed": "array",
+     "modifiedAt": "string",
      "smsBlacklisted": "boolean",
+     "whatsappBlacklisted": "boolean",
+     "consentGroups": "array",
+     "ext_id": "string",
      "smtpBlacklistSender": "array",
      "updateEnabled": "boolean",
      "forceMerge": "boolean",
      "getId": "boolean",
-     "createdAt": "string",
-     "listUnsubscribed": "array",
-     "modifiedAt": "string",
-     "whatsappBlacklisted": "boolean",
-     "consentGroups": "array",
      "statistics": "object",
      "unlinkListIds": "array"
     },
@@ -894,8 +894,6 @@
      "email": "string",
      "linkedinUrl": "string",
      "message": "string",
-     "contacts": "array",
-     "pagination": "object",
      "id": "string",
      "firstName": "string",
      "lastName": "string",
@@ -1040,10 +1038,6 @@
      "mobilePhone": "string",
      "fax": "string",
      "salesPerson": "string",
-     "elements": "array",
-     "total": "integer",
-     "pageSize": "integer",
-     "page": "integer",
      "contact": "string",
      "activityType": "string",
      "activityDate": "string",
@@ -1295,14 +1289,15 @@
      "geolocation": "object",
      "tags": "array",
      "customFieldValues": "array",
-     "campaignId": "string",
-     "contacts": "array",
      "score": "string",
      "reason": "string",
      "deletedOn": "string",
      "subscribersType": "array",
-     "sectionLogicOperator": "string",
-     "section": "array"
+     "campaignIdsList": "array",
+     "logicOperator": "string",
+     "subscriberCycle": "array",
+     "conditions": "array",
+     "subscriptionDate": "string"
     },
     "evidence": [
      "openapi/_original/getresponse-contacts-openapi.yml#DELETE /contacts/{contactId}",
@@ -1495,11 +1490,6 @@
      "POST collection"
     ],
     "properties": {
-     "contacts": "array",
-     "total": "number",
-     "page": "number",
-     "limit": "number",
-     "totalPages": "number",
      "id": "number",
      "firstName": "string",
      "lastName": "string",
@@ -1636,8 +1626,8 @@
      "succeded": "boolean",
      "contact": "object",
      "inboundDndSettings": "object",
-     "contacts": "array",
-     "count": "number",
+     "attributions": "array",
+     "followers": "array",
      "deleted": "boolean",
      "bounceEmail": "boolean",
      "unsubscribeEmail": "boolean",
@@ -1884,8 +1874,6 @@
      "PUT collection"
     ],
     "properties": {
-     "contacts": "array",
-     "next_page_token": "string",
      "id": "string",
      "links": "array",
      "addresses": "array",
@@ -1926,11 +1914,21 @@
      "billing_information": "string",
      "created_by": "string",
      "last_updated_by": "string",
-     "deals": "array",
+     "email": "string",
+     "applied_time": "string",
+     "next_page_token": "string",
+     "name": "string",
+     "value": null,
+     "contact_ids": "array",
+     "stage_id": "string",
+     "stage_assignment_time": "string",
+     "owner_ids": "array",
+     "task_ids": "array",
+     "order_id": "string",
+     "status": "string",
+     "estimated_close_time": "string",
+     "closed_time": "string",
      "ids": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
      "ScoreValue": "string",
      "anniversary": "string",
      "birthday": "string",
@@ -1943,7 +1941,13 @@
      "opt_in_reason": "string",
      "relationships": "array",
      "duplicate_option": "string",
-     "key": "string"
+     "contacts": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "key": "string",
+     "linked_contact_id": "integer",
+     "relationship_type_id": "integer"
     },
     "evidence": [
      "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/contacts/{contact_id}",
@@ -2028,11 +2032,19 @@
     ],
     "properties": {
      "next_page_token": "string",
-     "deals": "array",
-     "contacts": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
+     "id": "string",
+     "name": "string",
+     "value": null,
+     "contact_ids": "array",
+     "stage_id": "string",
+     "stage_assignment_time": "string",
+     "owner_ids": "array",
+     "task_ids": "array",
+     "order_id": "string",
+     "status": "string",
+     "estimated_close_time": "string",
+     "closed_time": "string",
+     "custom_fields": "object",
      "addresses": "array",
      "birthday": "string",
      "prefix": "string",
@@ -2054,21 +2066,29 @@
      "job_title": "string",
      "preferred_locale": "string",
      "source_type": "string",
-     "custom_fields": "array",
      "spouse_name": "string",
-     "origin": "object",
-     "relationships": "array",
-     "company_name": "string",
-     "opt_in_reason": "string",
-     "tag_ids": "array",
      "company": "object",
+     "email_opted_in": "boolean",
+     "email_status": "string",
+     "date_created": "string",
+     "last_updated": "string",
+     "ScoreValue": "string",
+     "company_name": "string",
+     "linked_contact_id": "integer",
+     "relationship_type_id": "integer",
+     "origin": "object",
+     "opt_in_reason": "string",
+     "contacts": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
      "ids": "array",
-     "id": "string",
      "links": "array",
      "groups": "string",
      "update_time": "string",
      "create_time": "string",
      "score_value": "string",
+     "tag_ids": "array",
      "anniversary_date": "string",
      "birth_date": "string",
      "leadsource_id": "string",
@@ -2079,7 +2099,9 @@
      "assistant_phone": "string",
      "billing_information": "string",
      "created_by": "string",
-     "last_updated_by": "string"
+     "last_updated_by": "string",
+     "email": "string",
+     "applied_time": "string"
     },
     "evidence": [
      "openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/deals/-/contacts/{contact_id}",
@@ -2185,8 +2207,9 @@
      "POST item"
     ],
     "properties": {
-     "filters": "array",
-     "page": "integer",
+     "filterId": "string",
+     "in": "array",
+     "out": "array",
      "_id": "string",
      "teamId": "string",
      "email": "string",
@@ -2199,11 +2222,11 @@
      "results": "array",
      "total": "integer",
      "took": "integer",
+     "page": "integer",
      "size": "integer",
      "search": "string",
      "limitation": "integer",
      "team": "string",
-     "excludes": "array",
      "unsubscribed": "boolean",
      "fieldRejections": "array",
      "success": "boolean",
@@ -2784,13 +2807,11 @@
      "POST collection"
     ],
     "properties": {
-     "data": "array",
-     "links": "object",
-     "included": "array",
-     "meta": "object",
      "id": "string",
      "type": null,
-     "attributes": null
+     "attributes": null,
+     "relationships": "object",
+     "meta": "object"
     },
     "evidence": [
      "openapi/_original/nationbuilder-v2-openapi-original.yml#DELETE /api/v2/contacts/{id}",
@@ -2866,8 +2887,6 @@
      "contexts": "array",
      "ids": "array",
      "push_data": "object",
-     "contacts_meta": "object",
-     "resources": "array",
      "type": "string",
      "file_ids": "array"
     },
@@ -3131,7 +3150,9 @@
      "customFields": "array",
      "createdAt": "string",
      "updatedAt": "string",
-     "createdByUserId": "string"
+     "createdByUserId": "string",
+     "key": "string",
+     "value": null
     },
     "evidence": [
      "openapi/_original/quo-public-api-v1.json#DELETE /v1/contacts/{id}",
@@ -3726,6 +3747,9 @@
      "record": "object",
      "warnings": "array",
      "custom_fields": "object",
+     "detail": "string",
+     "problem_type": "string",
+     "title": "string",
      "Id": "string",
      "Description": "string",
      "Email": "string",
@@ -3931,9 +3955,6 @@
      "POST collection"
     ],
     "properties": {
-     "edges": "array",
-     "pageInfo": "object",
-     "totalCount": "integer",
      "id": "string",
      "createdAt": "string",
      "updatedAt": "string",
@@ -4018,6 +4039,7 @@
      "emails": "array",
      "phoneNumbers": "array",
      "legalDescription": "string",
+     "photo": "object",
      "accessBy": "array",
      "sourceOfEnquiry": "object",
      "archived": "boolean",
@@ -4027,6 +4049,7 @@
      "acn": "string",
      "smsUnsubscribeUrl": "string",
      "customUnsubscribe": "array",
+     "account": "object",
      "editableBy": "array"
     },
     "evidence": [
@@ -4055,8 +4078,6 @@
      "POST collection"
     ],
     "properties": {
-     "contacts": "array",
-     "nextPageCursor": "string",
      "id": "string",
      "nativeId": "string",
      "email": "string",
@@ -4071,7 +4092,6 @@
      "additional": "object",
      "accessToken": "string",
      "contact": "object",
-     "invalidIds": "array",
      "address": "object",
      "emails": "array",
      "phones": "array",
@@ -4586,9 +4606,14 @@
      "primary_address_id": "string",
      "primary_phone_id": "string",
      "primary_email_address_id": "string",
-     "count": "integer",
-     "next_link": "string",
-     "values": "array",
+     "active": "boolean",
+     "address": "object",
+     "is_referring_org": "boolean",
+     "is_third_party_payer": "boolean",
+     "is_transfer_school": "boolean",
+     "transfer_school": "object",
+     "primary_contact": "object",
+     "secondary_contact": "object",
      "account_id": "integer",
      "account_number": "string",
      "description": "string",
@@ -4609,7 +4634,6 @@
      "fiscal_period": "integer",
      "period_amount": "number",
      "period_percent": "number",
-     "primary_contact": "object",
      "primary_address": "object",
      "aka": "string",
      "tax_registration_date": "string",
@@ -5059,9 +5083,6 @@
      "retainedEarningsAccount": "string",
      "useA4PaperSize": "boolean",
      "workCode": "string",
-     "responseInfo": "object",
-     "returnObject": "array",
-     "recordCount": "integer",
      "cmoAccountManagerEmployeeID": "string",
      "cmoAddressLine1": "string",
      "cmoAddressLine2": "string",
@@ -5197,6 +5218,9 @@
      "cmoUpsWsBillingOption": "string",
      "cmoUsaTransactionTypeCode": "string",
      "cmoWebAddress": "string",
+     "responseInfo": "object",
+     "returnObject": "object",
+     "recordCount": "integer",
      "id": "integer",
      "customerId": "string",
      "companyName": "string",
@@ -5283,10 +5307,6 @@
      "country": "string",
      "businessPhone": "string",
      "crmSystemMappings": "array",
-     "elements": "array",
-     "total": "integer",
-     "pageSize": "integer",
-     "page": "integer",
      "folderId": "string",
      "sourceTemplateId": "string",
      "createdByName": "string",
@@ -5854,8 +5874,6 @@
      "POST collection"
     ],
     "properties": {
-     "companies": "array",
-     "next_page_token": "string",
      "id": "string",
      "address": "object",
      "notes": "string",
@@ -5888,12 +5906,14 @@
      "created_by": "string",
      "last_updated_by": "string",
      "tagged_companies": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
+     "next_page_token": "string",
      "email_opted_in": "boolean",
      "email_status": "string",
-     "opt_in_reason": "string"
+     "opt_in_reason": "string",
+     "companies": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string"
     },
     "evidence": [
      "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/companies/{company_id}",
@@ -5935,10 +5955,6 @@
      "POST collection"
     ],
     "properties": {
-     "companies": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
      "id": "integer",
      "website": "string",
      "address": "object",
@@ -5951,7 +5967,10 @@
      "email_opted_in": "boolean",
      "custom_fields": "array",
      "opt_in_reason": "string",
-     "next_page_token": "string",
+     "companies": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
      "suffix": "string",
      "title": "string",
      "groups": "string",
@@ -5974,7 +5993,8 @@
      "account_id": "string",
      "created_by": "string",
      "last_updated_by": "string",
-     "tagged_companies": "array"
+     "tagged_companies": "array",
+     "next_page_token": "string"
     },
     "evidence": [
      "openapi/_original/keap-v1-openapi.json#GET /rest/v1/companies",
@@ -6021,11 +6041,13 @@
      "POST collection"
     ],
     "properties": {
-     "filters": "array",
-     "page": "integer",
+     "filterId": "string",
+     "in": "array",
+     "out": "array",
      "results": "array",
      "total": "integer",
      "took": "integer",
+     "page": "integer",
      "size": "integer",
      "search": "string",
      "limitation": "integer",
@@ -6291,10 +6313,9 @@
      "POST collection"
     ],
     "properties": {
-     "action": "string",
-     "dedupeBy": "string",
-     "input": "array",
      "id": "integer",
+     "externalCompanyId": "string",
+     "company": "string",
      "reasons": "array",
      "seq": "integer",
      "status": "string"
@@ -6534,8 +6555,6 @@
      "PUT item"
     ],
     "properties": {
-     "accounts": "array",
-     "pagination": "object",
      "individualAccount": "object",
      "companyAccount": "object",
      "accountId": "string",
@@ -6795,9 +6814,9 @@
      "POST collection"
     ],
     "properties": {
-     "activeOrganizationId": "string",
-     "organizations": "array",
-     "name": "string"
+     "id": "string",
+     "name": "string",
+     "role": "string"
     },
     "evidence": [
      "openapi/_original/poggio-labs-goalkeeper-openapi.json#GET /v1/organizations",
@@ -7047,6 +7066,11 @@
      "emailAddresses": "array",
      "createdAt": "string",
      "updatedAt": "string",
+     "country": "string",
+     "street": "string",
+     "city": "string",
+     "state": "string",
+     "zip": "string",
      "stripeCustomerId": "string",
      "maxSeats": "integer",
      "isDynamicAllocation": "boolean",
@@ -7153,8 +7177,9 @@
      "updated_at": "string",
      "is_deleted": "boolean",
      "last_modified_at": "string",
-     "record": "object",
-     "warnings": "array",
+     "detail": "string",
+     "problem_type": "string",
+     "title": "string",
      "custom_fields": "object",
      "Id": "string",
      "Description": "string",
@@ -7193,6 +7218,7 @@
      "notes_last_updated": "string",
      "account_id": "string",
      "errors": "array",
+     "warnings": "array",
      "domains": "array"
     },
     "evidence": [
@@ -7311,9 +7337,6 @@
      "POST collection"
     ],
     "properties": {
-     "edges": "array",
-     "pageInfo": "object",
-     "totalCount": "integer",
      "id": "string",
      "createdAt": "string",
      "updatedAt": "string",
@@ -7467,8 +7490,6 @@
      "POST collection"
     ],
     "properties": {
-     "accounts": "array",
-     "nextPageCursor": "string",
      "id": "string",
      "nativeId": "string",
      "name": "string",
@@ -7485,7 +7506,6 @@
      "additional": "object",
      "accessToken": "string",
      "account": "object",
-     "invalidIds": "array",
      "locality": "string"
     },
     "evidence": [
@@ -8232,8 +8252,12 @@
     ],
     "properties": {
      "id": "string",
-     "crmScore": "object",
-     "fields": "array"
+     "alias": "string",
+     "imageUrl": "string",
+     "trendHistory": "array",
+     "trend": "string",
+     "value": null,
+     "originalValue": null
     },
     "evidence": [
      "openapi/_original/clari-revenue-api-openapi.yml#GET /opportunity"
@@ -8841,8 +8865,6 @@
      "PUT collection"
     ],
     "properties": {
-     "opportunities": "array",
-     "next_page_token": "string",
      "id": "string",
      "contact": "object",
      "stage": "object",
@@ -8871,7 +8893,7 @@
      "contact_id": "string",
      "stage_id": "string",
      "user_id": "string",
-     "deals": "array",
+     "next_page_token": "string",
      "name": "string",
      "value": null,
      "contact_ids": "array",
@@ -8891,9 +8913,9 @@
      "next_deal_id": "string",
      "estimated_close_date": "string",
      "closed_date": "string",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
+     "stage_name": "string",
+     "close_time": "string",
+     "order": "string",
      "date_created": "string",
      "last_updated": "string",
      "next_action_date": "string"
@@ -8940,7 +8962,6 @@
     ],
     "properties": {
      "next_page_token": "string",
-     "deals": "array",
      "id": "string",
      "name": "string",
      "value": null,
@@ -8965,10 +8986,9 @@
      "next_deal_id": "string",
      "estimated_close_date": "string",
      "closed_date": "string",
-     "opportunities": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
+     "stage_name": "string",
+     "close_time": "string",
+     "order": "string",
      "contact": "object",
      "stage": "object",
      "user": "object",
@@ -9208,12 +9228,9 @@
      "result": "array",
      "success": "boolean",
      "warnings": "array",
-     "batchSize": "integer",
-     "fields": "array",
-     "filterType": "string",
-     "input": "array",
-     "action": "string",
-     "dedupeBy": "string"
+     "marketoGUID": "string",
+     "reasons": "array",
+     "seq": "integer"
     },
     "evidence": [
      "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/opportunities.json",
@@ -10099,10 +10116,12 @@
      "updated_at": "string",
      "is_deleted": "boolean",
      "last_modified_at": "string",
-     "record": "object",
-     "warnings": "array",
+     "detail": "string",
+     "problem_type": "string",
+     "title": "string",
      "custom_fields": "object",
-     "errors": "array"
+     "errors": "array",
+     "warnings": "array"
     },
     "evidence": [
      "openapi/_original/supaglue-crm-api-openapi.yml#GET /opportunities",
@@ -10180,9 +10199,6 @@
      "POST collection"
     ],
     "properties": {
-     "edges": "array",
-     "pageInfo": "object",
-     "totalCount": "integer",
      "id": "string",
      "createdAt": "string",
      "updatedAt": "string",
@@ -10217,8 +10233,6 @@
      "POST collection"
     ],
     "properties": {
-     "deals": "array",
-     "nextPageCursor": "string",
      "id": "string",
      "nativeId": "string",
      "name": "string",
@@ -10234,8 +10248,7 @@
      "associations": "object",
      "additional": "object",
      "accessToken": "string",
-     "deal": "object",
-     "invalidIds": "array"
+     "deal": "object"
     },
     "evidence": [
      "openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/deal",
@@ -10702,9 +10715,6 @@
      "PUT collection"
     ],
     "properties": {
-     "responseInfo": "object",
-     "returnObject": "array",
-     "recordCount": "integer",
      "lopClosedByEmployeeID": "string",
      "lopClosedDate": "string",
      "lopClosedReasonID": "string",
@@ -10744,7 +10754,10 @@
      "lopShipOrganizationID": "string",
      "lopShortDescription": "string",
      "lopSplitPercentTotal": "number",
-     "lopStatus": "string"
+     "lopStatus": "string",
+     "responseInfo": "object",
+     "returnObject": "object",
+     "recordCount": "integer"
     },
     "evidence": [
      "openapi/_original/eci-solutions-m1-openapi.json#DELETE /api/ERP/Leads/{key}",
@@ -11005,15 +11018,11 @@
      "result": "array",
      "success": "boolean",
      "warnings": "array",
-     "action": "string",
-     "asyncProcessing": "boolean",
-     "input": "array",
-     "lookupField": "string",
-     "partitionName": "string",
      "id": "integer",
      "membership": "object",
      "reason": "object",
-     "status": "string"
+     "status": "string",
+     "input": "array"
     },
     "evidence": [
      "openapi/_original/marketo-lead-database-openapi-original.json#DELETE /rest/v1/lists/{listId}/leads.json",
@@ -11125,14 +11134,11 @@
      "PUT collection"
     ],
     "properties": {
-     "eventLeads": "array",
-     "total": "integer",
      "leadId": "string",
      "registered": "boolean",
      "checkedIn": "boolean",
      "status": "integer",
      "results": "object",
-     "leads": "array",
      "id": "string",
      "createdAt": "string",
      "isEnriched": "boolean",
@@ -11153,8 +11159,9 @@
      "tags": "array",
      "leadActivityEvents": "array",
      "remoteIds": "array",
-     "createdByEmail": "string",
-     "companyName": "string",
+     "number": "string",
+     "type": "string",
+     "preferred": "boolean",
      "profilePicture": "string",
      "remoteId": "object"
     },
@@ -11236,26 +11243,80 @@
      "PUT item"
     ],
     "properties": {
-     "has_more": "boolean",
-     "next_page": "string",
+     "id": "string",
+     "campaign_id": "string",
+     "mailbox_id": "string",
+     "lead": "object",
      "status": "string",
-     "errors": "array",
-     "campaign_leads": "array",
      "error": "object",
      "campaign_lead": "object",
      "lead_id": "string",
-     "mailbox_id": "string",
      "skip_if_exists": "boolean",
      "override_lead_limit": "boolean",
      "leads": "array",
-     "lead": "object",
-     "dup": "string",
+     "data": "object",
      "creator_id": "string",
-     "status_id": "string",
      "owner_id": "string",
      "bounced": "boolean",
      "optedout": "boolean",
-     "data": "object"
+     "sent_count": "integer",
+     "replied_count": "integer",
+     "last_sent_at": "string",
+     "dup": "string",
+     "status_id": "string",
+     "email": "string",
+     "first_name": [
+      "string",
+      "null"
+     ],
+     "last_name": [
+      "string",
+      "null"
+     ],
+     "company_name": [
+      "string",
+      "null"
+     ],
+     "address": [
+      "string",
+      "null"
+     ],
+     "city": [
+      "string",
+      "null"
+     ],
+     "state": [
+      "string",
+      "null"
+     ],
+     "phone": [
+      "string",
+      "null"
+     ],
+     "title": [
+      "string",
+      "null"
+     ],
+     "industry": [
+      "string",
+      "null"
+     ],
+     "snippet": [
+      "string",
+      "null"
+     ],
+     "snippet2": [
+      "string",
+      "null"
+     ],
+     "snippet3": [
+      "string",
+      "null"
+     ],
+     "snippet4": [
+      "string",
+      "null"
+     ]
     },
     "evidence": [
      "openapi/_original/persistiq-api-v1-openapi.json#DELETE /v1/campaigns/{campaign_id}/leads/{id}",
@@ -11523,8 +11584,8 @@
      "updated_at": "string",
      "is_deleted": "boolean",
      "last_modified_at": "string",
-     "record": "object",
-     "warnings": "array",
+     "detail": "string",
+     "problem_type": "string",
      "custom_fields": "object"
     },
     "evidence": [
@@ -11566,8 +11627,6 @@
      "POST collection"
     ],
     "properties": {
-     "leads": "array",
-     "nextPageCursor": "string",
      "id": "string",
      "nativeId": "string",
      "firstName": "string",
@@ -11582,8 +11641,7 @@
      "associations": "object",
      "additional": "object",
      "accessToken": "string",
-     "lead": "object",
-     "invalidIds": "array"
+     "lead": "object"
     },
     "evidence": [
      "openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/lead",
@@ -11602,14 +11660,6 @@
      "POST collection"
     ],
     "properties": {
-     "leads": "array",
-     "total": "integer",
-     "limit": "integer",
-     "offset": "integer",
-     "next_cursor": [
-      "string",
-      "null"
-     ],
      "id": "string",
      "customer_id": "string",
      "contact_name": [
@@ -11666,8 +11716,8 @@
       "null"
      ],
      "ignored_custom_fields": "array",
-     "on_duplicate": "string",
-     "dry_run": "boolean"
+     "owner_id": "string",
+     "lead_line": "string"
     },
     "evidence": [
      "openapi/_original/z-league-crm-lead-openapi.json#GET /api/agents/crm/leads",
@@ -11809,13 +11859,15 @@
      "POST item"
     ],
     "properties": {
-     "total_count": "integer",
-     "limit": "integer",
-     "page_count": "integer",
-     "page": "integer",
-     "activities": "array",
-     "continuation_token": "string",
      "id": "integer",
+     "name": "string",
+     "description": "string",
+     "total_entries": "integer",
+     "total_hours": "number",
+     "charity_id": "integer",
+     "affiliate_organization_id": "integer",
+     "benefitting_organization": "string",
+     "entries": "array",
      "request": "object",
      "organization": "object",
      "contact": "object",
@@ -11853,6 +11905,8 @@
      "form_id": "integer",
      "archive_reason_code": "integer",
      "currency_requested": "string",
+     "limit": "integer",
+     "page": "integer",
      "date_modified": "string",
      "include_inactive": "boolean"
     },
@@ -12599,9 +12653,24 @@
      "GET collection"
     ],
     "properties": {
-     "activities": "array",
-     "next_page": "object",
-     "meta": "object"
+     "activity_id": "string",
+     "activity_type": "object",
+     "assigned_to": "object",
+     "comments": "array",
+     "completed_tstamp": "object",
+     "created": "string",
+     "description": "string",
+     "details": "object",
+     "feed_tstamp": "object",
+     "is_important": "boolean",
+     "name": "string",
+     "owner": "object",
+     "priority": "string",
+     "related_contacts": "array",
+     "new_related_deals": "array",
+     "related_sequence": "object",
+     "scheduled_tstamp": "object",
+     "tags": "array"
     },
     "evidence": [
      "openapi/_original/nimble-openapi-original.yml#GET /api/v1/activities"
@@ -13521,7 +13590,10 @@
      "InteractionId": "integer",
      "AttachmentIds": "array",
      "AuditTrail": "object",
-     "Attachments": "array",
+     "Guid": "string",
+     "Name": "string",
+     "Extension": "string",
+     "Url": "string",
      "Type": "string",
      "Deleted": "boolean"
     },
@@ -13888,17 +13960,25 @@
      "POST collection"
     ],
     "properties": {
-     "requestId": "string",
-     "tasks": "array",
-     "crmType": "string",
-     "userId": "string",
+     "id": "integer",
+     "userId": "integer",
+     "created": "string",
+     "updated": "string",
+     "status": "string",
+     "type": "string",
+     "actions": "array",
+     "account": "object",
+     "opportunity": "object",
+     "dueDate": "string",
+     "flow": "object",
+     "contact": "object",
+     "additionalContacts": "array",
+     "title": "string",
+     "priority": "object",
+     "hasSpecificTime": "boolean",
      "workspaceId": "string",
      "types": "array",
-     "taskAction": "array",
-     "status": "array",
-     "dueDate": "string",
-     "priority": "string",
-     "hasSpecificTime": "boolean"
+     "taskAction": "array"
     },
     "evidence": [
      "openapi/_original/gong-openapi.json#PATCH /v2/tasks/{taskId}",
@@ -14041,8 +14121,6 @@
      "PUT item"
     ],
     "properties": {
-     "tasks": "array",
-     "next_page_token": "string",
      "id": "string",
      "title": "string",
      "description": "string",
@@ -14061,10 +14139,6 @@
      "opportunity_id": "string",
      "accepted": "boolean",
      "custom_fields": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
-     "sync_token": "string",
      "completion_date": "string",
      "contact": "object",
      "creation_date": "string",
@@ -14119,12 +14193,6 @@
      "user_id": "integer",
      "funnel_id": "integer",
      "jgraph_id": "integer",
-     "tasks": "array",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
-     "sync_token": "string",
-     "next_page_token": "string",
      "id": "string",
      "create_time": "string",
      "modification_time": "string",
@@ -14941,9 +15009,6 @@
      "POST collection"
     ],
     "properties": {
-     "edges": "array",
-     "pageInfo": "object",
-     "totalCount": "integer",
      "id": "string",
      "createdAt": "string",
      "updatedAt": "string",
@@ -15014,8 +15079,6 @@
      "POST collection"
     ],
     "properties": {
-     "tasks": "array",
-     "nextPageCursor": "string",
      "id": "string",
      "nativeId": "string",
      "body": "string",
@@ -15030,7 +15093,6 @@
      "additional": "object",
      "accessToken": "string",
      "task": "object",
-     "invalidIds": "array",
      "type": "string"
     },
     "evidence": [
@@ -15217,11 +15279,6 @@
       "boolean",
       "null"
      ],
-     "tasks": "array",
-     "info": "object",
-     "code": "string",
-     "details": "object",
-     "message": "string",
      "created_time": "string",
      "lock_status": "object",
      "editable": "boolean",
@@ -15239,7 +15296,10 @@
      "modified_time": "string",
      "associated": "boolean",
      "modified_by": "object",
-     "name": "string"
+     "name": "string",
+     "code": "string",
+     "details": "object",
+     "message": "string"
     },
     "evidence": [
      "openapi/_original/Task.json#GET /api/v1/tasks",
@@ -15268,12 +15328,6 @@
      "PUT item"
     ],
     "properties": {
-     "tasks": "array",
-     "info": "object",
-     "code": "string",
-     "details": "object",
-     "message": "string",
-     "status": "string",
      "created_time": "string",
      "lock_status": "object",
      "editable": "boolean",
@@ -15292,7 +15346,11 @@
      "associated": "boolean",
      "modified_by": "object",
      "name": "string",
-     "id": "string"
+     "id": "string",
+     "code": "string",
+     "details": "object",
+     "message": "string",
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/zoho-crm-workflow-tasks-openapi.json#DELETE /settings/automation/tasks",
@@ -15370,7 +15428,8 @@
      "opportunitiesPreview": "object",
      "personsPreview": "object",
      "companiesPreview": "object",
-     "type": "string"
+     "type": "string",
+     "person": "object"
     },
     "evidence": [
      "openapi/_original/affinity-v2-openapi.yml#GET /v2/companies/{companyId}/notes",
@@ -15442,8 +15501,6 @@
      "PUT item"
     ],
     "properties": {
-     "notes": "array",
-     "query": "object",
      "uid": "string",
      "title": "string",
      "body": "string",
@@ -15551,15 +15608,11 @@
      "benefits_include_notes": "boolean",
      "parent_id": "integer",
      "benefits_notes": "string",
-     "count": "integer",
-     "offset": "integer",
-     "limit": "integer",
-     "notes": "array",
      "id": "string",
+     "gift_id": "string",
      "title": "string",
      "author": "string",
      "text": "string",
-     "gift_id": "string",
      "rich_text": "boolean",
      "date_added": "string",
      "date_modified": "string",
@@ -15609,6 +15662,9 @@
      "Note": "string",
      "CustomValues": "array",
      "AuditTrail": "object",
+     "FieldId": "integer",
+     "FieldText": "string",
+     "Value": "object",
      "Attachments": "array",
      "Type": "string",
      "Deleted": "boolean"
@@ -15782,10 +15838,9 @@
      "POST collection"
     ],
     "properties": {
-     "notes": "array",
-     "totalCount": "integer",
      "id": "integer",
      "note": "string",
+     "createdByUser": "object",
      "createdAt": "string",
      "updatedAt": "string",
      "body": "string",
@@ -15943,8 +15998,6 @@
      "PUT item"
     ],
     "properties": {
-     "notes": "array",
-     "hasMore": "boolean",
      "id": "string",
      "body": "string",
      "userId": "string",
@@ -16044,8 +16097,6 @@
      "PUT item"
     ],
     "properties": {
-     "notes": "array",
-     "next_page_token": "string",
      "id": "string",
      "text": "string",
      "title": "string",
@@ -16067,9 +16118,7 @@
      "modified_time": "string",
      "create_success": "boolean",
      "error_message": "string",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
+     "next_page_token": "string",
      "date_created": "string",
      "last_updated": "string",
      "last_updated_by": "object"
@@ -16111,7 +16160,6 @@
      "create_success": "boolean",
      "error_message": "string",
      "next_page_token": "string",
-     "notes": "array",
      "title": "string",
      "type": "string",
      "contact_id": "integer",
@@ -16119,9 +16167,6 @@
      "last_updated_by": "object",
      "date_created": "string",
      "last_updated": "string",
-     "count": "integer",
-     "next": "string",
-     "previous": "string",
      "text": "string",
      "assigned_to_user": "object",
      "create_time": "string",
@@ -16656,9 +16701,6 @@
      "POST collection"
     ],
     "properties": {
-     "edges": "array",
-     "pageInfo": "object",
-     "totalCount": "integer",
      "id": "string",
      "createdAt": "string",
      "updatedAt": "string",
@@ -16735,8 +16777,6 @@
      "POST collection"
     ],
     "properties": {
-     "notes": "array",
-     "nextPageCursor": "string",
      "id": "string",
      "nativeId": "string",
      "contentHtml": "string",
@@ -16746,8 +16786,7 @@
      "associations": "object",
      "additional": "object",
      "accessToken": "string",
-     "note": "object",
-     "invalidIds": "array"
+     "note": "object"
     },
     "evidence": [
      "openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/note",
@@ -16918,9 +16957,15 @@
      "GET collection"
     ],
     "properties": {
-     "range": "object",
-     "currency": "string",
-     "pipelines": "array",
+     "id": "integer",
+     "name": "string",
+     "deals_open": "integer",
+     "deals_won": "integer",
+     "deals_lost": "integer",
+     "conversion_rate_percent": "number",
+     "total_revenue_cents": "integer",
+     "top_account": "object",
+     "pipelines": null,
      "pagination": "object"
     },
     "evidence": [
@@ -17071,9 +17116,7 @@
     "properties": {
      "id": "integer",
      "name": "string",
-     "stages": "array",
-     "type": "string",
-     "is_revenue": "boolean"
+     "win_probability": "integer"
     },
     "evidence": [
      "openapi/_original/copper-financial-openapi.json#GET /pipelines"
@@ -17088,11 +17131,11 @@
      "GET item"
     ],
     "properties": {
-     "created_at": "string",
+     "color": "string",
      "id": "string",
      "name": "string",
-     "stages": "array",
-     "updated_at": "string"
+     "position": "integer",
+     "stage_type": null
     },
     "evidence": [
      "openapi/_original/fixture-openapi.json#GET /api/v1/pipelines",
@@ -17156,8 +17199,12 @@
      "GET collection"
     ],
     "properties": {
-     "customObjectTypes": "object",
-     "hubspotDefinedObjectTypes": "array"
+     "limit": "integer",
+     "objectTypeId": "string",
+     "percentage": "number",
+     "pluralLabel": "string",
+     "singularLabel": "string",
+     "usage": "integer"
     },
     "evidence": [
      "openapi/_original/hubspot-crm-limits-tracking-openapi.json#GET /crm/limits/2026-09/pipelines"
@@ -17386,6 +17433,16 @@
      "revision": "integer",
      "steps": "array",
      "opportunity_types": "array",
+     "description": "string",
+     "has_readonly_form": "boolean",
+     "has_version_increment": "boolean",
+     "lead_process_id": "string",
+     "percent": "integer",
+     "quote_process_id": "string",
+     "sort_order": "integer",
+     "timeframe": "integer",
+     "documents": "array",
+     "step_checklists": "array",
      "success": "boolean",
      "data": "string"
     },
@@ -17410,11 +17467,13 @@
     ],
     "properties": {
      "id": "string",
-     "object": "string",
      "key": "string",
+     "label": "string",
+     "ordinal": "integer",
+     "type": "string",
      "name": "string",
      "is_default": "boolean",
-     "stages": "array",
+     "object": "string",
      "deleted": "boolean"
     },
     "evidence": [
@@ -17556,10 +17615,12 @@
     ],
     "properties": {
      "display_value": "string",
-     "default": "boolean",
-     "maps": "array",
+     "sequence_number": "integer",
+     "colour_code": "string",
+     "forecast_category": "object",
      "actual_value": "string",
      "id": "string",
+     "forecast_type": "string",
      "code": "string",
      "details": "object",
      "message": "string",
@@ -17591,10 +17652,12 @@
     ],
     "properties": {
      "display_value": "string",
-     "default": "boolean",
-     "maps": "array",
+     "sequence_number": "integer",
+     "colour_code": "string",
+     "forecast_category": "object",
      "actual_value": "string",
      "id": "string",
+     "forecast_type": "string",
      "code": "string",
      "details": "object",
      "message": "string",
@@ -19299,7 +19362,6 @@
     "mobly",
     "neonone",
     "nutshell",
-    "poggio-labs",
     "quo",
     "reonic",
     "revert",
@@ -19338,6 +19400,7 @@
     "exact-online",
     "infusionsoft",
     "insightly",
+    "keap",
     "oracle-siebel",
     "salesforce-service-cloud",
     "supaglue"

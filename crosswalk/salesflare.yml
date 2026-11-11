@@ -62,8 +62,8 @@ concepts:
       name: name
       created_at: creation_date
       status: status
-      custom_fields: custom
       stage_id: stage
+      custom_fields: custom
       close_date: close_date
       currency: currency
       pipeline_id: pipeline
@@ -95,8 +95,9 @@ concepts:
     properties:
       id: id
       name: name
-      stages: stages
       created_at: creation_date
+      stages: stages
+      order: order
     core_coverage: 1.0
     evidence:
     - openapi/_original/salesflare-api-openapi.yml#GET /pipelines

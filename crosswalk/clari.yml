@@ -8,7 +8,6 @@ concepts:
     - opportunity
     properties:
       id: id
-      custom_fields: fields
     core_coverage: 0.25
     evidence:
     - openapi/_original/clari-revenue-api-openapi.yml#GET /opportunity

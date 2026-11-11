@@ -27,8 +27,8 @@ concepts:
     - deals
     properties:
       name: name
-      custom_fields: custom_fields
       stage_id: stage_id
+      custom_fields: custom_fields
       contact_id: contact_id
       currency: currency
       owner_id: owner_id
@@ -46,10 +46,10 @@ concepts:
       status: status
       source: source_id
       email: email
-      custom_fields: custom_fields
       first_name: first_name
       last_name: last_name
       phone: phone
+      custom_fields: custom_fields
       company_name: organization_name
       owner_id: owner_id
       tags: tags

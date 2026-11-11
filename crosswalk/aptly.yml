@@ -42,8 +42,8 @@ concepts:
       - assigneeId
       - assignee
       priority: priority
-      owner_id: userId
       type: type
+      owner_id: userId
       note: note
     core_coverage: 0.75
     evidence:

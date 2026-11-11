@@ -62,13 +62,47 @@
     "email": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 12,
+      "x-commons-share": 0.481,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "email",
         "emailaddress1"
       ],
       "format": "email"
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "first_name",
+        "firstName",
+        "firstname"
+      ]
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "last_name",
+        "lastName",
+        "lastname"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "phone",
+        "phone_numbers",
+        "telephone1",
+        "phoneNumbers"
+      ]
     },
     "custom_fields": {
       "type": "object",
@@ -82,38 +116,29 @@
         "attributes"
       ]
     },
-    "first_name": {
+    "company_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.407,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.37,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
-        "first_name",
-        "firstName",
-        "firstname"
+        "company_name",
+        "company",
+        "companyName",
+        "Company name",
+        "companyname",
+        "organization_name"
       ]
     },
-    "last_name": {
+    "job_title": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.407,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.37,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
-        "last_name",
-        "lastName",
-        "lastname"
-      ]
-    },
-    "phone": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.407,
-      "x-commons-providers": 11,
-      "x-commons-spellings": [
-        "phone",
-        "phone_numbers",
-        "telephone1",
-        "phoneNumbers"
+        "title",
+        "jobTitle",
+        "jobtitle"
       ]
     },
     "updated_at": {
@@ -130,29 +155,15 @@
       ],
       "format": "date-time"
     },
-    "company_name": {
+    "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.296,
+      "x-commons-providers": 8,
       "x-commons-spellings": [
-        "company_name",
-        "company",
-        "companyName",
-        "Company name",
-        "companyname",
-        "organization_name"
-      ]
-    },
-    "job_title": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 9,
-      "x-commons-spellings": [
-        "title",
-        "jobTitle",
-        "jobtitle"
+        "owner_id",
+        "assignedTo",
+        "user_id"
       ]
     },
     "full_name": {
@@ -164,17 +175,6 @@
         "name",
         "full_name",
         "display_name"
-      ]
-    },
-    "owner_id": {
-      "type": "integer",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.259,
-      "x-commons-providers": 7,
-      "x-commons-spellings": [
-        "owner_id",
-        "assignedTo",
-        "user_id"
       ]
     },
     "description": {

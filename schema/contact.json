@@ -135,8 +135,8 @@
     "full_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.437,
-      "x-commons-providers": 31,
+      "x-commons-share": 0.451,
+      "x-commons-providers": 32,
       "x-commons-spellings": [
         "name",
         "fullName",
@@ -214,7 +214,6 @@
         "tags",
         "tag_ids",
         "label_ids",
-        "labels",
         "tagIds"
       ]
     },
@@ -226,9 +225,9 @@
       "x-commons-spellings": [
         "owner_id",
         "userId",
+        "user_id",
         "ownerId",
         "assignedTo",
-        "user_id",
         "OwnerId"
       ]
     }

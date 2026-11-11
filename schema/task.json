@@ -8,13 +8,14 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.878,
-      "x-commons-providers": 36,
+      "x-commons-share": 0.902,
+      "x-commons-providers": 37,
       "x-commons-spellings": [
         "id",
         "taskId",
         "_id",
         "Id",
+        "Guid",
         "recordId",
         "task_id"
       ]
@@ -22,13 +23,14 @@
     "subject": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.732,
-      "x-commons-providers": 30,
+      "x-commons-share": 0.756,
+      "x-commons-providers": 31,
       "x-commons-spellings": [
         "title",
         "subject",
         "name",
-        "Subject"
+        "Subject",
+        "Name"
       ]
     },
     "due_at": {
@@ -50,8 +52,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.585,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.61,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
@@ -118,8 +120,8 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.366,
-      "x-commons-providers": 15,
+      "x-commons-share": 0.39,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "updatedAt",
         "updated_at",
@@ -137,6 +139,17 @@
         "priority"
       ]
     },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.317,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "type",
+        "Type",
+        "_type"
+      ]
+    },
     "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -148,17 +161,6 @@
         "owner_id",
         "ownerId",
         "UserId"
-      ]
-    },
-    "type": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.293,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "type",
-        "Type",
-        "_type"
       ]
     },
     "created_by": {

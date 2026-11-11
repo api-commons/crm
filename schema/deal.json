@@ -73,20 +73,6 @@
         "Status"
       ]
     },
-    "custom_fields": {
-      "type": "object",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.457,
-      "x-commons-providers": 21,
-      "x-commons-spellings": [
-        "custom_fields",
-        "customFields",
-        "attributes",
-        "fields",
-        "custom",
-        "properties"
-      ]
-    },
     "stage_id": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -98,6 +84,20 @@
         "pipeline_stage_id",
         "pipelineStageId",
         "stageId"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.413,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "custom_fields",
+        "customFields",
+        "attributes",
+        "custom",
+        "properties",
+        "fields"
       ]
     },
     "close_date": {

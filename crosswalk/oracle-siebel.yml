@@ -62,8 +62,8 @@ concepts:
     properties:
       type: Type
       id: Id
-      company_id: Account Id
       description: Description
+      company_id: Account Id
     core_coverage: 0.667
     evidence:
     - openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Activity/Activity/{ActivityId}

@@ -7,10 +7,19 @@ concepts:
     path_segment:
     - leads
     properties:
-      id: lead_id
+      id:
+      - id
+      - lead_id
       status:
       - status
       - status_id
+      - state
+      email: email
+      first_name: first_name
+      last_name: last_name
+      phone: phone
+      company_name: company_name
+      job_title: title
       owner_id: owner_id
     core_coverage: 0.5
     evidence:

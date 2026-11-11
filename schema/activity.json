@@ -8,8 +8,8 @@
     "type": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.697,
-      "x-commons-providers": 23,
+      "x-commons-share": 0.727,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "type",
         "activity_type",
@@ -22,40 +22,40 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.667,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.697,
+      "x-commons-providers": 23,
       "x-commons-spellings": [
         "id",
+        "activity_id",
         "_id",
-        "Id",
-        "activity_id"
+        "Id"
       ]
     },
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.515,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.545,
+      "x-commons-providers": 18,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
         "date_created",
+        "created",
         "createdon",
         "createdTime",
-        "add_time",
-        "created"
+        "add_time"
       ],
       "format": "date-time"
     },
     "subject": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.424,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.485,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
+        "name",
         "subject",
         "title",
-        "name",
         "summary"
       ]
     },
@@ -86,6 +86,17 @@
         "public_description"
       ]
     },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.303,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "description",
+        "details",
+        "Description"
+      ]
+    },
     "company_id": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -100,17 +111,6 @@
         "org_id",
         "accountId",
         "organizationId"
-      ]
-    },
-    "description": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.242,
-      "x-commons-providers": 8,
-      "x-commons-spellings": [
-        "description",
-        "details",
-        "Description"
       ]
     }
   },

@@ -41,9 +41,9 @@ concepts:
     properties:
       id: id
       email: email
-      custom_fields: attributes
       first_name: first_name
       last_name: last_name
+      custom_fields: attributes
     core_coverage: 0.25
     evidence:
     - openapi/_original/street-co-spectre-api-openapi.json#GET /property-reports/leads

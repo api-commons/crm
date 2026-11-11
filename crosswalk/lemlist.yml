@@ -64,11 +64,11 @@ concepts:
       first_name: firstName
       last_name: lastName
       phone: phone
-      updated_at: updatedAt
       company_name:
       - companyName
       - Company name
       job_title: jobTitle
+      updated_at: updatedAt
     core_coverage: 0.75
     evidence:
     - openapi/_original/lemlist-openapi-v1-legacy.json#DELETE /campaigns/{campaignId}/leads/{email}
@@ -108,8 +108,8 @@ concepts:
       - completedAt
       - done
       priority: priority
-      owner_id: userId
       type: type
+      owner_id: userId
     core_coverage: 1.0
     evidence:
     - openapi/_original/lemlist-openapi-v1-legacy.json#GET /tasks

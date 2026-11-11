@@ -19,10 +19,10 @@ concepts:
       updated_at: updated_at
       company_id: account_id
       company_name: organization_name
-      tags:
-      - labels
-      - label_ids
-      owner_id: owner_id
+      tags: label_ids
+      owner_id:
+      - user_id
+      - owner_id
     core_coverage: 0.875
     evidence:
     - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /contacts/{contact_id}
@@ -92,8 +92,8 @@ concepts:
       status: status
       done: completed_at
       priority: priority
-      owner_id: user_id
       type: type
+      owner_id: user_id
       created_by: creator_id
       note: note
       contact_id:

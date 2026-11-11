@@ -17,8 +17,7 @@ concepts:
   deal:
     path_segment:
     - opportunities
-    properties:
-      custom_fields: fields
+    properties: {}
     core_coverage: 0.0
     evidence:
     - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/opportunities.json

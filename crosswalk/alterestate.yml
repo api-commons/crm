@@ -8,8 +8,8 @@ concepts:
     - leads
     properties:
       email: email
-      custom_fields: custom_fields
       phone: phone
+      custom_fields: custom_fields
       full_name: full_name
     core_coverage: 0.0
     evidence:

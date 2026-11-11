@@ -33,9 +33,9 @@ concepts:
       name: name
       address: address
       website: website
-      owner_id: owner_id
       city: city
       country: country
+      owner_id: owner_id
       email: email
       tags: tags
     core_coverage: 0.333

@@ -35,14 +35,14 @@ concepts:
       - companyId
       name: name
       created_at: createdAt
-      updated_at: updatedAt
       address: address
+      updated_at: updatedAt
       website: website
       phone: phone
       type: type
-      domain: domain
       city: city
       country: country
+      domain: domain
       email: email
       status: status
     core_coverage: 1.0
@@ -61,8 +61,8 @@ concepts:
       created_at: createdAt
       updated_at: updatedAt
       status: status
-      custom_fields: customFields
       stage_id: pipelineStageId
+      custom_fields: customFields
       contact_id: contactId
       owner_id: assignedTo
       pipeline_id: pipelineId

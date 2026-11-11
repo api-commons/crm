@@ -24,8 +24,8 @@ concepts:
     properties:
       id: id
       created_at: createdAt
-      updated_at: updatedAt
       address: address
+      updated_at: updatedAt
       custom_fields: custom
       description: description
       type: accountType

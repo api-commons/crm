@@ -6,8 +6,10 @@ concepts:
   pipeline:
     path_segment:
     - pipelines
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
     evidence:
     - openapi/_original/activecampaign-partners-api-openapi.json#GET /api/crm-reporting/v1/pipelines
     - openapi/_original/activecampaign-partners-api-openapi.json#GET /api/crm-sync/v1/pipelines

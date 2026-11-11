@@ -10,8 +10,8 @@ concepts:
       id: id
       name: company_name
       created_at: created
-      updated_at: updated
       address: address
+      updated_at: updated
       website: website
       city: city
       country: country

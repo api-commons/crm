@@ -16,9 +16,7 @@ concepts:
       first_name: firstName
       last_name: lastName
       phone: phoneNumbers
-      company_name:
-      - company
-      - companyName
+      company_name: company
       job_title: jobTitle
       description: description
       tags: tags

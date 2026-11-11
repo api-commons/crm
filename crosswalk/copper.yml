@@ -34,8 +34,8 @@ concepts:
       id: id
       name: name
       created_at: date_created
-      updated_at: date_modified
       address: address
+      updated_at: date_modified
       custom_fields: custom_fields
       description: details
       phone: phone_numbers
@@ -53,8 +53,8 @@ concepts:
       id: id
       name: name
       status: status
-      custom_fields: custom_fields
       stage_id: pipeline_stage_id
+      custom_fields: custom_fields
       close_date: close_date
       company_id: company_id
       contact_id: primary_contact_id
@@ -77,10 +77,10 @@ concepts:
       - status_id
       source: source_id
       email: email
-      custom_fields: custom_fields
       first_name: first_name
       last_name: last_name
       phone: phone_numbers
+      custom_fields: custom_fields
       company_name: company_name
       job_title: title
       full_name: name

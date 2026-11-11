@@ -210,8 +210,8 @@ concepts:
       - properties
     - name: full_name
       tier: extended
-      providers: 31
-      share: 0.437
+      providers: 32
+      share: 0.451
       type: string
       spellings:
       - name
@@ -279,7 +279,6 @@ concepts:
       - tags
       - tag_ids
       - label_ids
-      - labels
       - tagIds
     - name: owner_id
       tier: extended
@@ -289,11 +288,11 @@ concepts:
       spellings:
       - owner_id
       - userId
+      - user_id
       - ownerId
       - assignedTo
-      - user_id
       - OwnerId
-    long_tail_count: 893
+    long_tail_count: 900
     long_tail_sample:
     - is_deleted
     - mobile_phone
@@ -309,11 +308,11 @@ concepts:
     - country
     - contact_type
     - middle_name
-    - created_by
     - status
+    - account
+    - created_by
     - suffix
     - time_zone
-    - account
     - fax
     - notes
     - prefix
@@ -323,18 +322,18 @@ concepts:
     - last_activity_at
     - owner
     - salutation
+    - contact_ids
     - home_phone
+    - key
+    - relationships
     - address1
     - address2
     - bio
     - birth_date
     - comments
-    - contact_ids
     - domain
     - external_id
     - groups
-    - industry
-    - key
   company:
     segments_seen:
       accounts: 27
@@ -382,8 +381,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 44
-      share: 0.815
+      providers: 45
+      share: 0.833
       type: string
       spellings:
       - id
@@ -418,6 +417,17 @@ concepts:
       - date_created
       - createdDate
       - create_time
+    - name: address
+      tier: extended
+      providers: 26
+      share: 0.481
+      type: string
+      spellings:
+      - address
+      - addresses
+      - billingAddress
+      - BillingAddress
+      - address1_line1
     - name: updated_at
       tier: extended
       providers: 26
@@ -430,17 +440,6 @@ concepts:
       - update_time
       - modifiedon
       - updated
-    - name: address
-      tier: extended
-      providers: 25
-      share: 0.463
-      type: string
-      spellings:
-      - address
-      - addresses
-      - billingAddress
-      - BillingAddress
-      - address1_line1
     - name: website
       tier: extended
       providers: 25
@@ -508,6 +507,22 @@ concepts:
       - company_type
       - Account Type
       - account_type
+    - name: city
+      tier: extended
+      providers: 12
+      share: 0.222
+      type: string
+      spellings:
+      - city
+      - address1_city
+    - name: country
+      tier: extended
+      providers: 12
+      share: 0.222
+      type: string
+      spellings:
+      - country
+      - address1_country
     - name: domain
       tier: extended
       providers: 12
@@ -526,22 +541,6 @@ concepts:
       - ownerId
       - user_id
       - OwnerId
-    - name: city
-      tier: extended
-      providers: 11
-      share: 0.204
-      type: string
-      spellings:
-      - city
-      - address1_city
-    - name: country
-      tier: extended
-      providers: 11
-      share: 0.204
-      type: string
-      spellings:
-      - country
-      - address1_country
     - name: email
       tier: extended
       providers: 11
@@ -571,13 +570,13 @@ concepts:
       - label_ids
       - labels
       - tagIds
-    long_tail_count: 930
+    long_tail_count: 929
     long_tail_sample:
     - employee_count
-    - is_deleted
-    - photo_url
     - postal_code
     - state
+    - is_deleted
+    - photo_url
     - annual_revenue
     - linkedin_url
     - created_by
@@ -586,6 +585,7 @@ concepts:
     - currency
     - owner
     - relationships
+    - title
     - updated_by
     - contacts
     - currency_code
@@ -604,10 +604,9 @@ concepts:
     - size
     - source
     - tax_id
-    - title
     - account_number
     - account_source
-    - action
+    - active
     - additional
     - alias
     - associations
@@ -711,18 +710,6 @@ concepts:
       - status
       - state
       - Status
-    - name: custom_fields
-      tier: extended
-      providers: 21
-      share: 0.457
-      type: object
-      spellings:
-      - custom_fields
-      - customFields
-      - attributes
-      - fields
-      - custom
-      - properties
     - name: stage_id
       tier: extended
       providers: 20
@@ -734,6 +721,18 @@ concepts:
       - pipeline_stage_id
       - pipelineStageId
       - stageId
+    - name: custom_fields
+      tier: extended
+      providers: 19
+      share: 0.413
+      type: object
+      spellings:
+      - custom_fields
+      - customFields
+      - attributes
+      - custom
+      - properties
+      - fields
     - name: close_date
       tier: extended
       providers: 18
@@ -825,7 +824,7 @@ concepts:
       - probability
       - win_probability
       - Win Probability
-    long_tail_count: 599
+    long_tail_count: 596
     long_tail_sample:
     - closed_at
     - source
@@ -840,6 +839,7 @@ concepts:
     - contacts
     - external_id
     - notes
+    - stage_name
     - assignee_id
     - creator
     - is_closed
@@ -847,7 +847,6 @@ concepts:
     - number
     - priority
     - relationships
-    - stage_name
     - additional
     - attachments
     - company_name
@@ -857,6 +856,7 @@ concepts:
     - deleted_at
     - files
     - forecast_category
+    - image_url
     - is_won
     - label
     - last_activity
@@ -865,8 +865,7 @@ concepts:
     - next_cursor
     - next_page_token
     - opportunity_id
-    - order_id
-    - pipeline_name
+    - order
   lead:
     segments_seen:
       leads: 30
@@ -954,12 +953,40 @@ concepts:
       - origin
     - name: email
       tier: extended
-      providers: 12
-      share: 0.444
+      providers: 13
+      share: 0.481
       type: string
       spellings:
       - email
       - emailaddress1
+    - name: first_name
+      tier: extended
+      providers: 12
+      share: 0.444
+      type: string
+      spellings:
+      - first_name
+      - firstName
+      - firstname
+    - name: last_name
+      tier: extended
+      providers: 12
+      share: 0.444
+      type: string
+      spellings:
+      - last_name
+      - lastName
+      - lastname
+    - name: phone
+      tier: extended
+      providers: 12
+      share: 0.444
+      type: string
+      spellings:
+      - phone
+      - phone_numbers
+      - telephone1
+      - phoneNumbers
     - name: custom_fields
       tier: extended
       providers: 11
@@ -970,34 +997,27 @@ concepts:
       - customFields
       - properties
       - attributes
-    - name: first_name
+    - name: company_name
       tier: extended
-      providers: 11
-      share: 0.407
+      providers: 10
+      share: 0.37
       type: string
       spellings:
-      - first_name
-      - firstName
-      - firstname
-    - name: last_name
+      - company_name
+      - company
+      - companyName
+      - Company name
+      - companyname
+      - organization_name
+    - name: job_title
       tier: extended
-      providers: 11
-      share: 0.407
+      providers: 10
+      share: 0.37
       type: string
       spellings:
-      - last_name
-      - lastName
-      - lastname
-    - name: phone
-      tier: extended
-      providers: 11
-      share: 0.407
-      type: string
-      spellings:
-      - phone
-      - phone_numbers
-      - telephone1
-      - phoneNumbers
+      - title
+      - jobTitle
+      - jobtitle
     - name: updated_at
       tier: extended
       providers: 10
@@ -1009,27 +1029,15 @@ concepts:
       - modifiedDate
       - modifiedon
       - update_time
-    - name: company_name
+    - name: owner_id
       tier: extended
-      providers: 9
-      share: 0.333
+      providers: 8
+      share: 0.296
       type: string
       spellings:
-      - company_name
-      - company
-      - companyName
-      - Company name
-      - companyname
-      - organization_name
-    - name: job_title
-      tier: extended
-      providers: 9
-      share: 0.333
-      type: string
-      spellings:
-      - title
-      - jobTitle
-      - jobtitle
+      - owner_id
+      - assignedTo
+      - user_id
     - name: full_name
       tier: extended
       providers: 7
@@ -1039,15 +1047,6 @@ concepts:
       - name
       - full_name
       - display_name
-    - name: owner_id
-      tier: extended
-      providers: 7
-      share: 0.259
-      type: integer
-      spellings:
-      - owner_id
-      - assignedTo
-      - user_id
     - name: description
       tier: extended
       providers: 6
@@ -1065,23 +1064,23 @@ concepts:
       - tags
       - tagIds
       - label_ids
-    long_tail_count: 448
+    long_tail_count: 444
     long_tail_sample:
     - is_deleted
     - city
+    - address
+    - campaign_id
     - contact_id
     - created_by
     - notes
     - organization_id
     - priority
+    - type
     - url
-    - action
     - additional
-    - address
     - addresses
     - archived_at
     - associations
-    - campaign_id
     - campaign_name
     - company_domain
     - contact
@@ -1094,19 +1093,19 @@ concepts:
     - error
     - expected_close_date
     - html_url
+    - industry
     - last_activity_at
     - lead_ids
     - lead_source_id
     - lead_type
     - linkedin_url
+    - number
     - op
     - opportunities
     - owner
     - path
     - pipeline_id
     - preferred_contact_method
-    - remote_id
-    - result
   activity:
     segments_seen:
       activities: 31
@@ -1150,8 +1149,8 @@ concepts:
     properties:
     - name: type
       tier: core
-      providers: 23
-      share: 0.697
+      providers: 24
+      share: 0.727
       type: string
       spellings:
       - type
@@ -1162,36 +1161,36 @@ concepts:
       - engagementType
     - name: id
       tier: core
-      providers: 22
-      share: 0.667
+      providers: 23
+      share: 0.697
       type: string
       spellings:
       - id
+      - activity_id
       - _id
       - Id
-      - activity_id
     - name: created_at
       tier: core
-      providers: 17
-      share: 0.515
+      providers: 18
+      share: 0.545
       type: string
       spellings:
       - created_at
       - createdAt
       - date_created
+      - created
       - createdon
       - createdTime
       - add_time
-      - created
     - name: subject
       tier: extended
-      providers: 14
-      share: 0.424
+      providers: 16
+      share: 0.485
       type: string
       spellings:
+      - name
       - subject
       - title
-      - name
       - summary
     - name: updated_at
       tier: extended
@@ -1215,6 +1214,15 @@ concepts:
       - notes
       - body
       - public_description
+    - name: description
+      tier: extended
+      providers: 10
+      share: 0.303
+      type: string
+      spellings:
+      - description
+      - details
+      - Description
     - name: company_id
       tier: extended
       providers: 9
@@ -1229,23 +1237,14 @@ concepts:
       - org_id
       - accountId
       - organizationId
-    - name: description
-      tier: extended
-      providers: 8
-      share: 0.242
-      type: string
-      spellings:
-      - description
-      - details
-      - Description
-    long_tail_count: 369
+    long_tail_count: 380
     long_tail_sample:
     - contact_id
     - deal_id
+    - owner_id
     - created_by
     - done
     - due_at
-    - owner_id
     - activity_date
     - contact
     - custom_fields
@@ -1255,9 +1254,11 @@ concepts:
     - email
     - is_deleted
     - occurred_at
+    - priority
     - status
     - url
     - account
+    - comments
     - company_name
     - direction
     - end_date
@@ -1268,18 +1269,16 @@ concepts:
     - link
     - location
     - new_value
-    - next_page
     - old_value
     - organization
+    - owner
     - parent
-    - priority
     - relationships
     - resource
     - start_date
     - start_time
     - transcription
     - users
-    - access
   task:
     segments_seen:
       tasks: 43
@@ -1323,26 +1322,28 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 36
-      share: 0.878
+      providers: 37
+      share: 0.902
       type: string
       spellings:
       - id
       - taskId
       - _id
       - Id
+      - Guid
       - recordId
       - task_id
     - name: subject
       tier: core
-      providers: 30
-      share: 0.732
+      providers: 31
+      share: 0.756
       type: string
       spellings:
       - title
       - subject
       - name
       - Subject
+      - Name
     - name: due_at
       tier: core
       providers: 28
@@ -1358,8 +1359,8 @@ concepts:
       - dueTime
     - name: created_at
       tier: core
-      providers: 24
-      share: 0.585
+      providers: 25
+      share: 0.61
       type: string
       spellings:
       - createdAt
@@ -1415,8 +1416,8 @@ concepts:
       - isDone
     - name: updated_at
       tier: extended
-      providers: 15
-      share: 0.366
+      providers: 16
+      share: 0.39
       type: string
       spellings:
       - updatedAt
@@ -1430,6 +1431,15 @@ concepts:
       type: string
       spellings:
       - priority
+    - name: type
+      tier: extended
+      providers: 13
+      share: 0.317
+      type: string
+      spellings:
+      - type
+      - Type
+      - _type
     - name: owner_id
       tier: extended
       providers: 12
@@ -1441,15 +1451,6 @@ concepts:
       - owner_id
       - ownerId
       - UserId
-    - name: type
-      tier: extended
-      providers: 12
-      share: 0.293
-      type: string
-      spellings:
-      - type
-      - Type
-      - _type
     - name: created_by
       tier: extended
       providers: 10
@@ -1482,29 +1483,29 @@ concepts:
       - contact_id
       - contactId
       - person_id
-    long_tail_count: 418
+    long_tail_count: 412
     long_tail_sample:
     - custom_fields
     - tags
     - company_id
     - is_deleted
     - deal_id
+    - contact
     - duration
     - comments
-    - contact
     - lead_id
+    - url
+    - account
     - assignees
-    - attachments
     - relationships
     - reminder
     - updated_by
-    - url
-    - account
     - activity_type_id
     - additional
     - archived_at
     - associations
     - attachment_ids
+    - attachments
     - completed_by
     - completed_date
     - completed_time
@@ -1515,6 +1516,7 @@ concepts:
     - item_id
     - link
     - modified_time
+    - opportunity
     - owner
     - parent_task_id
     - project_id
@@ -1523,7 +1525,6 @@ concepts:
     - remote_id
     - result
     - revision
-    - row_id
   note:
     segments_seen:
       notes: 39
@@ -1667,7 +1668,7 @@ concepts:
       - AccountId
       - organization_id
       - org_id
-    long_tail_count: 202
+    long_tail_count: 199
     long_tail_sample:
     - deal_id
     - is_deleted
@@ -1677,7 +1678,6 @@ concepts:
     - author
     - parent_id
     - pinned_at
-    - total_count
     - updated_by
     - account
     - additional
@@ -1697,6 +1697,7 @@ concepts:
     - note_type_id
     - occurred_at
     - owner
+    - person
     - pinned
     - project
     - project_id
@@ -1743,45 +1744,55 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 18
-      share: 0.857
+      providers: 19
+      share: 0.905
       type: string
       spellings:
       - id
       - pipeline_id
     - name: name
       tier: core
-      providers: 17
-      share: 0.81
+      providers: 18
+      share: 0.857
       type: string
       spellings:
       - name
-    - name: stages
-      tier: extended
-      providers: 9
-      share: 0.429
-      type: array
-      spellings:
-      - stages
+      - label
     - name: created_at
       tier: extended
-      providers: 8
-      share: 0.381
+      providers: 7
+      share: 0.333
       type: string
       spellings:
       - created_at
       - created
       - add_time
       - creation_date
-    long_tail_count: 79
+    - name: stages
+      tier: extended
+      providers: 6
+      share: 0.286
+      type: array
+      spellings:
+      - stages
+    - name: order
+      tier: extended
+      providers: 5
+      share: 0.238
+      type: integer
+      spellings:
+      - order
+      - position
+      - order_nr
+      - sort_order
+    long_tail_count: 100
     long_tail_sample:
-    - is_default
+    - description
     - is_deleted
+    - color
+    - is_default
     - updated_at
     - currency
-    - description
-    - order
-    - color
     - status
     - steps
     - active
@@ -1789,29 +1800,30 @@ concepts:
     - archived_at
     - code
     - color_render_mode
+    - colour_code
+    - conversion_rate_percent
     - cover_image_url
     - creator
     - current_stage
     - custom_fields
-    - custom_object_types
+    - deals_lost
+    - deals_open
+    - deals_won
     - default_currency
     - default_pipeline
     - delete
     - display_value
+    - documents
     - expected_customer_lifetime_months
     - fields_tab_members
     - follows_default_team_currency
+    - forecast_category
+    - forecast_type
     - groups
     - has_follow_up_suggestion
-    - hubspot_defined_object_types
+    - has_readonly_form
+    - has_version_increment
     - is_active
     - is_deal_probability_enabled
     - is_delete_protected
     - is_hidden
-    - is_revenue
-    - key
-    - last_activity_at
-    - location_id
-    - lost_reasons
-    - maps
-    - member_count

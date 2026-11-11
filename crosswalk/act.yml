@@ -54,8 +54,8 @@ concepts:
       name: name
       created_at: created
       status: status
-      custom_fields: customFields
       stage_id: stage
+      custom_fields: customFields
       close_date: estimatedCloseDate
       probability: probability
     core_coverage: 0.75

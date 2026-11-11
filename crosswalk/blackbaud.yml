@@ -34,6 +34,7 @@ concepts:
       name:
       - name
       - organization_name
+      address: address
       updated_at: date_modified
       website: url
       custom_fields: custom_fields
@@ -71,8 +72,10 @@ concepts:
     properties:
       type: type
       id: id
+      subject: name
       updated_at: date_modified
       note: notes
+      description: description
     core_coverage: 0.667
     evidence:
     - openapi/_original/blackbaud-csrconnect-api-openapi.yml#GET /v1/employees/{affiliate_employee_id}/volunteer/ria/activities

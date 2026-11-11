@@ -26,10 +26,10 @@ concepts:
       - state
       - status
       email: email
-      custom_fields: customFields
       first_name: firstname
       last_name: lastname
       phone: phone
+      custom_fields: customFields
       owner_id: assignedTo
     core_coverage: 0.5
     evidence:

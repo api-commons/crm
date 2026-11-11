@@ -8,12 +8,16 @@ concepts:
     - task
     - tasks
     properties:
-      id: Id
-      subject: Subject
+      id:
+      - Id
+      - Guid
+      subject:
+      - Subject
+      - Name
       due_at: DueDate
       status: Status
-      owner_id: UserId
       type: Type
+      owner_id: UserId
       note: Note
     core_coverage: 0.75
     evidence:

@@ -10,8 +10,8 @@ concepts:
       id: id
       name: name
       created_at: created_at
-      updated_at: updated_at
       address: address
+      updated_at: updated_at
       website: url
       description: description
       type: type

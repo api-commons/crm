@@ -31,8 +31,8 @@ concepts:
       - name
       - displayName
       created_at: createdon
-      updated_at: modifiedon
       address: address1_line1
+      updated_at: modifiedon
       website: websiteurl
       description: description
       phone: telephone1
@@ -71,9 +71,9 @@ concepts:
       first_name: firstname
       last_name: lastname
       phone: telephone1
-      updated_at: modifiedon
       company_name: companyname
       job_title: jobtitle
+      updated_at: modifiedon
     core_coverage: 0.25
     evidence:
     - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#GET /leads

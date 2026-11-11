@@ -7,24 +7,27 @@ concepts:
     path_segment:
     - contacts
     properties:
-      email: email_addresses
+      email:
+      - email_addresses
+      - email
       id: id
       last_name: family_name
       first_name: given_name
       phone: phone_numbers
       job_title: job_title
       created_at:
-      - create_time
       - date_created
+      - create_time
       custom_fields: custom_fields
+      full_name: name
       updated_at:
-      - update_time
       - last_updated
+      - update_time
       company_id: account_id
       address: addresses
       company_name:
-      - company_name
       - company
+      - company_name
       tags: tag_ids
       owner_id: owner_id
     core_coverage: 1.0
@@ -42,8 +45,8 @@ concepts:
       id: id
       name: company_name
       created_at: create_time
-      updated_at: update_time
       address: address
+      updated_at: update_time
       website: website
       custom_fields: custom_fields
       phone: phone_number
@@ -68,10 +71,10 @@ concepts:
       - created_time
       updated_at: last_updated
       status: status
-      custom_fields: custom_fields
       stage_id:
       - stage_id
       - stage
+      custom_fields: custom_fields
       close_date: estimated_close_date
       contact_id: contact_id
       currency: currency_code
@@ -101,8 +104,8 @@ concepts:
       description: description
       done: completed
       priority: priority
-      owner_id: user_id
       type: type
+      owner_id: user_id
       contact_id: contact_id
     core_coverage: 1.0
     evidence:

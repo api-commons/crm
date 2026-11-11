@@ -30,6 +30,7 @@ concepts:
       - phone
       - phone_number
       job_title:
+      - title
       - Title
       - jobtitle
       - job_title
@@ -69,10 +70,10 @@ concepts:
       created_at:
       - created_at
       - CreatedDate
-      updated_at: updated_at
       address:
       - addresses
       - address
+      updated_at: updated_at
       website:
       - website
       - Website
@@ -87,12 +88,12 @@ concepts:
       industry:
       - industry
       - Industry
+      city: city
+      country: country
       domain: domain
       owner_id:
       - owner_id
       - OwnerId
-      city: city
-      country: country
     core_coverage: 1.0
     evidence:
     - openapi/_original/supaglue-crm-api-openapi.yml#GET /accounts
@@ -105,12 +106,14 @@ concepts:
     - opportunities
     properties:
       id: id
-      name: name
+      name:
+      - name
+      - title
       created_at: created_at
       updated_at: updated_at
       status: status
-      custom_fields: custom_fields
       stage_id: stage
+      custom_fields: custom_fields
       close_date: close_date
       company_id: account_id
       description: description
@@ -130,13 +133,13 @@ concepts:
       id: id
       created_at: created_at
       source: lead_source
-      custom_fields: custom_fields
       first_name: first_name
       last_name: last_name
       phone: phone_numbers
-      updated_at: updated_at
+      custom_fields: custom_fields
       company_name: company
       job_title: title
+      updated_at: updated_at
       owner_id: owner_id
     core_coverage: 0.75
     evidence:

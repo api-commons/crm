@@ -31,8 +31,8 @@ concepts:
       id: id
       name: name
       created_at: created_at
-      updated_at: updated_at
       address: address
+      updated_at: updated_at
       website: website
       type: company_type
       city: city

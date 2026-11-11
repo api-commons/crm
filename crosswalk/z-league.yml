@@ -14,6 +14,7 @@ concepts:
       created_at: created_at
       custom_fields: custom_fields
       updated_at: updated_at
+      owner_id: owner_id
     core_coverage: 0.75
     evidence:
     - openapi/_original/z-league-crm-lead-openapi.json#GET /api/agents/crm/leads

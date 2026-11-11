@@ -7,8 +7,9 @@ concepts:
     path_segment:
     - organizations
     properties:
+      id: id
       name: name
-    core_coverage: 0.333
+    core_coverage: 0.667
     evidence:
     - openapi/_original/poggio-labs-goalkeeper-openapi.json#GET /v1/organizations
     - openapi/_original/poggio-labs-goalkeeper-openapi.json#POST /v1/organizations
