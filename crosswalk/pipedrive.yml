@@ -131,7 +131,7 @@ concepts:
       updated_at: update_time
       priority: priority
       created_by: creator_id
-    core_coverage: 0.833
+    core_coverage: 1.0
     evidence:
     - openapi/_original/pipedrive-v1-openapi.yml#DELETE /tasks/{id}
     - openapi/_original/pipedrive-v1-openapi.yml#GET /projects/{id}/tasks

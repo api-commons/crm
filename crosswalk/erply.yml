@@ -14,7 +14,7 @@ concepts:
       updated_at: updatedAt
       type: type
       created_by: createdById
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/erply-assignments-openapi.json#DELETE /api/v1/task/{taskId}
     - openapi/_original/erply-assignments-openapi.json#GET /api/v1/report/task

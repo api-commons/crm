@@ -809,20 +809,13 @@ adopters:
   - contact
   - deal
   - lead
-- provider: zoho
-  apis_io: https://apis.io/providers/zoho/
-  crosswalk: crosswalk/zoho.yml
-  concepts:
-  - activity
-  - company
-  - contact
-  - note
-  - pipeline
-  - task
 - provider: zoho-crm
   apis_io: https://apis.io/providers/zoho-crm/
   crosswalk: crosswalk/zoho-crm.yml
   concepts:
+  - activity
+  - company
+  - contact
   - note
   - pipeline
   - task

@@ -41,7 +41,7 @@ concepts:
       id: id
       subject: name
       due_at: due_date
-    core_coverage: 0.5
+    core_coverage: 0.75
     evidence:
     - openapi/_original/wealthbox-openapi.yml#DELETE /tasks/{id}
     - openapi/_original/wealthbox-openapi.yml#GET /tasks

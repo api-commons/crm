@@ -113,7 +113,7 @@ concepts:
       status: status
       assignee_id: assignee_id
       priority: priority
-    core_coverage: 0.833
+    core_coverage: 0.75
     evidence:
     - openapi/_original/copper-developer-api-openapi.yml#DELETE /tasks/{id}
     - openapi/_original/copper-developer-api-openapi.yml#GET /tasks/{id}

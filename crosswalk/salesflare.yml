@@ -80,7 +80,7 @@ concepts:
       id: id
       description: description
       done: completed
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/salesflare-api-openapi.yml#DELETE /tasks/{id}
     - openapi/_original/salesflare-api-openapi.yml#GET /tasks

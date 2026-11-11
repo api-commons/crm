@@ -75,7 +75,7 @@ concepts:
       type: _type
       created_by: created_by
       contact_id: contact_id
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/close-api-openapi.json#DELETE /task/{id}/
     - openapi/_original/close-api-openapi.json#GET /task/
@@ -96,7 +96,7 @@ concepts:
       contact_id: contact_id
       owner_id: user_id
       company_id: organization_id
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/close-api-openapi.json#DELETE /activity/note/{id}/
     - openapi/_original/close-api-openapi.json#GET /activity/note/

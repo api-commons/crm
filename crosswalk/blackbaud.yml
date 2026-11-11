@@ -88,7 +88,7 @@ concepts:
       updated_at: date_modified
       type: type
       subject: title
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#GET /vendors/{vendor_id}/notes
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#POST /vendors/{vendor_id}/notes

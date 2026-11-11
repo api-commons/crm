@@ -37,7 +37,7 @@ concepts:
       updated_at: updated_at
       created_by: created_by
       note: content
-    core_coverage: 0.5
+    core_coverage: 0.75
     evidence:
     - openapi/_original/frontline-openapi-original.yml#DELETE /public/v1/objects/{name}/tasks/{id}
     - openapi/_original/frontline-openapi-original.yml#DELETE /public/v1/tables/{name}/tasks/{id}

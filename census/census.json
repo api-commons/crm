@@ -2806,11 +2806,6 @@
      "PUT item"
     ],
     "properties": {
-     "meta": "object",
-     "resources": "array",
-     "ids": "array",
-     "push_data": "object",
-     "contacts_meta": "object",
      "avatar_url": "string",
      "children": "array",
      "employers_info": "array",
@@ -2834,6 +2829,10 @@
      "stages_info": "array",
      "notice": "object",
      "contexts": "array",
+     "ids": "array",
+     "push_data": "object",
+     "contacts_meta": "object",
+     "resources": "array",
      "type": "string",
      "file_ids": "array"
     },
@@ -2859,17 +2858,27 @@
      "POST collection"
     ],
     "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "createdTime": "integer",
+     "deletedTime": "integer",
+     "emails": "array",
+     "addresses": "array",
+     "phones": "array",
+     "urls": "array",
+     "avatarUrl": "string",
+     "initials": "string",
+     "htmlUrl": "string",
+     "htmlUrlPath": "string",
+     "jobTitle": null,
+     "firstName": null,
+     "lastName": null,
+     "href": "string",
      "links": "object",
-     "contacts": "array",
      "op": "string",
      "path": "string",
      "value": "string",
-     "name": "string",
-     "description": "string",
-     "phones": "array",
-     "emails": "array",
-     "urls": "array",
-     "addresses": "array",
      "customFields": "object"
     },
     "evidence": [
@@ -3617,9 +3626,6 @@
      "record": "object",
      "warnings": "array",
      "custom_fields": "object",
-     "detail": "string",
-     "problem_type": "string",
-     "title": "string",
      "Id": "string",
      "Description": "string",
      "Email": "string",
@@ -6994,9 +7000,6 @@
      "record": "object",
      "warnings": "array",
      "custom_fields": "object",
-     "detail": "string",
-     "problem_type": "string",
-     "title": "string",
      "Id": "string",
      "Description": "string",
      "BillingCity": "string",
@@ -9240,8 +9243,6 @@
      "PUT item"
     ],
     "properties": {
-     "meta": "object",
-     "resources": "array",
      "updated": "string",
      "deal_id": "string",
      "deal_number": "integer",
@@ -11015,11 +11016,9 @@
      "isCurrentUserWatching": "boolean",
      "op": "string",
      "path": "string",
-     "meta": "object",
-     "links": "object",
-     "leads": "array",
      "manualValue": "string",
-     "customFields": "object"
+     "customFields": "object",
+     "links": "object"
     },
     "evidence": [
      "openapi/_original/nutshell-api.json#DELETE /leads/{id}",
@@ -11331,9 +11330,7 @@
      "last_modified_at": "string",
      "record": "object",
      "warnings": "array",
-     "custom_fields": "object",
-     "detail": "string",
-     "problem_type": "string"
+     "custom_fields": "object"
     },
     "evidence": [
      "openapi/_original/supaglue-crm-api-openapi.yml#GET /leads",
@@ -16127,8 +16124,6 @@
      "owner": "object",
      "updated": "string",
      "contact_ids": "array",
-     "meta": "object",
-     "resources": "array",
      "note_id": "string",
      "title": "string",
      "body": "string",

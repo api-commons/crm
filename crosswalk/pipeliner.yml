@@ -116,7 +116,7 @@ concepts:
       contact_id: contact_id
       owner_id: owner_id
       company_id: account_id
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/pipeliner-openapi.json#DELETE /entities/Notes/{id}
     - openapi/_original/pipeliner-openapi.json#GET /entities/Notes

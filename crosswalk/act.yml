@@ -73,7 +73,7 @@ concepts:
       subject: subject
       created_at: created
       description: details
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/act-web-api-swagger.json#DELETE /api/tasks
     - openapi/_original/act-web-api-swagger.json#DELETE /api/tasks/{taskId}
@@ -86,7 +86,7 @@ concepts:
     properties:
       id: id
       created_at: created
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/act-supplemental-files-api-openapi.yml#DELETE /api/attachments/notes/{id}
     - openapi/_original/act-supplemental-files-api-openapi.yml#GET /api/attachments/notes/{id}

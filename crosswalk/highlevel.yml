@@ -81,7 +81,7 @@ concepts:
       done: completed
       note: body
       contact_id: contactId
-    core_coverage: 0.5
+    core_coverage: 0.75
     evidence:
     - openapi/_original/highlevel-contacts-openapi.json#DELETE /contacts/{contactId}/tasks/{taskId}
     - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/{contactId}/tasks
@@ -98,7 +98,7 @@ concepts:
       subject: title
       contact_id: contactId
       owner_id: userId
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/highlevel-calendars-openapi.json#DELETE /calendars/appointments/{appointmentId}/notes/{noteId}
     - openapi/_original/highlevel-calendars-openapi.json#GET /calendars/appointments/{appointmentId}/notes

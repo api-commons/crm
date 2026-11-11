@@ -13,16 +13,16 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| contact | 79 | 70 | email 81%, id 79%, last_name 76%, first_name 74%, phone 64%, job_title 54%, created_at 51%, custom_fields 51% | contacts 63, contact 18, people 10, persons 4 |
+| contact | 79 | 70 | email 81%, id 80%, last_name 77%, first_name 76%, phone 64%, job_title 56%, created_at 53%, custom_fields 51% | contacts 63, contact 18, people 10, persons 4 |
 | company | 57 | 53 | id 81%, name 81%, created_at 68% | accounts 27, companies 26, organizations 12, account 11 |
 | deal | 53 | 46 | id 83%, name 76%, created_at 65%, updated_at 52% | opportunities 32, deals 16, opportunity 7, deal 4 |
 | lead | 31 | 27 | id 82%, status 59%, created_at 56%, source 52% | leads 30, lead 4 |
 | activity | 40 | 32 | type 69%, id 66%, created_at 53% | activities 31, activity 8, engagements 2 |
-| task | 49 | 42 | id 88%, subject 74%, due_at 67%, created_at 60%, description 50%, status 50% | tasks 44, task 7, todos 1 |
-| note | 42 | 35 | id 100%, created_at 71%, content 63% | notes 40, note 4 |
-| pipeline | 26 | 22 | id 86%, name 77% | pipelines 22, pipeline 6 |
+| task | 48 | 41 | id 88%, subject 73%, due_at 68%, created_at 58% | tasks 43, task 7, todos 1 |
+| note | 41 | 34 | id 100%, created_at 74%, content 65%, updated_at 50% | notes 39, note 4 |
+| pipeline | 25 | 21 | id 86%, name 81% | pipelines 22, pipeline 5 |
 
-Cohort: 177 providers with harvested OpenAPI, 112 crosswalks. Of the providers exposing a contact: 92% create, 90% list, 89% fetch, 75% update, 63% delete. Generated 2026-11-10 by build.py.
+Cohort: 177 providers with harvested OpenAPI, 111 crosswalks. Of the providers exposing a contact: 92% create, 90% list, 89% fetch, 75% update, 63% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -62,9 +62,8 @@ These are calls, not measurements, recorded so they can be revisited as the meth
 - **One company counts once.** Where the catalog lists a company more than once (Keap and
   Infusionsoft, three Microsoft Dynamics listings), the listings are merged under
   `duplicates:` rather than dropped, so no evidence is lost.
-- **Properties are snake_case.** It began as a near-tie in this cohort; across CRM, help
-  desk and commerce snake_case now leads (200 providers to 180), and references follow
-  (`_id` 165, `Id` 162). camelCase providers map through the crosswalk without loss.
+- **Properties are snake_case** -- a decision made across all contexts; see
+  [Schema Commons](https://github.com/api-commons/schema-commons#decisions-that-cross-contexts).
 
 ## Rebuild
 

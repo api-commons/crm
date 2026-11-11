@@ -45,7 +45,7 @@ concepts:
       status: status
       assignee_id: assigneeId
       type: type
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/tasks/{taskId}
     - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/customers/{customerId}/tasks
@@ -61,7 +61,7 @@ concepts:
       created_by: createdBy
       type: type
       subject: title
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/notes
     - openapi/_original/agencyzoom-openapi.yml#POST /v1/api/customers/{customerId}/notes

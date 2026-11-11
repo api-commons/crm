@@ -15,7 +15,7 @@ concepts:
       owner_id: UserId
       type: Type
       note: Note
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/bloomerang-openapi.json#DELETE /task/{id}
     - openapi/_original/bloomerang-openapi.json#GET /task/{id}
@@ -30,7 +30,7 @@ concepts:
       id: Id
       type: Type
       company_id: AccountId
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/bloomerang-openapi.json#DELETE /note/{id}
     - openapi/_original/bloomerang-openapi.json#GET /note/{id}

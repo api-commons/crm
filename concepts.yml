@@ -177,3 +177,4 @@ duplicates:
   capsule: [capsule-crm]
   apollo-io: [apollo-api-documentation]
   microsoft-dynamics-365: [microsoft-dynamics, microsoft-dynamics-365-sales]
+  zoho-crm: [zoho]

@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/pipeline.json",
   "title": "Pipeline",
-  "description": "The common pipeline in Customer Relationship Management, distilled from 22 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common pipeline in Customer Relationship Management, distilled from 21 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.864,
-      "x-commons-providers": 19,
+      "x-commons-share": 0.857,
+      "x-commons-providers": 18,
       "x-commons-spellings": [
         "id",
         "pipeline_id"
@@ -18,7 +18,7 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.773,
+      "x-commons-share": 0.81,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "name"
@@ -27,7 +27,7 @@
     "stages": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.409,
+      "x-commons-share": 0.429,
       "x-commons-providers": 9,
       "x-commons-spellings": [
         "stages"
@@ -36,7 +36,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.364,
+      "x-commons-share": 0.381,
       "x-commons-providers": 8,
       "x-commons-spellings": [
         "created_at",
@@ -45,17 +45,6 @@
         "creation_date"
       ],
       "format": "date-time"
-    },
-    "is_default": {
-      "type": "boolean",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.227,
-      "x-commons-providers": 5,
-      "x-commons-spellings": [
-        "is_default",
-        "default",
-        "isDefault"
-      ]
     }
   },
   "required": [
@@ -64,7 +53,7 @@
   "x-commons": {
     "context": "crm",
     "concept": "pipeline",
-    "providers": 22,
+    "providers": 21,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

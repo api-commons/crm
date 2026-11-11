@@ -90,7 +90,7 @@ concepts:
       priority: priority
       owner_id: userId
       note: body
-    core_coverage: 0.833
+    core_coverage: 0.75
     evidence:
     - openapi/_original/sendpulse-crm-openapi.yml#DELETE /task-tags/{tagId}/task/{taskId}
     - openapi/_original/sendpulse-crm-openapi.yml#DELETE /task-to-task/{taskHeadId}/task/{taskId}

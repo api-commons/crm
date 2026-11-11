@@ -13,6 +13,6 @@ concepts:
       - due_time
       description: description
       status: status
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/podio-openapi.yml#POST /task/

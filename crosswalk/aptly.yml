@@ -45,7 +45,7 @@ concepts:
       owner_id: userId
       type: type
       note: note
-    core_coverage: 0.833
+    core_coverage: 0.75
     evidence:
     - openapi/_original/aptly-openapi.yml#GET /api/tasks/{taskId}
     - openapi/_original/aptly-openapi.yml#POST /api/tasks

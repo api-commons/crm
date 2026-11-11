@@ -61,7 +61,7 @@ concepts:
       content: body
       type: type
       subject: name
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /contacts/{contactid}/notes/{id}
     - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /properties/{propertyid}/notes/{id}

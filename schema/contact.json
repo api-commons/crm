@@ -25,8 +25,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.786,
-      "x-commons-providers": 55,
+      "x-commons-share": 0.8,
+      "x-commons-providers": 56,
       "x-commons-spellings": [
         "id",
         "contactId",
@@ -41,8 +41,8 @@
     "last_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.757,
-      "x-commons-providers": 53,
+      "x-commons-share": 0.771,
+      "x-commons-providers": 54,
       "x-commons-spellings": [
         "lastName",
         "last_name",
@@ -56,8 +56,8 @@
     "first_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.743,
-      "x-commons-providers": 52,
+      "x-commons-share": 0.757,
+      "x-commons-providers": 53,
       "x-commons-spellings": [
         "firstName",
         "first_name",
@@ -87,8 +87,8 @@
     "job_title": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.543,
-      "x-commons-providers": 38,
+      "x-commons-share": 0.557,
+      "x-commons-providers": 39,
       "x-commons-spellings": [
         "title",
         "jobTitle",
@@ -102,15 +102,15 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.514,
-      "x-commons-providers": 36,
+      "x-commons-share": 0.529,
+      "x-commons-providers": 37,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
         "created",
         "date_created",
-        "creation_date",
         "createdTime",
+        "creation_date",
         "createdDate",
         "create_time"
       ],

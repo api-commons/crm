@@ -91,7 +91,7 @@ concepts:
     properties:
       description: description
       owner_id: userId
-    core_coverage: 0.167
+    core_coverage: 0.0
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/tasks/{id}
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/import/tasks/{id}
@@ -104,7 +104,6 @@ concepts:
     - pipeline
     properties:
       name: name
-      is_default: isDefault
     core_coverage: 0.5
     evidence:
     - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/pipelines/{id}

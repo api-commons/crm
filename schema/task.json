@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/task.json",
   "title": "Task",
-  "description": "The common task in Customer Relationship Management, distilled from 42 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common task in Customer Relationship Management, distilled from 41 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.881,
-      "x-commons-providers": 37,
+      "x-commons-share": 0.878,
+      "x-commons-providers": 36,
       "x-commons-spellings": [
         "id",
         "taskId",
@@ -22,8 +22,8 @@
     "subject": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.738,
-      "x-commons-providers": 31,
+      "x-commons-share": 0.732,
+      "x-commons-providers": 30,
       "x-commons-spellings": [
         "title",
         "subject",
@@ -34,7 +34,7 @@
     "due_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.667,
+      "x-commons-share": 0.683,
       "x-commons-providers": 28,
       "x-commons-spellings": [
         "due_date",
@@ -50,25 +50,25 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.595,
-      "x-commons-providers": 25,
+      "x-commons-share": 0.585,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
         "created",
         "createdTime",
-        "created_time",
         "date_created",
         "creation_date",
-        "create_time"
+        "create_time",
+        "add_time"
       ],
       "format": "date-time"
     },
     "description": {
       "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 21,
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.488,
+      "x-commons-providers": 20,
       "x-commons-spellings": [
         "description",
         "details"
@@ -76,9 +76,9 @@
     },
     "status": {
       "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 21,
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.488,
+      "x-commons-providers": 20,
       "x-commons-spellings": [
         "status",
         "Status",
@@ -89,7 +89,7 @@
     "assignee_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.405,
+      "x-commons-share": 0.415,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "assigneeId",
@@ -104,7 +104,7 @@
     "done": {
       "type": "boolean",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.405,
+      "x-commons-share": 0.415,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "completed",
@@ -118,7 +118,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.357,
+      "x-commons-share": 0.366,
       "x-commons-providers": 15,
       "x-commons-spellings": [
         "updatedAt",
@@ -131,7 +131,7 @@
     "priority": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
+      "x-commons-share": 0.341,
       "x-commons-providers": 14,
       "x-commons-spellings": [
         "priority"
@@ -140,7 +140,7 @@
     "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
+      "x-commons-share": 0.293,
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "userId",
@@ -153,7 +153,7 @@
     "type": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
+      "x-commons-share": 0.293,
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "type",
@@ -164,8 +164,8 @@
     "created_by": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.262,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.244,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "created_by",
         "creator_id",
@@ -178,7 +178,7 @@
     "note": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.238,
+      "x-commons-share": 0.244,
       "x-commons-providers": 10,
       "x-commons-spellings": [
         "notes",
@@ -191,7 +191,7 @@
     "contact_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.214,
+      "x-commons-share": 0.22,
       "x-commons-providers": 9,
       "x-commons-spellings": [
         "contact_id",
@@ -206,7 +206,7 @@
   "x-commons": {
     "context": "crm",
     "concept": "task",
-    "providers": 42,
+    "providers": 41,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

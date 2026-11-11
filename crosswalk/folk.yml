@@ -49,7 +49,7 @@ concepts:
       id: id
       created_at: createdAt
       content: content
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/folk-openapi.yml#DELETE /v1/notes/{noteId}
     - openapi/_original/folk-openapi.yml#GET /v1/notes

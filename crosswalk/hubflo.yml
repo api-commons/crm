@@ -51,7 +51,7 @@ concepts:
       description: description
       done: completed
       contact_id: contact_id
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/tasks
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/tasks/{id}
@@ -65,7 +65,7 @@ concepts:
       id: note_id
       content: content
       subject: title
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes/{id}

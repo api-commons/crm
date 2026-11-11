@@ -65,7 +65,7 @@ concepts:
     properties:
       id: id
       type: type
-    core_coverage: 0.167
+    core_coverage: 0.25
     evidence:
     - openapi/_original/street-co-open-api-openapi.json#GET /todos
     - openapi/_original/street-co-open-api-openapi.json#POST /todos
@@ -77,7 +77,7 @@ concepts:
     properties:
       id: id
       type: type
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/street-co-open-api-openapi.json#POST /notes
     - openapi/_original/street-co-open-api-openapi.yml#POST /notes

@@ -70,7 +70,7 @@ concepts:
       done: done
       updated_at: updatedAt
       note: notes
-    core_coverage: 0.5
+    core_coverage: 0.75
     evidence:
     - openapi/_original/brevo-sales-crm-openapi.yml#DELETE /crm/tasks/{id}
     - openapi/_original/brevo-sales-crm-openapi.yml#GET /crm/tasks

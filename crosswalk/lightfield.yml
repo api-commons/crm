@@ -55,7 +55,7 @@ concepts:
       id: id
       created_at: createdAt
       updated_at: updatedAt
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/lightfield-openapi-original.yml#GET /v1/tasks
     - openapi/_original/lightfield-openapi-original.yml#GET /v1/tasks/{id}
@@ -68,7 +68,7 @@ concepts:
       id: id
       created_at: createdAt
       updated_at: updatedAt
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/lightfield-openapi-original.yml#GET /v1/notes
     - openapi/_original/lightfield-openapi-original.yml#GET /v1/notes/{id}

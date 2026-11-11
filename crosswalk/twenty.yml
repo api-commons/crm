@@ -73,7 +73,7 @@ concepts:
       assignee_id: assigneeId
       updated_at: updatedAt
       created_by: createdBy
-    core_coverage: 0.833
+    core_coverage: 1.0
     evidence:
     - openapi/_original/twenty-core-api-openapi.yml#DELETE /tasks/{id}
     - openapi/_original/twenty-core-api-openapi.yml#GET /tasks
@@ -89,7 +89,7 @@ concepts:
       updated_at: updatedAt
       created_by: createdBy
       subject: title
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/twenty-core-api-openapi.yml#DELETE /notes/{id}
     - openapi/_original/twenty-core-api-openapi.yml#GET /notes

@@ -11,7 +11,7 @@ concepts:
       status: status
       priority: priority
       owner_id: userId
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/gong-openapi.json#PATCH /v2/tasks/{taskId}
     - openapi/_original/gong-openapi.json#POST /v2/tasks

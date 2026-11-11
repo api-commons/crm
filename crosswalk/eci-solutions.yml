@@ -86,7 +86,7 @@ concepts:
     properties:
       id: noteId
       created_by: createdBy
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/eci-solutions-lasso-crm-openapi.yml#DELETE /registrants/{registrantId}/notes/{noteId}
     - openapi/_original/eci-solutions-lasso-crm-openapi.yml#POST /registrants/{registrantId}/notes

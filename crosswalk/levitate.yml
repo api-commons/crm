@@ -49,7 +49,7 @@ concepts:
       created_at: creationDate
       content: body
       created_by: createdBy
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/levitate-public-v1-openapi.json#DELETE /public/v1/Notes/{id}
     - openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Notes

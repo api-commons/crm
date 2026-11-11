@@ -471,7 +471,7 @@ paths:
       tags:
       - Tasks
       x-commons-tier: core
-      x-commons-share: 0.939
+      x-commons-share: 0.938
       responses:
         '200':
           description: OK
@@ -490,7 +490,7 @@ paths:
       tags:
       - Tasks
       x-commons-tier: core
-      x-commons-share: 0.837
+      x-commons-share: 0.833
       responses:
         '200':
           description: OK
@@ -517,7 +517,7 @@ paths:
       tags:
       - Tasks
       x-commons-tier: core
-      x-commons-share: 0.755
+      x-commons-share: 0.75
       responses:
         '200':
           description: OK
@@ -530,7 +530,7 @@ paths:
       tags:
       - Tasks
       x-commons-tier: core
-      x-commons-share: 0.735
+      x-commons-share: 0.729
       responses:
         '200':
           description: OK
@@ -548,7 +548,7 @@ paths:
       tags:
       - Tasks
       x-commons-tier: core
-      x-commons-share: 0.612
+      x-commons-share: 0.604
       responses:
         '200':
           description: OK
@@ -562,7 +562,7 @@ paths:
       tags:
       - Notes
       x-commons-tier: core
-      x-commons-share: 0.905
+      x-commons-share: 0.902
       responses:
         '200':
           description: OK
@@ -587,7 +587,7 @@ paths:
       tags:
       - Notes
       x-commons-tier: core
-      x-commons-share: 0.881
+      x-commons-share: 0.878
       responses:
         '200':
           description: OK
@@ -608,7 +608,7 @@ paths:
       tags:
       - Notes
       x-commons-tier: core
-      x-commons-share: 0.667
+      x-commons-share: 0.659
       responses:
         '200':
           description: OK
@@ -621,7 +621,7 @@ paths:
       tags:
       - Notes
       x-commons-tier: core
-      x-commons-share: 0.643
+      x-commons-share: 0.634
       responses:
         '200':
           description: OK
@@ -639,7 +639,7 @@ paths:
       tags:
       - Notes
       x-commons-tier: core
-      x-commons-share: 0.619
+      x-commons-share: 0.61
       responses:
         '200':
           description: OK
@@ -678,7 +678,7 @@ paths:
       tags:
       - Pipelines
       x-commons-tier: core
-      x-commons-share: 0.577
+      x-commons-share: 0.56
       responses:
         '200':
           description: OK
@@ -699,7 +699,7 @@ paths:
       tags:
       - Pipelines
       x-commons-tier: core
-      x-commons-share: 0.654
+      x-commons-share: 0.64
       responses:
         '200':
           description: OK
@@ -711,8 +711,8 @@ paths:
       summary: Update a pipeline
       tags:
       - Pipelines
-      x-commons-tier: core
-      x-commons-share: 0.5
+      x-commons-tier: extended
+      x-commons-share: 0.48
       responses:
         '200':
           description: OK
@@ -730,7 +730,7 @@ paths:
       tags:
       - Pipelines
       x-commons-tier: extended
-      x-commons-share: 0.423
+      x-commons-share: 0.44
       responses:
         '200':
           description: OK
