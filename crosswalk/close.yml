@@ -29,8 +29,8 @@ concepts:
     properties:
       id: id
       created_at: date_created
-      status: status
       custom_fields: custom_fields
+      status: status
       company_id: organization_id
       contact_id: contact_id
       owner_id: user_id
@@ -46,9 +46,11 @@ concepts:
     path_segment:
     - lead
     properties:
-      id: id
-      created_at: date_created
+      id:
+      - id
+      - lead_id
       status: status_id
+      created_at: date_created
       source: source
       full_name:
       - display_name

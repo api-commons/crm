@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: email
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phone
       created_at: created_at
       custom_fields: custom_fields
@@ -27,8 +27,8 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       updated_at: updated_at
       custom_fields: custom_fields

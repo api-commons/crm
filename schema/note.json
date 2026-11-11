@@ -8,10 +8,12 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.914,
-      "x-commons-providers": 32,
+      "x-commons-share": 1.0,
+      "x-commons-providers": 35,
       "x-commons-spellings": [
         "id",
+        "noteId",
+        "note_id",
         "record_id",
         "Id",
         "_id"
@@ -136,6 +138,8 @@
     "context": "crm",
     "concept": "note",
     "providers": 35,
-    "generated": "2026-11-10"
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
   }
 }

@@ -8,9 +8,9 @@ concepts:
     - persons
     properties:
       email: emailAddresses
+      id: id
       last_name: lastName
       first_name: firstName
-      id: id
       custom_fields: fields
     core_coverage: 0.625
     evidence:
@@ -20,8 +20,8 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       custom_fields: fields
       domain: domain
     core_coverage: 0.667

@@ -9,9 +9,11 @@ concepts:
     - people
     properties:
       email: email
+      id:
+      - _id
+      - contactId
       last_name: lastName
       first_name: firstName
-      id: _id
       phone: phone
       job_title: jobTitle
       created_at: createdAt
@@ -31,8 +33,10 @@ concepts:
     path_segment:
     - companies
     properties:
+      id:
+      - _id
+      - companyId
       name: name
-      id: _id
       created_at: createdAt
       custom_fields: fields
       description: description

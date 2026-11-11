@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Customer Relationship Management (API Commons)
-  version: '2026-11-10'
+  version: 0.1.0-draft.20261110
   description: 'The common Customer Relationship Management interface, distilled from the harvested OpenAPI of 177
     providers in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already
     shares, measured, so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
@@ -107,7 +107,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.877
+      x-commons-share: 0.895
       responses:
         '200':
           description: OK
@@ -198,7 +198,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.808
+      x-commons-share: 0.811
       responses:
         '200':
           description: OK
@@ -223,7 +223,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.808
+      x-commons-share: 0.811
       responses:
         '200':
           description: OK
@@ -244,7 +244,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.788
+      x-commons-share: 0.774
       responses:
         '200':
           description: OK
@@ -257,7 +257,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.635
+      x-commons-share: 0.623
       responses:
         '200':
           description: OK
@@ -270,7 +270,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.635
+      x-commons-share: 0.623
       responses:
         '200':
           description: OK
@@ -289,7 +289,7 @@ paths:
       tags:
       - Leads
       x-commons-tier: core
-      x-commons-share: 0.867
+      x-commons-share: 0.871
       responses:
         '200':
           description: OK
@@ -314,7 +314,7 @@ paths:
       tags:
       - Leads
       x-commons-tier: core
-      x-commons-share: 0.833
+      x-commons-share: 0.839
       responses:
         '200':
           description: OK
@@ -335,7 +335,7 @@ paths:
       tags:
       - Leads
       x-commons-tier: core
-      x-commons-share: 0.6
+      x-commons-share: 0.613
       responses:
         '200':
           description: OK
@@ -348,7 +348,7 @@ paths:
       tags:
       - Leads
       x-commons-tier: core
-      x-commons-share: 0.567
+      x-commons-share: 0.548
       responses:
         '200':
           description: OK
@@ -366,7 +366,7 @@ paths:
       tags:
       - Leads
       x-commons-tier: extended
-      x-commons-share: 0.467
+      x-commons-share: 0.452
       responses:
         '200':
           description: OK
@@ -380,7 +380,7 @@ paths:
       tags:
       - Activities
       x-commons-tier: core
-      x-commons-share: 0.769
+      x-commons-share: 0.775
       responses:
         '200':
           description: OK
@@ -401,11 +401,11 @@ paths:
           type: string
     post:
       operationId: createActivity
-      summary: Create a activity
+      summary: Create an activity
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.462
+      x-commons-share: 0.45
       responses:
         '200':
           description: OK
@@ -422,11 +422,11 @@ paths:
     - $ref: '#/components/parameters/activity_id'
     get:
       operationId: getActivity
-      summary: Get a activity
+      summary: Get an activity
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.385
+      x-commons-share: 0.375
       responses:
         '200':
           description: OK
@@ -435,11 +435,11 @@ paths:
               schema: *id005
     delete:
       operationId: deleteActivity
-      summary: Delete a activity
+      summary: Delete an activity
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.231
+      x-commons-share: 0.225
       responses:
         '200':
           description: OK
@@ -448,11 +448,11 @@ paths:
               schema: *id005
     patch:
       operationId: updateActivity
-      summary: Update a activity
+      summary: Update an activity
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.231
+      x-commons-share: 0.225
       responses:
         '200':
           description: OK

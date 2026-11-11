@@ -2,23 +2,25 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/deal.json",
   "title": "Deal",
-  "description": "The common deal in Customer Relationship Management, distilled from 45 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common deal in Customer Relationship Management, distilled from 46 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.822,
-      "x-commons-providers": 37,
+      "x-commons-share": 0.826,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "id",
-        "Id"
+        "deal_id",
+        "Id",
+        "dealId"
       ]
     },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.778,
+      "x-commons-share": 0.761,
       "x-commons-providers": 35,
       "x-commons-spellings": [
         "name",
@@ -30,7 +32,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.667,
+      "x-commons-share": 0.652,
       "x-commons-providers": 30,
       "x-commons-spellings": [
         "created_at",
@@ -47,7 +49,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.533,
+      "x-commons-share": 0.522,
       "x-commons-providers": 24,
       "x-commons-spellings": [
         "updated_at",
@@ -60,22 +62,11 @@
       ],
       "format": "date-time"
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.467,
-      "x-commons-providers": 21,
-      "x-commons-spellings": [
-        "status",
-        "state",
-        "Status"
-      ]
-    },
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.457,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
         "custom_fields",
         "customFields",
@@ -85,10 +76,21 @@
         "properties"
       ]
     },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.457,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "Status"
+      ]
+    },
     "stage_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
+      "x-commons-share": 0.435,
       "x-commons-providers": 20,
       "x-commons-spellings": [
         "stage",
@@ -101,7 +103,7 @@
     "close_date": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
+      "x-commons-share": 0.391,
       "x-commons-providers": 18,
       "x-commons-spellings": [
         "close_date",
@@ -116,7 +118,7 @@
     "company_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.378,
+      "x-commons-share": 0.37,
       "x-commons-providers": 17,
       "x-commons-spellings": [
         "company_id",
@@ -132,7 +134,7 @@
     "contact_id": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.289,
+      "x-commons-share": 0.283,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "contact_id",
@@ -145,7 +147,7 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.289,
+      "x-commons-share": 0.283,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "currency",
@@ -155,7 +157,7 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.289,
+      "x-commons-share": 0.283,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "description",
@@ -166,7 +168,7 @@
     "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.289,
+      "x-commons-share": 0.283,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "owner_id",
@@ -179,7 +181,7 @@
     "pipeline_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.289,
+      "x-commons-share": 0.283,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "pipeline_id",
@@ -190,7 +192,7 @@
     "amount": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.244,
+      "x-commons-share": 0.239,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "amount"
@@ -199,29 +201,13 @@
     "probability": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.244,
+      "x-commons-share": 0.239,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "probability",
         "win_probability",
         "Win Probability"
       ]
-    },
-    "closed_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.2,
-      "x-commons-providers": 9,
-      "x-commons-spellings": [
-        "closed_date",
-        "actual_close_date",
-        "closed_at",
-        "actualCloseDate",
-        "close_time",
-        "won_time",
-        "closedAt"
-      ],
-      "format": "date-time"
     }
   },
   "required": [
@@ -230,7 +216,9 @@
   "x-commons": {
     "context": "crm",
     "concept": "deal",
-    "providers": 45,
-    "generated": "2026-11-10"
+    "providers": 46,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
   }
 }

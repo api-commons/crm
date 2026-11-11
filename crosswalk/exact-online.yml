@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: Email
+      id: ID
       last_name: LastName
       first_name: FirstName
-      id: ID
       phone: Phone
     core_coverage: 0.625
     evidence:
@@ -20,8 +20,8 @@ concepts:
     path_segment:
     - accounts
     properties:
-      name: Name
       id: ID
+      name: Name
       phone: Phone
       type: Type
     core_coverage: 0.667

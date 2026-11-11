@@ -9,9 +9,9 @@ concepts:
     - people
     properties:
       email: email
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phone_numbers
       job_title: title
       created_at: created_at
@@ -35,8 +35,8 @@ concepts:
     - accounts
     - organizations
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       phone: phone
       domain: domain
@@ -61,9 +61,6 @@ concepts:
       owner_id: owner_id
       amount: amount
       probability: probability
-      closed_at:
-      - closed_date
-      - actual_close_date
     core_coverage: 0.75
     evidence:
     - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /opportunities/{opportunity_id}

@@ -22,6 +22,22 @@
       ],
       "format": "email"
     },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.786,
+      "x-commons-providers": 55,
+      "x-commons-spellings": [
+        "id",
+        "contactId",
+        "contact_id",
+        "_id",
+        "Id",
+        "uuid",
+        "record_id",
+        "contactID"
+      ]
+    },
     "last_name": {
       "type": "string",
       "x-commons-tier": "core",
@@ -50,20 +66,6 @@
         "given_name",
         "FIRST_NAME",
         "First Name"
-      ]
-    },
-    "id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.743,
-      "x-commons-providers": 52,
-      "x-commons-spellings": [
-        "id",
-        "_id",
-        "Id",
-        "uuid",
-        "record_id",
-        "ID"
       ]
     },
     "phone": {
@@ -237,6 +239,8 @@
     "context": "crm",
     "concept": "contact",
     "providers": 70,
-    "generated": "2026-11-10"
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
   }
 }

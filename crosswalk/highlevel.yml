@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: email
+      id: id
       last_name: lastName
       first_name: firstName
-      id: id
       phone: phone
       custom_fields: customFields
       full_name: name
@@ -29,10 +29,11 @@ concepts:
     - accounts
     - companies
     properties:
-      name: name
       id:
       - id
       - _id
+      - companyId
+      name: name
       created_at: createdAt
       updated_at: updatedAt
       address: address
@@ -57,8 +58,8 @@ concepts:
       name: name
       created_at: createdAt
       updated_at: updatedAt
-      status: status
       custom_fields: customFields
+      status: status
       stage_id: pipelineStageId
       contact_id: contactId
       owner_id: assignedTo

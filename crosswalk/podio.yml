@@ -7,11 +7,12 @@ concepts:
     path_segment:
     - task
     properties:
+      id: task_id
       due_at:
       - due_date
       - due_time
       description: description
       status: status
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/podio-openapi.yml#POST /task/

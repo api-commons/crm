@@ -9,9 +9,9 @@ concepts:
     - contacts
     properties:
       email: email
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phone
       job_title: title
       custom_fields: attributes

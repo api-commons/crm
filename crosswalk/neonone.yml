@@ -7,9 +7,10 @@ concepts:
     path_segment:
     - contacts
     properties:
+      id: contactId
       last_name: lastName
       first_name: firstName
-    core_coverage: 0.25
+    core_coverage: 0.375
     evidence:
     - openapi/_original/neonone-openapi.yml#DELETE /accounts/{id}/contacts/{contactId}
     - openapi/_original/neonone-openapi.yml#GET /accounts/{id}/contacts

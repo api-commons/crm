@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: emailAddress
+      id: id
       last_name: lastName
       first_name: firstName
-      id: id
       job_title: jobTitle
       created_at: created
       custom_fields: customFields
@@ -28,8 +28,8 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: created
       address:
       - address
@@ -53,12 +53,11 @@ concepts:
       id: id
       name: name
       created_at: created
-      status: status
       custom_fields: customFields
+      status: status
       stage_id: stage
       close_date: estimatedCloseDate
       probability: probability
-      closed_at: actualCloseDate
     core_coverage: 0.75
     evidence:
     - openapi/_original/act-web-api-swagger.json#DELETE /api/opportunities/{opportunityId}

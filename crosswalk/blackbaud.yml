@@ -8,11 +8,12 @@ concepts:
     - contacts
     properties:
       email: email
-      last_name: last_name
-      first_name: first_name
       id:
+      - contact_id
       - record_id
       - id
+      last_name: last_name
+      first_name: first_name
       job_title:
       - title
       - position
@@ -29,10 +30,10 @@ concepts:
     - organizations
     - accounts
     properties:
+      id: id
       name:
       - name
       - organization_name
-      id: id
       updated_at: date_modified
       website: url
       custom_fields: custom_fields

@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: emailAddresses
+      id: id
       last_name: lastName
       first_name: firstName
-      id: id
       phone: phoneNumbers
       job_title: jobTitle
       created_at: creationDate
@@ -29,8 +29,8 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       address: address
       phone: phoneNumbers
       description: description

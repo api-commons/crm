@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - account
     properties:
-      name: company_name
       id: id
+      name: company_name
       created_at: created
       updated_at: updated
       address: address
@@ -24,10 +24,11 @@ concepts:
     - activity
     properties:
       type: activity_type
+      id: activity_id
       created_at: created
       subject: title
       note: content
       company_id: account_id
-    core_coverage: 0.667
+    core_coverage: 1.0
     evidence:
     - openapi/_original/vendasta-marketplace-openapi-original.yml#POST /activity/

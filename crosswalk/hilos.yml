@@ -8,9 +8,9 @@ concepts:
     - contact
     properties:
       email: email
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phone
       tags: tags
     core_coverage: 0.625

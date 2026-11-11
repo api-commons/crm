@@ -8,9 +8,9 @@ concepts:
     - people
     properties:
       email: emails
+      id: id
       last_name: lastName
       first_name: firstName
-      id: id
       phone: phones
       job_title: jobTitle
       created_at: createdAt
@@ -28,8 +28,8 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       address: addresses
       custom_fields: customFieldValues

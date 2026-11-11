@@ -11,9 +11,11 @@ concepts:
       email:
       - emailAddress
       - email
+      id:
+      - contactID
+      - id
       last_name: last_name
       first_name: first_name
-      id: id
       phone:
       - phoneNumber
       - phone
@@ -38,11 +40,13 @@ concepts:
     - account
     - company
     properties:
+      id:
+      - id
+      - companyId
       name:
       - name
       - companyName
       - displayName
-      id: id
       created_at: createdDate
       address: addresses
       website: websiteUrl
@@ -80,8 +84,9 @@ concepts:
     path_segment:
     - notes
     properties:
+      id: noteId
       created_by: createdBy
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/eci-solutions-lasso-crm-openapi.yml#DELETE /registrants/{registrantId}/notes/{noteId}
     - openapi/_original/eci-solutions-lasso-crm-openapi.yml#POST /registrants/{registrantId}/notes

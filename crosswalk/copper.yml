@@ -8,9 +8,9 @@ concepts:
     - people
     properties:
       email: emails
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phone_numbers
       job_title: title
       created_at: date_created
@@ -31,8 +31,8 @@ concepts:
     path_segment:
     - companies
     properties:
-      name: name
       id: id
+      name: name
       created_at: date_created
       updated_at: date_modified
       address: address
@@ -51,8 +51,8 @@ concepts:
     properties:
       id: id
       name: name
-      status: status
       custom_fields: custom_fields
+      status: status
       stage_id: pipeline_stage_id
       close_date: close_date
       company_id: company_id

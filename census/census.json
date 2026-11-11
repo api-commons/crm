@@ -6162,15 +6162,22 @@
      "companies"
     ],
     "operations": [
+     "GET collection",
      "POST collection"
     ],
     "properties": {
      "action": "string",
      "dedupeBy": "string",
-     "input": "array"
+     "input": "array",
+     "id": "integer",
+     "reasons": "array",
+     "seq": "integer",
+     "status": "string"
     },
     "evidence": [
-     "openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/companies"
+     "openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/companies",
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/companies.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#POST /rest/v1/companies.json"
     ]
    },
    "microsoft-dynamics": {
@@ -9007,6 +9014,34 @@
      "openapi/_original/lone-wolf-deals-api-openapi.yml#POST /deals"
     ]
    },
+   "marketo": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "errors": "array",
+     "moreResult": "boolean",
+     "nextPageToken": "string",
+     "requestId": "string",
+     "result": "array",
+     "success": "boolean",
+     "warnings": "array",
+     "batchSize": "integer",
+     "fields": "array",
+     "filterType": "string",
+     "input": "array",
+     "action": "string",
+     "dedupeBy": "string"
+    },
+    "evidence": [
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/opportunities.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#POST /rest/v1/opportunities.json"
+    ]
+   },
    "microsoft-dynamics": {
     "segments": [
      "opportunities"
@@ -10755,6 +10790,46 @@
      "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#POST /api/leads"
     ]
    },
+   "marketo": {
+    "segments": [
+     "leads",
+     "lead"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "errors": "array",
+     "moreResult": "boolean",
+     "nextPageToken": "string",
+     "requestId": "string",
+     "result": "array",
+     "success": "boolean",
+     "warnings": "array",
+     "action": "string",
+     "asyncProcessing": "boolean",
+     "input": "array",
+     "lookupField": "string",
+     "partitionName": "string",
+     "id": "integer",
+     "membership": "object",
+     "reason": "object",
+     "status": "string"
+    },
+    "evidence": [
+     "openapi/_original/marketo-lead-database-openapi-original.json#DELETE /rest/v1/lists/{listId}/leads.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/lead/{leadId}.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/leads.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/list/{listId}/leads.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/lists/{listId}/leads.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#POST /bulk/v1/leads.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#POST /rest/v1/leads.json",
+     "openapi/_original/marketo-lead-database-openapi-original.json#POST /rest/v1/lists/{listId}/leads.json"
+    ]
+   },
    "microsoft-dynamics": {
     "segments": [
      "leads"
@@ -12230,6 +12305,26 @@
      "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#GET /api/campaigns/{id}/activity",
      "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#PATCH /api/activities/{id}",
      "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#POST /api/activities"
+    ]
+   },
+   "marketo": {
+    "segments": [
+     "activities"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "errors": "array",
+     "moreResult": "boolean",
+     "nextPageToken": "string",
+     "requestId": "string",
+     "result": "array",
+     "success": "boolean",
+     "warnings": "array"
+    },
+    "evidence": [
+     "openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/activities.json"
     ]
    },
    "microsoft-dynamics": {
@@ -17647,7 +17742,6 @@
     "leandata",
     "lemlist",
     "live-direct-marketing-online",
-    "marketo",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
     "microsoft-dynamics-365-sales",
@@ -17661,10 +17755,8 @@
     "salesloft",
     "sap-business-one",
     "sap-bydesign",
-    "siro",
     "supaglue",
     "the-mobile-first-company",
-    "zendesk",
     "zoho",
     "zoho-crm"
    ],

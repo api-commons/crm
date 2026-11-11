@@ -8,11 +8,11 @@ concepts:
     - contacts
     properties:
       email: email
-      last_name: lastname
-      first_name: firstname
       id:
       - _id
       - uuid
+      last_name: lastname
+      first_name: firstname
       phone: phone
       job_title: title
       custom_fields: customFields
@@ -31,7 +31,9 @@ concepts:
     path_segment:
     - tasks
     properties:
-      id: _id
+      id:
+      - taskId
+      - _id
       subject: title
       due_at: dueAt
       description: description

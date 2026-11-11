@@ -8,10 +8,11 @@ concepts:
     - contacts
     properties:
       email: EMAIL_ADDRESS
+      id: CONTACT_ID
       last_name: LAST_NAME
       first_name: FIRST_NAME
       phone: PHONE
-    core_coverage: 0.5
+    core_coverage: 0.625
     evidence:
     - openapi/_original/insightly-openapi.yml#DELETE /Contacts/{id}
     - openapi/_original/insightly-openapi.yml#GET /Contacts

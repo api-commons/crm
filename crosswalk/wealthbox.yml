@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: email_addresses
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phone_numbers
     core_coverage: 0.625
     evidence:

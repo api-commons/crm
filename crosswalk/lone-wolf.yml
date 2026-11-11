@@ -8,13 +8,13 @@ concepts:
     - contacts
     properties:
       email: email
+      id: id
       last_name:
       - lastname
       - lastName
       first_name:
       - firstname
       - firstName
-      id: id
       phone:
       - phone
       - workPhone

@@ -8,9 +8,9 @@ concepts:
     - persons
     properties:
       email: emails
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phones
       job_title: job_title
       created_at: add_time
@@ -31,8 +31,8 @@ concepts:
     path_segment:
     - organizations
     properties:
-      name: name
       id: id
+      name: name
       created_at: add_time
       updated_at: update_time
       address: address
@@ -54,8 +54,8 @@ concepts:
       name: title
       created_at: add_time
       updated_at: update_time
-      status: status
       custom_fields: custom_fields
+      status: status
       stage_id: stage_id
       close_date: expected_close_date
       company_id: org_id
@@ -66,9 +66,6 @@ concepts:
       - owner_id
       pipeline_id: pipeline_id
       probability: probability
-      closed_at:
-      - close_time
-      - won_time
     core_coverage: 1.0
     evidence:
     - openapi/_original/pipedrive-v1-openapi.yml#GET /pipelines/{id}/deals

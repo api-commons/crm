@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: email
+      id: id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phones
       job_title: title
       created_at: created_at
@@ -28,8 +28,8 @@ concepts:
     - companies
     - accounts
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       updated_at: updated_at
       address: address
@@ -83,8 +83,9 @@ concepts:
     path_segment:
     - pipelines
     - pipeline
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: pipeline_id
+    core_coverage: 0.5
     evidence:
     - openapi/_original/lev-openapi-original.json#GET /api/external/v2/pipelines
     - openapi/_original/lev-openapi-original.json#GET /api/external/v2/pipelines/{pipeline_id}

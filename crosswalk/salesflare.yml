@@ -9,9 +9,9 @@ concepts:
     - persons
     properties:
       email: email
+      id: id
       last_name: lastname
       first_name: firstname
-      id: id
       phone:
       - phone_number
       - phone_numbers
@@ -59,8 +59,8 @@ concepts:
       id: id
       name: name
       created_at: creation_date
-      status: status
       custom_fields: custom
+      status: status
       stage_id: stage
       close_date: close_date
       currency: currency

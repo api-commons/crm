@@ -13,6 +13,9 @@ concepts:
       - Email
       - email
       - email_address
+      id:
+      - id
+      - Id
       last_name:
       - last_name
       - LastName
@@ -21,9 +24,6 @@ concepts:
       - first_name
       - FirstName
       - firstname
-      id:
-      - id
-      - Id
       phone:
       - phone_numbers
       - Phone
@@ -61,12 +61,12 @@ concepts:
     - accounts
     - companies
     properties:
-      name:
-      - name
-      - Name
       id:
       - id
       - Id
+      name:
+      - name
+      - Name
       created_at:
       - created_at
       - CreatedDate
@@ -109,8 +109,8 @@ concepts:
       name: name
       created_at: created_at
       updated_at: updated_at
-      status: status
       custom_fields: custom_fields
+      status: status
       stage_id: stage
       close_date: close_date
       company_id: account_id

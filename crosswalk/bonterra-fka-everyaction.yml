@@ -24,9 +24,10 @@ concepts:
     path_segment:
     - notes
     properties:
+      id: noteId
       created_at: createdDate
       content: text
-    core_coverage: 0.667
+    core_coverage: 1.0
     evidence:
     - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#GET /people/{vanId}/notes
     - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#POST /people/{personIdType}:{personId}/notes

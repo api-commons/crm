@@ -10,7 +10,9 @@ concepts:
       email:
       - email
       - emails
-      id: id
+      id:
+      - id
+      - contact_id
       phone: phone
       job_title: title
       created_at: created_at
@@ -29,8 +31,8 @@ concepts:
     path_segment:
     - accounts
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       updated_at: updated_at
       website: website_url
@@ -70,10 +72,10 @@ concepts:
     - leads
     properties:
       id: id
-      created_at: created_at
       status:
       - state
       - status
+      created_at: created_at
       source: source
       email: email
       custom_fields: custom_fields

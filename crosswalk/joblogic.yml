@@ -8,9 +8,9 @@ concepts:
     - contact
     properties:
       email: email
+      id: id
       last_name: lastName
       first_name: firstName
-      id: id
       job_title: jobTitle
     core_coverage: 0.625
     evidence:

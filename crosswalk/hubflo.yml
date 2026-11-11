@@ -62,9 +62,10 @@ concepts:
     path_segment:
     - notes
     properties:
+      id: note_id
       content: content
       subject: title
-    core_coverage: 0.333
+    core_coverage: 0.667
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes/{id}

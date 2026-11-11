@@ -9,9 +9,11 @@ concepts:
     - contacts
     properties:
       email: emailAddress
+      id:
+      - id
+      - contactId
       last_name: lastName
       first_name: firstName
-      id: id
       job_title: title
       created_at:
       - createdAt
@@ -36,11 +38,13 @@ concepts:
     - account
     - accounts
     properties:
+      id:
+      - companyId
+      - id
       name:
       - accountName
       - name
       - companyName
-      id: id
       created_at: createdAt
       updated_at: updatedAt
       description: description

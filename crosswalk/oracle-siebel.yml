@@ -8,9 +8,9 @@ concepts:
     - contact
     properties:
       email: Email Address
+      id: Id
       last_name: Last Name
       first_name: First Name
-      id: Id
       phone: 'Work Phone #'
       job_title: Job Title
       company_id: Account Id

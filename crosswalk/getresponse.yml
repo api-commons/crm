@@ -8,10 +8,11 @@ concepts:
     - contacts
     properties:
       email: email
+      id: contactId
       custom_fields: customFieldValues
       full_name: name
       tags: tags
-    core_coverage: 0.25
+    core_coverage: 0.375
     evidence:
     - openapi/_original/getresponse-contacts-openapi.yml#DELETE /contacts/{contactId}
     - openapi/_original/getresponse-contacts-openapi.yml#GET /campaigns/{campaignId}/contacts

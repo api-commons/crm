@@ -22,6 +22,7 @@ concepts:
     path_segment:
     - tasks
     properties:
+      id: taskId
       subject: title
       due_at: dueDate
       created_at: createdAt
@@ -29,7 +30,7 @@ concepts:
       assignee_id: assignedTo
       done: completed
       created_by: createdBy
-    core_coverage: 0.667
+    core_coverage: 0.833
     evidence:
     - openapi/_original/quo-public-api-v1.json#DELETE /v1/tasks/{taskId}
     - openapi/_original/quo-public-api-v1.json#GET /v1/tasks

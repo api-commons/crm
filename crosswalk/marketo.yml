@@ -6,7 +6,40 @@ concepts:
   company:
     path_segment:
     - companies
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/companies
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/companies.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#POST /rest/v1/companies.json
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      custom_fields: fields
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/opportunities.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#POST /rest/v1/opportunities.json
+  lead:
+    path_segment:
+    - leads
+    - lead
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/marketo-lead-database-openapi-original.json#DELETE /rest/v1/lists/{listId}/leads.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/lead/{leadId}.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/leads.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/list/{listId}/leads.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/lists/{listId}/leads.json
+  activity:
+    path_segment:
+    - activities
     properties: {}
     core_coverage: 0.0
     evidence:
-    - openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/companies
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/activities.json

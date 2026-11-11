@@ -11,8 +11,8 @@ concepts:
       name: name
       created_at: date_created
       updated_at: date_modified
-      status: status
       custom_fields: custom_fields
+      status: status
       stage_id: pipeline_stage_id
       close_date: close_date
       company_id: company_id

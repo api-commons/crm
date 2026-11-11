@@ -8,9 +8,9 @@ concepts:
     - contacts
     properties:
       email: email_addresses
+      id: id
       last_name: family_name
       first_name: given_name
-      id: id
       phone: phone_numbers
       job_title: job_title
       created_at:
@@ -39,8 +39,8 @@ concepts:
     - companies
     - company
     properties:
-      name: company_name
       id: id
+      name: company_name
       created_at: create_time
       updated_at: update_time
       address: address
@@ -66,8 +66,8 @@ concepts:
       - date_created
       - created_time
       updated_at: last_updated
-      status: status
       custom_fields: custom_fields
+      status: status
       stage_id:
       - stage_id
       - stage
@@ -78,7 +78,6 @@ concepts:
       - owner_id
       - user_id
       amount: amount
-      closed_at: closed_date
     core_coverage: 1.0
     evidence:
     - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/opportunities/{opportunity_id}

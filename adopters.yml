@@ -462,7 +462,10 @@ adopters:
   apis_io: https://apis.io/providers/marketo/
   crosswalk: crosswalk/marketo.yml
   concepts:
+  - activity
   - company
+  - deal
+  - lead
 - provider: microsoft-dynamics-365
   apis_io: https://apis.io/providers/microsoft-dynamics-365/
   crosswalk: crosswalk/microsoft-dynamics-365.yml

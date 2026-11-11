@@ -8,13 +8,15 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.833,
-      "x-commons-providers": 35,
+      "x-commons-share": 0.881,
+      "x-commons-providers": 37,
       "x-commons-spellings": [
         "id",
+        "taskId",
         "_id",
         "Id",
-        "recordId"
+        "recordId",
+        "task_id"
       ]
     },
     "subject": {
@@ -205,6 +207,8 @@
     "context": "crm",
     "concept": "task",
     "providers": 42,
-    "generated": "2026-11-10"
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
   }
 }

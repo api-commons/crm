@@ -5,6 +5,19 @@
   "description": "The common company in Customer Relationship Management, distilled from 53 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.811,
+      "x-commons-providers": 43,
+      "x-commons-spellings": [
+        "id",
+        "companyId",
+        "_id",
+        "ID",
+        "Id"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
@@ -18,18 +31,6 @@
         "company_name",
         "organization_name",
         "accountName"
-      ]
-    },
-    "id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.792,
-      "x-commons-providers": 42,
-      "x-commons-spellings": [
-        "id",
-        "_id",
-        "ID",
-        "Id"
       ]
     },
     "created_at": {
@@ -205,6 +206,8 @@
     "context": "crm",
     "concept": "company",
     "providers": 53,
-    "generated": "2026-11-10"
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
   }
 }

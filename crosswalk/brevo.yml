@@ -25,10 +25,10 @@ concepts:
     - companies
     - account
     properties:
+      id: id
       name:
       - companyName
       - name
-      id: id
       address: address
       custom_fields: attributes
       owner_id: user_id

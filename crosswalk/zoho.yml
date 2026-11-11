@@ -23,8 +23,8 @@ concepts:
     - accounts
     - organizations
     properties:
-      name: companyName
       id: id
+      name: companyName
       created_at: createdTime
       website: website
       custom_fields: customFields

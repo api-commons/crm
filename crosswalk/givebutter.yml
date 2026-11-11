@@ -10,9 +10,11 @@ concepts:
       email:
       - emails
       - primary_email
+      id:
+      - id
+      - contact_id
       last_name: last_name
       first_name: first_name
-      id: id
       phone: phones
       job_title: title
       created_at: created_at

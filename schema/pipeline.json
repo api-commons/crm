@@ -8,10 +8,11 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.773,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.864,
+      "x-commons-providers": 19,
       "x-commons-spellings": [
-        "id"
+        "id",
+        "pipeline_id"
       ]
     },
     "name": {
@@ -64,6 +65,8 @@
     "context": "crm",
     "concept": "pipeline",
     "providers": 22,
-    "generated": "2026-11-10"
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
   }
 }

@@ -26,10 +26,10 @@ concepts:
     - accounts
     - companies
     properties:
+      id: id
       name:
       - name
       - displayName
-      id: id
       created_at: createdon
       updated_at: modifiedon
       address: address1_line1

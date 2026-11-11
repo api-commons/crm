@@ -9,9 +9,11 @@ concepts:
     - person
     properties:
       email: email
+      id:
+      - id
+      - contactId
       last_name: lastName
       first_name: firstName
-      id: id
       updated_at: lastUpdated
       company_name: company
     core_coverage: 0.5
