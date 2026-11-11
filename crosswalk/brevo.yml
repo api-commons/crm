@@ -32,6 +32,7 @@ concepts:
       address: address
       custom_fields: attributes
       owner_id: user_id
+      email: email
     core_coverage: 0.667
     evidence:
     - openapi/_original/brevo-accounts-and-settings-openapi.yml#GET /account

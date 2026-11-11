@@ -29,8 +29,8 @@ concepts:
       name: name
       address: address
       website: website
-      phone: phone
       description: description
+      phone: phone
       industry: industry
       domain: domain
       city: city

@@ -525,6 +525,8 @@ adopters:
   apis_io: https://apis.io/providers/oracle-siebel/
   crosswalk: crosswalk/oracle-siebel.yml
   concepts:
+  - activity
+  - company
   - contact
   - deal
 - provider: outreach
@@ -640,6 +642,11 @@ adopters:
   - deal
   - pipeline
   - task
+- provider: salesforce
+  apis_io: https://apis.io/providers/salesforce/
+  crosswalk: crosswalk/salesforce.yml
+  concepts:
+  - contact
 - provider: salesforce-service-cloud
   apis_io: https://apis.io/providers/salesforce-service-cloud/
   crosswalk: crosswalk/salesforce-service-cloud.yml

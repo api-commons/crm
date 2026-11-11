@@ -23,8 +23,8 @@ concepts:
     - openapi/_original/agile-crm-openapi.yml#DELETE /api/opportunity/{id}
     - openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}/deals
     - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity
+    - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/my/deals
     - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{id}
-    - openapi/_original/agile-crm-openapi.yml#POST /api/opportunity
   task:
     path_segment:
     - tasks

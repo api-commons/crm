@@ -28,8 +28,8 @@ concepts:
       created_at: createdTime
       website: website
       custom_fields: customFields
-      phone: phoneNumber
       description: description
+      phone: phoneNumber
       industry: industry
       owner_id: ownerId
       city: city

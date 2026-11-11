@@ -32,8 +32,8 @@ concepts:
       id: id
       name: name
       address: address
-      phone: phoneNumbers
       description: description
+      phone: phoneNumbers
       tags: tags
     core_coverage: 0.667
     evidence:

@@ -37,8 +37,8 @@ concepts:
       updated_at: updated_at
       website: website_url
       custom_fields: custom_fields
-      phone: phone
       description: description
+      phone: phone
       industry: industry
       status: status
     core_coverage: 1.0

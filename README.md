@@ -13,16 +13,16 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| contact | 79 | 70 | email 81%, id 80%, last_name 77%, first_name 76%, phone 64%, job_title 56%, created_at 53%, custom_fields 51% | contacts 63, contact 18, people 10, persons 4 |
-| company | 57 | 53 | id 81%, name 81%, created_at 68% | accounts 27, companies 26, organizations 12, account 11 |
+| contact | 80 | 71 | email 80%, id 80%, last_name 76%, first_name 75%, phone 63%, job_title 55%, created_at 52%, custom_fields 51% | contacts 64, contact 18, people 10, persons 4 |
+| company | 58 | 54 | id 82%, name 82%, created_at 67% | accounts 27, companies 26, organizations 12, account 12 |
 | deal | 53 | 46 | id 83%, name 76%, created_at 65%, updated_at 52% | opportunities 32, deals 16, opportunity 7, deal 4 |
 | lead | 31 | 27 | id 82%, status 59%, created_at 56%, source 52% | leads 30, lead 4 |
-| activity | 40 | 32 | type 69%, id 66%, created_at 53% | activities 31, activity 8, engagements 2 |
+| activity | 41 | 33 | type 70%, id 67%, created_at 52% | activities 31, activity 9, engagements 2 |
 | task | 48 | 41 | id 88%, subject 73%, due_at 68%, created_at 58% | tasks 43, task 7, todos 1 |
 | note | 41 | 34 | id 100%, created_at 74%, content 65%, updated_at 50% | notes 39, note 4 |
 | pipeline | 25 | 21 | id 86%, name 81% | pipelines 22, pipeline 5 |
 
-Cohort: 177 providers with harvested OpenAPI, 111 crosswalks. Of the providers exposing a contact: 92% create, 90% list, 89% fetch, 75% update, 63% delete. Generated 2026-11-10 by build.py.
+Cohort: 177 providers with harvested OpenAPI, 112 crosswalks. Of the providers exposing a contact: 92% create, 90% list, 90% fetch, 75% update, 64% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

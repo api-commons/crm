@@ -37,9 +37,12 @@ concepts:
       updated_at: date_modified
       website: url
       custom_fields: custom_fields
-      phone: phone_number
       description: description
+      phone: phone_number
       industry: industry
+      email:
+      - email_address
+      - email
     core_coverage: 0.667
     evidence:
     - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#GET /organizations/{constituent_id}

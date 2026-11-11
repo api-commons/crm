@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/contact.json",
   "title": "Contact",
-  "description": "The common contact in Customer Relationship Management, distilled from 70 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common contact in Customer Relationship Management, distilled from 71 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.814,
+      "x-commons-share": 0.803,
       "x-commons-providers": 57,
       "x-commons-spellings": [
         "email",
@@ -25,8 +25,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.8,
-      "x-commons-providers": 56,
+      "x-commons-share": 0.803,
+      "x-commons-providers": 57,
       "x-commons-spellings": [
         "id",
         "contactId",
@@ -41,7 +41,7 @@
     "last_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.771,
+      "x-commons-share": 0.761,
       "x-commons-providers": 54,
       "x-commons-spellings": [
         "lastName",
@@ -56,7 +56,7 @@
     "first_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.757,
+      "x-commons-share": 0.746,
       "x-commons-providers": 53,
       "x-commons-spellings": [
         "firstName",
@@ -71,7 +71,7 @@
     "phone": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.643,
+      "x-commons-share": 0.634,
       "x-commons-providers": 45,
       "x-commons-spellings": [
         "phone",
@@ -87,7 +87,7 @@
     "job_title": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.557,
+      "x-commons-share": 0.549,
       "x-commons-providers": 39,
       "x-commons-spellings": [
         "title",
@@ -102,7 +102,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.529,
+      "x-commons-share": 0.521,
       "x-commons-providers": 37,
       "x-commons-spellings": [
         "createdAt",
@@ -119,7 +119,7 @@
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "core",
-      "x-commons-share": 0.514,
+      "x-commons-share": 0.507,
       "x-commons-providers": 36,
       "x-commons-spellings": [
         "custom_fields",
@@ -135,7 +135,7 @@
     "full_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.443,
+      "x-commons-share": 0.437,
       "x-commons-providers": 31,
       "x-commons-spellings": [
         "name",
@@ -149,7 +149,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
+      "x-commons-share": 0.394,
       "x-commons-providers": 28,
       "x-commons-spellings": [
         "updated_at",
@@ -166,7 +166,7 @@
     "company_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.357,
+      "x-commons-share": 0.352,
       "x-commons-providers": 25,
       "x-commons-spellings": [
         "company_id",
@@ -182,7 +182,7 @@
     "address": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.343,
+      "x-commons-share": 0.338,
       "x-commons-providers": 24,
       "x-commons-spellings": [
         "address",
@@ -194,7 +194,7 @@
     "company_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.3,
+      "x-commons-share": 0.296,
       "x-commons-providers": 21,
       "x-commons-spellings": [
         "company",
@@ -208,7 +208,7 @@
     "tags": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
+      "x-commons-share": 0.282,
       "x-commons-providers": 20,
       "x-commons-spellings": [
         "tags",
@@ -221,7 +221,7 @@
     "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.214,
+      "x-commons-share": 0.211,
       "x-commons-providers": 15,
       "x-commons-spellings": [
         "owner_id",
@@ -239,7 +239,7 @@
   "x-commons": {
     "context": "crm",
     "concept": "contact",
-    "providers": 70,
+    "providers": 71,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

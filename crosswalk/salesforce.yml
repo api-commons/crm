@@ -1,0 +1,15 @@
+provider: salesforce
+apis_io: https://apis.io/providers/salesforce/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      id: contactId
+    core_coverage: 0.125
+    evidence:
+    - openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#DELETE /contacts/v1/contacts
+    - openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#GET /contacts/v1/contacts
+    - openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#GET /contacts/v1/contacts/{contactKey}

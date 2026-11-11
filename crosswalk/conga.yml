@@ -30,8 +30,8 @@ concepts:
       name: Name
       address: BillingAddress
       website: Website
-      phone: Phone
       description: Description
+      phone: Phone
       industry: Industry
       type: Type
     core_coverage: 0.333

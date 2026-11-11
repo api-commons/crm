@@ -36,6 +36,7 @@ concepts:
       owner_id: owner_id
       city: city
       country: country
+      email: email
       tags: tags
     core_coverage: 0.333
     evidence:

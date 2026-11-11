@@ -2,27 +2,27 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/company.json",
   "title": "Company",
-  "description": "The common company in Customer Relationship Management, distilled from 53 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common company in Customer Relationship Management, distilled from 54 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.811,
-      "x-commons-providers": 43,
+      "x-commons-share": 0.815,
+      "x-commons-providers": 44,
       "x-commons-spellings": [
         "id",
         "companyId",
         "_id",
-        "ID",
-        "Id"
+        "Id",
+        "ID"
       ]
     },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.811,
-      "x-commons-providers": 43,
+      "x-commons-share": 0.815,
+      "x-commons-providers": 44,
       "x-commons-spellings": [
         "name",
         "companyName",
@@ -36,7 +36,7 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.679,
+      "x-commons-share": 0.667,
       "x-commons-providers": 36,
       "x-commons-spellings": [
         "createdAt",
@@ -53,7 +53,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.491,
+      "x-commons-share": 0.481,
       "x-commons-providers": 26,
       "x-commons-spellings": [
         "updatedAt",
@@ -68,7 +68,7 @@
     "address": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.472,
+      "x-commons-share": 0.463,
       "x-commons-providers": 25,
       "x-commons-spellings": [
         "address",
@@ -81,7 +81,7 @@
     "website": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.472,
+      "x-commons-share": 0.463,
       "x-commons-providers": 25,
       "x-commons-spellings": [
         "website",
@@ -95,7 +95,7 @@
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.415,
+      "x-commons-share": 0.407,
       "x-commons-providers": 22,
       "x-commons-spellings": [
         "custom_fields",
@@ -107,10 +107,21 @@
         "properties"
       ]
     },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.389,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "description",
+        "Description",
+        "details"
+      ]
+    },
     "phone": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.396,
+      "x-commons-share": 0.389,
       "x-commons-providers": 21,
       "x-commons-spellings": [
         "phone",
@@ -122,22 +133,11 @@
         "telephone1"
       ]
     },
-    "description": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.377,
-      "x-commons-providers": 20,
-      "x-commons-spellings": [
-        "description",
-        "Description",
-        "details"
-      ]
-    },
     "industry": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.283,
-      "x-commons-providers": 15,
+      "x-commons-share": 0.296,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "industry",
         "Industry"
@@ -146,20 +146,21 @@
     "type": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.245,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.259,
+      "x-commons-providers": 14,
       "x-commons-spellings": [
         "type",
         "Type",
         "accountType",
         "company_type",
+        "Account Type",
         "account_type"
       ]
     },
     "domain": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.226,
+      "x-commons-share": 0.222,
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "domain",
@@ -169,7 +170,7 @@
     "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.226,
+      "x-commons-share": 0.222,
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "owner_id",
@@ -181,7 +182,7 @@
     "city": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.208,
+      "x-commons-share": 0.204,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "city",
@@ -191,17 +192,31 @@
     "country": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.208,
+      "x-commons-share": 0.204,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "country",
         "address1_country"
       ]
     },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.204,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "email",
+        "email_address",
+        "Email",
+        "emailaddress1",
+        "Email Address"
+      ],
+      "format": "email"
+    },
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.208,
+      "x-commons-share": 0.204,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "status",
@@ -211,7 +226,7 @@
     "tags": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.208,
+      "x-commons-share": 0.204,
       "x-commons-providers": 11,
       "x-commons-spellings": [
         "tags",
@@ -227,7 +242,7 @@
   "x-commons": {
     "context": "crm",
     "concept": "company",
-    "providers": 53,
+    "providers": 54,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

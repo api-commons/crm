@@ -40,11 +40,12 @@ concepts:
       - addresses
       website: website
       custom_fields: custom
+      description: description
       phone:
       - phone_number
       - phone_numbers
-      description: description
       domain: domain
+      email: email
       tags: tags
     core_coverage: 0.333
     evidence:

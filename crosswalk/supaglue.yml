@@ -77,13 +77,13 @@ concepts:
       - website
       - Website
       custom_fields: custom_fields
+      description:
+      - description
+      - Description
       phone:
       - phone_numbers
       - Phone
       - phone
-      description:
-      - description
-      - Description
       industry:
       - industry
       - Industry

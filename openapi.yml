@@ -16,7 +16,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.924
+      x-commons-share: 0.925
       responses:
         '200':
           description: OK
@@ -35,7 +35,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.899
+      x-commons-share: 0.9
       responses:
         '200':
           description: OK
@@ -62,7 +62,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.886
+      x-commons-share: 0.9
       responses:
         '200':
           description: OK
@@ -75,7 +75,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.747
+      x-commons-share: 0.75
       responses:
         '200':
           description: OK
@@ -93,7 +93,7 @@ paths:
       tags:
       - Contacts
       x-commons-tier: core
-      x-commons-share: 0.633
+      x-commons-share: 0.637
       responses:
         '200':
           description: OK
@@ -107,7 +107,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.895
+      x-commons-share: 0.897
       responses:
         '200':
           description: OK
@@ -132,7 +132,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.825
+      x-commons-share: 0.828
       responses:
         '200':
           description: OK
@@ -153,7 +153,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.754
+      x-commons-share: 0.759
       responses:
         '200':
           description: OK
@@ -166,7 +166,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.649
+      x-commons-share: 0.655
       responses:
         '200':
           description: OK
@@ -184,7 +184,7 @@ paths:
       tags:
       - Companies
       x-commons-tier: core
-      x-commons-share: 0.526
+      x-commons-share: 0.534
       responses:
         '200':
           description: OK
@@ -192,6 +192,25 @@ paths:
             application/json:
               schema: *id002
   /deals:
+    post:
+      operationId: createDeal
+      summary: Create a deal
+      tags:
+      - Deals
+      x-commons-tier: core
+      x-commons-share: 0.83
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id003
+                $ref: '#/components/schemas/Deal'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
     get:
       operationId: listDeals
       summary: List deals
@@ -206,8 +225,7 @@ paths:
             application/json:
               schema:
                 type: array
-                items: &id003
-                  $ref: '#/components/schemas/Deal'
+                items: *id003
       parameters:
       - name: limit
         in: query
@@ -217,24 +235,6 @@ paths:
         in: query
         schema:
           type: string
-    post:
-      operationId: createDeal
-      summary: Create a deal
-      tags:
-      - Deals
-      x-commons-tier: core
-      x-commons-share: 0.811
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema: *id003
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema: *id003
   /deals/{deal_id}:
     parameters:
     - $ref: '#/components/parameters/deal_id'
@@ -244,7 +244,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.774
+      x-commons-share: 0.792
       responses:
         '200':
           description: OK
@@ -257,7 +257,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.623
+      x-commons-share: 0.642
       responses:
         '200':
           description: OK
@@ -270,7 +270,7 @@ paths:
       tags:
       - Deals
       x-commons-tier: core
-      x-commons-share: 0.623
+      x-commons-share: 0.642
       responses:
         '200':
           description: OK
@@ -380,7 +380,7 @@ paths:
       tags:
       - Activities
       x-commons-tier: core
-      x-commons-share: 0.775
+      x-commons-share: 0.78
       responses:
         '200':
           description: OK
@@ -405,7 +405,7 @@ paths:
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.45
+      x-commons-share: 0.463
       responses:
         '200':
           description: OK
@@ -426,7 +426,7 @@ paths:
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.375
+      x-commons-share: 0.39
       responses:
         '200':
           description: OK
@@ -439,7 +439,7 @@ paths:
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.225
+      x-commons-share: 0.244
       responses:
         '200':
           description: OK
@@ -452,7 +452,7 @@ paths:
       tags:
       - Activities
       x-commons-tier: extended
-      x-commons-share: 0.225
+      x-commons-share: 0.244
       responses:
         '200':
           description: OK

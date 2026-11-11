@@ -2934,8 +2934,12 @@
      "contact"
     ],
     "operations": [
+     "DELETE item",
      "GET collection",
-     "PUT collection"
+     "GET item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
     ],
     "properties": {
      "Id": "string",
@@ -2954,8 +2958,13 @@
      "Link": "array"
     },
     "evidence": [
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Contact/Contact/{ContactId}",
      "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Contact",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}/Contact"
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Contact/Contact",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Contact/Contact/{ContactId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Contact/Contact",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}/Contact",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Contact/Contact/{ContactId}"
     ]
    },
    "pipedrive": {
@@ -3420,6 +3429,32 @@
      "openapi/_original/salesflare-openapi.json#DELETE /contacts/{contact_id}",
      "openapi/_original/salesflare-openapi.json#GET /contacts",
      "openapi/_original/salesflare-openapi.json#GET /contacts/{contact_id}"
+    ]
+   },
+   "salesforce": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "contactKey": "string",
+     "contactId": "integer",
+     "contactStatus": "string",
+     "isAnonymous": "boolean",
+     "attributeSets": "array",
+     "requestServiceMessageID": "string",
+     "resultMessages": "array",
+     "contactKeys": "array",
+     "deleteOperationType": "string"
+    },
+    "evidence": [
+     "openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#DELETE /contacts/v1/contacts",
+     "openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#GET /contacts/v1/contacts",
+     "openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#GET /contacts/v1/contacts/{contactKey}"
     ]
    },
    "salesforce-service-cloud": {
@@ -6568,6 +6603,43 @@
      "openapi/_original/nutshell-api.json#POST /accounts"
     ]
    },
+   "oracle-siebel": {
+    "segments": [
+     "account"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "Id": "string",
+     "Name": "string",
+     "Location": "string",
+     "Account Status": "string",
+     "Account Type": "string",
+     "Description": "string",
+     "Industry": "string",
+     "Primary Organization": "string",
+     "Primary Organization Id": "string",
+     "Main Phone Number": "string",
+     "Main Fax Number": "string",
+     "Email Address": "string",
+     "Home Page": "string",
+     "Current Volume": "number",
+     "Alias": "string",
+     "Link": "array"
+    },
+    "evidence": [
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Account/Account/{AccountId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Account/Account",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}"
+    ]
+   },
    "outreach": {
     "segments": [
      "accounts"
@@ -7836,6 +7908,7 @@
      "openapi/_original/agile-crm-openapi.yml#DELETE /api/opportunity/{id}",
      "openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}/deals",
      "openapi/_original/agile-crm-openapi.yml#GET /api/opportunity",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/my/deals",
      "openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{id}",
      "openapi/_original/agile-crm-openapi.yml#POST /api/opportunity",
      "openapi/_original/agile-crm-openapi.yml#POST /api/opportunity/bulk"
@@ -9381,7 +9454,11 @@
      "opportunity"
     ],
     "operations": [
-     "GET collection"
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
     ],
     "properties": {
      "Id": "string",
@@ -9398,7 +9475,12 @@
      "Link": "array"
     },
     "evidence": [
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Opportunity"
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Opportunity/Opportunity/{OpportunityId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Opportunity",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Opportunity/Opportunity",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Opportunity/Opportunity/{OpportunityId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Opportunity/Opportunity",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Opportunity/Opportunity/{OpportunityId}"
     ]
    },
    "outreach": {
@@ -12568,6 +12650,40 @@
      "openapi/_original/nutshell-api.json#GET /activities/{id}",
      "openapi/_original/nutshell-api.json#POST /activities",
      "openapi/_original/nutshell-api.json#PUT /activities/{id}"
+    ]
+   },
+   "oracle-siebel": {
+    "segments": [
+     "activity"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "Id": "string",
+     "Type": "string",
+     "Description": "string",
+     "Status": "string",
+     "Priority": "string",
+     "Due": "string",
+     "Planned": "string",
+     "Account": "string",
+     "Account Id": "string",
+     "Contact First Name": "string",
+     "Contact Last Name": "string",
+     "Owner": "string",
+     "Link": "array"
+    },
+    "evidence": [
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Activity/Activity/{ActivityId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Activity/Activity",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Activity/Activity/{ActivityId}",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Activity/Activity",
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Activity/Activity/{ActivityId}"
     ]
    },
    "pipedrive": {
@@ -19187,6 +19303,7 @@
     "quo",
     "reonic",
     "revert",
+    "salesforce",
     "salesforce-service-cloud",
     "sendpulse",
     "servicetitan",
