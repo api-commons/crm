@@ -1,0 +1,95 @@
+provider: relmcrm-com
+apis_io: https://apis.io/providers/relmcrm-com/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone
+      created_at: created_at
+      custom_fields: custom_fields
+      updated_at: updated_at
+      company_id: company_id
+      is_deleted: deleted
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/relmcrm-com-openapi.json#DELETE /contacts/{id}
+    - openapi/_original/relmcrm-com-openapi.json#GET /contacts
+    - openapi/_original/relmcrm-com-openapi.json#GET /contacts/{id}
+    - openapi/_original/relmcrm-com-openapi.json#PATCH /contacts/{id}
+    - openapi/_original/relmcrm-com-openapi.json#POST /contacts
+  company:
+    path_segment:
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      custom_fields: custom_fields
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/relmcrm-com-openapi.json#DELETE /companies/{id}
+    - openapi/_original/relmcrm-com-openapi.json#GET /companies
+    - openapi/_original/relmcrm-com-openapi.json#GET /companies/{id}
+    - openapi/_original/relmcrm-com-openapi.json#PATCH /companies/{id}
+    - openapi/_original/relmcrm-com-openapi.json#POST /companies
+  deal:
+    path_segment:
+    - deals
+    properties:
+      name: title
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      stage_id: stage
+      company_id: company_id
+      custom_fields: custom_fields
+      close_date: close_date
+      currency: currency
+      contact_id: primary_contact_id
+      pipeline_id: pipeline
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/relmcrm-com-openapi.json#DELETE /deals/{id}
+    - openapi/_original/relmcrm-com-openapi.json#GET /deals
+    - openapi/_original/relmcrm-com-openapi.json#GET /deals/{id}
+    - openapi/_original/relmcrm-com-openapi.json#PATCH /deals/{id}
+    - openapi/_original/relmcrm-com-openapi.json#POST /deals
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      note: body
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/relmcrm-com-openapi.json#DELETE /activities/{id}
+    - openapi/_original/relmcrm-com-openapi.json#GET /activities
+    - openapi/_original/relmcrm-com-openapi.json#GET /activities/{id}
+    - openapi/_original/relmcrm-com-openapi.json#PATCH /activities/{id}
+    - openapi/_original/relmcrm-com-openapi.json#POST /activities
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      stages: stages
+      is_default: is_default
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/relmcrm-com-openapi.json#DELETE /pipelines/{key}
+    - openapi/_original/relmcrm-com-openapi.json#GET /pipelines
+    - openapi/_original/relmcrm-com-openapi.json#GET /pipelines/{key}
+    - openapi/_original/relmcrm-com-openapi.json#PATCH /pipelines/{key}
+    - openapi/_original/relmcrm-com-openapi.json#POST /pipelines

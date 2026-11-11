@@ -1,0 +1,153 @@
+provider: keap
+apis_io: https://apis.io/providers/keap/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email_addresses
+      last_name: family_name
+      first_name: given_name
+      id: id
+      phone: phone_numbers
+      job_title: job_title
+      created_at: create_time
+      custom_fields: custom_fields
+      updated_at: update_time
+      company_id: account_id
+      address: addresses
+      company_name:
+      - company_name
+      - company
+      tags: tag_ids
+      owner_id: owner_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/deals/-/contacts/{contact_id}
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/campaigns/{campaignId}/sequences/{sequenceId}/contacts
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/campaigns/{campaignId}/sequences/{sequenceId}/contacts/{contactId}
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/contacts/{contactId}
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/tags/{tagId}/contacts
+  company:
+    path_segment:
+    - companies
+    - company
+    properties:
+      name: company_name
+      id: id
+      created_at: create_time
+      updated_at: update_time
+      website: website
+      address: address
+      phone: phone_number
+      custom_fields: custom_fields
+      email: email_address
+      owner_id: owner_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-v1-openapi.json#GET /rest/v1/companies
+    - openapi/_original/keap-v1-openapi.json#GET /rest/v1/companies/{companyId}
+    - openapi/_original/keap-v1-openapi.json#GET /rest/v1/tags/{tagId}/companies
+    - openapi/_original/keap-v1-openapi.json#PATCH /rest/v1/companies/{companyId}
+    - openapi/_original/keap-v1-openapi.json#PATCH /rest/v1/company/{companyId}
+  deal:
+    path_segment:
+    - deals
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at:
+      - date_created
+      - created_time
+      updated_at: last_updated
+      stage_id:
+      - stage_id
+      - stage
+      custom_fields: custom_fields
+      status: status
+      close_date: estimated_close_date
+      currency: currency_code
+      owner_id:
+      - owner_id
+      - user_id
+      amount: amount
+      contact_id: contact_id
+      closed_at: closed_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-pipelines-openapi-original.yml#DELETE /v2/deals/{id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/deals
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/deals/{id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/pipelines/{id}/deals
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/stages/{id}/deals
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      created_at:
+      - creation_date
+      - create_time
+      due_at:
+      - due_date
+      - due_time
+      description: description
+      done: completed
+      owner_id: user_id
+      priority: priority
+      type: type
+      contact_id: contact_id
+      custom_fields: custom_fields
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/tasks/{taskId}
+    - openapi/_original/keap-v1-openapi.json#GET /rest/v1/tasks
+    - openapi/_original/keap-v1-openapi.json#GET /rest/v1/tasks/{taskId}
+    - openapi/_original/keap-v1-openapi.json#PATCH /rest/v1/tasks/{taskId}
+    - openapi/_original/keap-v1-openapi.json#POST /rest/v1/tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at:
+      - created_time
+      - date_created
+      - create_time
+      content:
+      - body
+      - text
+      updated_at:
+      - last_updated
+      - update_time
+      contact_id: contact_id
+      created_by: created_by
+      owner_id: user_id
+      subject: title
+      type: type
+      deal_id: deal_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-pipelines-openapi-original.yml#DELETE /v2/deals/-/notes/{note_id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/deals/-/notes/{note_id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/deals/{id}/notes
+    - openapi/_original/keap-pipelines-openapi-original.yml#PATCH /v2/deals/-/notes/{note_id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#POST /v2/deals/-/notes
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      stages: stages
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-pipelines-openapi-original.yml#DELETE /v2/pipelines/{id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/pipelines
+    - openapi/_original/keap-pipelines-openapi-original.yml#GET /v2/pipelines/{id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#PATCH /v2/pipelines/{id}
+    - openapi/_original/keap-pipelines-openapi-original.yml#POST /v2/pipelines

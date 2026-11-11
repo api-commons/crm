@@ -1,0 +1,84 @@
+provider: street-co
+apis_io: https://apis.io/providers/street-co/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    - people
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone
+      job_title: title
+      custom_fields: attributes
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/street-co-open-api-openapi.json#GET /people
+    - openapi/_original/street-co-open-api-openapi.json#GET /people/{person_id}
+    - openapi/_original/street-co-open-api-openapi.json#PATCH /people/{person_id}
+    - openapi/_original/street-co-open-api-openapi.yml#GET /people
+    - openapi/_original/street-co-open-api-openapi.yml#GET /people/{person_id}
+  company:
+    path_segment:
+    - companies
+    properties:
+      id: id
+      custom_fields: attributes
+      type: type
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/street-co-open-api-openapi.json#GET /companies
+    - openapi/_original/street-co-open-api-openapi.json#GET /companies/{company_id}
+    - openapi/_original/street-co-open-api-openapi.yml#GET /companies
+    - openapi/_original/street-co-open-api-openapi.yml#GET /companies/{company_id}
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      email: email
+      first_name: first_name
+      last_name: last_name
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/street-co-spectre-api-openapi.json#GET /property-reports/leads
+    - openapi/_original/street-co-spectre-api-openapi.json#POST /property-reports/leads
+    - openapi/_original/street-co-spectre-api-openapi.yml#GET /property-reports/leads
+    - openapi/_original/street-co-spectre-api-openapi.yml#POST /property-reports/leads
+  activity:
+    path_segment:
+    - activity
+    properties:
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/street-co-open-api-openapi.json#POST /activity
+    - openapi/_original/street-co-open-api-openapi.yml#POST /activity
+  task:
+    path_segment:
+    - todos
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/street-co-open-api-openapi.json#GET /todos
+    - openapi/_original/street-co-open-api-openapi.json#POST /todos
+    - openapi/_original/street-co-open-api-openapi.yml#GET /todos
+    - openapi/_original/street-co-open-api-openapi.yml#POST /todos
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/street-co-open-api-openapi.json#POST /notes
+    - openapi/_original/street-co-open-api-openapi.yml#POST /notes

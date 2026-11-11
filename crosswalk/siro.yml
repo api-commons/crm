@@ -1,0 +1,65 @@
+provider: siro
+apis_io: https://apis.io/providers/siro/
+context: crm
+generated: '2026-11-10'
+concepts:
+  company:
+    path_segment:
+    - accounts
+    - organizations
+    properties:
+      name: name
+      id: id
+      created_at:
+      - dateCreated
+      - createdAt
+      updated_at: updatedAt
+      address: addresses
+      phone: phoneNumbers
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/siro-external-api-openapi.json#DELETE /v1/integrations/accounts/{id}
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/core/organizations
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/core/organizations/{id}
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/accounts
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/accounts/{id}
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      company_id:
+      - accountId
+      - organizationId
+      amount: amount
+      closed_at: closedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/siro-external-api-openapi.json#DELETE /v1/integrations/opportunities/{id}
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/opportunities
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/opportunities/{id}
+    - openapi/_original/siro-external-api-openapi.json#PUT /v1/integrations/sync/batch/opportunities
+    - openapi/_original/siro-external-api-openapi.json#PUT /v1/integrations/sync/opportunities
+  activity:
+    path_segment:
+    - engagements
+    properties:
+      type: engagementType
+      id: id
+      created_at: createdAt
+      subject: subject
+      updated_at: updatedAt
+      note: content
+      company_id:
+      - accountId
+      - organizationId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/siro-external-api-openapi.json#DELETE /v1/integrations/engagements/{id}
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/engagements
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/engagements/{id}
+    - openapi/_original/siro-external-api-openapi.json#GET /v1/integrations/users/{id}/engagements
+    - openapi/_original/siro-external-api-openapi.json#PUT /v1/integrations/sync/batch/engagements

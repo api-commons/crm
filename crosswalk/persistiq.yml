@@ -1,0 +1,20 @@
+provider: persistiq
+apis_io: https://apis.io/providers/persistiq/
+context: crm
+generated: '2026-11-10'
+concepts:
+  lead:
+    path_segment:
+    - leads
+    properties:
+      status:
+      - status
+      - status_id
+      owner_id: owner_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/persistiq-api-v1-openapi.json#DELETE /v1/campaigns/{campaign_id}/leads/{id}
+    - openapi/_original/persistiq-api-v1-openapi.json#GET /v1/campaigns/{campaign_id}/leads
+    - openapi/_original/persistiq-api-v1-openapi.json#GET /v1/leads
+    - openapi/_original/persistiq-api-v1-openapi.json#GET /v1/leads/{id}
+    - openapi/_original/persistiq-api-v1-openapi.json#PATCH /v1/leads/{id}

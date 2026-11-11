@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/company.json",
+  "title": "Company",
+  "description": "The common company in Customer Relationship Management, distilled from 54 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 42,
+      "x-commons-spellings": [
+        "name",
+        "companyName",
+        "displayName",
+        "Name",
+        "company_name",
+        "organization_name",
+        "accountName"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.759,
+      "x-commons-providers": 41,
+      "x-commons-spellings": [
+        "id",
+        "_id",
+        "Id"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.685,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "createdon",
+        "createdTime",
+        "created",
+        "created_date",
+        "createdDate",
+        "create_time"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.519,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "modifiedon",
+        "update_time",
+        "date_modified",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "website": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 27,
+      "x-commons-spellings": [
+        "website",
+        "url",
+        "websiteurl",
+        "Website",
+        "websiteUrl",
+        "website_url"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.426,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "address",
+        "addresses",
+        "address1_line1",
+        "BillingAddress"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.407,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "phone",
+        "phoneNumber",
+        "telephone1",
+        "phone_number",
+        "Phone",
+        "phoneNumbers",
+        "phone_numbers"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.352,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "description",
+        "Description",
+        "details"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.296,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "custom_fields",
+        "attributes",
+        "fields",
+        "customFields",
+        "custom",
+        "properties"
+      ]
+    },
+    "city": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.259,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "city",
+        "address1_city"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.259,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "email",
+        "emailaddress1",
+        "email_address",
+        "Email Address"
+      ],
+      "format": "email"
+    },
+    "country": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "country",
+        "address1_country"
+      ]
+    },
+    "industry": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "industry",
+        "Industry"
+      ]
+    },
+    "owner_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "owner_id",
+        "ownerId",
+        "user_id",
+        "userId",
+        "OwnerId"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "type",
+        "accountType",
+        "Type",
+        "company_type",
+        "Account Type",
+        "account_type"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "crm",
+    "concept": "company",
+    "providers": 54,
+    "generated": "2026-11-10"
+  }
+}

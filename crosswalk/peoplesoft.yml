@@ -1,0 +1,12 @@
+provider: peoplesoft
+apis_io: https://apis.io/providers/peoplesoft/
+context: crm
+generated: '2026-11-10'
+concepts:
+  deal:
+    path_segment:
+    - opportunities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/crm.yml#GET /sales/opportunities

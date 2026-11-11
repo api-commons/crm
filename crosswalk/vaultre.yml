@@ -1,0 +1,89 @@
+provider: vaultre
+apis_io: https://apis.io/providers/vaultre/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      email: emails
+      last_name: lastName
+      first_name: firstName
+      id: id
+      phone: phoneNumbers
+      job_title:
+      - title
+      - position
+      full_name:
+      - name
+      - displayName
+      address: address
+      company_name: company
+      is_deleted: archived
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /contacts/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /categories/contact
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /categories/contact/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /contacts
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /contacts/{id}
+  company:
+    path_segment:
+    - account
+    - accounts
+    properties:
+      name: name
+      id: id
+      website: websiteUrl
+      address: address
+      phone: phoneNumbers
+      email: email
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /account
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /integrator/accounts
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /integrator/accounts/{id}
+    - openapi/_original/vaultre-api-v1-2-openapi.yml#GET /account
+    - openapi/_original/vaultre-api-v1-2-openapi.yml#GET /integrator/accounts
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      source: source
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/vaultre-api-v1-3-openapi.yml#GET /fms/leads
+    - openapi/_original/vaultre-api-v1-3-openapi.yml#POST /fms/leads
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: subject
+      description: description
+      done: completed
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /tasks/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /tasks
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /tasks/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#POST /tasks
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#PUT /tasks/{id}
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      content: body
+      subject: name
+      type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /contacts/{contactid}/notes/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /properties/{propertyid}/notes/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /contacts/{contactid}/notes/{id}
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /contacts/{id}/notes
+    - openapi/_original/vaultre-api-v1-1-openapi.yml#GET /properties/{id}/notes

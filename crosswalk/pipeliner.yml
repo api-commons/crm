@@ -1,0 +1,146 @@
+provider: pipeliner
+apis_io: https://apis.io/providers/pipeliner/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      last_name: last_name
+      first_name: first_name
+      id: id
+      job_title:
+      - position
+      - title
+      created_at: created
+      address: address
+      tags: tags
+      owner_id: owner_id
+      is_deleted:
+      - is_deleted
+      - is_archived
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Contacts/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Contacts
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Contacts/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Contacts/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Contacts
+  company:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      id: id
+      created_at: created
+      address: address
+      city: city
+      country: country
+      industry: industry
+      owner_id: owner_id
+      type: account_type
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Accounts/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Accounts
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Accounts/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Accounts/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Accounts
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: created
+      status: status
+      description: description
+      owner_id: owner_id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Opportunities/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Opportunities
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Opportunities/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Opportunities/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Opportunities
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: created
+      source: lead_source
+      status: status
+      full_name: name
+      is_deleted:
+      - is_deleted
+      - is_archived
+      owner_id: owner_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Leads/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Leads
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Leads/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Leads/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Leads
+  activity:
+    path_segment:
+    - activities
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Activities
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Activities/{id}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: subject
+      created_at: created
+      due_at: due_date
+      status: status
+      description: description
+      owner_id: owner_id
+      priority: priority
+      is_deleted: is_deleted
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Tasks/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Tasks
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Tasks/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Tasks/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: created
+      contact_id: contact_id
+      owner_id: owner_id
+      company_id: account_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Notes/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Notes
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Notes/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Notes/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Notes
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      created_at: created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipeliner-openapi.json#DELETE /entities/Pipelines/{id}
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Pipelines
+    - openapi/_original/pipeliner-openapi.json#GET /entities/Pipelines/{id}
+    - openapi/_original/pipeliner-openapi.json#PATCH /entities/Pipelines/{id}
+    - openapi/_original/pipeliner-openapi.json#POST /entities/Pipelines

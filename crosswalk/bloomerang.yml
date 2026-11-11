@@ -1,0 +1,40 @@
+provider: bloomerang
+apis_io: https://apis.io/providers/bloomerang/
+context: crm
+generated: '2026-11-10'
+concepts:
+  task:
+    path_segment:
+    - task
+    - tasks
+    properties:
+      id: Id
+      subject: Subject
+      due_at: DueDate
+      status: Status
+      owner_id: UserId
+      note: Note
+      type: Type
+      is_deleted: Deleted
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bloomerang-openapi.json#DELETE /task/{id}
+    - openapi/_original/bloomerang-openapi.json#GET /task/{id}
+    - openapi/_original/bloomerang-openapi.json#GET /tasks
+    - openapi/_original/bloomerang-openapi.json#POST /task
+    - openapi/_original/bloomerang-openapi.json#PUT /task/{id}
+  note:
+    path_segment:
+    - note
+    - notes
+    properties:
+      id: Id
+      type: Type
+      company_id: AccountId
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/bloomerang-openapi.json#DELETE /note/{id}
+    - openapi/_original/bloomerang-openapi.json#GET /note/{id}
+    - openapi/_original/bloomerang-openapi.json#GET /notes
+    - openapi/_original/bloomerang-openapi.json#POST /note
+    - openapi/_original/bloomerang-openapi.json#PUT /note/{id}

@@ -1,0 +1,77 @@
+provider: lightfield
+apis_io: https://apis.io/providers/lightfield/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      id: id
+      created_at: createdAt
+      custom_fields: fields
+      updated_at: updatedAt
+    core_coverage: 0.375
+    evidence:
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/contacts
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/contacts/{id}
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/lists/{listId}/contacts
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/contacts
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/contacts/{id}
+  company:
+    path_segment:
+    - accounts
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      custom_fields: fields
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/accounts
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/accounts/{id}
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/lists/{listId}/accounts
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/accounts
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/accounts/{id}
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      custom_fields: fields
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/lists/{listId}/opportunities
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/opportunities
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/opportunities/{id}
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/opportunities
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/opportunities/{id}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      custom_fields: fields
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/tasks
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/tasks/{id}
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/tasks
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/tasks/{id}
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/notes
+    - openapi/_original/lightfield-openapi-original.yml#GET /v1/notes/{id}
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/notes
+    - openapi/_original/lightfield-openapi-original.yml#POST /v1/notes/{id}

@@ -1,0 +1,73 @@
+provider: oracle-siebel
+apis_io: https://apis.io/providers/oracle-siebel/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties:
+      email: Email Address
+      last_name: Last Name
+      first_name: First Name
+      id: Id
+      phone: 'Work Phone #'
+      job_title: Job Title
+      company_id: Account Id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Contact/Contact/{ContactId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Contact
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Contact/Contact
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Contact/Contact/{ContactId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Contact/Contact
+  company:
+    path_segment:
+    - account
+    properties:
+      name: Name
+      id: Id
+      description: Description
+      email: Email Address
+      industry: Industry
+      type: Account Type
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Account/Account/{AccountId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Account/Account
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}
+  deal:
+    path_segment:
+    - opportunity
+    properties:
+      name: Name
+      id: Id
+      company_id: Account Id
+      status: Status
+      description: Description
+      close_date: Close Date
+      probability: Win Probability
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Opportunity/Opportunity/{OpportunityId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Opportunity
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Opportunity/Opportunity
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Opportunity/Opportunity/{OpportunityId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Opportunity/Opportunity
+  activity:
+    path_segment:
+    - activity
+    properties:
+      type: Type
+      id: Id
+      company_id: Account Id
+      description: Description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Activity/Activity/{ActivityId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Activity/Activity
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Activity/Activity/{ActivityId}
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Activity/Activity
+    - openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Activity/Activity/{ActivityId}

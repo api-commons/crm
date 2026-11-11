@@ -1,0 +1,21 @@
+provider: clari
+apis_io: https://apis.io/providers/clari/
+context: crm
+generated: '2026-11-10'
+concepts:
+  deal:
+    path_segment:
+    - opportunity
+    properties:
+      id: id
+      custom_fields: fields
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/clari-revenue-api-openapi.yml#GET /opportunity
+  activity:
+    path_segment:
+    - activity
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/clari-revenue-api-openapi.yml#POST /export/activity

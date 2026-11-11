@@ -1,0 +1,117 @@
+provider: highlevel
+apis_io: https://apis.io/providers/highlevel/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      id: id
+      phone: phone
+      custom_fields: customFields
+      full_name: name
+      company_name: companyName
+      tags: tags
+      owner_id: assignedTo
+      is_deleted: deleted
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/highlevel-contacts-openapi.json#DELETE /contacts/{contactId}
+    - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/
+    - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/{contactId}
+    - openapi/_original/highlevel-contacts-openapi.json#POST /contacts/
+    - openapi/_original/highlevel-contacts-openapi.json#PUT /contacts/{contactId}
+  company:
+    path_segment:
+    - accounts
+    - companies
+    properties:
+      name: name
+      id:
+      - id
+      - _id
+      created_at: createdAt
+      updated_at: updatedAt
+      website: website
+      address: address
+      phone: phone
+      city: city
+      email: email
+      country: country
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/highlevel-companies-openapi.json#GET /companies/{companyId}
+    - openapi/_original/highlevel-social-media-posting-openapi.json#DELETE /social-media-posting/{locationId}/accounts/{id}
+    - openapi/_original/highlevel-social-media-posting-openapi.json#GET /social-media-posting/oauth/{locationId}/facebook/accounts/{accountId}
+    - openapi/_original/highlevel-social-media-posting-openapi.json#GET /social-media-posting/oauth/{locationId}/instagram/accounts/{accountId}
+    - openapi/_original/highlevel-social-media-posting-openapi.json#GET /social-media-posting/oauth/{locationId}/linkedin/accounts/{accountId}
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      stage_id: pipelineStageId
+      custom_fields: customFields
+      status: status
+      owner_id: assignedTo
+      contact_id: contactId
+      pipeline_id: pipelineId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/highlevel-opportunities-openapi.json#DELETE /opportunities/{id}
+    - openapi/_original/highlevel-opportunities-openapi.json#GET /opportunities/{id}
+    - openapi/_original/highlevel-opportunities-openapi.json#POST /opportunities/
+    - openapi/_original/highlevel-opportunities-openapi.json#PUT /opportunities/{id}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      due_at: dueDate
+      done: completed
+      assignee_id: assignedTo
+      note: body
+      contact_id: contactId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/highlevel-contacts-openapi.json#DELETE /contacts/{contactId}/tasks/{taskId}
+    - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/{contactId}/tasks
+    - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/{contactId}/tasks/{taskId}
+    - openapi/_original/highlevel-contacts-openapi.json#POST /contacts/{contactId}/tasks
+    - openapi/_original/highlevel-contacts-openapi.json#PUT /contacts/{contactId}/tasks/{taskId}
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      content: body
+      contact_id: contactId
+      created_by: createdBy
+      owner_id: userId
+      subject: title
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/highlevel-calendars-openapi.json#DELETE /calendars/appointments/{appointmentId}/notes/{noteId}
+    - openapi/_original/highlevel-calendars-openapi.json#GET /calendars/appointments/{appointmentId}/notes
+    - openapi/_original/highlevel-calendars-openapi.json#POST /calendars/appointments/{appointmentId}/notes
+    - openapi/_original/highlevel-calendars-openapi.json#PUT /calendars/appointments/{appointmentId}/notes/{noteId}
+    - openapi/_original/highlevel-contacts-openapi.json#DELETE /contacts/{contactId}/notes/{id}
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      stages: stages
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/highlevel-opportunities-openapi.json#GET /opportunities/pipelines

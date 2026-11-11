@@ -1,0 +1,45 @@
+provider: getresponse
+apis_io: https://apis.io/providers/getresponse/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      custom_fields: customFieldValues
+      full_name: name
+      tags: tags
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/getresponse-contacts-openapi.yml#DELETE /contacts/{contactId}
+    - openapi/_original/getresponse-contacts-openapi.yml#GET /campaigns/{campaignId}/contacts
+    - openapi/_original/getresponse-contacts-openapi.yml#GET /contacts
+    - openapi/_original/getresponse-contacts-openapi.yml#GET /contacts/{contactId}
+    - openapi/_original/getresponse-contacts-openapi.yml#POST /contacts
+  company:
+    path_segment:
+    - accounts
+    properties:
+      name: companyName
+      phone: phone
+      city: city
+      email: email
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/getresponse-accounts-openapi.yml#GET /accounts
+    - openapi/_original/getresponse-accounts-openapi.yml#POST /accounts
+    - openapi/_original/getresponse-open-api-original.json#GET /accounts
+    - openapi/_original/getresponse-open-api-original.json#POST /accounts
+  activity:
+    path_segment:
+    - activities
+    properties:
+      subject: subject
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/getresponse-contacts-openapi.yml#GET /contacts/{contactId}/activities
+    - openapi/_original/getresponse-newsletters-openapi.yml#GET /newsletters/{newsletterId}/activities
+    - openapi/_original/getresponse-open-api-original.json#GET /contacts/{contactId}/activities
+    - openapi/_original/getresponse-open-api-original.json#GET /newsletters/{newsletterId}/activities

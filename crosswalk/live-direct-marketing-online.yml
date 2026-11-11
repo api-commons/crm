@@ -1,0 +1,114 @@
+provider: live-direct-marketing-online
+apis_io: https://apis.io/providers/live-direct-marketing-online/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      last_name: lastName
+      first_name: firstName
+      job_title: position
+      company_id: companyId
+    core_coverage: 0.375
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/contact-lists/{id}/contacts
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/contacts/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/contacts
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/contacts/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#PATCH /api/contacts/{id}
+  company:
+    path_segment:
+    - account
+    - accounts
+    - companies
+    - company
+    properties:
+      name: name
+      website: website
+      address: address
+      phone: phone
+      description: description
+      city: city
+      country: country
+      industry: industry
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/companies/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/company-lists/{id}/companies
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/companies
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/companies/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/dialogs/accounts
+  deal:
+    path_segment:
+    - deal
+    properties:
+      close_date: expectedCloseDate
+      currency: currency
+      amount: amount
+      probability: probability
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/leads/{id}/deal
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#PATCH /api/leads/{id}/deal
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#GET /api/leads/{id}/deal
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#PATCH /api/leads/{id}/deal
+  lead:
+    path_segment:
+    - leads
+    properties:
+      source: source
+      job_title: title
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/leads/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/leads
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/leads/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#PATCH /api/leads/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#POST /api/leads
+  activity:
+    path_segment:
+    - activities
+    - activity
+    properties:
+      type: type
+      subject: subject
+      company_id: companyId
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/activities/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/activities
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/campaigns/{id}/activity
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#PATCH /api/activities/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#POST /api/activities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      description: description
+      owner_id: userId
+      tags: tagIds
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/tasks/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/import/tasks/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/pipeline/speed/stage/{name}/tasks
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/pipeline/tasks
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/pipeline/tasks/{id}
+  pipeline:
+    path_segment:
+    - pipeline
+    - pipelines
+    properties:
+      name: name
+      is_default: isDefault
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#DELETE /api/pipelines/{id}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/admin/pipelines
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/creatives/{id}/autopilot/bank/pipeline/{jobId}
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/pipelines
+    - openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json#GET /api/pipelines/{id}

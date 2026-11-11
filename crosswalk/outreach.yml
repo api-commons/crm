@@ -1,0 +1,46 @@
+provider: outreach
+apis_io: https://apis.io/providers/outreach/
+context: crm
+generated: '2026-11-10'
+concepts:
+  company:
+    path_segment:
+    - accounts
+    properties:
+      id: id
+      custom_fields: attributes
+      type: type
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/outreach-openapi.json#DELETE /accounts/{id}
+    - openapi/_original/outreach-openapi.json#GET /accounts
+    - openapi/_original/outreach-openapi.json#GET /accounts/{id}
+    - openapi/_original/outreach-openapi.json#PATCH /accounts/{id}
+    - openapi/_original/outreach-openapi.json#POST /accounts
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/outreach-openapi.json#DELETE /opportunities/{id}
+    - openapi/_original/outreach-openapi.json#GET /opportunities
+    - openapi/_original/outreach-openapi.json#GET /opportunities/{id}
+    - openapi/_original/outreach-openapi.json#PATCH /opportunities/{id}
+    - openapi/_original/outreach-openapi.json#POST /opportunities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/outreach-openapi.json#DELETE /tasks/{id}
+    - openapi/_original/outreach-openapi.json#GET /tasks
+    - openapi/_original/outreach-openapi.json#GET /tasks/{id}
+    - openapi/_original/outreach-openapi.json#PATCH /tasks/{id}
+    - openapi/_original/outreach-openapi.json#POST /tasks

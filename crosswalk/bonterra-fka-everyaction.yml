@@ -1,0 +1,34 @@
+provider: bonterra-fka-everyaction
+apis_io: https://apis.io/providers/bonterra-fka-everyaction/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - people
+    properties:
+      email: emails
+      last_name: lastName
+      first_name: firstName
+      phone: phones
+      custom_fields: customProperties
+      address: addresses
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#DELETE /people/{vanId}
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#DELETE /supporterGroups/{supporterGroupId}/people/{vanId}
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#GET /people
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#GET /people/{personIdType}:{personId}
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#GET /people/{vanId}
+  note:
+    path_segment:
+    - notes
+    properties:
+      created_at: createdDate
+      content: text
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#GET /people/{vanId}/notes
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#POST /people/{personIdType}:{personId}/notes
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#POST /people/{vanId}/notes
+    - openapi/_original/bonterra-fka-everyaction-everyaction-8-openapi.yml#PUT /people/{vanId}/notes/{noteId}

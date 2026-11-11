@@ -1,0 +1,75 @@
+provider: hubflo
+apis_io: https://apis.io/providers/hubflo/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: phone
+      job_title: job_title
+      full_name: full_name
+      company_id: company_id
+      address: address
+      company_name: company_name
+      tags: tags
+      owner_id: owner_id
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/hubflo-openapi-original.yml#DELETE /api/v2/workspaces/{workspace_id}/contacts/{id}
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/contacts
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/contacts/{id}
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/projects/{project_id}/contacts
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/proposals/{proposal_id}/contacts
+  company:
+    path_segment:
+    - companies
+    - organizations
+    properties:
+      name: name
+      website: website
+      address: address
+      city: city
+      email: email
+      country: country
+      owner_id: owner_id
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/companies
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/companies/{id}
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/organizations
+    - openapi/_original/hubflo-openapi-original.yml#PATCH /api/v2/companies/{id}
+    - openapi/_original/hubflo-openapi-original.yml#PATCH /api/v2/organizations
+  task:
+    path_segment:
+    - tasks
+    properties:
+      subject: name
+      description: description
+      done: completed
+      contact_id: contact_id
+      tags: tags
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/tasks
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/tasks/{id}
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/workspaces/{workspace_id}/tasks
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/workspaces/{workspace_id}/tasks/{id}
+    - openapi/_original/hubflo-openapi-original.yml#PATCH /api/v2/tasks/{id}
+  note:
+    path_segment:
+    - notes
+    properties:
+      content: content
+      subject: title
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes/{id}
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/workspaces/{workspace_id}/notes
+    - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/workspaces/{workspace_id}/notes/{id}
+    - openapi/_original/hubflo-openapi-original.yml#PATCH /api/v2/notes/{id}

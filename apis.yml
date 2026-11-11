@@ -1,0 +1,63 @@
+aid: common-crm
+name: CRM
+type: Common
+description: 'The common Customer Relationship Management vocabulary, distilled from the harvested OpenAPI of 134
+  CRM providers in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from
+  the common names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- CRM
+- Customer Relationship Management
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/crm/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-crm:crm
+  name: Common CRM Interface
+  description: The CRM interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/crm
+  tags:
+  - CRM
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/crm/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/crm/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/crm/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: contact
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/contact.json
+  - type: JSONSchema
+    name: company
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/company.json
+  - type: JSONSchema
+    name: deal
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/deal.json
+  - type: JSONSchema
+    name: lead
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/lead.json
+  - type: JSONSchema
+    name: activity
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/activity.json
+  - type: JSONSchema
+    name: task
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/task.json
+  - type: JSONSchema
+    name: note
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/note.json
+  - type: JSONSchema
+    name: pipeline
+    url: https://raw.githubusercontent.com/api-commons/crm/main/schema/pipeline.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/crm/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

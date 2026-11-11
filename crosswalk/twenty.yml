@@ -1,0 +1,97 @@
+provider: twenty
+apis_io: https://apis.io/providers/twenty/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - people
+    properties:
+      email: emails
+      id: id
+      phone: phones
+      job_title:
+      - jobTitle
+      - position
+      created_at: createdAt
+      updated_at: updatedAt
+      full_name: name
+      company_id: companyId
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/twenty-core-api-openapi.yml#DELETE /people/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#GET /people
+    - openapi/_original/twenty-core-api-openapi.yml#GET /people/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#PATCH /people/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#POST /batch/people
+  company:
+    path_segment:
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      address: address
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/twenty-core-api-openapi.yml#DELETE /companies/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#GET /companies
+    - openapi/_original/twenty-core-api-openapi.yml#GET /companies/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#PATCH /companies/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#POST /batch/companies
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      stage_id: stage
+      company_id: companyId
+      close_date: closeDate
+      owner_id: ownerId
+      amount: amount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/twenty-core-api-openapi.yml#DELETE /opportunities/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#GET /opportunities
+    - openapi/_original/twenty-core-api-openapi.yml#GET /opportunities/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#PATCH /opportunities/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#POST /opportunities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      created_at: createdAt
+      due_at: dueAt
+      status: status
+      updated_at: updatedAt
+      assignee_id: assigneeId
+      created_by: createdBy
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/twenty-core-api-openapi.yml#DELETE /tasks/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#GET /tasks
+    - openapi/_original/twenty-core-api-openapi.yml#GET /tasks/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#PATCH /tasks/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#POST /tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      created_by: createdBy
+      subject: title
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/twenty-core-api-openapi.yml#DELETE /notes/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#GET /notes
+    - openapi/_original/twenty-core-api-openapi.yml#GET /notes/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#PATCH /notes/{id}
+    - openapi/_original/twenty-core-api-openapi.yml#POST /notes

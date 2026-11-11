@@ -1,0 +1,90 @@
+provider: eci-solutions
+apis_io: https://apis.io/providers/eci-solutions/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      email:
+      - emailAddress
+      - email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone:
+      - phoneNumber
+      - phone
+      job_title: title
+      full_name: name
+      company_id: organizationID
+      address: address
+      company_name:
+      - organization
+      - company_name
+      mobile_phone:
+      - cellPhone
+      - cell_phone
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/contacts
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/contacts/{id}
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/view/contacts
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#POST /api/v2.1/contacts
+    - openapi/_original/eci-solutions-erp-v2-openapi.json#GET /api/v2/view/contacts
+  company:
+    path_segment:
+    - account
+    - companies
+    - company
+    - organizations
+    properties:
+      name:
+      - name
+      - companyName
+      - displayName
+      id: id
+      created_at: createdDate
+      website: websiteUrl
+      address: addresses
+      phone: phoneNumber
+      country: country
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/organizations
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/organizations/{id}
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/view/organizations
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#POST /api/v2.1/organizations
+    - openapi/_original/eci-solutions-erp-v2-openapi.json#GET /api/v2/view/organizations
+  lead:
+    path_segment:
+    - leads
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eci-solutions-m1-openapi.json#DELETE /api/ERP/Leads/{key}
+    - openapi/_original/eci-solutions-m1-openapi.json#GET /api/ERP/Leads
+    - openapi/_original/eci-solutions-m1-openapi.json#GET /api/ERP/Leads/{key}
+    - openapi/_original/eci-solutions-m1-openapi.json#PUT /api/ERP/Leads
+  activity:
+    path_segment:
+    - activity
+    properties:
+      id: id
+      subject: name
+      company_id: companyId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/eci-solutions-management-openapi.json#POST /api/ApiUser/{userId}/activity
+    - openapi/_original/eci-solutions-management-openapi.json#POST /api/api-users/{userId}/activity
+  note:
+    path_segment:
+    - notes
+    properties:
+      created_by: createdBy
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#DELETE /registrants/{registrantId}/notes/{noteId}
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#POST /registrants/{registrantId}/notes

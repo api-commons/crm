@@ -1,0 +1,179 @@
+provider: pipedrive
+apis_io: https://apis.io/providers/pipedrive/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - persons
+    properties:
+      email: emails
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phones
+      job_title: job_title
+      created_at: add_time
+      custom_fields: custom_fields
+      updated_at: update_time
+      full_name: name
+      company_id: org_id
+      tags: label_ids
+      owner_id: owner_id
+      is_deleted: is_deleted
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipedrive-v2-openapi.yml#DELETE /persons/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /persons
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /persons/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#PATCH /persons/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#POST /persons
+  company:
+    path_segment:
+    - organizations
+    properties:
+      name: name
+      id: id
+      created_at: add_time
+      updated_at: update_time
+      address: address
+      custom_fields: custom_fields
+      owner_id: owner_id
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/pipedrive-v2-openapi.yml#DELETE /organizations/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /organizations
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /organizations/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#PATCH /organizations/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#POST /organizations
+  deal:
+    path_segment:
+    - deal
+    - deals
+    properties:
+      name: title
+      id: id
+      created_at: add_time
+      updated_at: update_time
+      stage_id: stage_id
+      company_id: org_id
+      custom_fields: custom_fields
+      status: status
+      close_date: expected_close_date
+      currency: currency
+      owner_id:
+      - user_id
+      - owner_id
+      contact_id: person_id
+      pipeline_id: pipeline_id
+      closed_at:
+      - close_time
+      - won_time
+      probability: probability
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /pipelines/{id}/deals
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /products/{id}/deals
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /stages/{id}/deals
+    - openapi/_original/pipedrive-v2-openapi.yml#DELETE /deals/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /deals
+  lead:
+    path_segment:
+    - lead
+    - leads
+    properties:
+      id: id
+      created_at: add_time
+      source: origin
+      updated_at: update_time
+      job_title: title
+      is_deleted: is_archived
+      owner_id: owner_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipedrive-v1-openapi.yml#DELETE /leads/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /leads
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /leads/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#PATCH /leads/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#POST /leads
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: id
+      created_at: add_time
+      subject: subject
+      updated_at: update_time
+      note:
+      - public_description
+      - note
+      company_id:
+      - org_id
+      - company_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /projects/{id}/activities
+    - openapi/_original/pipedrive-v1-openapi.yml#PUT /projects/{id}/plan/activities/{activityId}
+    - openapi/_original/pipedrive-v2-openapi.yml#DELETE /activities/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /activities
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /activities/{id}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      created_at: add_time
+      due_at: due_date
+      description: description
+      done:
+      - done
+      - is_done
+      updated_at: update_time
+      assignee_id:
+      - assignee_id
+      - assignee_ids
+      priority: priority
+      created_by: creator_id
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/pipedrive-v1-openapi.yml#DELETE /tasks/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /projects/{id}/tasks
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /tasks
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /tasks/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#POST /tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: add_time
+      content: content
+      updated_at: update_time
+      contact_id: person_id
+      owner_id: user_id
+      company_id: org_id
+      deal_id: deal_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipedrive-v1-openapi.yml#DELETE /notes/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /notes
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /notes/{id}
+    - openapi/_original/pipedrive-v1-openapi.yml#POST /notes
+    - openapi/_original/pipedrive-v1-openapi.yml#PUT /notes/{id}
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      created_at: add_time
+      updated_at: update_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pipedrive-v1-openapi.yml#GET /roles/{id}/pipelines
+    - openapi/_original/pipedrive-v1-openapi.yml#PUT /roles/{id}/pipelines
+    - openapi/_original/pipedrive-v2-openapi.yml#DELETE /pipelines/{id}
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /pipelines
+    - openapi/_original/pipedrive-v2-openapi.yml#GET /pipelines/{id}

@@ -1,0 +1,806 @@
+openapi: 3.1.0
+info:
+  title: Customer Relationship Management (API Commons)
+  version: '2026-11-10'
+  description: 'The common Customer Relationship Management interface, distilled from the harvested OpenAPI of 134
+    providers in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already
+    shares, measured, so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /contacts:
+    post:
+      operationId: createContact
+      summary: Create a contact
+      tags:
+      - Contacts
+      x-commons-tier: core
+      x-commons-share: 0.952
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id001
+                $ref: '#/components/schemas/Contact'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    get:
+      operationId: listContacts
+      summary: List contacts
+      tags:
+      - Contacts
+      x-commons-tier: core
+      x-commons-share: 0.873
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id001
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /contacts/{contact_id}:
+    parameters:
+    - $ref: '#/components/parameters/contact_id'
+    get:
+      operationId: getContact
+      summary: Get a contact
+      tags:
+      - Contacts
+      x-commons-tier: core
+      x-commons-share: 0.873
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateContact
+      summary: Update a contact
+      tags:
+      - Contacts
+      x-commons-tier: core
+      x-commons-share: 0.73
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    delete:
+      operationId: deleteContact
+      summary: Delete a contact
+      tags:
+      - Contacts
+      x-commons-tier: core
+      x-commons-share: 0.587
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /companies:
+    get:
+      operationId: listCompanies
+      summary: List companies
+      tags:
+      - Companies
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Company'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCompany
+      summary: Create a company
+      tags:
+      - Companies
+      x-commons-tier: core
+      x-commons-share: 0.768
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /companies/{company_id}:
+    parameters:
+    - $ref: '#/components/parameters/company_id'
+    get:
+      operationId: getCompany
+      summary: Get a company
+      tags:
+      - Companies
+      x-commons-tier: core
+      x-commons-share: 0.679
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateCompany
+      summary: Update a company
+      tags:
+      - Companies
+      x-commons-tier: core
+      x-commons-share: 0.589
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+    delete:
+      operationId: deleteCompany
+      summary: Delete a company
+      tags:
+      - Companies
+      x-commons-tier: extended
+      x-commons-share: 0.446
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /deals:
+    post:
+      operationId: createDeal
+      summary: Create a deal
+      tags:
+      - Deals
+      x-commons-tier: core
+      x-commons-share: 0.841
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id003
+                $ref: '#/components/schemas/Deal'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    get:
+      operationId: listDeals
+      summary: List deals
+      tags:
+      - Deals
+      x-commons-tier: core
+      x-commons-share: 0.75
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id003
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /deals/{deal_id}:
+    parameters:
+    - $ref: '#/components/parameters/deal_id'
+    get:
+      operationId: getDeal
+      summary: Get a deal
+      tags:
+      - Deals
+      x-commons-tier: core
+      x-commons-share: 0.773
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateDeal
+      summary: Update a deal
+      tags:
+      - Deals
+      x-commons-tier: core
+      x-commons-share: 0.636
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteDeal
+      summary: Delete a deal
+      tags:
+      - Deals
+      x-commons-tier: core
+      x-commons-share: 0.591
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /leads:
+    get:
+      operationId: listLeads
+      summary: List leads
+      tags:
+      - Leads
+      x-commons-tier: core
+      x-commons-share: 0.923
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Lead'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createLead
+      summary: Create a lead
+      tags:
+      - Leads
+      x-commons-tier: core
+      x-commons-share: 0.885
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /leads/{lead_id}:
+    parameters:
+    - $ref: '#/components/parameters/lead_id'
+    get:
+      operationId: getLead
+      summary: Get a lead
+      tags:
+      - Leads
+      x-commons-tier: core
+      x-commons-share: 0.577
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateLead
+      summary: Update a lead
+      tags:
+      - Leads
+      x-commons-tier: core
+      x-commons-share: 0.538
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    delete:
+      operationId: deleteLead
+      summary: Delete a lead
+      tags:
+      - Leads
+      x-commons-tier: extended
+      x-commons-share: 0.462
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /activities:
+    get:
+      operationId: listActivities
+      summary: List activities
+      tags:
+      - Activities
+      x-commons-tier: core
+      x-commons-share: 0.789
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Activity'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createActivity
+      summary: Create a activity
+      tags:
+      - Activities
+      x-commons-tier: extended
+      x-commons-share: 0.447
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /activities/{activity_id}:
+    parameters:
+    - $ref: '#/components/parameters/activity_id'
+    get:
+      operationId: getActivity
+      summary: Get a activity
+      tags:
+      - Activities
+      x-commons-tier: extended
+      x-commons-share: 0.368
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    delete:
+      operationId: deleteActivity
+      summary: Delete a activity
+      tags:
+      - Activities
+      x-commons-tier: extended
+      x-commons-share: 0.237
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateActivity
+      summary: Update a activity
+      tags:
+      - Activities
+      x-commons-tier: extended
+      x-commons-share: 0.237
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /tasks:
+    post:
+      operationId: createTask
+      summary: Create a task
+      tags:
+      - Tasks
+      x-commons-tier: core
+      x-commons-share: 0.947
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id006
+                $ref: '#/components/schemas/Task'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+    get:
+      operationId: listTasks
+      summary: List tasks
+      tags:
+      - Tasks
+      x-commons-tier: core
+      x-commons-share: 0.816
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id006
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /tasks/{task_id}:
+    parameters:
+    - $ref: '#/components/parameters/task_id'
+    get:
+      operationId: getTask
+      summary: Get a task
+      tags:
+      - Tasks
+      x-commons-tier: core
+      x-commons-share: 0.763
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateTask
+      summary: Update a task
+      tags:
+      - Tasks
+      x-commons-tier: core
+      x-commons-share: 0.737
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+    delete:
+      operationId: deleteTask
+      summary: Delete a task
+      tags:
+      - Tasks
+      x-commons-tier: core
+      x-commons-share: 0.553
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+  /notes:
+    get:
+      operationId: listNotes
+      summary: List notes
+      tags:
+      - Notes
+      x-commons-tier: core
+      x-commons-share: 0.882
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id007
+                  $ref: '#/components/schemas/Note'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createNote
+      summary: Create a note
+      tags:
+      - Notes
+      x-commons-tier: core
+      x-commons-share: 0.853
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+  /notes/{note_id}:
+    parameters:
+    - $ref: '#/components/parameters/note_id'
+    patch:
+      operationId: updateNote
+      summary: Update a note
+      tags:
+      - Notes
+      x-commons-tier: core
+      x-commons-share: 0.676
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+    delete:
+      operationId: deleteNote
+      summary: Delete a note
+      tags:
+      - Notes
+      x-commons-tier: core
+      x-commons-share: 0.647
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    get:
+      operationId: getNote
+      summary: Get a note
+      tags:
+      - Notes
+      x-commons-tier: core
+      x-commons-share: 0.559
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+  /pipelines:
+    get:
+      operationId: listPipelines
+      summary: List pipelines
+      tags:
+      - Pipelines
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id008
+                  $ref: '#/components/schemas/Pipeline'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPipeline
+      summary: Create a pipeline
+      tags:
+      - Pipelines
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
+  /pipelines/{pipeline_id}:
+    parameters:
+    - $ref: '#/components/parameters/pipeline_id'
+    get:
+      operationId: getPipeline
+      summary: Get a pipeline
+      tags:
+      - Pipelines
+      x-commons-tier: core
+      x-commons-share: 0.7
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+    patch:
+      operationId: updatePipeline
+      summary: Update a pipeline
+      tags:
+      - Pipelines
+      x-commons-tier: core
+      x-commons-share: 0.55
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
+    delete:
+      operationId: deletePipeline
+      summary: Delete a pipeline
+      tags:
+      - Pipelines
+      x-commons-tier: extended
+      x-commons-share: 0.4
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+components:
+  schemas:
+    Contact:
+      $ref: ./schema/contact.json
+    Company:
+      $ref: ./schema/company.json
+    Deal:
+      $ref: ./schema/deal.json
+    Lead:
+      $ref: ./schema/lead.json
+    Activity:
+      $ref: ./schema/activity.json
+    Task:
+      $ref: ./schema/task.json
+    Note:
+      $ref: ./schema/note.json
+    Pipeline:
+      $ref: ./schema/pipeline.json
+  parameters:
+    contact_id:
+      name: contact_id
+      in: path
+      required: true
+      schema:
+        type: string
+    company_id:
+      name: company_id
+      in: path
+      required: true
+      schema:
+        type: string
+    deal_id:
+      name: deal_id
+      in: path
+      required: true
+      schema:
+        type: string
+    lead_id:
+      name: lead_id
+      in: path
+      required: true
+      schema:
+        type: string
+    activity_id:
+      name: activity_id
+      in: path
+      required: true
+      schema:
+        type: string
+    task_id:
+      name: task_id
+      in: path
+      required: true
+      schema:
+        type: string
+    note_id:
+      name: note_id
+      in: path
+      required: true
+      schema:
+        type: string
+    pipeline_id:
+      name: pipeline_id
+      in: path
+      required: true
+      schema:
+        type: string

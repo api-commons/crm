@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/lead.json",
+  "title": "Lead",
+  "description": "The common lead in Customer Relationship Management, distilled from 23 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.696,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "id",
+        "_id"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.652,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdon",
+        "createdTime",
+        "createdDate",
+        "add_time",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "source": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.522,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "source",
+        "lead_source",
+        "leadSource",
+        "origin",
+        "source_id"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.478,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "email",
+        "emailaddress1"
+      ],
+      "format": "email"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.478,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "leadStatus",
+        "status_id"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.478,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "modifiedon",
+        "modifiedDate",
+        "update_time"
+      ],
+      "format": "date-time"
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.435,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "first_name",
+        "firstName",
+        "firstname"
+      ]
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.435,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "last_name",
+        "lastName",
+        "lastname"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.435,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "phone",
+        "telephone1",
+        "phoneNumbers",
+        "phone_numbers"
+      ]
+    },
+    "company_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.391,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "company",
+        "company_name",
+        "companyName",
+        "companyname",
+        "Company name",
+        "organization_name"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.391,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "custom_fields",
+        "properties",
+        "customFields",
+        "attributes"
+      ]
+    },
+    "job_title": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.391,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "title",
+        "jobTitle",
+        "jobtitle"
+      ]
+    },
+    "full_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.217,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "name",
+        "full_name"
+      ]
+    },
+    "is_deleted": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.217,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "is_archived",
+        "is_deleted",
+        "deleted",
+        "archived"
+      ]
+    },
+    "owner_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.217,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "owner_id"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "crm",
+    "concept": "lead",
+    "providers": 23,
+    "generated": "2026-11-10"
+  }
+}

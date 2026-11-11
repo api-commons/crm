@@ -1,0 +1,27 @@
+provider: mobly
+apis_io: https://apis.io/providers/mobly/
+context: crm
+generated: '2026-11-10'
+concepts:
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: createdAt
+      email: email
+      status: status
+      first_name: firstName
+      last_name: lastName
+      phone: phoneNumbers
+      company_name:
+      - company
+      - companyName
+      job_title: jobTitle
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/mobly-rest-api-v0-openapi-original.yml#DELETE /events/{eventId}/leads/{leadId}
+    - openapi/_original/mobly-rest-api-v0-openapi-original.yml#DELETE /leads/{leadId}
+    - openapi/_original/mobly-rest-api-v0-openapi-original.yml#GET /events/{eventId}/leads
+    - openapi/_original/mobly-rest-api-v0-openapi-original.yml#GET /leads
+    - openapi/_original/mobly-rest-api-v0-openapi-original.yml#GET /leads/{leadId}

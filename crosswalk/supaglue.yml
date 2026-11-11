@@ -1,0 +1,153 @@
+provider: supaglue
+apis_io: https://apis.io/providers/supaglue/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    - persons
+    properties:
+      email:
+      - email_addresses
+      - Email
+      - email
+      - email_address
+      last_name:
+      - last_name
+      - LastName
+      - lastname
+      first_name:
+      - first_name
+      - FirstName
+      - firstname
+      id:
+      - id
+      - Id
+      phone:
+      - phone_numbers
+      - Phone
+      - phone
+      - phone_number
+      job_title:
+      - title
+      - Title
+      - jobtitle
+      - job_title
+      created_at:
+      - created_at
+      - CreatedDate
+      custom_fields: custom_fields
+      updated_at: updated_at
+      full_name: name
+      company_id:
+      - account_id
+      - AccountId
+      address:
+      - addresses
+      - address
+      owner_id:
+      - owner_id
+      - OwnerId
+      is_deleted:
+      - is_deleted
+      - IsDeleted
+      mobile_phone:
+      - MobilePhone
+      - mobilephone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /contacts
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /contacts/{contact_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#PATCH /contacts/{contact_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#POST /contacts
+    - openapi/_original/supaglue-data-api-openapi.yml#GET /hubspot/contacts
+  company:
+    path_segment:
+    - accounts
+    - companies
+    properties:
+      name:
+      - name
+      - Name
+      id:
+      - id
+      - Id
+      created_at:
+      - created_at
+      - CreatedDate
+      updated_at: updated_at
+      website:
+      - website
+      - Website
+      address:
+      - addresses
+      - address
+      phone:
+      - phone_numbers
+      - Phone
+      - phone
+      description:
+      - description
+      - Description
+      custom_fields: custom_fields
+      city: city
+      country: country
+      industry:
+      - industry
+      - Industry
+      owner_id:
+      - owner_id
+      - OwnerId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /accounts
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /accounts/{account_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#PATCH /accounts/{account_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#POST /accounts
+    - openapi/_original/supaglue-data-api-openapi.yml#GET /hubspot/companies
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      stage_id: stage
+      company_id: account_id
+      custom_fields: custom_fields
+      status: status
+      description: description
+      close_date: close_date
+      owner_id: owner_id
+      amount: amount
+      pipeline_id: pipeline
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /opportunities
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /opportunities/{opportunity_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#PATCH /opportunities/{opportunity_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#POST /opportunities
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: created_at
+      source: lead_source
+      updated_at: updated_at
+      first_name: first_name
+      last_name: last_name
+      phone: phone_numbers
+      company_name: company
+      custom_fields: custom_fields
+      job_title: title
+      is_deleted: is_deleted
+      owner_id: owner_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /leads
+    - openapi/_original/supaglue-crm-api-openapi.yml#GET /leads/{lead_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#PATCH /leads/{lead_id}
+    - openapi/_original/supaglue-crm-api-openapi.yml#POST /leads

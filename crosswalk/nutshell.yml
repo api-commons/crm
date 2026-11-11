@@ -1,0 +1,98 @@
+provider: nutshell
+apis_io: https://apis.io/providers/nutshell/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: emails
+      phone: phones
+      custom_fields: customFields
+      full_name: name
+      address: addresses
+    core_coverage: 0.375
+    evidence:
+    - openapi/_original/nutshell-api.json#DELETE /contacts/{id}
+    - openapi/_original/nutshell-api.json#GET /contacts
+    - openapi/_original/nutshell-api.json#GET /contacts/{id}
+    - openapi/_original/nutshell-api.json#PATCH /contacts/{id}
+    - openapi/_original/nutshell-api.json#POST /contacts
+  company:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      id: id
+      created_at: createdTime
+      address: addresses
+      description: description
+      custom_fields: customFields
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/nutshell-accounts-api-openapi.yml#DELETE /accounts/{id}
+    - openapi/_original/nutshell-accounts-api-openapi.yml#GET /accounts
+    - openapi/_original/nutshell-accounts-api-openapi.yml#GET /accounts/{id}
+    - openapi/_original/nutshell-accounts-api-openapi.yml#PATCH /accounts/{id}
+    - openapi/_original/nutshell-accounts-api-openapi.yml#POST /accounts
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: createdTime
+      status: status
+      custom_fields: customFields
+      full_name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nutshell-api.json#DELETE /leads/{id}
+    - openapi/_original/nutshell-api.json#GET /leads
+    - openapi/_original/nutshell-api.json#GET /leads/{id}
+    - openapi/_original/nutshell-api.json#PATCH /leads/{id}
+    - openapi/_original/nutshell-api.json#POST /leads
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: activityType
+      id: id
+      created_at: createdTime
+      subject: name
+      note: note
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nutshell-api.json#GET /activities
+    - openapi/_original/nutshell-api.json#GET /activities/{id}
+    - openapi/_original/nutshell-api.json#POST /activities
+    - openapi/_original/nutshell-api.json#PUT /activities/{id}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      due_at: dueTime
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nutshell-api.json#DELETE /tasks/{id}
+    - openapi/_original/nutshell-api.json#GET /tasks
+    - openapi/_original/nutshell-api.json#GET /tasks/{id}
+    - openapi/_original/nutshell-api.json#PATCH /tasks/{id}
+    - openapi/_original/nutshell-api.json#POST /tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: createdTime
+      content: body
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/nutshell-api.json#DELETE /notes/{id}
+    - openapi/_original/nutshell-api.json#GET /notes
+    - openapi/_original/nutshell-api.json#GET /notes/{id}
+    - openapi/_original/nutshell-api.json#POST /notes

@@ -1,0 +1,16 @@
+provider: alterestate
+apis_io: https://apis.io/providers/alterestate/
+context: crm
+generated: '2026-11-10'
+concepts:
+  lead:
+    path_segment:
+    - leads
+    properties:
+      email: email
+      phone: phone
+      custom_fields: custom_fields
+      full_name: full_name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/alterestate-openapi.yml#POST /leads/

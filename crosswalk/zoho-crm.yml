@@ -1,0 +1,48 @@
+provider: zoho-crm
+apis_io: https://apis.io/providers/zoho-crm/
+context: crm
+generated: '2026-11-10'
+concepts:
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: name
+      created_at: created_time
+      status: status
+      description: details
+      created_by: created_by
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/zoho-crm-workflow-tasks-openapi.json#DELETE /settings/automation/tasks
+    - openapi/_original/zoho-crm-workflow-tasks-openapi.json#DELETE /settings/automation/tasks/{id}
+    - openapi/_original/zoho-crm-workflow-tasks-openapi.json#GET /settings/automation/tasks
+    - openapi/_original/zoho-crm-workflow-tasks-openapi.json#GET /settings/automation/tasks/{id}
+    - openapi/_original/zoho-crm-workflow-tasks-openapi.json#POST /settings/automation/tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/zoho-crm-notes-openapi.json#DELETE /Notes
+    - openapi/_original/zoho-crm-notes-openapi.json#DELETE /Notes/{id}
+    - openapi/_original/zoho-crm-notes-openapi.json#GET /Notes
+    - openapi/_original/zoho-crm-notes-openapi.json#GET /Notes/{id}
+    - openapi/_original/zoho-crm-notes-openapi.json#POST /Notes
+  pipeline:
+    path_segment:
+    - pipeline
+    properties:
+      id: id
+      is_default: default
+      description: details
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/zoho-crm-pipeline-openapi.json#GET /settings/pipeline
+    - openapi/_original/zoho-crm-pipeline-openapi.json#GET /settings/pipeline/{id}
+    - openapi/_original/zoho-crm-pipeline-openapi.json#PATCH /settings/pipeline
+    - openapi/_original/zoho-crm-pipeline-openapi.json#PATCH /settings/pipeline/{id}
+    - openapi/_original/zoho-crm-pipeline-openapi.json#POST /settings/pipeline

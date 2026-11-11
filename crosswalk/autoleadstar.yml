@@ -1,0 +1,58 @@
+provider: autoleadstar
+apis_io: https://apis.io/providers/autoleadstar/
+context: crm
+generated: '2026-11-10'
+concepts:
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: created_at
+      source: source
+      status:
+      - state
+      - status
+      first_name: first_name
+      last_name: last_name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/autoleadstar-fullpath-api-openapi.yml#GET /dealerships/{dealershipId}/leads
+    - openapi/_original/autoleadstar-mcp-tools-openapi.yml#GET /dealerships/{dealershipId}/leads
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type:
+      - type
+      - type_id
+      id: id
+      created_at: created_at
+      subject: title
+      updated_at: updated_at
+      note: notes
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/autoleadstar-fullpath-api-openapi.yml#GET /dealerships/{dealershipId}/activities
+    - openapi/_original/autoleadstar-mcp-tools-openapi.yml#GET /dealerships/{dealershipId}/activities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      created_at: created_at
+      due_at: due_date
+      status: status
+      description: description
+      updated_at: updated_at
+      assignee_id: assigned_to
+      priority: priority
+      created_by: created_by
+      note: notes
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/autoleadstar-fullpath-api-openapi.yml#GET /dealerships/{dealershipId}/tasks
+    - openapi/_original/autoleadstar-mcp-tools-openapi.yml#GET /dealerships/{dealershipId}/tasks

@@ -1,0 +1,87 @@
+provider: eloqua
+apis_io: https://apis.io/providers/eloqua/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      email: emailAddress
+      last_name: lastName
+      first_name: firstName
+      id: id
+      job_title: title
+      created_at:
+      - createdAt
+      - createdDate
+      updated_at: updatedAt
+      full_name: name
+      company_id:
+      - accountId
+      - accountID
+      company_name:
+      - accountName
+      - company
+      mobile_phone: mobilePhone
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/1.0/data/contact/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Contact
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Contact/{key}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Contact
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Contact/{key}
+  company:
+    path_segment:
+    - account
+    - accounts
+    properties:
+      name:
+      - accountName
+      - name
+      - companyName
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+      city: city
+      country: country
+      type: type
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/1.0/data/account/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/AccountActivity/1/Account
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/AccountActivity/1/Account/{key}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Account
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Account/{key}
+  deal:
+    path_segment:
+    - opportunities
+    - opportunity
+    properties:
+      name: opportunityName
+      created_at: createdDate
+      stage_id: stage
+      contact_id: primaryContactID
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Contact/{key}/Opportunities
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Opportunity
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Opportunity/{key}
+  activity:
+    path_segment:
+    - activity
+    properties:
+      type:
+      - type
+      - activityType
+      id: id
+      created_at: createdAt
+      subject: name
+      updated_at: updatedAt
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#GET /api/rest/2.0/data/activity/{id}
+    - openapi/_original/eloqua-published-swagger.json#POST /api/rest/2.0/data/activity

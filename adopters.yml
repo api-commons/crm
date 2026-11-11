@@ -1,0 +1,686 @@
+context: crm
+generated: '2026-11-10'
+adopters:
+- provider: activecampaign
+  apis_io: https://apis.io/providers/activecampaign/
+  crosswalk: crosswalk/activecampaign.yml
+  concepts:
+  - company
+  - pipeline
+- provider: alterestate
+  apis_io: https://apis.io/providers/alterestate/
+  crosswalk: crosswalk/alterestate.yml
+  concepts:
+  - lead
+- provider: alto-vebra
+  apis_io: https://apis.io/providers/alto-vebra/
+  crosswalk: crosswalk/alto-vebra.yml
+  concepts:
+  - contact
+  - lead
+- provider: apollo-api-documentation
+  apis_io: https://apis.io/providers/apollo-api-documentation/
+  crosswalk: crosswalk/apollo-api-documentation.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - note
+  - task
+- provider: apollo-io
+  apis_io: https://apis.io/providers/apollo-io/
+  crosswalk: crosswalk/apollo-io.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - note
+  - task
+- provider: aptly
+  apis_io: https://apis.io/providers/aptly/
+  crosswalk: crosswalk/aptly.yml
+  concepts:
+  - contact
+  - task
+- provider: autoleadstar
+  apis_io: https://apis.io/providers/autoleadstar/
+  crosswalk: crosswalk/autoleadstar.yml
+  concepts:
+  - activity
+  - lead
+  - task
+- provider: blackbaud
+  apis_io: https://apis.io/providers/blackbaud/
+  crosswalk: crosswalk/blackbaud.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - note
+- provider: bloomerang
+  apis_io: https://apis.io/providers/bloomerang/
+  crosswalk: crosswalk/bloomerang.yml
+  concepts:
+  - note
+  - task
+- provider: bonterra-fka-everyaction
+  apis_io: https://apis.io/providers/bonterra-fka-everyaction/
+  crosswalk: crosswalk/bonterra-fka-everyaction.yml
+  concepts:
+  - contact
+  - note
+- provider: boostup
+  apis_io: https://apis.io/providers/boostup/
+  crosswalk: crosswalk/boostup.yml
+  concepts:
+  - company
+  - deal
+- provider: brevo
+  apis_io: https://apis.io/providers/brevo/
+  crosswalk: crosswalk/brevo.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - note
+  - task
+- provider: chorus-ai
+  apis_io: https://apis.io/providers/chorus-ai/
+  crosswalk: crosswalk/chorus-ai.yml
+  concepts:
+  - activity
+- provider: clari
+  apis_io: https://apis.io/providers/clari/
+  crosswalk: crosswalk/clari.yml
+  concepts:
+  - activity
+  - deal
+- provider: clarify
+  apis_io: https://apis.io/providers/clarify/
+  crosswalk: crosswalk/clarify.yml
+  concepts:
+  - activity
+- provider: clickfunnels
+  apis_io: https://apis.io/providers/clickfunnels/
+  crosswalk: crosswalk/clickfunnels.yml
+  concepts:
+  - contact
+  - deal
+  - note
+  - pipeline
+- provider: commsharbor
+  apis_io: https://apis.io/providers/commsharbor/
+  crosswalk: crosswalk/commsharbor.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+  - pipeline
+  - task
+- provider: conga
+  apis_io: https://apis.io/providers/conga/
+  crosswalk: crosswalk/conga.yml
+  concepts:
+  - company
+  - contact
+  - deal
+- provider: coperniq
+  apis_io: https://apis.io/providers/coperniq/
+  crosswalk: crosswalk/coperniq.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+- provider: copper-financial
+  apis_io: https://apis.io/providers/copper-financial/
+  crosswalk: crosswalk/copper-financial.yml
+  concepts:
+  - activity
+  - deal
+  - pipeline
+- provider: customeros
+  apis_io: https://apis.io/providers/customeros/
+  crosswalk: crosswalk/customeros.yml
+  concepts:
+  - company
+  - contact
+- provider: drippay
+  apis_io: https://apis.io/providers/drippay/
+  crosswalk: crosswalk/drippay.yml
+  concepts:
+  - company
+  - deal
+  - lead
+- provider: eci-solutions
+  apis_io: https://apis.io/providers/eci-solutions/
+  crosswalk: crosswalk/eci-solutions.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - lead
+  - note
+- provider: elead-crm
+  apis_io: https://apis.io/providers/elead-crm/
+  crosswalk: crosswalk/elead-crm.yml
+  concepts:
+  - activity
+  - deal
+- provider: eloqua
+  apis_io: https://apis.io/providers/eloqua/
+  crosswalk: crosswalk/eloqua.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+- provider: entergram
+  apis_io: https://apis.io/providers/entergram/
+  crosswalk: crosswalk/entergram.yml
+  concepts:
+  - company
+  - contact
+- provider: erply
+  apis_io: https://apis.io/providers/erply/
+  crosswalk: crosswalk/erply.yml
+  concepts:
+  - note
+  - task
+- provider: fixture
+  apis_io: https://apis.io/providers/fixture/
+  crosswalk: crosswalk/fixture.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+  - note
+  - pipeline
+  - task
+- provider: freshsales
+  apis_io: https://apis.io/providers/freshsales/
+  crosswalk: crosswalk/freshsales.yml
+  concepts:
+  - activity
+  - contact
+  - deal
+  - note
+  - task
+- provider: frontline
+  apis_io: https://apis.io/providers/frontline/
+  crosswalk: crosswalk/frontline.yml
+  concepts:
+  - activity
+  - company
+  - task
+- provider: getresponse
+  apis_io: https://apis.io/providers/getresponse/
+  crosswalk: crosswalk/getresponse.yml
+  concepts:
+  - activity
+  - company
+  - contact
+- provider: givebutter
+  apis_io: https://apis.io/providers/givebutter/
+  crosswalk: crosswalk/givebutter.yml
+  concepts:
+  - activity
+  - company
+  - contact
+- provider: gofundme
+  apis_io: https://apis.io/providers/gofundme/
+  crosswalk: crosswalk/gofundme.yml
+  concepts:
+  - activity
+  - company
+- provider: gojiberry-ai
+  apis_io: https://apis.io/providers/gojiberry-ai/
+  crosswalk: crosswalk/gojiberry-ai.yml
+  concepts:
+  - company
+  - contact
+- provider: gong
+  apis_io: https://apis.io/providers/gong/
+  crosswalk: crosswalk/gong.yml
+  concepts:
+  - task
+- provider: highlevel
+  apis_io: https://apis.io/providers/highlevel/
+  crosswalk: crosswalk/highlevel.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+  - pipeline
+  - task
+- provider: hilos
+  apis_io: https://apis.io/providers/hilos/
+  crosswalk: crosswalk/hilos.yml
+  concepts:
+  - contact
+- provider: honeybook
+  apis_io: https://apis.io/providers/honeybook/
+  crosswalk: crosswalk/honeybook.yml
+  concepts:
+  - contact
+  - pipeline
+- provider: hubflo
+  apis_io: https://apis.io/providers/hubflo/
+  crosswalk: crosswalk/hubflo.yml
+  concepts:
+  - company
+  - contact
+  - note
+  - task
+- provider: hubspot
+  apis_io: https://apis.io/providers/hubspot/
+  crosswalk: crosswalk/hubspot.yml
+  concepts:
+  - company
+  - contact
+  - lead
+  - note
+  - pipeline
+  - task
+- provider: joblogic
+  apis_io: https://apis.io/providers/joblogic/
+  crosswalk: crosswalk/joblogic.yml
+  concepts:
+  - contact
+- provider: keap
+  apis_io: https://apis.io/providers/keap/
+  crosswalk: crosswalk/keap.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+  - pipeline
+  - task
+- provider: knownwell
+  apis_io: https://apis.io/providers/knownwell/
+  crosswalk: crosswalk/knownwell.yml
+  concepts:
+  - note
+- provider: lemlist
+  apis_io: https://apis.io/providers/lemlist/
+  crosswalk: crosswalk/lemlist.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - lead
+  - note
+  - task
+- provider: lev
+  apis_io: https://apis.io/providers/lev/
+  crosswalk: crosswalk/lev.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+  - pipeline
+- provider: lightfield
+  apis_io: https://apis.io/providers/lightfield/
+  crosswalk: crosswalk/lightfield.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+  - task
+- provider: live-direct-marketing-online
+  apis_io: https://apis.io/providers/live-direct-marketing-online/
+  crosswalk: crosswalk/live-direct-marketing-online.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+  - pipeline
+  - task
+- provider: marketo
+  apis_io: https://apis.io/providers/marketo/
+  crosswalk: crosswalk/marketo.yml
+  concepts:
+  - company
+  - contact
+- provider: microsoft-dynamics
+  apis_io: https://apis.io/providers/microsoft-dynamics/
+  crosswalk: crosswalk/microsoft-dynamics.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+- provider: microsoft-dynamics-365
+  apis_io: https://apis.io/providers/microsoft-dynamics-365/
+  crosswalk: crosswalk/microsoft-dynamics-365.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+- provider: microsoft-dynamics-365-sales
+  apis_io: https://apis.io/providers/microsoft-dynamics-365-sales/
+  crosswalk: crosswalk/microsoft-dynamics-365-sales.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - lead
+  - task
+- provider: mobly
+  apis_io: https://apis.io/providers/mobly/
+  crosswalk: crosswalk/mobly.yml
+  concepts:
+  - lead
+- provider: monaco
+  apis_io: https://apis.io/providers/monaco/
+  crosswalk: crosswalk/monaco.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - task
+- provider: nationbuilder
+  apis_io: https://apis.io/providers/nationbuilder/
+  crosswalk: crosswalk/nationbuilder.yml
+  concepts:
+  - contact
+- provider: neonone
+  apis_io: https://apis.io/providers/neonone/
+  crosswalk: crosswalk/neonone.yml
+  concepts:
+  - company
+  - contact
+  - deal
+- provider: nimble
+  apis_io: https://apis.io/providers/nimble/
+  crosswalk: crosswalk/nimble.yml
+  concepts:
+  - activity
+  - contact
+  - deal
+  - note
+  - pipeline
+  - task
+- provider: nutshell
+  apis_io: https://apis.io/providers/nutshell/
+  crosswalk: crosswalk/nutshell.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - lead
+  - note
+  - task
+- provider: oracle-siebel
+  apis_io: https://apis.io/providers/oracle-siebel/
+  crosswalk: crosswalk/oracle-siebel.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+- provider: outreach
+  apis_io: https://apis.io/providers/outreach/
+  crosswalk: crosswalk/outreach.yml
+  concepts:
+  - company
+  - deal
+  - task
+- provider: peoplesoft
+  apis_io: https://apis.io/providers/peoplesoft/
+  crosswalk: crosswalk/peoplesoft.yml
+  concepts:
+  - deal
+- provider: persistiq
+  apis_io: https://apis.io/providers/persistiq/
+  crosswalk: crosswalk/persistiq.yml
+  concepts:
+  - lead
+- provider: pipedrive
+  apis_io: https://apis.io/providers/pipedrive/
+  crosswalk: crosswalk/pipedrive.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+  - note
+  - pipeline
+  - task
+- provider: pipeliner
+  apis_io: https://apis.io/providers/pipeliner/
+  crosswalk: crosswalk/pipeliner.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - lead
+  - note
+  - pipeline
+  - task
+- provider: poggio-labs
+  apis_io: https://apis.io/providers/poggio-labs/
+  crosswalk: crosswalk/poggio-labs.yml
+  concepts:
+  - company
+- provider: protonai
+  apis_io: https://apis.io/providers/protonai/
+  crosswalk: crosswalk/protonai.yml
+  concepts:
+  - contact
+  - deal
+  - lead
+  - task
+- provider: quo
+  apis_io: https://apis.io/providers/quo/
+  crosswalk: crosswalk/quo.yml
+  concepts:
+  - contact
+  - task
+- provider: rasayel
+  apis_io: https://apis.io/providers/rasayel/
+  crosswalk: crosswalk/rasayel.yml
+  concepts:
+  - contact
+- provider: relmcrm-com
+  apis_io: https://apis.io/providers/relmcrm-com/
+  crosswalk: crosswalk/relmcrm-com.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - pipeline
+- provider: reonic
+  apis_io: https://apis.io/providers/reonic/
+  crosswalk: crosswalk/reonic.yml
+  concepts:
+  - activity
+  - contact
+  - note
+  - task
+- provider: replyrai
+  apis_io: https://apis.io/providers/replyrai/
+  crosswalk: crosswalk/replyrai.yml
+  concepts:
+  - contact
+  - deal
+  - pipeline
+- provider: revert
+  apis_io: https://apis.io/providers/revert/
+  crosswalk: crosswalk/revert.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - lead
+  - note
+  - task
+- provider: salesforce
+  apis_io: https://apis.io/providers/salesforce/
+  crosswalk: crosswalk/salesforce.yml
+  concepts:
+  - contact
+- provider: salesforce-service-cloud
+  apis_io: https://apis.io/providers/salesforce-service-cloud/
+  crosswalk: crosswalk/salesforce-service-cloud.yml
+  concepts:
+  - company
+  - contact
+- provider: salesloft
+  apis_io: https://apis.io/providers/salesloft/
+  crosswalk: crosswalk/salesloft.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - deal
+  - note
+  - task
+- provider: sendpulse
+  apis_io: https://apis.io/providers/sendpulse/
+  crosswalk: crosswalk/sendpulse.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+  - pipeline
+  - task
+- provider: siro
+  apis_io: https://apis.io/providers/siro/
+  crosswalk: crosswalk/siro.yml
+  concepts:
+  - activity
+  - company
+  - deal
+- provider: snov-io
+  apis_io: https://apis.io/providers/snov-io/
+  crosswalk: crosswalk/snov-io.yml
+  concepts:
+  - pipeline
+- provider: splio
+  apis_io: https://apis.io/providers/splio/
+  crosswalk: crosswalk/splio.yml
+  concepts:
+  - activity
+  - contact
+- provider: spotio
+  apis_io: https://apis.io/providers/spotio/
+  crosswalk: crosswalk/spotio.yml
+  concepts:
+  - activity
+  - company
+- provider: street-co
+  apis_io: https://apis.io/providers/street-co/
+  crosswalk: crosswalk/street-co.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - lead
+  - note
+  - task
+- provider: supaglue
+  apis_io: https://apis.io/providers/supaglue/
+  crosswalk: crosswalk/supaglue.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - lead
+- provider: the-mobile-first-company
+  apis_io: https://apis.io/providers/the-mobile-first-company/
+  crosswalk: crosswalk/the-mobile-first-company.yml
+  concepts:
+  - company
+  - contact
+  - deal
+- provider: twenty
+  apis_io: https://apis.io/providers/twenty/
+  crosswalk: crosswalk/twenty.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - note
+  - task
+- provider: vaultre
+  apis_io: https://apis.io/providers/vaultre/
+  crosswalk: crosswalk/vaultre.yml
+  concepts:
+  - company
+  - contact
+  - lead
+  - note
+  - task
+- provider: vendasta
+  apis_io: https://apis.io/providers/vendasta/
+  crosswalk: crosswalk/vendasta.yml
+  concepts:
+  - activity
+  - company
+- provider: vessel
+  apis_io: https://apis.io/providers/vessel/
+  crosswalk: crosswalk/vessel.yml
+  concepts:
+  - company
+  - contact
+  - deal
+  - lead
+  - note
+  - task
+- provider: z-league
+  apis_io: https://apis.io/providers/z-league/
+  crosswalk: crosswalk/z-league.yml
+  concepts:
+  - lead
+- provider: zendesk
+  apis_io: https://apis.io/providers/zendesk/
+  crosswalk: crosswalk/zendesk.yml
+  concepts:
+  - activity
+  - company
+- provider: zendesk-sell
+  apis_io: https://apis.io/providers/zendesk-sell/
+  crosswalk: crosswalk/zendesk-sell.yml
+  concepts:
+  - contact
+  - deal
+  - lead
+- provider: zoho
+  apis_io: https://apis.io/providers/zoho/
+  crosswalk: crosswalk/zoho.yml
+  concepts:
+  - activity
+  - company
+  - contact
+  - note
+  - pipeline
+  - task
+- provider: zoho-crm
+  apis_io: https://apis.io/providers/zoho-crm/
+  crosswalk: crosswalk/zoho-crm.yml
+  concepts:
+  - note
+  - pipeline
+  - task

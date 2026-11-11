@@ -1,0 +1,15 @@
+provider: rasayel
+apis_io: https://apis.io/providers/rasayel/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rasayel-rest-openapi.yml#GET /contacts
+    - openapi/_original/rasayel-rest-openapi.yml#GET /contacts/{id}
+    - openapi/_original/rasayel-rest-openapi.yml#PATCH /contacts/{id}
+    - openapi/_original/rasayel-rest-openapi.yml#POST /contacts

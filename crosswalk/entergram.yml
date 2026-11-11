@@ -1,0 +1,27 @@
+provider: entergram
+apis_io: https://apis.io/providers/entergram/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      last_name: lastName
+      first_name: firstName
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/entergram-openapi.json#GET /v1/contacts
+    - openapi/_original/entergram-openapi.json#GET /v1/contacts/{contact_id}
+  company:
+    path_segment:
+    - accounts
+    properties:
+      name: displayName
+      id: id
+      created_at: createdAt
+      phone: phoneNumber
+      owner_id: userId
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/entergram-openapi.json#GET /v1/accounts

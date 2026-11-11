@@ -1,0 +1,91 @@
+provider: hubspot
+apis_io: https://apis.io/providers/hubspot/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      id: id
+      created_at: createdAt
+      custom_fields: properties
+      updated_at: updatedAt
+      is_deleted: archived
+    core_coverage: 0.375
+    evidence:
+    - openapi/_original/hubspot-automation-sequences-openapi.json#GET /automation/sequences/2026-03/enrollments/contact/{contactId}
+    - openapi/_original/hubspot-crm-contacts-openapi.json#DELETE /crm/objects/2026-03/contacts/{contactId}
+    - openapi/_original/hubspot-crm-contacts-openapi.json#GET /crm/objects/2026-03/contacts
+    - openapi/_original/hubspot-crm-contacts-openapi.json#GET /crm/objects/2026-03/contacts/{contactId}
+    - openapi/_original/hubspot-crm-contacts-openapi.json#PATCH /crm/objects/2026-03/contacts/{contactId}
+  company:
+    path_segment:
+    - companies
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      website: url
+      custom_fields: properties
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/hubspot-crm-companies-openapi.json#DELETE /crm/objects/2026-03/companies/{companyId}
+    - openapi/_original/hubspot-crm-companies-openapi.json#GET /crm/objects/2026-03/companies
+    - openapi/_original/hubspot-crm-companies-openapi.json#GET /crm/objects/2026-03/companies/{companyId}
+    - openapi/_original/hubspot-crm-companies-openapi.json#PATCH /crm/objects/2026-03/companies/{companyId}
+    - openapi/_original/hubspot-crm-companies-openapi.json#POST /crm/objects/2026-03/companies
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      custom_fields: properties
+      is_deleted: archived
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hubspot-crm-leads-openapi.json#DELETE /crm/objects/2026-03/leads/{leadsId}
+    - openapi/_original/hubspot-crm-leads-openapi.json#GET /crm/objects/2026-03/leads
+    - openapi/_original/hubspot-crm-leads-openapi.json#GET /crm/objects/2026-03/leads/{leadsId}
+    - openapi/_original/hubspot-crm-leads-openapi.json#PATCH /crm/objects/2026-03/leads/{leadsId}
+    - openapi/_original/hubspot-crm-leads-openapi.json#POST /crm/objects/2026-03/leads
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      custom_fields: properties
+      is_deleted: archived
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/hubspot-crm-tasks-openapi.json#DELETE /crm/objects/2026-03/tasks/{taskId}
+    - openapi/_original/hubspot-crm-tasks-openapi.json#GET /crm/objects/2026-03/tasks
+    - openapi/_original/hubspot-crm-tasks-openapi.json#GET /crm/objects/2026-03/tasks/{taskId}
+    - openapi/_original/hubspot-crm-tasks-openapi.json#PATCH /crm/objects/2026-03/tasks/{taskId}
+    - openapi/_original/hubspot-crm-tasks-openapi.json#POST /crm/objects/2026-03/tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/hubspot-crm-notes-openapi.json#DELETE /crm/objects/2026-03/notes/{noteId}
+    - openapi/_original/hubspot-crm-notes-openapi.json#GET /crm/objects/2026-03/notes
+    - openapi/_original/hubspot-crm-notes-openapi.json#GET /crm/objects/2026-03/notes/{noteId}
+    - openapi/_original/hubspot-crm-notes-openapi.json#PATCH /crm/objects/2026-03/notes/{noteId}
+    - openapi/_original/hubspot-crm-notes-openapi.json#POST /crm/objects/2026-03/notes
+  pipeline:
+    path_segment:
+    - pipelines
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hubspot-crm-limits-tracking-openapi.json#GET /crm/limits/2026-09/pipelines

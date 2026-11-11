@@ -1,0 +1,40 @@
+provider: protonai
+apis_io: https://apis.io/providers/protonai/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/protonai-openapi.yml#DELETE /{company}/v1/contacts/{identifier}
+    - openapi/_original/protonai-openapi.yml#GET /{company}/v1/contacts/{identifier}
+    - openapi/_original/protonai-openapi.yml#POST /{company}/v1/contacts
+    - openapi/_original/protonai-openapi.yml#PUT /{company}/v1/contacts/{identifier}
+  deal:
+    path_segment:
+    - opportunities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/protonai-openapi.yml#DELETE /{company}/opportunities/{opportunity_id}
+    - openapi/_original/protonai-openapi.yml#GET /{company}/opportunities/{opportunity_id}
+    - openapi/_original/protonai-openapi.yml#PATCH /{company}/opportunities/{opportunity_id}
+    - openapi/_original/protonai-openapi.yml#POST /{company}/opportunities
+  lead:
+    path_segment:
+    - leads
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/protonai-openapi.yml#POST /{company}/v1/leads
+  task:
+    path_segment:
+    - task
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/protonai-openapi.yml#POST /{company}/create/task
+    - openapi/_original/protonai-openapi.yml#POST /{company}/edit/task

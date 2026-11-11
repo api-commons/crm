@@ -1,0 +1,23 @@
+provider: hilos
+apis_io: https://apis.io/providers/hilos/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone
+      tags: tags
+      is_deleted: is_deleted
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/hilos-openapi-original.yml#DELETE /api/contact/{id}
+    - openapi/_original/hilos-openapi-original.yml#GET /api/contact
+    - openapi/_original/hilos-openapi-original.yml#GET /api/contact/{id}
+    - openapi/_original/hilos-openapi-original.yml#PATCH /api/contact/{id}
+    - openapi/_original/hilos-openapi-original.yml#POST /api/contact

@@ -1,0 +1,22 @@
+provider: elead-crm
+apis_io: https://apis.io/providers/elead-crm/
+context: crm
+generated: '2026-11-10'
+concepts:
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/elead-crm-openapi.yml#POST /opportunities
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/elead-crm-openapi.yml#POST /activities

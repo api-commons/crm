@@ -1,0 +1,19 @@
+provider: joblogic
+apis_io: https://apis.io/providers/joblogic/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      id: id
+      job_title: jobTitle
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/joblogic-openapi.yml#DELETE /Contact
+    - openapi/_original/joblogic-openapi.yml#POST /Contact
+    - openapi/_original/joblogic-openapi.yml#PUT /Contact

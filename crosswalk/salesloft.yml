@@ -1,0 +1,60 @@
+provider: salesloft
+apis_io: https://apis.io/providers/salesloft/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - people
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /people
+    - openapi/_original/salesloft-openapi.yml#GET /people/{id}
+    - openapi/_original/salesloft-openapi.yml#POST /people
+    - openapi/_original/salesloft-openapi.yml#PUT /people/{id}
+  company:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#DELETE /accounts/{id}
+    - openapi/_original/salesloft-openapi.yml#GET /accounts
+    - openapi/_original/salesloft-openapi.yml#GET /accounts/{id}
+    - openapi/_original/salesloft-openapi.yml#POST /accounts
+  deal:
+    path_segment:
+    - opportunities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /opportunities
+    - openapi/_original/salesloft-openapi.yml#GET /opportunities/{id}
+  activity:
+    path_segment:
+    - activities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /activities
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#GET /tasks
+    - openapi/_original/salesloft-openapi.yml#GET /tasks/{id}
+    - openapi/_original/salesloft-openapi.yml#POST /tasks
+  note:
+    path_segment:
+    - notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salesloft-openapi.yml#DELETE /notes/{id}
+    - openapi/_original/salesloft-openapi.yml#GET /notes
+    - openapi/_original/salesloft-openapi.yml#GET /notes/{id}
+    - openapi/_original/salesloft-openapi.yml#POST /notes
+    - openapi/_original/salesloft-openapi.yml#PUT /notes/{id}

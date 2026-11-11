@@ -1,0 +1,117 @@
+provider: apollo-api-documentation
+apis_io: https://apis.io/providers/apollo-api-documentation/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    - people
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone_numbers
+      job_title: title
+      created_at: created_at
+      updated_at: updated_at
+      full_name: name
+      company_id: account_id
+      company_name: organization_name
+      tags:
+      - labels
+      - label_ids
+      owner_id: owner_id
+      mobile_phone: mobile_phone
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /contacts/{contact_id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /people/{id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#PATCH /contacts/{contact_id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#POST /contacts
+  company:
+    path_segment:
+    - accounts
+    - organizations
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      phone: phone
+      owner_id: owner_id
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /accounts/{id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /organizations/{id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#PATCH /accounts/{account_id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#POST /accounts
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      company_id: account_id
+      description: description
+      currency: currency
+      owner_id: owner_id
+      amount: amount
+      closed_at:
+      - closed_date
+      - actual_close_date
+      probability: probability
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /opportunities/{opportunity_id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#PATCH /opportunities/{opportunity_id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#POST /contacts/{contact_id}/opportunities
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#POST /opportunities
+  activity:
+    path_segment:
+    - activities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /emailer_messages/{id}/activities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject:
+      - subject
+      - title
+      created_at: created_at
+      due_at: due_at
+      status: status
+      done: completed_at
+      owner_id: user_id
+      priority: priority
+      created_by: creator_id
+      note: note
+      type: type
+      contact_id:
+      - contact_id
+      - person_id
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /tasks/{id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#PATCH /tasks/{id}
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#POST /tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: created_at
+      content: content
+      updated_at: updated_at
+      contact_id: contact_id
+      owner_id: user_id
+      company_id: account_id
+      deal_id: opportunity_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/apollo-api-documentation-apollo-rest-api-openapi.json#GET /notes

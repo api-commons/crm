@@ -1,0 +1,138 @@
+# The CRM bounded context: the concepts it distills, the collection path segments that
+# identify each one in a provider's own OpenAPI, and the property aliases that collapse
+# to one common name.
+#
+# Segments are matched as the LAST literal segment of a path, so /contacts/{id}/notes is
+# a note, not a contact. Aliases are compared after snake_case normalisation, so
+# firstName, FirstName and first_name are already one name without being listed. An
+# alias is listed only when two spellings mean the same field -- that is the curated
+# judgement in this file, and every one of them is reviewable here. Adoption is never
+# curated: it is counted by build.py from the census.
+context: crm
+name: Customer Relationship Management
+tags: [CRM, Customer Relationship Management]
+
+# Response envelopes and paging wrappers, not resource fields.
+envelope: [data, success, errors, warnings, count, total, page, meta, links, value, results,
+           next, previous, has_more, message, status_code, ids]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id]
+  created_at: [created, created_date, created_time, createdon, date_created, create_time, creation_date, add_time]
+  updated_at: [updated, updated_date, modified_at, modifiedon, last_modified, date_modified, update_time, modified_date, updated_time, last_updated]
+  owner_id: [owner_user_id, assigned_to, assigned_user_id, user_id]
+  created_by: [created_by_id, creator_id]
+  updated_by: [modified_by, updated_by_id, modified_by_id]
+  custom_fields: [custom_field_values, custom_properties, custom, customfields, fields, properties, attributes]
+  tags: [tag_ids, labels, label_ids, tag_list]
+  external_id: [foreign_id, source_id]
+  is_deleted: [deleted, archived, is_archived]
+  description: [details, about, body_text]
+  last_activity_at: [last_activity_date, last_contacted_at, last_activity_time]
+
+concepts:
+  contact:
+    segments: [contacts, contact, people, persons, person]
+    aliases:
+      first_name: [firstname, given_name, fname]
+      last_name: [lastname, surname, family_name, lname]
+      full_name: [name, display_name]
+      email: [email_address, primary_email, emailaddress1, emails, email_addresses]
+      phone: [phone_number, phones, phone_numbers, telephone1, work_phone]
+      mobile_phone: [mobile, mobile_phone_number, cell_phone, mobilephone]
+      job_title: [title, position, jobtitle]
+      company_id: [account_id, organization_id, org_id, parentcustomerid]
+      company_name: [company, organization, organization_name, account_name]
+      address: [addresses, mailing_address, location]
+      linkedin_url: [linkedin, linkedin_profile]
+      website: [website_url, url]
+      source: [lead_source, contact_source, origin]
+      photo_url: [picture, avatar, avatar_url, image_url, picture_id]
+      time_zone: [timezone, tz]
+      postal_code: [zip, zip_code, zipcode, postcode]
+  company:
+    segments: [companies, company, organizations, organisations, organization, accounts, account]
+    aliases:
+      name: [company_name, account_name, organization_name, display_name]
+      website: [website_url, url, websiteurl, domain_url]
+      domain: [domain_name, primary_domain]
+      phone: [phone_number, phone_numbers, telephone1, main_phone]
+      email: [email_address, emailaddress1]
+      employee_count: [number_of_employees, numberofemployees, employees, num_employees, headcount]
+      annual_revenue: [revenue, annualrevenue]
+      parent_company_id: [parent_account_id, parent_id, parent_organization_id]
+      address: [addresses, billing_address, address1_line1]
+      city: [address1_city]
+      country: [address1_country]
+      postal_code: [zip, zip_code, zipcode, postcode]
+      linkedin_url: [linkedin]
+      type: [account_type, company_type]
+      photo_url: [picture, logo, logo_url, picture_id]
+  deal:
+    segments: [deals, deal, opportunities, opportunity]
+    aliases:
+      name: [title, deal_name, opportunity_name]
+      amount: [value, deal_value]
+      currency: [currency_code, currency_iso_code]
+      stage_id: [pipeline_stage_id, deal_stage_id, stage]
+      pipeline_id: [pipeline]
+      close_date: [expected_close_date, estimated_close_date, closedate, expected_close]
+      closed_at: [closed_date, actual_close_date, close_time, won_time]
+      company_id: [account_id, organization_id, org_id]
+      contact_id: [primary_contact_id, person_id]
+      probability: [win_probability, close_probability]
+      status: [state, deal_status]
+      is_won: [won]
+      is_closed: [closed]
+      source: [lead_source]
+  lead:
+    segments: [leads, lead]
+    aliases:
+      first_name: [firstname, given_name]
+      last_name: [lastname, surname, family_name]
+      full_name: [name, display_name]
+      email: [email_address, emails, emailaddress1]
+      phone: [phone_number, phones, phone_numbers, telephone1]
+      company_name: [company, organization_name, organization, companyname]
+      status: [lead_status, state, status_id]
+      source: [lead_source, source_id, origin]
+      job_title: [title, position, jobtitle]
+  activity:
+    segments: [activities, activity, engagements]
+    aliases:
+      type: [activity_type, type_id, kind, engagement_type]
+      subject: [title, name, summary]
+      due_at: [due_date, due_time, due, scheduled_at, date]
+      done: [completed, is_done, is_completed, done_at]
+      contact_id: [person_id, contact_ids]
+      company_id: [account_id, org_id, organization_id]
+      deal_id: [opportunity_id]
+      note: [notes, body, content, public_description]
+  task:
+    segments: [tasks, task, todos]
+    aliases:
+      subject: [title, name, summary]
+      due_at: [due_date, due, due_time, deadline]
+      status: [state, task_status]
+      done: [completed, is_completed, is_done, completed_at]
+      priority: [importance]
+      assignee_id: [assigned_to, assignee, assigned_user_id, assignee_ids]
+      contact_id: [person_id]
+      company_id: [account_id, organization_id]
+      deal_id: [opportunity_id]
+      note: [notes, body, content]
+  note:
+    segments: [notes, note]
+    aliases:
+      content: [body, text, note, note_body, html_content]
+      subject: [title, name]
+      contact_id: [person_id]
+      company_id: [account_id, org_id, organization_id]
+      deal_id: [opportunity_id]
+  pipeline:
+    segments: [pipelines, pipeline]
+    aliases:
+      name: [title, label, pipeline_name]
+      stages: [deal_stages, pipeline_stages]
+      order: [order_nr, display_order, position, sort_order]
+      is_default: [default]

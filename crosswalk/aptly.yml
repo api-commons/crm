@@ -1,0 +1,51 @@
+provider: aptly
+apis_io: https://apis.io/providers/aptly/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: lastname
+      first_name: firstname
+      id:
+      - _id
+      - uuid
+      phone: phone
+      job_title: title
+      custom_fields: customFields
+      full_name: fullName
+      company_id: companyId
+      address: address
+      company_name: company
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/aptly-openapi.yml#GET /api/board/{boardId}/{cardId}/contacts
+    - openapi/_original/aptly-openapi.yml#GET /api/contacts
+    - openapi/_original/aptly-openapi.yml#GET /api/contacts/{contactId}
+    - openapi/_original/aptly-openapi.yml#POST /api/contacts
+    - openapi/_original/aptly-openapi.yml#POST /api/contacts/{contactId}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: _id
+      subject: title
+      due_at: dueAt
+      status: status
+      description: description
+      assignee_id:
+      - assigneeId
+      - assignee
+      owner_id: userId
+      priority: priority
+      note: note
+      type: type
+      is_deleted: archived
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/aptly-openapi.yml#GET /api/tasks/{taskId}
+    - openapi/_original/aptly-openapi.yml#POST /api/tasks
+    - openapi/_original/aptly-openapi.yml#PUT /api/tasks/{taskId}

@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/contact.json",
+  "title": "Contact",
+  "description": "The common contact in Customer Relationship Management, distilled from 58 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.793,
+      "x-commons-providers": 46,
+      "x-commons-spellings": [
+        "email",
+        "emails",
+        "Email",
+        "email_address",
+        "emailAddress",
+        "email_addresses",
+        "emailaddress1",
+        "emailAddresses"
+      ],
+      "format": "email"
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.759,
+      "x-commons-providers": 44,
+      "x-commons-spellings": [
+        "last_name",
+        "lastName",
+        "lastname",
+        "LastName",
+        "surname",
+        "family_name",
+        "Last Name"
+      ]
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.724,
+      "x-commons-providers": 42,
+      "x-commons-spellings": [
+        "first_name",
+        "firstName",
+        "firstname",
+        "FirstName",
+        "given_name",
+        "First Name"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.724,
+      "x-commons-providers": 42,
+      "x-commons-spellings": [
+        "id",
+        "_id",
+        "Id",
+        "uuid",
+        "record_id"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.638,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "phone",
+        "phones",
+        "phone_numbers",
+        "phone_number",
+        "Phone",
+        "phoneNumbers",
+        "telephone1",
+        "phoneNumber"
+      ]
+    },
+    "job_title": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.569,
+      "x-commons-providers": 33,
+      "x-commons-spellings": [
+        "title",
+        "position",
+        "job_title",
+        "jobTitle",
+        "jobtitle",
+        "Title",
+        "Job Title"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.534,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdon",
+        "created",
+        "createdTime",
+        "createdDate",
+        "create_time",
+        "add_time"
+      ],
+      "format": "date-time"
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 29,
+      "x-commons-spellings": [
+        "custom_fields",
+        "customFields",
+        "attributes",
+        "fields",
+        "customProperties",
+        "customFieldValues",
+        "properties",
+        "custom_properties"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.483,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "update_time",
+        "modifiedon",
+        "modifiedDate",
+        "modifiedAt",
+        "lastUpdated",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "full_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.414,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "name",
+        "fullName",
+        "full_name",
+        "Name",
+        "displayName"
+      ]
+    },
+    "company_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.379,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "account_id",
+        "company_id",
+        "companyId",
+        "AccountId",
+        "organizationID",
+        "accountId",
+        "accountID",
+        "Account Id"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.345,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "address",
+        "addresses",
+        "location",
+        "MailingAddress"
+      ]
+    },
+    "company_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.293,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "company",
+        "company_name",
+        "companyName",
+        "organization_name",
+        "organization",
+        "accountName"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.293,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "tags",
+        "label_ids",
+        "tag_ids",
+        "labels"
+      ]
+    },
+    "owner_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.241,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "owner_id",
+        "userId",
+        "assignedTo",
+        "user_id",
+        "ownerId",
+        "OwnerId"
+      ]
+    },
+    "is_deleted": {
+      "type": "boolean",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.207,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "is_deleted",
+        "archived",
+        "deleted",
+        "is_archived",
+        "IsDeleted",
+        "isDeleted"
+      ]
+    },
+    "mobile_phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.207,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "mobilephone",
+        "mobile",
+        "mobile_phone",
+        "MobilePhone",
+        "mobilePhone",
+        "cellPhone",
+        "cell_phone"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "crm",
+    "concept": "contact",
+    "providers": 58,
+    "generated": "2026-11-10"
+  }
+}

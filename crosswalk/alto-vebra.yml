@@ -1,0 +1,44 @@
+provider: alto-vebra
+apis_io: https://apis.io/providers/alto-vebra/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    - persons
+    properties:
+      email: emailAddresses
+      last_name: surname
+      id: id
+      phone: phoneNumbers
+      job_title:
+      - position
+      - title
+      updated_at: modifiedDate
+      address: address
+      company_name: companyName
+      is_deleted: archived
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/alto-api-openapi.json#GET /contacts
+    - openapi/_original/alto-api-openapi.json#GET /contacts/{contactId}
+    - openapi/_original/alto-api-openapi.json#GET /contacts/{contactId}/persons
+    - openapi/_original/alto-api-openapi.json#GET /contacts/{contactId}/persons/{personId}
+    - openapi/_original/alto-api-openapi.json#PATCH /contacts/{contactId}
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: createdDate
+      source: leadSource
+      status: leadStatus
+      updated_at: modifiedDate
+      custom_fields: properties
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/alto-api-openapi.json#GET /leads
+    - openapi/_original/alto-api-openapi.json#GET /leads/{leadId}
+    - openapi/_original/alto-api-openapi.json#PATCH /leads/{leadId}
+    - openapi/_original/alto-api-openapi.json#POST /leads

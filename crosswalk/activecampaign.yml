@@ -1,0 +1,20 @@
+provider: activecampaign
+apis_io: https://apis.io/providers/activecampaign/
+context: crm
+generated: '2026-11-10'
+concepts:
+  company:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/activecampaign-partners-api-openapi.json#PATCH /api/ai-customizations/v1/profiles/{id}/accounts
+  pipeline:
+    path_segment:
+    - pipelines
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/activecampaign-partners-api-openapi.json#GET /api/crm-reporting/v1/pipelines
+    - openapi/_original/activecampaign-partners-api-openapi.json#GET /api/crm-sync/v1/pipelines

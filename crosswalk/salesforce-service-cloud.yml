@@ -1,0 +1,26 @@
+provider: salesforce-service-cloud
+apis_io: https://apis.io/providers/salesforce-service-cloud/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties:
+      email: Email
+      last_name: LastName
+      first_name: FirstName
+      id: id
+      phone: Phone
+      company_id: AccountId
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/salesforce-service-cloud-rest-openapi.yml#GET /sobjects/Contact
+    - openapi/_original/salesforce-service-cloud-rest-openapi.yml#POST /sobjects/Contact
+  company:
+    path_segment:
+    - account
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/salesforce-service-cloud-rest-openapi.yml#GET /sobjects/Account

@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/deal.json",
+  "title": "Deal",
+  "description": "The common deal in Customer Relationship Management, distilled from 38 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.816,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "Name",
+        "opportunityName"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.789,
+      "x-commons-providers": 30,
+      "x-commons-spellings": [
+        "id",
+        "Id"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.737,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "date_created",
+        "createdon",
+        "created",
+        "created_date",
+        "createdDate",
+        "created_time"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.632,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "date_modified",
+        "modifiedon",
+        "last_updated",
+        "updated",
+        "update_time"
+      ],
+      "format": "date-time"
+    },
+    "stage_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.421,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "stage",
+        "stage_id",
+        "pipeline_stage_id",
+        "pipelineStageId"
+      ]
+    },
+    "company_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.395,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "account_id",
+        "company_id",
+        "accountId",
+        "companyId",
+        "Account Id",
+        "org_id",
+        "organizationId"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.395,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "custom_fields",
+        "attributes",
+        "fields",
+        "custom",
+        "customFields",
+        "properties"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.395,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "Status"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.368,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "description",
+        "Description",
+        "details"
+      ]
+    },
+    "close_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.342,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "close_date",
+        "estimated_close_date",
+        "closeDate",
+        "expected_close_date",
+        "expectedCloseDate",
+        "Close Date"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.316,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code"
+      ]
+    },
+    "owner_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.316,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "owner_id",
+        "user_id",
+        "ownerId",
+        "assignedTo",
+        "owner_user_id"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.289,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "amount"
+      ]
+    },
+    "contact_id": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.289,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "contact_id",
+        "primary_contact_id",
+        "contactId",
+        "primaryContactID",
+        "person_id"
+      ]
+    },
+    "pipeline_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.263,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "pipeline_id",
+        "pipeline",
+        "pipelineId"
+      ]
+    },
+    "closed_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.237,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "closed_date",
+        "actual_close_date",
+        "closed_at",
+        "close_time",
+        "won_time",
+        "closedAt"
+      ],
+      "format": "date-time"
+    },
+    "probability": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "probability",
+        "win_probability",
+        "Win Probability"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "crm",
+    "concept": "deal",
+    "providers": 38,
+    "generated": "2026-11-10"
+  }
+}

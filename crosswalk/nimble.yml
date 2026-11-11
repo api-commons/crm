@@ -1,0 +1,100 @@
+provider: nimble
+apis_io: https://apis.io/providers/nimble/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      id: id
+      created_at: created
+      custom_fields: fields
+      updated_at: updated
+      tags: tags
+      owner_id: owner_id
+    core_coverage: 0.375
+    evidence:
+    - openapi/_original/nimble-openapi-original.yml#DELETE /api/v1/contact/{contact_id}
+    - openapi/_original/nimble-openapi-original.yml#DELETE /api/v1/contacts
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/contact
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/contact/{contact_id}
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/contacts
+  deal:
+    path_segment:
+    - deals
+    properties:
+      created_at: created
+      updated_at: updated
+      stage_id:
+      - stage_id
+      - stage
+      currency: currency
+      owner_id: owner_id
+      pipeline_id: pipeline_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/nimble-openapi-original.yml#DELETE /api/v2/deals/{deal_id}
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals/pipelines/{pipeline_id}/deals
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals/{deal_id}
+    - openapi/_original/nimble-openapi-original.yml#POST /api/v2/deals
+  activity:
+    path_segment:
+    - activities
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/activities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: subject
+      created_at: created
+      due_at: due_date
+      done: completed
+      updated_at: updated
+      assignee_id: assigned_to
+      owner_id: owner_id
+      note: notes
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nimble-openapi-original.yml#POST /api/v1/tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: created
+      content: body
+      updated_at: updated
+      owner_id: owner_id
+      subject: title
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nimble-openapi-original.yml#DELETE /api/v1/contacts/notes/{note_id}
+    - openapi/_original/nimble-openapi-original.yml#DELETE /api/v2/deals/{deal_id}/notes/{note_id}
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/contacts/notes/{note_id}
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/contacts/{contact_id}/notes
+    - openapi/_original/nimble-openapi-original.yml#POST /api/v1/contacts/notes
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      name: name
+      stages: stages
+      created_at: created
+      is_default: is_default
+      description: description
+      updated_at: updated
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/nimble-openapi-original.yml#DELETE /api/v2/deals/pipelines/{pipeline_id}
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v1/contacts/pipelines
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals/pipelines
+    - openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals/pipelines/{pipeline_id}
+    - openapi/_original/nimble-openapi-original.yml#POST /api/v2/deals/pipelines

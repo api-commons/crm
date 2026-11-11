@@ -1,0 +1,50 @@
+provider: copper-financial
+apis_io: https://apis.io/providers/copper-financial/
+context: crm
+generated: '2026-11-10'
+concepts:
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: date_created
+      updated_at: date_modified
+      stage_id: pipeline_stage_id
+      company_id: company_id
+      custom_fields: custom_fields
+      status: status
+      description: details
+      close_date: close_date
+      contact_id: primary_contact_id
+      pipeline_id: pipeline_id
+      probability: win_probability
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copper-financial-openapi.json#GET /opportunities/{id}
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: id
+      created_at: date_created
+      updated_at: date_modified
+      description: details
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copper-financial-openapi.json#POST /companies/{id}/activities
+    - openapi/_original/copper-financial-openapi.json#POST /leads/{id}/activities
+    - openapi/_original/copper-financial-openapi.json#POST /opportunities/{id}/activities
+    - openapi/_original/copper-financial-openapi.json#POST /people/{id}/activities
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      stages: stages
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copper-financial-openapi.json#GET /pipelines

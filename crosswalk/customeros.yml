@@ -1,0 +1,37 @@
+provider: customeros
+apis_io: https://apis.io/providers/customeros/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    - person
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      id: id
+      updated_at: lastUpdated
+      company_name: company
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/customeros-customerbase-openapi.yml#POST /customerbase/v1/contacts
+    - openapi/_original/customeros-enrich-openapi.yml#GET /enrich/v1/person
+    - openapi/_original/customeros-flow-api-openapi.yml#DELETE /flows/{flow_id}/sequences/{sequence_id}/contacts/{contact_id}
+    - openapi/_original/customeros-flow-api-openapi.yml#GET /flows/{flow_id}/sequences/{sequence_id}/contacts
+    - openapi/_original/customeros-flow-api-openapi.yml#GET /flows/{flow_id}/sequences/{sequence_id}/contacts/{contact_id}
+  company:
+    path_segment:
+    - organization
+    - organizations
+    properties:
+      name: name
+      website: website
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/customeros-customerbase-openapi.yml#GET /customerbase/v1/organizations/{id}
+    - openapi/_original/customeros-customerbase-openapi.yml#POST /customerbase/v1/organizations
+    - openapi/_original/customeros-enrich-openapi.yml#GET /enrich/v1/organization
+    - openapi/_original/customeros-swagger.json#GET /customerbase/v1/organizations/{id}
+    - openapi/_original/customeros-swagger.json#GET /enrich/v1/organization

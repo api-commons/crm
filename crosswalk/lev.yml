@@ -1,0 +1,91 @@
+provider: lev
+apis_io: https://apis.io/providers/lev/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phones
+      job_title: title
+      created_at: created_at
+      updated_at: updated_at
+      company_id: company_id
+      address: address
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/contacts
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/contacts/{contact_id}
+    - openapi/_original/lev-openapi-original.json#PATCH /api/external/v2/contacts/{contact_id}
+    - openapi/_original/lev-openapi-original.json#POST /api/external/v2/contacts
+  company:
+    path_segment:
+    - accounts
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      website: website
+      address: address
+      city: city
+      type: company_type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/companies
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/companies/{company_id}
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/me/accounts
+    - openapi/_original/lev-openapi-original.json#PATCH /api/external/v2/companies/{company_id}
+    - openapi/_original/lev-openapi-original.json#POST /api/external/v2/companies
+  deal:
+    path_segment:
+    - deals
+    properties:
+      name: title
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      custom_fields: properties
+      description: description
+      close_date:
+      - estimated_close_date
+      - close_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lev-openapi-original.json#DELETE /api/external/v2/deals/{deal_id}
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/deals
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/deals/{deal_id}
+    - openapi/_original/lev-openapi-original.json#PATCH /api/external/v2/deals/{deal_id}
+    - openapi/_original/lev-openapi-original.json#POST /api/external/v2/deals
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: created_at
+      content: text
+      updated_at: updated_at
+      created_by: created_by
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lev-openapi-original.json#DELETE /api/external/v2/checklist-tasks/{task_id}/notes/{note_id}
+    - openapi/_original/lev-openapi-original.json#DELETE /api/external/v2/companies/{company_id}/notes/{note_id}
+    - openapi/_original/lev-openapi-original.json#DELETE /api/external/v2/contacts/{contact_id}/notes/{note_id}
+    - openapi/_original/lev-openapi-original.json#DELETE /api/external/v2/deals/{deal_id}/notes/{note_id}
+    - openapi/_original/lev-openapi-original.json#DELETE /api/external/v2/placements/{placement_id}/notes/{note_id}
+  pipeline:
+    path_segment:
+    - pipeline
+    - pipelines
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/pipelines
+    - openapi/_original/lev-openapi-original.json#GET /api/external/v2/pipelines/{pipeline_id}
+    - openapi/_original/lev-openapi-original.json#POST /api/external/v2/deals/{deal_id}/pipeline

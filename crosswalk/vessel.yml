@@ -1,0 +1,121 @@
+provider: vessel
+apis_io: https://apis.io/providers/vessel/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      email:
+      - email
+      - emails
+      last_name: lastName
+      first_name: firstName
+      id: id
+      phone:
+      - phone
+      - phones
+      job_title: jobTitle
+      created_at: createdTime
+      custom_fields: customFields
+      address: address
+      mobile_phone: mobilePhone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contact
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contacts
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/contact
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/contact
+    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/contact
+  company:
+    path_segment:
+    - account
+    - accounts
+    properties:
+      name: name
+      id: id
+      created_at: createdTime
+      website: website
+      address: address
+      phone: phone
+      description: description
+      industry: industry
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/account
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/accounts
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/account
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/account
+    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/account
+  deal:
+    path_segment:
+    - deal
+    - deals
+    properties:
+      name: name
+      id: id
+      created_at: createdTime
+      stage_id: stage
+      close_date: closeDate
+      amount: amount
+      probability: probability
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/deal
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/deals
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/deal
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/deal
+  lead:
+    path_segment:
+    - lead
+    - leads
+    properties:
+      id: id
+      created_at: createdTime
+      email: email
+      first_name: firstName
+      last_name: lastName
+      phone: phone
+      job_title: jobTitle
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/lead
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/leads
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/lead
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/lead
+  task:
+    path_segment:
+    - task
+    - tasks
+    properties:
+      id: id
+      subject: subject
+      created_at: createdTime
+      due_at: dueDate
+      status: status
+      done: isDone
+      priority: priority
+      note: body
+      type: type
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/task
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/tasks
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/task
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/task
+    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/task
+  note:
+    path_segment:
+    - note
+    - notes
+    properties:
+      id: id
+      created_at: createdTime
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/note
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/notes
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/note
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/note

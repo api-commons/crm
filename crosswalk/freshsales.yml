@@ -1,0 +1,52 @@
+provider: freshsales
+apis_io: https://apis.io/providers/freshsales/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshsales-openapi.yml#DELETE /contacts/{id}
+    - openapi/_original/freshsales-openapi.yml#GET /contacts/{id}
+    - openapi/_original/freshsales-openapi.yml#POST /contacts
+    - openapi/_original/freshsales-openapi.yml#PUT /contacts/{id}
+  deal:
+    path_segment:
+    - deals
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshsales-openapi.yml#DELETE /deals/{id}
+    - openapi/_original/freshsales-openapi.yml#GET /deals/{id}
+    - openapi/_original/freshsales-openapi.yml#POST /deals
+    - openapi/_original/freshsales-openapi.yml#PUT /deals/{id}
+  activity:
+    path_segment:
+    - activities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshsales-openapi.yml#GET /contacts/{id}/activities
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshsales-openapi.yml#DELETE /tasks/{id}
+    - openapi/_original/freshsales-openapi.yml#GET /tasks
+    - openapi/_original/freshsales-openapi.yml#GET /tasks/{id}
+    - openapi/_original/freshsales-openapi.yml#POST /tasks
+    - openapi/_original/freshsales-openapi.yml#PUT /tasks/{id}
+  note:
+    path_segment:
+    - notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshsales-openapi.yml#DELETE /notes/{id}
+    - openapi/_original/freshsales-openapi.yml#POST /notes
+    - openapi/_original/freshsales-openapi.yml#PUT /notes/{id}

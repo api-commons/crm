@@ -1,0 +1,99 @@
+provider: blackbaud
+apis_io: https://apis.io/providers/blackbaud/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id:
+      - record_id
+      - id
+      job_title:
+      - title
+      - position
+      custom_fields: custom_fields
+      company_name: organization
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#GET /vendors/{vendor_id}/contacts
+    - openapi/_original/blackbaud-general-ledger-api-openapi.yml#GET /grants/{grant_id}/contacts
+    - openapi/_original/blackbaud-general-ledger-api-openapi.yml#POST /projects/{project_id}/contacts
+    - openapi/_original/blackbaud-grantmaking-api-openapi.yml#GET /api/v1/contacts/{contact_id}
+  company:
+    path_segment:
+    - accounts
+    - organizations
+    properties:
+      name:
+      - name
+      - organization_name
+      id: id
+      updated_at: date_modified
+      website: url
+      phone: phone_number
+      description: description
+      custom_fields: custom_fields
+      email:
+      - email_address
+      - email
+      industry: industry
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#GET /organizations/{constituent_id}
+    - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#PATCH /organizations/{constituent_id}
+    - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#POST /organizations
+    - openapi/_original/blackbaud-crm-constituent-api-openapi.yml#GET /organizations/{constituent_id}
+    - openapi/_original/blackbaud-crm-constituent-api-openapi.yml#PATCH /organizations/{constituent_id}
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      updated_at: date_modified
+      status: status
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/blackbaud-opportunity-api-openapi.yml#DELETE /opportunities/{opportunity_id}
+    - openapi/_original/blackbaud-opportunity-api-openapi.yml#GET /opportunities
+    - openapi/_original/blackbaud-opportunity-api-openapi.yml#GET /opportunities/{opportunity_id}
+    - openapi/_original/blackbaud-opportunity-api-openapi.yml#PATCH /opportunities/{opportunity_id}
+    - openapi/_original/blackbaud-opportunity-api-openapi.yml#POST /opportunities
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: id
+      updated_at: date_modified
+      note: notes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/blackbaud-csrconnect-api-openapi.yml#GET /v1/employees/{affiliate_employee_id}/volunteer/ria/activities
+    - openapi/_original/blackbaud-grantmaking-api-openapi.yml#GET /api/v1/activities/{activity_id}
+    - openapi/_original/blackbaud-grantsconnect-api-openapi.yml#POST /v1/activities/{application_id}
+  note:
+    path_segment:
+    - notes
+    properties:
+      id:
+      - record_id
+      - id
+      content:
+      - content
+      - text
+      updated_at: date_modified
+      subject: title
+      type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#GET /vendors/{vendor_id}/notes
+    - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#POST /vendors/{vendor_id}/notes
+    - openapi/_original/blackbaud-general-ledger-api-openapi.yml#GET /projects/{project_id}/notes
+    - openapi/_original/blackbaud-general-ledger-api-openapi.yml#POST /projects/{project_id}/notes
+    - openapi/_original/blackbaud-gift-v2-api-openapi.yml#DELETE /v2/gifts/{gift_id}/notes/{note_id}

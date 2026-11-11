@@ -1,0 +1,131 @@
+provider: lemlist
+apis_io: https://apis.io/providers/lemlist/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    - people
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      id: _id
+      phone: phone
+      job_title: jobTitle
+      created_at: createdAt
+      custom_fields: fields
+      full_name: fullName
+      company_id: companyId
+      address: location
+      owner_id: ownerId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /contacts
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /contacts/{idOrEmail}
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /schema/people
+    - openapi/_original/lemlist-openapi-v1-legacy.json#POST /database/people
+    - openapi/_original/lemlist-openapi-v2.json#DELETE /contacts/{idOrEmail}
+  company:
+    path_segment:
+    - companies
+    properties:
+      name: name
+      id: _id
+      created_at: createdAt
+      description: description
+      custom_fields: fields
+      industry: industry
+      owner_id: ownerId
+      type: type
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /companies
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /schema/companies
+    - openapi/_original/lemlist-openapi-v1-legacy.json#POST /database/companies
+    - openapi/_original/lemlist-openapi-v2.json#DELETE /companies/{companyId}
+    - openapi/_original/lemlist-openapi-v2.json#GET /companies
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: _id
+      source: source
+      email: email
+      status:
+      - status
+      - state
+      updated_at: updatedAt
+      first_name: firstName
+      last_name: lastName
+      phone: phone
+      company_name:
+      - companyName
+      - Company name
+      job_title: jobTitle
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lemlist-openapi-v1-legacy.json#DELETE /campaigns/{campaignId}/leads/{email}
+    - openapi/_original/lemlist-openapi-v1-legacy.json#DELETE /campaigns/{campaignId}/leads/{leadId}
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /campaigns/{campaignId}/export/leads
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /leads
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /leads/{email}
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: _id
+      created_at: createdAt
+      subject:
+      - name
+      - summary
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /activities/
+    - openapi/_original/lemlist-openapi-v2.json#GET /activities
+    - openapi/_original/lemlist-openapi.yml#GET /activities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id:
+      - _id
+      - recordId
+      - id
+      subject: title
+      created_at: createdAt
+      due_at: dueDate
+      status: status
+      done:
+      - completedAt
+      - done
+      assignee_id: assignedTo
+      owner_id: userId
+      priority: priority
+      type: type
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /tasks
+    - openapi/_original/lemlist-openapi-v1-legacy.json#PATCH /tasks
+    - openapi/_original/lemlist-openapi-v1-legacy.json#POST /tasks
+    - openapi/_original/lemlist-openapi-v2.json#GET /tasks
+    - openapi/_original/lemlist-openapi-v2.json#PATCH /tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: _id
+      created_at: createdAt
+      updated_at: updatedAt
+      owner_id: userId
+      type: type
+      company_id: companyId
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/lemlist-openapi-v1-legacy.json#GET /companies/{companyId}/notes
+    - openapi/_original/lemlist-openapi-v1-legacy.json#POST /companies/{companyId}/notes
+    - openapi/_original/lemlist-openapi-v2.json#GET /companies/{companyId}/notes
+    - openapi/_original/lemlist-openapi-v2.json#POST /companies/{companyId}/notes
+    - openapi/_original/lemlist-openapi.yml#GET /companies/{companyId}/notes

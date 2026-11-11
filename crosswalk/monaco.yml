@@ -1,0 +1,80 @@
+provider: monaco
+apis_io: https://apis.io/providers/monaco/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone_number
+      job_title: title
+      created_at: created_at
+      updated_at: updated_at
+      company_id: account_id
+      address: location
+      tags: tags
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/monaco-openapi-original.json#DELETE /v1/contacts/{contact_id}
+    - openapi/_original/monaco-openapi-original.json#GET /v1/audiences/{audience_id}/contacts
+    - openapi/_original/monaco-openapi-original.json#GET /v1/contacts/{contact_id}
+    - openapi/_original/monaco-openapi-original.json#PATCH /v1/contacts/{contact_id}
+    - openapi/_original/monaco-openapi-original.json#POST /v1/audiences/{audience_id}/contacts
+  company:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/monaco-openapi-original.json#DELETE /v1/accounts/{account_id}
+    - openapi/_original/monaco-openapi-original.json#GET /v1/accounts/{account_id}
+    - openapi/_original/monaco-openapi-original.json#PATCH /v1/accounts/{account_id}
+    - openapi/_original/monaco-openapi-original.json#PUT /v1/accounts/
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      stage_id: stage
+      company_id: account_id
+      close_date: estimated_close_date
+      owner_id: owner_user_id
+      closed_at: actual_close_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/monaco-openapi-original.json#DELETE /v1/opportunities/{opportunity_id}
+    - openapi/_original/monaco-openapi-original.json#GET /v1/opportunities/{opportunity_id}
+    - openapi/_original/monaco-openapi-original.json#PATCH /v1/opportunities/{opportunity_id}
+    - openapi/_original/monaco-openapi-original.json#POST /v1/opportunities/
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      created_at: created_at
+      due_at: due_at
+      status: status
+      description: description
+      done: completed_at
+      updated_at: updated_at
+      assignee_id:
+      - assignee
+      - assignee_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/monaco-openapi-original.json#GET /v1/tasks/{task_id}
+    - openapi/_original/monaco-openapi-original.json#PATCH /v1/tasks/{task_id}
+    - openapi/_original/monaco-openapi-original.json#POST /v1/tasks/

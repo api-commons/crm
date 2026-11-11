@@ -1,0 +1,51 @@
+provider: replyrai
+apis_io: https://apis.io/providers/replyrai/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone
+      custom_fields: custom_fields
+      tags: tags
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/replyrai-platform-api-swagger.json#GET /contacts/{contact_id}
+    - openapi/_original/replyrai-platform-api-swagger.json#POST /contacts
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: title
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      stage_id:
+      - stage
+      - stage_id
+      status: status
+      description: description
+      contact_id: contact_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/replyrai-platform-api-swagger.json#DELETE /pipelines/{pipeline_id}/opportunities/{opportunity_id}
+    - openapi/_original/replyrai-platform-api-swagger.json#GET /pipelines/{pipeline_id}/opportunities
+    - openapi/_original/replyrai-platform-api-swagger.json#GET /pipelines/{pipeline_id}/opportunities/{opportunity_id}
+    - openapi/_original/replyrai-platform-api-swagger.json#POST /pipelines/{pipeline_id}/opportunities
+    - openapi/_original/replyrai-platform-api-swagger.json#POST /pipelines/{pipeline_id}/opportunities/{opportunity_id}
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/replyrai-platform-api-swagger.json#GET /pipelines
+    - openapi/_original/replyrai-platform-api-swagger.json#GET /pipelines/{pipeline_id}

@@ -1,0 +1,42 @@
+provider: neonone
+apis_io: https://apis.io/providers/neonone/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      last_name: lastName
+      first_name: firstName
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/neonone-openapi.yml#DELETE /accounts/{id}/contacts/{contactId}
+    - openapi/_original/neonone-openapi.yml#GET /accounts/{id}/contacts
+    - openapi/_original/neonone-openapi.yml#GET /accounts/{id}/contacts/{contactId}
+    - openapi/_original/neonone-openapi.yml#PATCH /accounts/{id}/contacts/{contactId}
+    - openapi/_original/neonone-openapi.yml#POST /accounts/{id}/contacts
+  company:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/neonone-openapi.yml#GET /accounts
+    - openapi/_original/neonone-openapi.yml#GET /accounts/{id}
+    - openapi/_original/neonone-openapi.yml#POST /accounts
+    - openapi/_original/neonone-openapi.yml#PUT /accounts/{id}
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/neonone-openapi.yml#DELETE /opportunities/{id}
+    - openapi/_original/neonone-openapi.yml#GET /opportunities
+    - openapi/_original/neonone-openapi.yml#GET /opportunities/{id}
+    - openapi/_original/neonone-openapi.yml#PATCH /opportunities/{id}
+    - openapi/_original/neonone-openapi.yml#POST /opportunities

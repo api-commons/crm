@@ -1,0 +1,15 @@
+provider: clarify
+apis_io: https://apis.io/providers/clarify/
+context: crm
+generated: '2026-11-10'
+concepts:
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/clarify-openapi.json#GET /workspaces/{workspace}/objects/{object}/records/{record}/activities
+    - openapi/_original/clarify-openapi.json#GET /workspaces/{workspace}/schemas/{entity}/activities

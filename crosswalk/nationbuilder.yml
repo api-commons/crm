@@ -1,0 +1,18 @@
+provider: nationbuilder
+apis_io: https://apis.io/providers/nationbuilder/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/nationbuilder-v2-openapi-original.yml#DELETE /api/v2/contacts/{id}
+    - openapi/_original/nationbuilder-v2-openapi-original.yml#GET /api/v2/contacts
+    - openapi/_original/nationbuilder-v2-openapi-original.yml#GET /api/v2/contacts/{id}
+    - openapi/_original/nationbuilder-v2-openapi-original.yml#PATCH /api/v2/contacts/{id}
+    - openapi/_original/nationbuilder-v2-openapi-original.yml#POST /api/v2/contacts

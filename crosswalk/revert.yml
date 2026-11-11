@@ -1,0 +1,128 @@
+provider: revert
+apis_io: https://apis.io/providers/revert/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      id: id
+      phone: phone
+      job_title: title
+      created_at: createdAt
+      updated_at: updatedAt
+      company_name: company
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/contacts
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/contacts/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/contacts/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#POST /crm/contacts
+  company:
+    path_segment:
+    - accounts
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      website: website
+      phone: phone
+      industry: industry
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revert-unified-api-openapi.yml#GET /accounting/accounts
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/companies
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/companies/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/companies/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#POST /crm/companies
+  deal:
+    path_segment:
+    - deals
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      stage_id: stage
+      company_id: companyId
+      status: status
+      close_date: closeDate
+      currency: currency
+      owner_id: ownerId
+      amount: amount
+      contact_id: contactId
+      probability: probability
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/deals
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/deals/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/deals/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#POST /crm/deals
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      created_at: createdAt
+      source: source
+      email: email
+      status: status
+      updated_at: updatedAt
+      first_name: firstName
+      last_name: lastName
+      phone: phone
+      company_name: company
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/leads
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/leads/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/leads/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#POST /crm/leads
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject:
+      - subject
+      - title
+      created_at: createdAt
+      due_at: dueDate
+      status: status
+      description: description
+      updated_at: updatedAt
+      assignee_id: assigneeId
+      owner_id: ownerId
+      priority: priority
+      contact_id: contactId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/tasks
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/tasks/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#GET /ticket/tasks
+    - openapi/_original/revert-unified-api-openapi.yml#GET /ticket/tasks/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/tasks/{id}
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: createdAt
+      content: content
+      updated_at: updatedAt
+      contact_id: contactId
+      company_id: companyId
+      deal_id: dealId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/notes
+    - openapi/_original/revert-unified-api-openapi.yml#GET /crm/notes/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/notes/{id}
+    - openapi/_original/revert-unified-api-openapi.yml#POST /crm/notes

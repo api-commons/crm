@@ -1,0 +1,69 @@
+provider: the-mobile-first-company
+apis_io: https://apis.io/providers/the-mobile-first-company/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    - contacts
+    - people
+    properties:
+      email: emails
+      last_name: last_name
+      id: id
+      job_title: job_title
+      created_at: created_at
+      custom_fields: custom_properties
+      updated_at: updated_at
+      full_name: name
+      company_id: company_id
+      address: address
+      company_name: company
+      is_deleted: is_archived
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/contact/{contact_id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v1/api/contacts
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/crm/people/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v1/api/contacts
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/crm/people
+  company:
+    path_segment:
+    - accounts
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      website: website
+      phone: phone_numbers
+      email: email
+      industry: industry
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#DELETE /v2/api/partner/accounts/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/crm/companies/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/partner/accounts/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/crm/companies
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/partner/accounts
+  deal:
+    path_segment:
+    - deals
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      company_id: company_id
+      status: status
+      currency: currency
+      amount: amount
+      closed_at: closed_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#DELETE /v2/api/crm/deals/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#GET /v2/api/crm/deals/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#PATCH /v2/api/crm/deals/{id}
+    - openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/crm/deals

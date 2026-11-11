@@ -1,0 +1,16 @@
+provider: chorus-ai
+apis_io: https://apis.io/providers/chorus-ai/
+context: crm
+generated: '2026-11-10'
+concepts:
+  activity:
+    path_segment:
+    - engagements
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chorus-ai-openapi.json#DELETE /v3/engagements
+    - openapi/_original/chorus-ai-openapi.json#DELETE /v3/engagements/{engagement_id}
+    - openapi/_original/chorus-ai-openapi.json#GET /v3/engagements
+    - openapi/_original/chorus-ai-openapi.yml#DELETE /v3/engagements
+    - openapi/_original/chorus-ai-openapi.yml#DELETE /v3/engagements/{engagement_id}

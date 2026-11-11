@@ -1,0 +1,24 @@
+provider: boostup
+apis_io: https://apis.io/providers/boostup/
+context: crm
+generated: '2026-11-10'
+concepts:
+  company:
+    path_segment:
+    - account
+    properties:
+      created_at: created_date
+      updated_at: updated_at
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/boostup-openapi-original.json#POST /export/account
+  deal:
+    path_segment:
+    - opportunity
+    properties:
+      created_at: created_date
+      updated_at: updated_at
+      closed_at: closed_date
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/boostup-openapi-original.json#POST /export/opportunity

@@ -1,0 +1,17 @@
+provider: gong
+apis_io: https://apis.io/providers/gong/
+context: crm
+generated: '2026-11-10'
+concepts:
+  task:
+    path_segment:
+    - tasks
+    properties:
+      due_at: dueDate
+      status: status
+      owner_id: userId
+      priority: priority
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/gong-openapi.json#PATCH /v2/tasks/{taskId}
+    - openapi/_original/gong-openapi.json#POST /v2/tasks

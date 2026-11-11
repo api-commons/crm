@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/activity.json",
+  "title": "Activity",
+  "description": "The common activity in Customer Relationship Management, distilled from 32 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.688,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "type",
+        "activity_type",
+        "activityType",
+        "type_id",
+        "Type",
+        "engagementType"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.625,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "id",
+        "_id",
+        "Id"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.531,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdon",
+        "date_created",
+        "createdTime",
+        "add_time",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "subject": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.469,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "subject",
+        "title",
+        "name",
+        "summary"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.406,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "date_modified",
+        "modifiedon",
+        "update_time"
+      ],
+      "format": "date-time"
+    },
+    "note": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "note",
+        "content",
+        "notes",
+        "body",
+        "public_description"
+      ]
+    },
+    "company_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.281,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "company_id",
+        "companyId",
+        "account_id",
+        "organization_id",
+        "Account Id",
+        "org_id",
+        "accountId",
+        "organizationId"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "description",
+        "details",
+        "Description"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "crm",
+    "concept": "activity",
+    "providers": 32,
+    "generated": "2026-11-10"
+  }
+}
