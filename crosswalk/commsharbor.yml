@@ -23,37 +23,31 @@ concepts:
     - openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/crm/contacts
   company:
     path_segment:
-    - companies
     - organizations
     properties:
-      id: id
       name: name
+      id: id
       created_at: created_at
-      updated_at: updated_at
-      website:
-      - website
-      - url
-      domain: domain
     core_coverage: 1.0
     evidence:
-    - openapi/_original/commsharbor-openapi.json#DELETE /api/organizations/{organization_id}/crm/companies/{company_id}
     - openapi/_original/commsharbor-openapi.json#GET /api/organizations
     - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}
-    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/crm/companies
-    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/crm/companies/{company_id}
+    - openapi/_original/commsharbor-openapi.json#PATCH /api/organizations/{organization_id}
+    - openapi/_original/commsharbor-openapi.json#POST /api/organizations
+    - openapi/_original/commsharbor-openapi_2.json#GET /api/organizations
   deal:
     path_segment:
     - deals
     properties:
-      name: title
       id: id
+      name: title
       created_at: created_at
       updated_at: updated_at
+      status: status
       stage_id: stage_id
       company_id: company_id
-      status: status
-      currency: currency
       contact_id: contact_id
+      currency: currency
       pipeline_id: pipeline_id
     core_coverage: 1.0
     evidence:
@@ -73,7 +67,7 @@ concepts:
       updated_at: updated_at
       company_name: company_name
       full_name: name
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/commsharbor-openapi.json#DELETE /api/platform/crm/leads/{lead_id}
     - openapi/_original/commsharbor-openapi.json#GET /api/platform/crm/leads
@@ -102,8 +96,8 @@ concepts:
     properties:
       id: id
       subject: title
-      created_at: created_at
       due_at: due_at
+      created_at: created_at
       status: status
       updated_at: updated_at
       contact_id: contact_id

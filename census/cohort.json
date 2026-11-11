@@ -1,5 +1,27 @@
 [
  {
+  "slug": "accelo",
+  "specs": [
+   "openapi/_original/accelo-openapi.yml"
+  ]
+ },
+ {
+  "slug": "act",
+  "specs": [
+   "openapi/_original/act-activity-series-api-openapi.yml",
+   "openapi/_original/act-custom-entities-api-openapi.yml",
+   "openapi/_original/act-document-types-api-openapi.yml",
+   "openapi/_original/act-history-types-api-openapi.yml",
+   "openapi/_original/act-marketing-automations-api-openapi.yml",
+   "openapi/_original/act-metadata-info-api-openapi.yml",
+   "openapi/_original/act-secondary-contacts-api-openapi.yml",
+   "openapi/_original/act-supplemental-files-api-openapi.yml",
+   "openapi/_original/act-sync-data-api-openapi.yml",
+   "openapi/_original/act-task-types-api-openapi.yml",
+   "openapi/_original/act-web-api-swagger.json"
+  ]
+ },
+ {
   "slug": "activecampaign",
   "specs": [
    "openapi/_original/activecampaign-partners-api-openapi.json",
@@ -21,6 +43,18 @@
   ]
  },
  {
+  "slug": "affinity",
+  "specs": [
+   "openapi/_original/affinity-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "agencyzoom",
+  "specs": [
+   "openapi/_original/agencyzoom-openapi.yml"
+  ]
+ },
+ {
   "slug": "agendapro",
   "specs": [
    "openapi/_original/agendapro-connect-v3-openapi.yml",
@@ -28,9 +62,28 @@
   ]
  },
  {
+  "slug": "agile-crm",
+  "specs": [
+   "openapi/_original/agile-crm-openapi.yml"
+  ]
+ },
+ {
   "slug": "agora-real-estate",
   "specs": [
    "openapi/_original/agora-real-estate-wp-json-route-index.json"
+  ]
+ },
+ {
+  "slug": "agorapulse",
+  "specs": [
+   "openapi/_original/agorapulse-open-api-openapi.yml",
+   "openapi/_original/agorapulse-openapi.yml"
+  ]
+ },
+ {
+  "slug": "aircall",
+  "specs": [
+   "openapi/_original/aircall-openapi.yml"
   ]
  },
  {
@@ -96,6 +149,18 @@
   "slug": "badger-maps",
   "specs": [
    "openapi/_original/badger-maps-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bitrix24",
+  "specs": [
+   "openapi/_original/bitrix24-openapi.json"
+  ]
+ },
+ {
+  "slug": "bizapi",
+  "specs": [
+   "openapi/_original/bizapi-business-intelligence-api-openapi.yml"
   ]
  },
  {
@@ -201,9 +266,34 @@
   ]
  },
  {
+  "slug": "capsule",
+  "specs": [
+   "openapi/_original/capsule-openapi.yml"
+  ]
+ },
+ {
+  "slug": "capsule-crm",
+  "specs": [
+   "openapi/_original/capsule-crm-openapi.yml",
+   "openapi/_original/capsule-opportunities-api-openapi.yml",
+   "openapi/_original/capsule-parties-api-openapi.yml",
+   "openapi/_original/capsule-projects-api-openapi.yml"
+  ]
+ },
+ {
   "slug": "casafari",
   "specs": [
    "openapi/_original/casafari-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "cdk-global",
+  "specs": [
+   "openapi/_original/fortellis-appointments-openapi.yml",
+   "openapi/_original/fortellis-event-relay-webhook-openapi.yml",
+   "openapi/_original/fortellis-parts-store-openapi.yml",
+   "openapi/_original/fortellis-pet-adoption-openapi.yml",
+   "openapi/_original/fortellis-user-service-openapi.yml"
   ]
  },
  {
@@ -263,6 +353,13 @@
   ]
  },
  {
+  "slug": "close",
+  "specs": [
+   "openapi/_original/close-api-openapi.json",
+   "openapi/_original/close-openapi.yml"
+  ]
+ },
+ {
   "slug": "commsharbor",
   "specs": [
    "openapi/_original/commsharbor-openapi.json",
@@ -310,6 +407,12 @@
   "specs": [
    "openapi/_original/coperniq-api-key-openapi.yml",
    "openapi/_original/coperniq-openapi.yml"
+  ]
+ },
+ {
+  "slug": "copper",
+  "specs": [
+   "openapi/_original/copper-developer-api-openapi.yml"
   ]
  },
  {
@@ -413,6 +516,18 @@
   ]
  },
  {
+  "slug": "erpnext",
+  "specs": [
+   "openapi/_original/openapi.yaml"
+  ]
+ },
+ {
+  "slug": "exact-online",
+  "specs": [
+   "openapi/_original/exact-online-openapi.yml"
+  ]
+ },
+ {
   "slug": "fieldpulse",
   "specs": [
    "openapi/_original/fieldpulse-api-openapi-original.json"
@@ -422,6 +537,12 @@
   "slug": "fixture",
   "specs": [
    "openapi/_original/fixture-openapi.json"
+  ]
+ },
+ {
+  "slug": "folk",
+  "specs": [
+   "openapi/_original/folk-openapi.yml"
   ]
  },
  {
@@ -575,6 +696,12 @@
   ]
  },
  {
+  "slug": "holded",
+  "specs": [
+   "openapi/_original/holded-openapi.yml"
+  ]
+ },
+ {
   "slug": "honeybook",
   "specs": [
    "openapi/_original/honeybook-openapi.json"
@@ -699,10 +826,30 @@
   ]
  },
  {
+  "slug": "infusionsoft",
+  "specs": [
+   "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml",
+   "openapi/_original/infusionsoft-pipelines-openapi-original.yml",
+   "openapi/_original/infusionsoft-pipelines-openapi.yml",
+   "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json",
+   "openapi/_original/infusionsoft-rest-v1-openapi-original.json",
+   "openapi/_original/infusionsoft-rest-v1-openapi.json",
+   "openapi/_original/infusionsoft-rest-v2-2025-11-05-openapi-original.json",
+   "openapi/_original/infusionsoft-rest-v2-openapi-original.json",
+   "openapi/_original/infusionsoft-rest-v2-openapi.json"
+  ]
+ },
+ {
   "slug": "insightera",
   "specs": [
    "openapi/_original/insightera-nlp-platform-openapi.json",
    "openapi/_original/insightera-nlp-platform-openapi.yml"
+  ]
+ },
+ {
+  "slug": "insightly",
+  "specs": [
+   "openapi/_original/insightly-openapi.yml"
   ]
  },
  {
@@ -731,6 +878,12 @@
   ]
  },
  {
+  "slug": "keller-williams",
+  "specs": [
+   "openapi/_original/keller-williams-listings-search-openapi.json"
+  ]
+ },
+ {
   "slug": "knownwell",
   "specs": [
    "openapi/_original/knownwell-ci-openapi-original.json"
@@ -740,6 +893,26 @@
   "slug": "kustomer",
   "specs": [
    "openapi/_original/kustomer-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lawmatics",
+  "specs": [
+   "openapi/_original/lawmatics-openapi.yml"
+  ]
+ },
+ {
+  "slug": "leadsquared",
+  "specs": [
+   "openapi/_original/leadsquared-openapi.yml"
+  ]
+ },
+ {
+  "slug": "leandata",
+  "specs": [
+   "openapi/_original/leandata-bookit-openapi.yml",
+   "openapi/_original/leandata-graph-openapi.yml",
+   "openapi/_original/leandata-matching-openapi.yml"
   ]
  },
  {
@@ -757,6 +930,19 @@
   ]
  },
  {
+  "slug": "lever-co",
+  "specs": [
+   "openapi/_original/lever-data-api-openapi.yml",
+   "openapi/_original/lever-postings-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "levitate",
+  "specs": [
+   "openapi/_original/levitate-public-v1-openapi.json"
+  ]
+ },
+ {
   "slug": "lightfield",
   "specs": [
    "openapi/_original/lightfield-openapi-original.yml"
@@ -769,6 +955,17 @@
    "openapi/_original/live-direct-marketing-online-inbox-check-openapi_2.json",
    "openapi/_original/live-direct-marketing-online-ldm-v3-openapi.json",
    "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json"
+  ]
+ },
+ {
+  "slug": "lone-wolf",
+  "specs": [
+   "openapi/_original/lone-wolf-back-office-online-api-openapi.yml",
+   "openapi/_original/lone-wolf-deals-api-openapi.yml",
+   "openapi/_original/lone-wolf-transact-api-openapi.yml",
+   "openapi/_original/lone-wolf-transactiondesk-api-openapi.yml",
+   "openapi/_original/lone-wolf-wolfconnect-api-openapi.yml",
+   "openapi/_original/lone-wolf-zipform-api-openapi.yml"
   ]
  },
  {
@@ -907,6 +1104,18 @@
   ]
  },
  {
+  "slug": "odoo",
+  "specs": [
+   "openapi/_original/odoo-openapi.yml"
+  ]
+ },
+ {
+  "slug": "ontraport",
+  "specs": [
+   "openapi/_original/ontraport-openapi.yml"
+  ]
+ },
+ {
   "slug": "oracle-siebel",
   "specs": [
    "openapi/_original/oracle-siebel-rest-api-openapi.yml"
@@ -972,6 +1181,12 @@
   "slug": "pipeliner",
   "specs": [
    "openapi/_original/pipeliner-openapi.json"
+  ]
+ },
+ {
+  "slug": "podio",
+  "specs": [
+   "openapi/_original/podio-openapi.yml"
   ]
  },
  {
@@ -1043,6 +1258,13 @@
   ]
  },
  {
+  "slug": "salesflare",
+  "specs": [
+   "openapi/_original/salesflare-api-openapi.yml",
+   "openapi/_original/salesflare-openapi.json"
+  ]
+ },
+ {
   "slug": "salesforce",
   "specs": [
    "openapi/_original/salesforce-bulk-api-2-openapi.yml",
@@ -1068,6 +1290,23 @@
   ]
  },
  {
+  "slug": "salesforce-automation-system",
+  "specs": [
+   "openapi/_original/salesforce-automation-flow-openapi.yml"
+  ]
+ },
+ {
+  "slug": "salesforce-einstein",
+  "specs": [
+   "openapi/_original/salesforce-einstein-bots-openapi.yml",
+   "openapi/_original/salesforce-einstein-discovery-openapi.yml",
+   "openapi/_original/salesforce-einstein-gpt-openapi.yml",
+   "openapi/_original/salesforce-einstein-language-openapi.yml",
+   "openapi/_original/salesforce-einstein-prediction-builder-openapi.yml",
+   "openapi/_original/salesforce-einstein-vision-openapi.yml"
+  ]
+ },
+ {
   "slug": "salesforce-experience-cloud",
   "specs": [
    "openapi/_original/salesforce-experience-cloud-cms-connect-openapi.yml",
@@ -1085,6 +1324,12 @@
   "slug": "salesforce-flow",
   "specs": [
    "openapi/_original/salesforce-flow-rest-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "salesforce-knowledge-management",
+  "specs": [
+   "openapi/_original/salesforce-knowledge-management-rest-api-openapi.yml"
   ]
  },
  {
@@ -1170,6 +1415,19 @@
   ]
  },
  {
+  "slug": "servicetitan",
+  "specs": [
+   "openapi/_original/servicetitan-accounting-api-openapi.yml",
+   "openapi/_original/servicetitan-crm-api-openapi.yml",
+   "openapi/_original/servicetitan-dispatch-api-openapi.yml",
+   "openapi/_original/servicetitan-equipment-systems-api-openapi.yml",
+   "openapi/_original/servicetitan-inventory-api-openapi.yml",
+   "openapi/_original/servicetitan-jpm-api-openapi.yml",
+   "openapi/_original/servicetitan-pricebook-api-openapi.yml",
+   "openapi/_original/servicetitan-settings-api-openapi.yml"
+  ]
+ },
+ {
   "slug": "siro",
   "specs": [
    "openapi/_original/siro-external-api-openapi.json",
@@ -1197,6 +1455,12 @@
   "slug": "spotio",
   "specs": [
    "openapi/_original/spotio-swagger.json"
+  ]
+ },
+ {
+  "slug": "streak",
+  "specs": [
+   "openapi/_original/streak-openapi.yml"
   ]
  },
  {
@@ -1231,6 +1495,12 @@
   ]
  },
  {
+  "slug": "synthflow",
+  "specs": [
+   "openapi/_original/synthflow-openapi.json"
+  ]
+ },
+ {
   "slug": "talkpush",
   "specs": [
    "openapi/_original/talkpush-openapi.json"
@@ -1243,9 +1513,32 @@
   ]
  },
  {
+  "slug": "thanx",
+  "specs": [
+   "openapi/_original/thanx-consumer-api-openapi.yml",
+   "openapi/_original/thanx-loyalty-api-openapi.yml",
+   "openapi/_original/thanx-partner-api-openapi.yml"
+  ]
+ },
+ {
   "slug": "the-mobile-first-company",
   "specs": [
    "openapi/_original/the-mobile-first-company-allo-openapi.json"
+  ]
+ },
+ {
+  "slug": "thoughtly",
+  "specs": [
+   "openapi/_original/thoughtly-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "truto",
+  "specs": [
+   "openapi/_original/truto-admin-openapi.yml",
+   "openapi/_original/truto-unified-ats-openapi.yml",
+   "openapi/_original/truto-unified-crm-openapi.yml",
+   "openapi/_original/truto-unified-hris-openapi.yml"
   ]
  },
  {
@@ -1253,6 +1546,12 @@
   "specs": [
    "openapi/_original/twenty-core-api-openapi.yml",
    "openapi/_original/twenty-metadata-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "usergems",
+  "specs": [
+   "openapi/_original/usergems-api-openapi.yml"
   ]
  },
  {
@@ -1326,9 +1625,21 @@
   ]
  },
  {
+  "slug": "wati",
+  "specs": [
+   "openapi/_original/wati-openapi.yml"
+  ]
+ },
+ {
   "slug": "wealth-x",
   "specs": [
    "openapi/_original/wealth-x-connect-openapi.yml"
+  ]
+ },
+ {
+  "slug": "wealthbox",
+  "specs": [
+   "openapi/_original/wealthbox-openapi.yml"
   ]
  },
  {

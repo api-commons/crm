@@ -1,0 +1,17 @@
+provider: podio
+apis_io: https://apis.io/providers/podio/
+context: crm
+generated: '2026-11-10'
+concepts:
+  task:
+    path_segment:
+    - task
+    properties:
+      due_at:
+      - due_date
+      - due_time
+      description: description
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/podio-openapi.yml#POST /task/

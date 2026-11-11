@@ -1,0 +1,121 @@
+provider: copper
+apis_io: https://apis.io/providers/copper/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - people
+    properties:
+      email: emails
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone_numbers
+      job_title: title
+      created_at: date_created
+      custom_fields: custom_fields
+      full_name: name
+      updated_at: date_modified
+      company_id: company_id
+      address: address
+      company_name: company_name
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copper-developer-api-openapi.yml#DELETE /people/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#GET /people/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#POST /people
+    - openapi/_original/copper-developer-api-openapi.yml#PUT /people/{id}
+  company:
+    path_segment:
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: date_created
+      updated_at: date_modified
+      address: address
+      custom_fields: custom_fields
+      phone: phone_numbers
+      description: details
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copper-developer-api-openapi.yml#DELETE /companies/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#GET /companies/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#POST /companies
+    - openapi/_original/copper-developer-api-openapi.yml#PUT /companies/{id}
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      id: id
+      name: name
+      status: status
+      custom_fields: custom_fields
+      stage_id: pipeline_stage_id
+      close_date: close_date
+      company_id: company_id
+      contact_id: primary_contact_id
+      description: details
+      pipeline_id: pipeline_id
+      probability: win_probability
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/copper-developer-api-openapi.yml#DELETE /opportunities/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#GET /opportunities/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#POST /opportunities
+    - openapi/_original/copper-developer-api-openapi.yml#PUT /opportunities/{id}
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      status:
+      - status
+      - status_id
+      source: source_id
+      email: email
+      custom_fields: custom_fields
+      first_name: first_name
+      last_name: last_name
+      phone: phone_numbers
+      company_name: company_name
+      job_title: title
+      full_name: name
+      description: details
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/copper-developer-api-openapi.yml#DELETE /leads/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#GET /leads/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#POST /leads
+    - openapi/_original/copper-developer-api-openapi.yml#PUT /leads/{id}
+  activity:
+    path_segment:
+    - activities
+    properties:
+      type: type
+      id: id
+      created_at: date_created
+      updated_at: date_modified
+      description: details
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copper-developer-api-openapi.yml#POST /activities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: name
+      due_at: due_date
+      description: details
+      status: status
+      assignee_id: assignee_id
+      priority: priority
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/copper-developer-api-openapi.yml#DELETE /tasks/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#GET /tasks/{id}
+    - openapi/_original/copper-developer-api-openapi.yml#POST /tasks
+    - openapi/_original/copper-developer-api-openapi.yml#PUT /tasks/{id}

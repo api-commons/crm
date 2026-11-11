@@ -1,0 +1,65 @@
+provider: lawmatics
+apis_io: https://apis.io/providers/lawmatics/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#DELETE /v1/contacts/{contact_id}
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/contacts
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/contacts/{contact_id}
+    - openapi/_original/lawmatics-openapi.yml#POST /v1/contacts
+    - openapi/_original/lawmatics-openapi.yml#PUT /v1/contacts/{contact_id}
+  company:
+    path_segment:
+    - companies
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#DELETE /v1/companies/{company_id}
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/companies
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/companies/{company_id}
+    - openapi/_original/lawmatics-openapi.yml#POST /v1/companies
+    - openapi/_original/lawmatics-openapi.yml#PUT /v1/companies/{company_id}
+  activity:
+    path_segment:
+    - activities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/activities
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/activities/{activity_id}
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#DELETE /v1/tasks/{task_id}
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/tasks
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/tasks/{task_id}
+    - openapi/_original/lawmatics-openapi.yml#POST /v1/tasks
+    - openapi/_original/lawmatics-openapi.yml#PUT /v1/tasks/{task_id}
+  note:
+    path_segment:
+    - notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#DELETE /v1/notes/{note_id}
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/notes
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/notes/{note_id}
+    - openapi/_original/lawmatics-openapi.yml#POST /v1/notes
+    - openapi/_original/lawmatics-openapi.yml#PUT /v1/notes/{note_id}
+  pipeline:
+    path_segment:
+    - pipelines
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/pipelines
+    - openapi/_original/lawmatics-openapi.yml#GET /v1/pipelines/{pipeline_id}

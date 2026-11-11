@@ -5,8 +5,8 @@ generated: '2026-11-10'
 concepts:
   contact:
     path_segment:
-    - contacts
     - people
+    - contacts
     properties:
       email: email
       last_name: last_name
@@ -29,7 +29,7 @@ concepts:
       id: id
       custom_fields: attributes
       type: type
-    core_coverage: 0.2
+    core_coverage: 0.333
     evidence:
     - openapi/_original/street-co-open-api-openapi.json#GET /companies
     - openapi/_original/street-co-open-api-openapi.json#GET /companies/{company_id}
@@ -41,10 +41,10 @@ concepts:
     properties:
       id: id
       email: email
+      custom_fields: attributes
       first_name: first_name
       last_name: last_name
-      custom_fields: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/street-co-spectre-api-openapi.json#GET /property-reports/leads
     - openapi/_original/street-co-spectre-api-openapi.json#POST /property-reports/leads
@@ -65,7 +65,6 @@ concepts:
     properties:
       id: id
       type: type
-      custom_fields: attributes
     core_coverage: 0.167
     evidence:
     - openapi/_original/street-co-open-api-openapi.json#GET /todos
@@ -78,7 +77,7 @@ concepts:
     properties:
       id: id
       type: type
-    core_coverage: 0.25
+    core_coverage: 0.333
     evidence:
     - openapi/_original/street-co-open-api-openapi.json#POST /notes
     - openapi/_original/street-co-open-api-openapi.yml#POST /notes

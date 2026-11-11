@@ -12,9 +12,8 @@ concepts:
       created_at: createdAt
       status: state
       updated_at: updatedAt
-      created_by: createdById
       type: type
-      tags: labels
+      created_by: createdById
     core_coverage: 0.667
     evidence:
     - openapi/_original/erply-assignments-openapi.json#DELETE /api/v1/task/{taskId}

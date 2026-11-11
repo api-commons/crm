@@ -15,10 +15,9 @@ concepts:
       job_title: title
       created_at: created_at
       custom_fields: custom_fields
-      updated_at: updated_at
       full_name: name
+      updated_at: updated_at
       company_id: account_id
-      is_deleted: deleted
     core_coverage: 0.75
     evidence:
     - openapi/_original/fixture-openapi.json#DELETE /api/v1/contacts/{contact_id}
@@ -30,14 +29,14 @@ concepts:
     path_segment:
     - accounts
     properties:
-      id: id
       name: name
+      id: id
       created_at: created_at
       updated_at: updated_at
       website: website_url
-      description: description
-      phone: phone
       custom_fields: custom_fields
+      phone: phone
+      description: description
       industry: industry
     core_coverage: 1.0
     evidence:
@@ -50,14 +49,14 @@ concepts:
     path_segment:
     - deals
     properties:
-      name: name
       id: id
+      name: name
       created_at: created_at
       updated_at: updated_at
-      stage_id: pipeline_stage_id
-      company_id: account_id
       custom_fields: custom_fields
+      stage_id: pipeline_stage_id
       close_date: expected_close_date
+      company_id: account_id
       pipeline_id: pipeline_id
     core_coverage: 1.0
     evidence:
@@ -72,18 +71,17 @@ concepts:
     properties:
       id: id
       created_at: created_at
-      source: source
-      email: email
       status:
       - state
       - status
-      updated_at: updated_at
-      phone: phone
-      company_name: company_name
+      source: source
+      email: email
       custom_fields: custom_fields
+      phone: phone
+      updated_at: updated_at
+      company_name: company_name
       job_title: title
       full_name: name
-      is_deleted: deleted
     core_coverage: 1.0
     evidence:
     - openapi/_original/fixture-openapi.json#DELETE /api/v1/lead-lists/{list_id}/leads
@@ -115,15 +113,14 @@ concepts:
     properties:
       id: id
       subject: title
-      created_at: created_at
       due_at: due_date
-      status: task_status
+      created_at: created_at
       description: description
+      status: task_status
+      assignee_id: assignee_id
       done: completed_at
       updated_at: updated_at
-      assignee_id: assignee_id
       created_by: created_by_id
-      is_deleted: deleted
     core_coverage: 1.0
     evidence:
     - openapi/_original/fixture-openapi.json#DELETE /api/v1/tasks/{task_id}
@@ -139,8 +136,8 @@ concepts:
       created_at: created_at
       content: content
       updated_at: updated_at
-      subject: title
       type: type
+      subject: title
     core_coverage: 1.0
     evidence:
     - openapi/_original/fixture-openapi.json#DELETE /api/v1/notes/{note_id}
@@ -154,7 +151,6 @@ concepts:
       name: name
       stages: stages
       created_at: created_at
-      updated_at: updated_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/fixture-openapi.json#GET /api/v1/pipelines

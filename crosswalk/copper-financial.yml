@@ -7,17 +7,17 @@ concepts:
     path_segment:
     - opportunities
     properties:
-      name: name
       id: id
+      name: name
       created_at: date_created
       updated_at: date_modified
-      stage_id: pipeline_stage_id
-      company_id: company_id
-      custom_fields: custom_fields
       status: status
-      description: details
+      custom_fields: custom_fields
+      stage_id: pipeline_stage_id
       close_date: close_date
+      company_id: company_id
       contact_id: primary_contact_id
+      description: details
       pipeline_id: pipeline_id
       probability: win_probability
     core_coverage: 1.0

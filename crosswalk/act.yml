@@ -1,0 +1,96 @@
+provider: act
+apis_io: https://apis.io/providers/act/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: emailAddress
+      last_name: lastName
+      first_name: firstName
+      id: id
+      job_title: jobTitle
+      created_at: created
+      custom_fields: customFields
+      full_name: fullName
+      company_id: companyID
+      company_name: company
+    core_coverage: 0.875
+    evidence:
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/contacts/{contactId}
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/history/{id}/contacts/{contactId}
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/notes/{id}/contacts/{contactId}
+    - openapi/_original/act-web-api-swagger.json#GET /api/contacts
+    - openapi/_original/act-web-api-swagger.json#GET /api/contacts/{contactId}
+  company:
+    path_segment:
+    - companies
+    properties:
+      name: name
+      id: id
+      created_at: created
+      address:
+      - address
+      - billingAddress
+      website: website
+      custom_fields: customFields
+      phone: phone
+      description: description
+      industry: industry
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/companies/{companyId}
+    - openapi/_original/act-web-api-swagger.json#GET /api/companies
+    - openapi/_original/act-web-api-swagger.json#GET /api/companies/{companyId}
+    - openapi/_original/act-web-api-swagger.json#PATCH /api/companies/{companyId}
+    - openapi/_original/act-web-api-swagger.json#POST /api/companies
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      id: id
+      name: name
+      created_at: created
+      status: status
+      custom_fields: customFields
+      stage_id: stage
+      close_date: estimatedCloseDate
+      probability: probability
+      closed_at: actualCloseDate
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/opportunities/{opportunityId}
+    - openapi/_original/act-web-api-swagger.json#GET /api/opportunities
+    - openapi/_original/act-web-api-swagger.json#GET /api/opportunities/{opportunityId}
+    - openapi/_original/act-web-api-swagger.json#PATCH /api/opportunities/{opportunityId}
+    - openapi/_original/act-web-api-swagger.json#POST /api/opportunities
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: subject
+      created_at: created
+      description: details
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/tasks
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/tasks/{taskId}
+    - openapi/_original/act-web-api-swagger.json#GET /api/preferences/tasks
+    - openapi/_original/act-web-api-swagger.json#GET /api/tasks
+    - openapi/_original/act-web-api-swagger.json#GET /api/tasks/{taskId}
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      created_at: created
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/act-supplemental-files-api-openapi.yml#DELETE /api/attachments/notes/{id}
+    - openapi/_original/act-supplemental-files-api-openapi.yml#GET /api/attachments/notes/{id}
+    - openapi/_original/act-supplemental-files-api-openapi.yml#POST /api/attachments/notes/{id}
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/attachments/notes/{id}
+    - openapi/_original/act-web-api-swagger.json#DELETE /api/contacts/{contactId}/notes/{id}

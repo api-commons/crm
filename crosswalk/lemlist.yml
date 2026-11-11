@@ -31,16 +31,16 @@ concepts:
     path_segment:
     - companies
     properties:
-      id: _id
       name: name
+      id: _id
       created_at: createdAt
-      description: description
       custom_fields: fields
+      description: description
       industry: industry
       type: type
-      owner_id: ownerId
       domain: domain
-    core_coverage: 0.6
+      owner_id: ownerId
+    core_coverage: 1.0
     evidence:
     - openapi/_original/lemlist-openapi-v1-legacy.json#GET /companies
     - openapi/_original/lemlist-openapi-v1-legacy.json#GET /schema/companies
@@ -52,20 +52,20 @@ concepts:
     - leads
     properties:
       id: _id
-      source: source
-      email: email
       status:
       - status
       - state
-      updated_at: updatedAt
+      source: source
+      email: email
       first_name: firstName
       last_name: lastName
       phone: phone
+      updated_at: updatedAt
       company_name:
       - companyName
       - Company name
       job_title: jobTitle
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/lemlist-openapi-v1-legacy.json#DELETE /campaigns/{campaignId}/leads/{email}
     - openapi/_original/lemlist-openapi-v1-legacy.json#DELETE /campaigns/{campaignId}/leads/{leadId}
@@ -96,15 +96,15 @@ concepts:
       - recordId
       - id
       subject: title
-      created_at: createdAt
       due_at: dueDate
+      created_at: createdAt
       status: status
+      assignee_id: assignedTo
       done:
       - completedAt
       - done
-      assignee_id: assignedTo
-      owner_id: userId
       priority: priority
+      owner_id: userId
       type: type
     core_coverage: 0.833
     evidence:
@@ -120,10 +120,10 @@ concepts:
       id: _id
       created_at: createdAt
       updated_at: updatedAt
-      owner_id: userId
       type: type
+      owner_id: userId
       company_id: companyId
-    core_coverage: 0.75
+    core_coverage: 0.667
     evidence:
     - openapi/_original/lemlist-openapi-v1-legacy.json#GET /companies/{companyId}/notes
     - openapi/_original/lemlist-openapi-v1-legacy.json#POST /companies/{companyId}/notes

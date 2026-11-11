@@ -1,0 +1,16 @@
+provider: streak
+apis_io: https://apis.io/providers/streak/
+context: crm
+generated: '2026-11-10'
+concepts:
+  pipeline:
+    path_segment:
+    - pipelines
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/streak-openapi.yml#DELETE /pipelines/{pipelineKey}
+    - openapi/_original/streak-openapi.yml#GET /pipelines
+    - openapi/_original/streak-openapi.yml#GET /pipelines/{pipelineKey}
+    - openapi/_original/streak-openapi.yml#POST /pipelines
+    - openapi/_original/streak-openapi.yml#PUT /pipelines/{pipelineKey}

@@ -17,8 +17,8 @@ concepts:
       job_title: title
       created_at: created_at
       custom_fields: custom_fields
-      updated_at: updated_at
       full_name: name
+      updated_at: updated_at
       company_id: account_id
       address: addresses
       company_name:

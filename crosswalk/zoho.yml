@@ -11,8 +11,6 @@ concepts:
       job_title: title
       created_at: createdTime
       custom_fields: customFields
-      is_deleted: isDeleted
-      mobile_phone: mobile
     core_coverage: 0.5
     evidence:
     - openapi/_original/Contact.json#GET /api/v1/accounts/{accountId}/contacts
@@ -25,18 +23,18 @@ concepts:
     - accounts
     - organizations
     properties:
-      id: id
       name: companyName
+      id: id
       created_at: createdTime
       website: website
-      description: description
-      phone: phoneNumber
       custom_fields: customFields
-      city: city
-      country: country
+      phone: phoneNumber
+      description: description
       industry: industry
       owner_id: ownerId
-    core_coverage: 0.8
+      city: city
+      country: country
+    core_coverage: 1.0
     evidence:
     - openapi/_original/Account.json#GET /api/v1/accounts
     - openapi/_original/Account.json#GET /api/v1/accounts/{accountId}
@@ -58,22 +56,21 @@ concepts:
       subject:
       - subject
       - name
+      due_at: dueDate
       created_at:
       - createdTime
       - created_time
-      due_at: dueDate
-      status: status
       description:
       - description
       - details
+      status: status
       assignee_id: assignee
-      owner_id: ownerId
       priority: priority
+      owner_id: ownerId
       created_by:
       - creatorId
       - created_by
       contact_id: contactId
-      custom_fields: customFields
     core_coverage: 1.0
     evidence:
     - openapi/_original/Task.json#GET /api/v1/tasks
@@ -86,7 +83,7 @@ concepts:
     - notes
     properties:
       id: id
-    core_coverage: 0.25
+    core_coverage: 0.333
     evidence:
     - openapi/_original/notes.json#DELETE /Notes
     - openapi/_original/notes.json#DELETE /Notes/{id}
@@ -99,7 +96,6 @@ concepts:
     properties:
       id: id
       is_default: default
-      description: details
     core_coverage: 0.5
     evidence:
     - openapi/_original/pipeline.json#GET /settings/pipeline

@@ -1,0 +1,77 @@
+provider: agencyzoom
+apis_io: https://apis.io/providers/agencyzoom/
+context: crm
+generated: '2026-11-10'
+concepts:
+  deal:
+    path_segment:
+    - opportunities
+    properties:
+      id: id
+      status: status
+      custom_fields: customFields
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/leads/{leadId}/opportunities/{opportunityId}
+    - openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/opportunities/{opportunityId}
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/opportunities
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/opportunities/{opportunityId}
+    - openapi/_original/agencyzoom-openapi.yml#POST /v1/api/leads/{leadId}/opportunities
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      status:
+      - state
+      - status
+      email: email
+      custom_fields: customFields
+      first_name: firstname
+      last_name: lastname
+      phone: phone
+      owner_id: assignedTo
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}
+    - openapi/_original/agencyzoom-openapi.yml#PUT /v1/api/leads/{leadId}
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: title
+      due_at: dueDate
+      status: status
+      assignee_id: assigneeId
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/tasks/{taskId}
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/customers/{customerId}/tasks
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/tasks
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/tasks/{taskId}
+    - openapi/_original/agencyzoom-openapi.yml#POST /v1/api/tasks
+  note:
+    path_segment:
+    - notes
+    properties:
+      id: id
+      content: body
+      created_by: createdBy
+      type: type
+      subject: title
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/notes
+    - openapi/_original/agencyzoom-openapi.yml#POST /v1/api/customers/{customerId}/notes
+    - openapi/_original/agencyzoom-openapi.yml#POST /v1/api/leads/{leadId}/notes
+  pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/agencyzoom-openapi.yml#GET /v1/api/pipelines

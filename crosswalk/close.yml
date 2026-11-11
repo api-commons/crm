@@ -1,0 +1,114 @@
+provider: close
+apis_io: https://apis.io/providers/close/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties:
+      email: emails
+      id: id
+      phone: phones
+      job_title: title
+      created_at: date_created
+      full_name:
+      - display_name
+      - name
+      company_id: organization_id
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /contact/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /custom_field/contact/{id}/
+    - openapi/_original/close-api-openapi.json#GET /contact/
+    - openapi/_original/close-api-openapi.json#GET /contact/{id}/
+    - openapi/_original/close-api-openapi.json#GET /custom_field/contact/
+  deal:
+    path_segment:
+    - opportunity
+    properties:
+      id: id
+      created_at: date_created
+      status: status
+      custom_fields: custom_fields
+      company_id: organization_id
+      contact_id: contact_id
+      owner_id: user_id
+      pipeline_id: pipeline_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /activity/status_change/opportunity/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /custom_field/opportunity/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /opportunity/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /status/opportunity/{id}/
+    - openapi/_original/close-api-openapi.json#GET /activity/status_change/opportunity/
+  lead:
+    path_segment:
+    - lead
+    properties:
+      id: id
+      created_at: date_created
+      status: status_id
+      source: source
+      full_name:
+      - display_name
+      - name
+      owner_id: user_id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /activity/status_change/lead/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /custom_field/lead/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /lead/{id}/
+    - openapi/_original/close-api-openapi.json#DELETE /status/lead/{id}/
+    - openapi/_original/close-api-openapi.json#GET /activity/status_change/lead/
+  task:
+    path_segment:
+    - task
+    properties:
+      due_at: due_date
+      created_at: date_created
+      assignee_id: assigned_to
+      priority: priority
+      type: _type
+      created_by: created_by
+      contact_id: contact_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /task/{id}/
+    - openapi/_original/close-api-openapi.json#GET /task/
+    - openapi/_original/close-api-openapi.json#GET /task/{id}/
+    - openapi/_original/close-api-openapi.json#POST /task/
+    - openapi/_original/close-api-openapi.json#PUT /task/
+  note:
+    path_segment:
+    - note
+    properties:
+      id: id
+      created_at: date_created
+      created_by:
+      - created_by
+      - created_by_id
+      type: _type
+      subject: title
+      contact_id: contact_id
+      owner_id: user_id
+      company_id: organization_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /activity/note/{id}/
+    - openapi/_original/close-api-openapi.json#GET /activity/note/
+    - openapi/_original/close-api-openapi.json#GET /activity/note/{id}/
+    - openapi/_original/close-api-openapi.json#POST /activity/note/
+    - openapi/_original/close-api-openapi.json#PUT /activity/note/{id}/
+  pipeline:
+    path_segment:
+    - pipeline
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/close-api-openapi.json#DELETE /pipeline/{id}/
+    - openapi/_original/close-api-openapi.json#GET /pipeline/
+    - openapi/_original/close-api-openapi.json#GET /pipeline/{id}/
+    - openapi/_original/close-api-openapi.json#POST /pipeline/
+    - openapi/_original/close-api-openapi.json#PUT /pipeline/{id}/

@@ -1,0 +1,45 @@
+provider: lone-wolf
+apis_io: https://apis.io/providers/lone-wolf/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      last_name:
+      - lastname
+      - lastName
+      first_name:
+      - firstname
+      - firstName
+      id: id
+      phone:
+      - phone
+      - workPhone
+      company_name:
+      - companyName
+      - company
+      owner_id: userId
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/lone-wolf-transact-api-openapi.yml#DELETE /transact-workflow/v1/users/{userId}/Contacts/{contactId}
+    - openapi/_original/lone-wolf-transact-api-openapi.yml#GET /transact-workflow/v1/users/{userId}/Contacts
+    - openapi/_original/lone-wolf-transact-api-openapi.yml#GET /transact-workflow/v1/users/{userId}/Contacts/{contactId}
+    - openapi/_original/lone-wolf-transact-api-openapi.yml#PATCH /transact-workflow/v1/users/{userId}/Contacts/{contactId}
+    - openapi/_original/lone-wolf-transact-api-openapi.yml#POST /transact-workflow/v1/Contacts
+  deal:
+    path_segment:
+    - deals
+    properties:
+      id: id
+      name: name
+      close_date: closeDate
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/lone-wolf-deals-api-openapi.yml#DELETE /deals/{dealId}
+    - openapi/_original/lone-wolf-deals-api-openapi.yml#GET /deals
+    - openapi/_original/lone-wolf-deals-api-openapi.yml#GET /deals/{dealId}
+    - openapi/_original/lone-wolf-deals-api-openapi.yml#PATCH /deals/{dealId}
+    - openapi/_original/lone-wolf-deals-api-openapi.yml#POST /deals

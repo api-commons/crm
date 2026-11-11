@@ -1,0 +1,24 @@
+provider: holded
+apis_io: https://apis.io/providers/holded/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/holded-openapi.yml#DELETE /invoicing/v1/contacts/{contactId}
+    - openapi/_original/holded-openapi.yml#GET /invoicing/v1/contacts
+    - openapi/_original/holded-openapi.yml#GET /invoicing/v1/contacts/{contactId}
+    - openapi/_original/holded-openapi.yml#POST /invoicing/v1/contacts
+    - openapi/_original/holded-openapi.yml#PUT /invoicing/v1/contacts/{contactId}
+  lead:
+    path_segment:
+    - leads
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/holded-openapi.yml#GET /crm/v1/leads
+    - openapi/_original/holded-openapi.yml#POST /crm/v1/leads

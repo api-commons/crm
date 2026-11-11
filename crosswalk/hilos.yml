@@ -13,7 +13,6 @@ concepts:
       id: id
       phone: phone
       tags: tags
-      is_deleted: is_deleted
     core_coverage: 0.625
     evidence:
     - openapi/_original/hilos-openapi-original.yml#DELETE /api/contact/{id}

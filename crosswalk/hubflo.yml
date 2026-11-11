@@ -31,13 +31,12 @@ concepts:
     - organizations
     properties:
       name: name
-      website: website
       address: address
+      website: website
+      owner_id: owner_id
       city: city
       country: country
-      owner_id: owner_id
-      email: email
-    core_coverage: 0.4
+    core_coverage: 0.333
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/companies
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/companies/{id}
@@ -52,7 +51,6 @@ concepts:
       description: description
       done: completed
       contact_id: contact_id
-      tags: tags
     core_coverage: 0.333
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/tasks
@@ -66,7 +64,7 @@ concepts:
     properties:
       content: content
       subject: title
-    core_coverage: 0.25
+    core_coverage: 0.333
     evidence:
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes
     - openapi/_original/hubflo-openapi-original.yml#GET /api/v2/notes/{id}

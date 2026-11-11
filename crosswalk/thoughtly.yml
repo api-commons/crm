@@ -1,0 +1,14 @@
+provider: thoughtly
+apis_io: https://apis.io/providers/thoughtly/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/thoughtly-api-openapi.yml#DELETE /contact/{id}
+    - openapi/_original/thoughtly-api-openapi.yml#GET /contact
+    - openapi/_original/thoughtly-api-openapi.yml#GET /contact/{id}

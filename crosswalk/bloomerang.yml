@@ -13,9 +13,8 @@ concepts:
       due_at: DueDate
       status: Status
       owner_id: UserId
-      note: Note
       type: Type
-      is_deleted: Deleted
+      note: Note
     core_coverage: 0.667
     evidence:
     - openapi/_original/bloomerang-openapi.json#DELETE /task/{id}
@@ -31,7 +30,7 @@ concepts:
       id: Id
       type: Type
       company_id: AccountId
-    core_coverage: 0.25
+    core_coverage: 0.333
     evidence:
     - openapi/_original/bloomerang-openapi.json#DELETE /note/{id}
     - openapi/_original/bloomerang-openapi.json#GET /note/{id}

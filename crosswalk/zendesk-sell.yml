@@ -15,7 +15,6 @@ concepts:
       full_name: name
       tags: tags
       owner_id: owner_id
-      mobile_phone: mobile
     core_coverage: 0.625
     evidence:
     - openapi/_original/zendesk-sell-openapi.yml#DELETE /v2/contacts/{id}
@@ -28,11 +27,11 @@ concepts:
     - deals
     properties:
       name: name
-      stage_id: stage_id
       custom_fields: custom_fields
+      stage_id: stage_id
+      contact_id: contact_id
       currency: currency
       owner_id: owner_id
-      contact_id: contact_id
     core_coverage: 0.25
     evidence:
     - openapi/_original/zendesk-sell-openapi.yml#DELETE /v2/deals/{id}
@@ -44,16 +43,16 @@ concepts:
     path_segment:
     - leads
     properties:
+      status: status
       source: source_id
       email: email
-      status: status
+      custom_fields: custom_fields
       first_name: first_name
       last_name: last_name
       phone: phone
       company_name: organization_name
-      custom_fields: custom_fields
       owner_id: owner_id
-    core_coverage: 0.333
+    core_coverage: 0.5
     evidence:
     - openapi/_original/zendesk-sell-openapi.yml#DELETE /v2/leads/{id}
     - openapi/_original/zendesk-sell-openapi.yml#GET /v2/leads

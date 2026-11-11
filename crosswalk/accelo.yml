@@ -1,0 +1,47 @@
+provider: accelo
+apis_io: https://apis.io/providers/accelo/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/accelo-openapi.yml#GET /contacts
+    - openapi/_original/accelo-openapi.yml#GET /contacts/{contact_id}
+    - openapi/_original/accelo-openapi.yml#POST /contacts
+    - openapi/_original/accelo-openapi.yml#PUT /contacts/{contact_id}
+  company:
+    path_segment:
+    - companies
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/accelo-openapi.yml#DELETE /companies/{company_id}
+    - openapi/_original/accelo-openapi.yml#GET /companies
+    - openapi/_original/accelo-openapi.yml#GET /companies/{company_id}
+    - openapi/_original/accelo-openapi.yml#POST /companies
+    - openapi/_original/accelo-openapi.yml#PUT /companies/{company_id}
+  activity:
+    path_segment:
+    - activities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/accelo-openapi.yml#DELETE /activities/{activity_id}
+    - openapi/_original/accelo-openapi.yml#GET /activities
+    - openapi/_original/accelo-openapi.yml#GET /activities/{activity_id}
+    - openapi/_original/accelo-openapi.yml#POST /activities
+    - openapi/_original/accelo-openapi.yml#PUT /activities/{activity_id}
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/accelo-openapi.yml#GET /tasks
+    - openapi/_original/accelo-openapi.yml#GET /tasks/{task_id}
+    - openapi/_original/accelo-openapi.yml#POST /tasks
+    - openapi/_original/accelo-openapi.yml#PUT /tasks/{task_id}

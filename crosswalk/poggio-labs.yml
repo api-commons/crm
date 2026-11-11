@@ -8,7 +8,7 @@ concepts:
     - organizations
     properties:
       name: name
-    core_coverage: 0.2
+    core_coverage: 0.333
     evidence:
     - openapi/_original/poggio-labs-goalkeeper-openapi.json#GET /v1/organizations
     - openapi/_original/poggio-labs-goalkeeper-openapi.json#POST /v1/organizations

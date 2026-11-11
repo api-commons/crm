@@ -11,7 +11,7 @@ concepts:
       - status
       - status_id
       owner_id: owner_id
-    core_coverage: 0.0
+    core_coverage: 0.25
     evidence:
     - openapi/_original/persistiq-api-v1-openapi.json#DELETE /v1/campaigns/{campaign_id}/leads/{id}
     - openapi/_original/persistiq-api-v1-openapi.json#GET /v1/campaigns/{campaign_id}/leads

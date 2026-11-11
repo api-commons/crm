@@ -1,0 +1,15 @@
+provider: servicetitan
+apis_io: https://apis.io/providers/servicetitan/
+context: crm
+generated: '2026-11-10'
+concepts:
+  lead:
+    path_segment:
+    - leads
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/servicetitan-crm-api-openapi.yml#GET /leads
+    - openapi/_original/servicetitan-crm-api-openapi.yml#POST /leads

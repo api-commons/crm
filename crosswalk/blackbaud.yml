@@ -26,23 +26,20 @@ concepts:
     - openapi/_original/blackbaud-grantmaking-api-openapi.yml#GET /api/v1/contacts/{contact_id}
   company:
     path_segment:
-    - accounts
     - organizations
+    - accounts
     properties:
-      id: id
       name:
       - name
       - organization_name
+      id: id
       updated_at: date_modified
       website: url
-      description: description
-      phone: phone_number
       custom_fields: custom_fields
+      phone: phone_number
+      description: description
       industry: industry
-      email:
-      - email_address
-      - email
-    core_coverage: 0.8
+    core_coverage: 0.667
     evidence:
     - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#GET /organizations/{constituent_id}
     - openapi/_original/blackbaud-altru-constituent-api-openapi.yml#PATCH /organizations/{constituent_id}
@@ -53,8 +50,8 @@ concepts:
     path_segment:
     - opportunities
     properties:
-      name: name
       id: id
+      name: name
       updated_at: date_modified
       status: status
     core_coverage: 0.75
@@ -88,9 +85,9 @@ concepts:
       - content
       - text
       updated_at: date_modified
-      subject: title
       type: type
-    core_coverage: 0.75
+      subject: title
+    core_coverage: 0.667
     evidence:
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#GET /vendors/{vendor_id}/notes
     - openapi/_original/blackbaud-accounts-payable-api-openapi.yml#POST /vendors/{vendor_id}/notes

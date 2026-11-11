@@ -12,7 +12,7 @@ concepts:
       updated_at: updatedAt
       website: url
       owner_id: ownerId
-    core_coverage: 0.8
+    core_coverage: 0.667
     evidence:
     - openapi/_original/spotio-swagger.json#GET /api/Documents/company
     - openapi/_original/spotio-swagger.json#PUT /api/Documents/company/{documentId}

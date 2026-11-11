@@ -23,12 +23,12 @@ concepts:
     - openapi/_original/customeros-flow-api-openapi.yml#GET /flows/{flow_id}/sequences/{sequence_id}/contacts/{contact_id}
   company:
     path_segment:
-    - organization
     - organizations
+    - organization
     properties:
       name: name
       website: website
-    core_coverage: 0.4
+    core_coverage: 0.333
     evidence:
     - openapi/_original/customeros-customerbase-openapi.yml#GET /customerbase/v1/organizations/{id}
     - openapi/_original/customeros-customerbase-openapi.yml#POST /customerbase/v1/organizations

@@ -1,11 +1,211 @@
 {
- "cohort_size": 134,
+ "cohort_size": 177,
  "concepts": {
   "contact": {
+   "accelo": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/accelo-openapi.yml#GET /contacts",
+     "openapi/_original/accelo-openapi.yml#GET /contacts/{contact_id}",
+     "openapi/_original/accelo-openapi.yml#POST /contacts",
+     "openapi/_original/accelo-openapi.yml#PUT /contacts/{contact_id}"
+    ]
+   },
+   "act": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "idStatus": "string",
+     "isUser": "boolean",
+     "company": "string",
+     "department": "string",
+     "companyID": "string",
+     "contactType": "string",
+     "namePrefix": "string",
+     "firstName": "string",
+     "middleName": "string",
+     "lastName": "string",
+     "nameSuffix": "string",
+     "fullName": "string",
+     "isFavorite": "boolean",
+     "isImported": "boolean",
+     "importDate": "string",
+     "isPrivate": "boolean",
+     "acl": "string",
+     "lastResults": "string",
+     "lastEmail": "string",
+     "lastAttempt": "string",
+     "lastReach": "string",
+     "lastMeeting": "string",
+     "lastLetterSent": "string",
+     "messengerID": "string",
+     "referredBy": "string",
+     "salutation": "string",
+     "jobTitle": "string",
+     "amaScore": "integer",
+     "emailAddress": "string",
+     "altEmailAddress": "string",
+     "personalEmailAddress": "string",
+     "website": "string",
+     "birthday": "string",
+     "businessAddress": "object",
+     "businessPhone": "string",
+     "businessExtension": "string",
+     "businessCountryCode": "integer",
+     "businessMaskFormat": "string",
+     "mobilePhone": "string",
+     "mobileExtension": "string",
+     "mobileCountryCode": "integer",
+     "mobileMaskFormat": "string",
+     "faxPhone": "string",
+     "faxExtension": "string",
+     "faxCountryCode": "integer",
+     "faxMaskFormat": "string",
+     "homeAddress": "object",
+     "homePhone": "string",
+     "homeExtension": "string",
+     "homeCountryCode": "integer",
+     "homeMaskFormat": "string",
+     "alternatePhone": "string",
+     "alternateExtension": "string",
+     "alternateCountryCode": "integer",
+     "alternateMaskFormat": "string",
+     "pagerPhone": "string",
+     "pagerExtension": "string",
+     "pagerCountryCode": "integer",
+     "pagerMaskFormat": "string",
+     "aemOptOut": "boolean",
+     "aemBounceBack": "boolean",
+     "recordManagerID": "string",
+     "quickbooksId": "string",
+     "nylasContactId": "string",
+     "customFields": "object",
+     "created": "string",
+     "edited": "string",
+     "editedBy": "string",
+     "recordManager": "string",
+     "createUserID": "string",
+     "createUserName": "string",
+     "editUserID": "string",
+     "editUserName": "string",
+     "contactEmail": "string",
+     "contactPhone": "string",
+     "contactPhoneExt": "string",
+     "contactCompany": "string",
+     "details": "string",
+     "regarding": "string",
+     "duration": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "outlookID": "string",
+     "historyTypeID": "integer",
+     "historyType": "object",
+     "companies": "array",
+     "contacts": "array",
+     "groups": "array",
+     "opportunities": "array",
+     "attachment": "object",
+     "noteText": "string",
+     "noteTypeID": "integer",
+     "displayDate": "string"
+    },
+    "evidence": [
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/history/{id}/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/notes/{id}/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/contacts",
+     "openapi/_original/act-web-api-swagger.json#GET /api/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#PATCH /api/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#POST /api/contacts",
+     "openapi/_original/act-web-api-swagger.json#POST /api/notes/{id}/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/history/{id}/contacts/{contactId}",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/notes/{id}/contacts/{contactId}"
+    ]
+   },
+   "affinity": {
+    "segments": [
+     "persons"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "firstName": "string",
+     "lastName": "string",
+     "primaryEmailAddress": "string",
+     "emailAddresses": "array",
+     "type": "string",
+     "fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/persons",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/persons/{personId}"
+    ]
+   },
+   "agile-crm": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agile-crm-openapi.yml#DELETE /api/contacts/{id}",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/contacts",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/contacts"
+    ]
+   },
+   "aircall": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/aircall-openapi.yml#DELETE /contacts/{id}",
+     "openapi/_original/aircall-openapi.yml#GET /contacts",
+     "openapi/_original/aircall-openapi.yml#GET /contacts/{id}",
+     "openapi/_original/aircall-openapi.yml#POST /contacts",
+     "openapi/_original/aircall-openapi.yml#PUT /contacts/{id}"
+    ]
+   },
    "alto-vebra": {
     "segments": [
-     "contacts",
-     "persons"
+     "contacts"
     ],
     "operations": [
      "GET collection",
@@ -35,21 +235,12 @@
      "branchId": "string",
      "op": "string",
      "value": "string",
-     "path": "string",
-     "title": "string",
-     "forename": "string",
-     "surname": "string",
-     "phoneNumbers": "array",
-     "emailAddresses": "array",
-     "isContactArchived": "boolean"
+     "path": "string"
     },
     "evidence": [
      "openapi/_original/alto-api-openapi.json#GET /contacts",
      "openapi/_original/alto-api-openapi.json#GET /contacts/{contactId}",
-     "openapi/_original/alto-api-openapi.json#GET /contacts/{contactId}/persons",
-     "openapi/_original/alto-api-openapi.json#GET /contacts/{contactId}/persons/{personId}",
      "openapi/_original/alto-api-openapi.json#PATCH /contacts/{contactId}",
-     "openapi/_original/alto-api-openapi.json#PATCH /contacts/{contactId}/persons/{personId}",
      "openapi/_original/alto-api-openapi.json#POST /contacts"
     ]
    },
@@ -198,15 +389,16 @@
      "POST collection"
     ],
     "properties": {
-     "count": "integer",
-     "value": "array",
-     "record_id": "integer",
+     "vendor_contact_id": "integer",
+     "address_description": "string",
+     "address_line": "string",
+     "contact_display_name": "string",
+     "contact_id": "integer",
      "description": "string",
      "country": "string",
      "city": "string",
      "county": "string",
      "state": "string",
-     "address_line": "string",
      "postal": "string",
      "title": "string",
      "first_name": "string",
@@ -214,8 +406,9 @@
      "last_name": "string",
      "suffix": "string",
      "position": "string",
-     "organization": "string",
      "address_contact_methods": "array",
+     "record_id": "integer",
+     "organization": "string",
      "id": "string",
      "email": "string",
      "primary_organization": "object",
@@ -298,8 +491,8 @@
    },
    "brevo": {
     "segments": [
-     "contact",
-     "contacts"
+     "contacts",
+     "contact"
     ],
     "operations": [
      "DELETE item",
@@ -333,7 +526,6 @@
     "evidence": [
      "openapi/_original/brevo-contact-management-openapi.yml#DELETE /contacts/{identifier}",
      "openapi/_original/brevo-contact-management-openapi.yml#GET /contacts",
-     "openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/lists/{listId}/contacts",
      "openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/{identifier}",
      "openapi/_original/brevo-contact-management-openapi.yml#POST /contacts",
      "openapi/_original/brevo-contact-management-openapi.yml#PUT /contacts/{identifier}",
@@ -343,6 +535,34 @@
      "openapi/_original/brevo-contacts-openapi.yml#POST /contacts",
      "openapi/_original/brevo-contacts-openapi.yml#PUT /contacts/{identifier}",
      "openapi/_original/brevo-loyalty-openapi.yml#DELETE /loyalty/config/programs/{pid}/contact/{cid}"
+    ]
+   },
+   "capsule": {
+    "segments": [
+     "people"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "parties": "array"
+    },
+    "evidence": [
+     "openapi/_original/capsule-openapi.yml#GET /parties/{partyId}/people"
+    ]
+   },
+   "capsule-crm": {
+    "segments": [
+     "people"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "parties": "array"
+    },
+    "evidence": [
+     "openapi/_original/capsule-parties-api-openapi.yml#GET /parties/{partyId}/people"
     ]
    },
    "clickfunnels": {
@@ -418,6 +638,53 @@
      "openapi/_original/clickfunnels-openapi.json#GET /workspaces/{workspace_id}/contacts",
      "openapi/_original/clickfunnels-openapi.json#POST /workspaces/{workspace_id}/contacts",
      "openapi/_original/clickfunnels-openapi.json#PUT /contacts/{id}"
+    ]
+   },
+   "close": {
+    "segments": [
+     "contact"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "created_by": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "display_name": "string",
+     "emails": "array",
+     "id": "string",
+     "integration_links": "array",
+     "lead_id": null,
+     "lead_suggestions_operation_id": null,
+     "name": null,
+     "organization_id": "string",
+     "phones": "array",
+     "recent_calls": "array",
+     "subscriptions": "array",
+     "timezone": null,
+     "timezone_source": null,
+     "title": null,
+     "updated_by": null,
+     "urls": "array"
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /contact/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /custom_field/contact/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /contact/",
+     "openapi/_original/close-api-openapi.json#GET /contact/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/contact/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/contact/{id}/",
+     "openapi/_original/close-api-openapi.json#POST /contact/",
+     "openapi/_original/close-api-openapi.json#POST /custom_field/contact/",
+     "openapi/_original/close-api-openapi.json#PUT /contact/{id}/",
+     "openapi/_original/close-api-openapi.json#PUT /custom_field/contact/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /contact/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /custom_field/contact/{id}/"
     ]
    },
    "commsharbor": {
@@ -557,6 +824,46 @@
      "openapi/_original/coperniq-openapi.yml#POST /contacts"
     ]
    },
+   "copper": {
+    "segments": [
+     "people"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "prefix": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "suffix": "string",
+     "title": "string",
+     "company_id": "integer",
+     "company_name": "string",
+     "emails": "array",
+     "phone_numbers": "array",
+     "socials": "array",
+     "websites": "array",
+     "address": "object",
+     "assignee_id": "integer",
+     "contact_type_id": "integer",
+     "details": "string",
+     "tags": "array",
+     "custom_fields": "array",
+     "date_created": "integer",
+     "date_modified": "integer"
+    },
+    "evidence": [
+     "openapi/_original/copper-developer-api-openapi.yml#DELETE /people/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#GET /people/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#POST /people",
+     "openapi/_original/copper-developer-api-openapi.yml#PUT /people/{id}"
+    ]
+   },
    "customeros": {
     "segments": [
      "contacts",
@@ -604,8 +911,8 @@
    },
    "eci-solutions": {
     "segments": [
-     "contact",
-     "contacts"
+     "contacts",
+     "contact"
     ],
     "operations": [
      "GET collection",
@@ -821,6 +1128,27 @@
      "openapi/_original/entergram-openapi.json#GET /v1/contacts/{contact_id}"
     ]
    },
+   "exact-online": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "ID": "string",
+     "Account": "string",
+     "FirstName": "string",
+     "LastName": "string",
+     "Email": "string",
+     "Phone": "string"
+    },
+    "evidence": [
+     "openapi/_original/exact-online-openapi.yml#GET /{division}/crm/Contacts",
+     "openapi/_original/exact-online-openapi.yml#POST /{division}/crm/Contacts"
+    ]
+   },
    "fixture": {
     "segments": [
      "contacts"
@@ -864,6 +1192,45 @@
      "openapi/_original/fixture-openapi.json#PATCH /api/v1/contacts/{contact_id}",
      "openapi/_original/fixture-openapi.json#POST /api/v1/contacts",
      "openapi/_original/fixture-openapi.json#PUT /api/v1/deals/{deal_id}/contacts"
+    ]
+   },
+   "folk": {
+    "segments": [
+     "people"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "firstName": "string",
+     "lastName": "string",
+     "fullName": "string",
+     "description": "string",
+     "birthday": "string",
+     "jobTitle": "string",
+     "createdAt": "string",
+     "createdBy": "object",
+     "groups": "array",
+     "companies": "array",
+     "addresses": "array",
+     "emails": "array",
+     "phones": "array",
+     "urls": "array",
+     "customFieldValues": "object",
+     "interactionMetadata": "object",
+     "strongestConnection": "object"
+    },
+    "evidence": [
+     "openapi/_original/folk-openapi.yml#DELETE /v1/people/{personId}",
+     "openapi/_original/folk-openapi.yml#GET /v1/people",
+     "openapi/_original/folk-openapi.yml#GET /v1/people/{personId}",
+     "openapi/_original/folk-openapi.yml#PATCH /v1/people/{personId}",
+     "openapi/_original/folk-openapi.yml#POST /v1/people"
     ]
    },
    "freshsales": {
@@ -1102,11 +1469,9 @@
    },
    "gojiberry-ai": {
     "segments": [
-     "contact",
-     "contacts"
+     "contact"
     ],
     "operations": [
-     "DELETE collection",
      "DELETE item",
      "GET collection",
      "GET item",
@@ -1192,18 +1557,15 @@
      "hasStartedCampaign": "boolean",
      "state": "string",
      "createdAt": "string",
-     "updatedAt": "string",
-     "contactIds": "array"
+     "updatedAt": "string"
     },
     "evidence": [
-     "openapi/_original/gojiberry-ai-openapi.json#DELETE /v1/contact/list/{listId}/contacts",
      "openapi/_original/gojiberry-ai-openapi.json#DELETE /v1/contact/{id}",
      "openapi/_original/gojiberry-ai-openapi.json#GET /v1/contact",
      "openapi/_original/gojiberry-ai-openapi.json#GET /v1/contact/{id}",
      "openapi/_original/gojiberry-ai-openapi.json#GET /v1/unibox/contact/{contactId}",
      "openapi/_original/gojiberry-ai-openapi.json#PATCH /v1/contact/{id}",
-     "openapi/_original/gojiberry-ai-openapi.json#POST /v1/contact",
-     "openapi/_original/gojiberry-ai-openapi.json#POST /v1/contact/list/{listId}/contacts"
+     "openapi/_original/gojiberry-ai-openapi.json#POST /v1/contact"
     ]
    },
    "highlevel": {
@@ -1324,6 +1686,26 @@
      "openapi/_original/hilos-openapi-original.yml#PUT /api/contact/{id}"
     ]
    },
+   "holded": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/holded-openapi.yml#DELETE /invoicing/v1/contacts/{contactId}",
+     "openapi/_original/holded-openapi.yml#GET /invoicing/v1/contacts",
+     "openapi/_original/holded-openapi.yml#GET /invoicing/v1/contacts/{contactId}",
+     "openapi/_original/holded-openapi.yml#POST /invoicing/v1/contacts",
+     "openapi/_original/holded-openapi.yml#PUT /invoicing/v1/contacts/{contactId}"
+    ]
+   },
    "honeybook": {
     "segments": [
      "contacts"
@@ -1432,8 +1814,8 @@
    },
    "hubspot": {
     "segments": [
-     "contact",
-     "contacts"
+     "contacts",
+     "contact"
     ],
     "operations": [
      "DELETE item",
@@ -1469,6 +1851,125 @@
      "openapi/_original/hubspot-crm-contacts-openapi.json#PATCH /crm/objects/2026-03/contacts/{contactId}",
      "openapi/_original/hubspot-crm-contacts-openapi.json#POST /crm/objects/2026-03/contacts",
      "openapi/_original/hubspot-marketing-campaigns-public-api-openapi.json#GET /marketing/campaigns/2026-03/{campaignGuid}/reports/contacts/{contactType}"
+    ]
+   },
+   "infusionsoft": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item",
+     "PUT collection"
+    ],
+    "properties": {
+     "contacts": "array",
+     "next_page_token": "string",
+     "id": "string",
+     "links": "array",
+     "addresses": "array",
+     "company": "object",
+     "origin": "object",
+     "prefix": "string",
+     "suffix": "string",
+     "website": "string",
+     "groups": "string",
+     "update_time": "string",
+     "create_time": "string",
+     "score_value": "string",
+     "tag_ids": "array",
+     "anniversary_date": "string",
+     "birth_date": "string",
+     "contact_type": "string",
+     "custom_fields": "array",
+     "email_addresses": "array",
+     "family_name": "string",
+     "fax_numbers": "array",
+     "given_name": "string",
+     "job_title": "string",
+     "leadsource_id": "string",
+     "middle_name": "string",
+     "owner_id": "string",
+     "phone_numbers": "array",
+     "preferred_locale": "string",
+     "preferred_name": "string",
+     "referral_code": "string",
+     "social_accounts": "array",
+     "source_type": "string",
+     "spouse_name": "string",
+     "time_zone": "string",
+     "utm_parameters": "array",
+     "account_id": "string",
+     "assistant_name": "string",
+     "assistant_phone": "string",
+     "billing_information": "string",
+     "created_by": "string",
+     "last_updated_by": "string",
+     "deals": "array",
+     "ids": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "ScoreValue": "string",
+     "anniversary": "string",
+     "birthday": "string",
+     "company_name": "string",
+     "date_created": "string",
+     "email_opted_in": "boolean",
+     "email_status": "string",
+     "last_updated": "string",
+     "lead_source_id": "integer",
+     "opt_in_reason": "string",
+     "relationships": "array",
+     "duplicate_option": "string",
+     "key": "string"
+    },
+    "evidence": [
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/contacts/{contact_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/contacts",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/contacts/{contact_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/tags/{tag_id}/contacts",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/contacts/{contact_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/contacts",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/deals/-/contacts/{contact_id}",
+     "openapi/_original/infusionsoft-pipelines-openapi.yml#GET /v2/deals/-/contacts/{contact_id}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#DELETE /v1/campaigns/{campaignId}/sequences/{sequenceId}/contacts",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#DELETE /v1/campaigns/{campaignId}/sequences/{sequenceId}/contacts/{contactId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#DELETE /v1/contacts/{contactId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#DELETE /v1/tags/{tagId}/contacts"
+    ]
+   },
+   "insightly": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "CONTACT_ID": "integer",
+     "FIRST_NAME": "string",
+     "LAST_NAME": "string",
+     "EMAIL_ADDRESS": "string",
+     "PHONE": "string",
+     "DATE_CREATED_UTC": "string",
+     "DATE_UPDATED_UTC": "string"
+    },
+    "evidence": [
+     "openapi/_original/insightly-openapi.yml#DELETE /Contacts/{id}",
+     "openapi/_original/insightly-openapi.yml#GET /Contacts",
+     "openapi/_original/insightly-openapi.yml#GET /Contacts/{id}",
+     "openapi/_original/insightly-openapi.yml#POST /Contacts",
+     "openapi/_original/insightly-openapi.yml#PUT /Contacts/{id}"
     ]
    },
    "joblogic": {
@@ -1577,6 +2078,82 @@
      "openapi/_original/keap-v1-openapi.json#PATCH /rest/v1/contacts/{contactId}",
      "openapi/_original/keap-v1-openapi.json#POST /rest/v1/campaigns/{campaignId}/sequences/{sequenceId}/contacts",
      "openapi/_original/keap-v1-openapi.json#POST /rest/v1/campaigns/{campaignId}/sequences/{sequenceId}/contacts/{contactId}"
+    ]
+   },
+   "keller-williams": {
+    "segments": [
+     "people"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "kw_uid": "integer",
+     "username": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "kw_email": "string",
+     "default_org_id": "integer",
+     "recovery_email": "string",
+     "email": "string",
+     "marketing_email": "string",
+     "kw_start_dt": "string",
+     "re_start_dt": "string",
+     "photo": "string",
+     "phone": "string",
+     "mobile_phone": "string",
+     "address_1": "string",
+     "address_2": "string",
+     "city": "string",
+     "state": "string",
+     "postal_code": "string",
+     "country": "string",
+     "luxury": "integer",
+     "luxury_dt": "string",
+     "commercial": "integer",
+     "land": "integer",
+     "kwyp": "integer",
+     "gps": "integer",
+     "maps_client": "integer",
+     "maps_coach": "integer",
+     "maps_mastery_client": "integer",
+     "active": "integer",
+     "km_active": "integer",
+     "kww": "integer",
+     "military": "integer",
+     "designations": "string",
+     "vested": "integer",
+     "birth_dt": "string",
+     "service_areas": "string",
+     "org_start_dt": "string",
+     "recruit_id": "integer",
+     "languages": "array",
+     "license": "array",
+     "teams": "array",
+     "person_role_orgs": "array"
+    },
+    "evidence": [
+     "openapi/_original/keller-williams-listings-search-openapi.json#GET /listings/orgs/{orgId}/people"
+    ]
+   },
+   "lawmatics": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lawmatics-openapi.yml#DELETE /v1/contacts/{contact_id}",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/contacts",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/contacts/{contact_id}",
+     "openapi/_original/lawmatics-openapi.yml#POST /v1/contacts",
+     "openapi/_original/lawmatics-openapi.yml#PUT /v1/contacts/{contact_id}"
     ]
    },
    "lemlist": {
@@ -1696,6 +2273,125 @@
      "openapi/_original/lev-openapi-original.json#POST /api/external/v2/contacts"
     ]
    },
+   "lever-co": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lever-data-api-openapi.yml#GET /contacts/{id}",
+     "openapi/_original/lever-data-api-openapi.yml#PUT /contacts/{id}"
+    ]
+   },
+   "levitate": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "firstName": [
+      "null",
+      "string"
+     ],
+     "lastName": [
+      "null",
+      "string"
+     ],
+     "name": [
+      "null",
+      "string"
+     ],
+     "jobTitle": [
+      "null",
+      "string"
+     ],
+     "website": [
+      "null",
+      "string"
+     ],
+     "bio": [
+      "null",
+      "string"
+     ],
+     "tags": [
+      "null",
+      "array"
+     ],
+     "emailAddresses": [
+      "null",
+      "array"
+     ],
+     "phoneNumbers": [
+      "null",
+      "array"
+     ],
+     "address": null,
+     "customFields": [
+      "null",
+      "object"
+     ],
+     "source": [
+      "null",
+      "string"
+     ],
+     "company": null,
+     "owner": null,
+     "visibility": [
+      "null",
+      "string"
+     ],
+     "emailSubscribed": "boolean",
+     "textSubscribed": "boolean",
+     "lastCommunicationDate": [
+      "null",
+      "string"
+     ],
+     "keyFacts": [
+      "null",
+      "array"
+     ],
+     "creationDate": [
+      "null",
+      "string"
+     ],
+     "lastModifiedDate": [
+      "null",
+      "string"
+     ],
+     "id": [
+      "null",
+      "string"
+     ],
+     "values": [
+      "null",
+      "array"
+     ],
+     "pageToken": [
+      "null",
+      "string"
+     ],
+     "totalCount": [
+      "integer",
+      "string"
+     ],
+     "debug": null
+    },
+    "evidence": [
+     "openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Contacts",
+     "openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Contacts/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#PATCH /public/v1/Contacts/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#POST /public/v1/Contacts"
+    ]
+   },
    "lightfield": {
     "segments": [
      "contacts"
@@ -1765,6 +2461,73 @@
      "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#GET /api/contacts/{id}"
     ]
    },
+   "lone-wolf": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "userId": "string",
+     "transactionId": "string",
+     "contactType": "integer",
+     "slot": "integer",
+     "prefix": "string",
+     "suffix": "string",
+     "firstname": "string",
+     "middlename": "string",
+     "lastname": "string",
+     "email": "string",
+     "phone": "string",
+     "cellPhone": "string",
+     "workPhone": "string",
+     "fax": "string",
+     "agentId": "string",
+     "agentLicense": "string",
+     "companyName": "string",
+     "officeId": "string",
+     "officeLicense": "string",
+     "escrowNumber": "string",
+     "address1": "string",
+     "address2": "string",
+     "address3": "string",
+     "address4": "string",
+     "locality": "string",
+     "region": "string",
+     "postalCode": "string",
+     "country": "string",
+     "llcPoa": "string",
+     "id": "string",
+     "preferredName": "string",
+     "firstName": "string",
+     "middleName": "string",
+     "lastName": "string",
+     "fullAddress": "string",
+     "city": "string",
+     "state": "string",
+     "zipCode": "string",
+     "cell": "string",
+     "company": "string",
+     "typeId": "string"
+    },
+    "evidence": [
+     "openapi/_original/lone-wolf-transact-api-openapi.yml#DELETE /transact-workflow/v1/users/{userId}/Contacts/{contactId}",
+     "openapi/_original/lone-wolf-transact-api-openapi.yml#GET /transact-workflow/v1/users/{userId}/Contacts",
+     "openapi/_original/lone-wolf-transact-api-openapi.yml#GET /transact-workflow/v1/users/{userId}/Contacts/{contactId}",
+     "openapi/_original/lone-wolf-transact-api-openapi.yml#PATCH /transact-workflow/v1/users/{userId}/Contacts/{contactId}",
+     "openapi/_original/lone-wolf-transact-api-openapi.yml#POST /transact-workflow/v1/Contacts",
+     "openapi/_original/lone-wolf-transactiondesk-api-openapi.yml#DELETE /v2/transactions/{transactionId}/contacts/{contactId}",
+     "openapi/_original/lone-wolf-transactiondesk-api-openapi.yml#GET /v2/transactions/{id}/contacts",
+     "openapi/_original/lone-wolf-transactiondesk-api-openapi.yml#GET /v2/transactions/{transactionId}/contacts/{contactId}",
+     "openapi/_original/lone-wolf-transactiondesk-api-openapi.yml#PATCH /v2/transactions/{transactionId}/contacts/{contactId}",
+     "openapi/_original/lone-wolf-transactiondesk-api-openapi.yml#POST /v2/transactions/{id}/contacts"
+    ]
+   },
    "marketo": {
     "segments": [
      "persons"
@@ -1824,10 +2587,6 @@
      "POST collection"
     ],
     "properties": {
-     "@odata.context": "string",
-     "@odata.count": "integer",
-     "@odata.nextLink": "string",
-     "value": "array",
      "@odata.etag": "string",
      "contactid": "string",
      "firstname": "string",
@@ -2131,12 +2890,8 @@
      "contact"
     ],
     "operations": [
-     "DELETE item",
      "GET collection",
-     "GET item",
-     "POST collection",
-     "PUT collection",
-     "PUT item"
+     "PUT collection"
     ],
     "properties": {
      "Id": "string",
@@ -2155,13 +2910,8 @@
      "Link": "array"
     },
     "evidence": [
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Contact/Contact/{ContactId}",
      "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Contact",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Contact/Contact",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Contact/Contact/{ContactId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Contact/Contact",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}/Contact",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Contact/Contact/{ContactId}"
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}/Contact"
     ]
    },
    "pipedrive": {
@@ -2554,30 +3304,78 @@
      "openapi/_original/revert-unified-api-openapi.yml#POST /crm/contacts"
     ]
    },
-   "salesforce": {
+   "salesflare": {
     "segments": [
-     "contacts"
+     "contacts",
+     "persons"
     ],
     "operations": [
-     "DELETE collection",
+     "DELETE item",
      "GET collection",
-     "GET item"
+     "GET item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
     ],
     "properties": {
-     "contactKey": "string",
-     "contactId": "integer",
-     "contactStatus": "string",
-     "isAnonymous": "boolean",
-     "attributeSets": "array",
-     "requestServiceMessageID": "string",
-     "resultMessages": "array",
-     "contactKeys": "array",
-     "deleteOperationType": "string"
+     "owner": "number",
+     "domain": "string",
+     "email": "string",
+     "prefix": "string",
+     "firstname": "string",
+     "middle": "string",
+     "lastname": "string",
+     "suffix": "string",
+     "name": "string",
+     "picture": "string",
+     "account": "number",
+     "birth_date": "string",
+     "opt-out": "boolean",
+     "opt-out_date": "string",
+     "opt-out_campaign": "string",
+     "bounced": "boolean",
+     "bounced_date": "string",
+     "files": "array",
+     "tags": "array",
+     "address": "object",
+     "addresses": "array",
+     "phone_number": "string",
+     "mobile_phone_number": "string",
+     "home_phone_number": "string",
+     "fax_number": "string",
+     "phone_numbers": "array",
+     "position": "object",
+     "positions": "array",
+     "social_profiles": "array",
+     "custom": "object",
+     "role": "string",
+     "_dirty": "boolean",
+     "archived": "boolean",
+     "id": "number",
+     "_deleted": "boolean",
+     "not_viewed": "boolean",
+     "can_edit": "boolean",
+     "creation_date": "string",
+     "modification_date": "string",
+     "type": "string",
+     "organisation": "string",
+     "last_email_date": "string",
+     "last_meeting_date": "string",
+     "connection_strength": "number"
     },
     "evidence": [
-     "openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#DELETE /contacts/v1/contacts",
-     "openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#GET /contacts/v1/contacts",
-     "openapi/_original/salesforce-marketing-cloud-rest-openapi.yml#GET /contacts/v1/contacts/{contactKey}"
+     "openapi/_original/salesflare-api-openapi.yml#DELETE /contacts/{contact_id}",
+     "openapi/_original/salesflare-api-openapi.yml#GET /contacts",
+     "openapi/_original/salesflare-api-openapi.yml#GET /contacts/{contact_id}",
+     "openapi/_original/salesflare-api-openapi.yml#GET /me/contacts",
+     "openapi/_original/salesflare-api-openapi.yml#GET /persons",
+     "openapi/_original/salesflare-api-openapi.yml#POST /accounts/{account_id}/contacts",
+     "openapi/_original/salesflare-api-openapi.yml#POST /contacts",
+     "openapi/_original/salesflare-api-openapi.yml#PUT /accounts/{account_id}/contacts",
+     "openapi/_original/salesflare-api-openapi.yml#PUT /contacts/{contact_id}",
+     "openapi/_original/salesflare-openapi.json#DELETE /contacts/{contact_id}",
+     "openapi/_original/salesflare-openapi.json#GET /contacts",
+     "openapi/_original/salesflare-openapi.json#GET /contacts/{contact_id}"
     ]
    },
    "salesforce-service-cloud": {
@@ -2625,8 +3423,8 @@
    },
    "sendpulse": {
     "segments": [
-     "contact",
-     "contacts"
+     "contacts",
+     "contact"
     ],
     "operations": [
      "DELETE item",
@@ -2694,6 +3492,26 @@
      "openapi/_original/sendpulse-whatsapp-openapi.yml#POST /contacts"
     ]
    },
+   "servicetitan": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "type": "string",
+     "value": "string",
+     "memo": "string",
+     "modifiedOn": "string"
+    },
+    "evidence": [
+     "openapi/_original/servicetitan-crm-api-openapi.yml#GET /customers/{id}/contacts",
+     "openapi/_original/servicetitan-crm-api-openapi.yml#POST /customers/{id}/contacts"
+    ]
+   },
    "splio": {
     "segments": [
      "contacts"
@@ -2735,8 +3553,8 @@
    },
    "street-co": {
     "segments": [
-     "contacts",
-     "people"
+     "people",
+     "contacts"
     ],
     "operations": [
      "GET collection",
@@ -2870,11 +3688,38 @@
      "openapi/_original/supaglue-ticketing-api-openapi.yml#GET /contacts"
     ]
    },
+   "synthflow": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "status": "string",
+     "response": "object",
+     "name": "string",
+     "phone_number": "string",
+     "email": "string",
+     "contact_metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/synthflow-openapi.json#DELETE /contacts/{contact_id}",
+     "openapi/_original/synthflow-openapi.json#GET /contacts",
+     "openapi/_original/synthflow-openapi.json#GET /contacts/{contact_id}",
+     "openapi/_original/synthflow-openapi.json#PATCH /contacts/{contact_id}",
+     "openapi/_original/synthflow-openapi.json#POST /contacts"
+    ]
+   },
    "the-mobile-first-company": {
     "segments": [
-     "contact",
      "contacts",
-     "people"
+     "people",
+     "contact"
     ],
     "operations": [
      "GET collection",
@@ -2918,6 +3763,56 @@
      "openapi/_original/the-mobile-first-company-allo-openapi.json#PUT /v2/api/crm/people/{id}"
     ]
    },
+   "thoughtly": {
+    "segments": [
+     "contact"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "error": "object",
+     "data": "object"
+    },
+    "evidence": [
+     "openapi/_original/thoughtly-api-openapi.yml#DELETE /contact/{id}",
+     "openapi/_original/thoughtly-api-openapi.yml#GET /contact",
+     "openapi/_original/thoughtly-api-openapi.yml#GET /contact/{id}"
+    ]
+   },
+   "truto": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remoteId": "string",
+     "firstName": "string",
+     "lastName": "string",
+     "email": "string",
+     "phone": "string",
+     "title": "string",
+     "accountId": "string",
+     "ownerId": "string",
+     "leadSource": "string",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/truto-unified-crm-openapi.yml#GET /contacts",
+     "openapi/_original/truto-unified-crm-openapi.yml#GET /contacts/{id}",
+     "openapi/_original/truto-unified-crm-openapi.yml#PATCH /contacts/{id}",
+     "openapi/_original/truto-unified-crm-openapi.yml#POST /contacts"
+    ]
+   },
    "twenty": {
     "segments": [
      "people"
@@ -2956,10 +3851,35 @@
      "openapi/_original/twenty-core-api-openapi.yml#POST /people"
     ]
    },
+   "usergems": {
+    "segments": [
+     "contact"
+    ],
+    "operations": [
+     "DELETE collection",
+     "POST collection"
+    ],
+    "properties": {
+     "message": "string",
+     "email": "string",
+     "firstName": "string",
+     "lastName": "string",
+     "fullName": "string",
+     "company": "string",
+     "relationshipType": "string",
+     "linkedinUrl": "string",
+     "signal": "string",
+     "custom": "string"
+    },
+    "evidence": [
+     "openapi/_original/usergems-api-openapi.yml#DELETE /contact",
+     "openapi/_original/usergems-api-openapi.yml#POST /contact"
+    ]
+   },
    "vaultre": {
     "segments": [
-     "contact",
-     "contacts"
+     "contacts",
+     "contact"
     ],
     "operations": [
      "DELETE item",
@@ -3063,6 +3983,32 @@
      "openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/contacts",
      "openapi/_original/vessel-engagement-v1-openapi.yml#PATCH /engagement/contact",
      "openapi/_original/vessel-engagement-v1-openapi.yml#POST /engagement/contact"
+    ]
+   },
+   "wealthbox": {
+    "segments": [
+     "contacts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "first_name": "string",
+     "last_name": "string",
+     "email_addresses": "array",
+     "phone_numbers": "array"
+    },
+    "evidence": [
+     "openapi/_original/wealthbox-openapi.yml#DELETE /contacts/{id}",
+     "openapi/_original/wealthbox-openapi.yml#GET /contacts",
+     "openapi/_original/wealthbox-openapi.yml#GET /contacts/{id}",
+     "openapi/_original/wealthbox-openapi.yml#POST /contacts",
+     "openapi/_original/wealthbox-openapi.yml#PUT /contacts/{id}"
     ]
    },
    "zendesk-sell": {
@@ -3240,6 +4186,85 @@
    }
   },
   "company": {
+   "accelo": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/accelo-openapi.yml#DELETE /companies/{company_id}",
+     "openapi/_original/accelo-openapi.yml#GET /companies",
+     "openapi/_original/accelo-openapi.yml#GET /companies/{company_id}",
+     "openapi/_original/accelo-openapi.yml#POST /companies",
+     "openapi/_original/accelo-openapi.yml#PUT /companies/{company_id}"
+    ]
+   },
+   "act": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "address": "object",
+     "billingAddress": "object",
+     "description": "string",
+     "division": "string",
+     "fax": "string",
+     "faxExtension": "string",
+     "hasDivisions": "boolean",
+     "hierarchyLevel": "integer",
+     "idStatus": "string",
+     "importDate": "string",
+     "industry": "string",
+     "isPrivate": "boolean",
+     "acl": "string",
+     "numberOfEmployees": "integer",
+     "rootParentID": "string",
+     "parentID": "string",
+     "phone": "string",
+     "phoneExtension": "string",
+     "referredBy": "string",
+     "region": "string",
+     "revenue": "number",
+     "shippingAddress": "object",
+     "sicCode": "string",
+     "territory": "string",
+     "tickerSymbol": "string",
+     "tollFreePhone": "string",
+     "tollFreeExtension": "string",
+     "website": "string",
+     "recordManagerID": "string",
+     "customFields": "object",
+     "created": "string",
+     "edited": "string",
+     "editedBy": "string",
+     "recordManager": "string"
+    },
+    "evidence": [
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/companies/{companyId}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/companies",
+     "openapi/_original/act-web-api-swagger.json#GET /api/companies/{companyId}",
+     "openapi/_original/act-web-api-swagger.json#PATCH /api/companies/{companyId}",
+     "openapi/_original/act-web-api-swagger.json#POST /api/companies",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/companies/{companyId}"
+    ]
+   },
    "activecampaign": {
     "segments": [
      "accounts"
@@ -3254,6 +4279,44 @@
     },
     "evidence": [
      "openapi/_original/activecampaign-partners-api-openapi.json#PATCH /api/ai-customizations/v1/profiles/{id}/accounts"
+    ]
+   },
+   "affinity": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "domain": "string",
+     "domains": "array",
+     "isGlobal": "boolean",
+     "fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/companies",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/companies/{companyId}"
+    ]
+   },
+   "agorapulse": {
+    "segments": [
+     "organizations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "organizationId": "integer",
+     "organizationName": "string",
+     "managerOrganizationRole": "string"
+    },
+    "evidence": [
+     "openapi/_original/agorapulse-open-api-openapi.yml#GET /v1.0/core/organizations",
+     "openapi/_original/agorapulse-openapi.yml#GET /v1.0/core/organizations"
     ]
    },
    "apollo-api-documentation": {
@@ -3364,8 +4427,8 @@
    },
    "blackbaud": {
     "segments": [
-     "accounts",
-     "organizations"
+     "organizations",
+     "accounts"
     ],
     "operations": [
      "GET collection",
@@ -3418,7 +4481,6 @@
      "count": "integer",
      "next_link": "string",
      "values": "array",
-     "value": "array",
      "account_id": "integer",
      "account_number": "string",
      "description": "string",
@@ -3433,6 +4495,12 @@
      "added_by": "string",
      "date_modified": "string",
      "modified_by": "string",
+     "budget_category": "string",
+     "fiscal_year": "string",
+     "total_amount": "number",
+     "fiscal_period": "integer",
+     "period_amount": "number",
+     "period_percent": "number",
      "primary_contact": "object",
      "primary_address": "object",
      "aka": "string",
@@ -3509,8 +4577,8 @@
    },
    "brevo": {
     "segments": [
-     "account",
-     "companies"
+     "companies",
+     "account"
     ],
     "operations": [
      "DELETE item",
@@ -3555,13 +4623,33 @@
      "openapi/_original/brevo-sales-crm-openapi.yml#POST /companies"
     ]
    },
+   "close": {
+    "segments": [
+     "organization"
+    ],
+    "operations": [
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "currency": "string",
+     "enable_unsubscribe_link": "boolean",
+     "lead_statuses": "array",
+     "name": "string",
+     "require_unsubscribe_link": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#GET /organization/{id}/",
+     "openapi/_original/close-api-openapi.json#PUT /organization/{id}/",
+     "openapi/_original/close-openapi.yml#GET /organization/{id}/",
+     "openapi/_original/close-openapi.yml#PUT /organization/{id}/"
+    ]
+   },
    "commsharbor": {
     "segments": [
-     "companies",
      "organizations"
     ],
     "operations": [
-     "DELETE item",
      "GET collection",
      "GET item",
      "PATCH item",
@@ -3571,25 +4659,17 @@
      "id": "string",
      "name": "string",
      "sending_domain": "string",
-     "created_at": "string",
-     "domain": "string",
-     "website": "string",
-     "updated_at": "string",
-     "url": "string"
+     "created_at": "string"
     },
     "evidence": [
-     "openapi/_original/commsharbor-openapi.json#DELETE /api/organizations/{organization_id}/crm/companies/{company_id}",
      "openapi/_original/commsharbor-openapi.json#GET /api/organizations",
      "openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}",
-     "openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/crm/companies",
-     "openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/crm/companies/{company_id}",
      "openapi/_original/commsharbor-openapi.json#PATCH /api/organizations/{organization_id}",
-     "openapi/_original/commsharbor-openapi.json#PATCH /api/organizations/{organization_id}/crm/companies/{company_id}",
      "openapi/_original/commsharbor-openapi.json#POST /api/organizations",
-     "openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/crm/companies",
-     "openapi/_original/commsharbor-openapi_2.json#DELETE /api/organizations/{organization_id}/crm/companies/{company_id}",
      "openapi/_original/commsharbor-openapi_2.json#GET /api/organizations",
-     "openapi/_original/commsharbor-openapi_2.json#GET /api/organizations/{organization_id}"
+     "openapi/_original/commsharbor-openapi_2.json#GET /api/organizations/{organization_id}",
+     "openapi/_original/commsharbor-openapi_2.json#PATCH /api/organizations/{organization_id}",
+     "openapi/_original/commsharbor-openapi_2.json#POST /api/organizations"
     ]
    },
    "conga": {
@@ -3705,10 +4785,43 @@
      "openapi/_original/coperniq-openapi.yml#POST /accounts"
     ]
    },
+   "copper": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "assignee_id": "integer",
+     "contact_type_id": "integer",
+     "details": "string",
+     "email_domain": "string",
+     "phone_numbers": "array",
+     "socials": "array",
+     "websites": "array",
+     "address": "object",
+     "tags": "array",
+     "custom_fields": "array",
+     "date_created": "integer",
+     "date_modified": "integer"
+    },
+    "evidence": [
+     "openapi/_original/copper-developer-api-openapi.yml#DELETE /companies/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#GET /companies/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#POST /companies",
+     "openapi/_original/copper-developer-api-openapi.yml#PUT /companies/{id}"
+    ]
+   },
    "customeros": {
     "segments": [
-     "organization",
-     "organizations"
+     "organizations",
+     "organization"
     ],
     "operations": [
      "GET collection",
@@ -3754,10 +4867,10 @@
    },
    "eci-solutions": {
     "segments": [
-     "account",
+     "organizations",
      "companies",
-     "company",
-     "organizations"
+     "account",
+     "company"
     ],
     "operations": [
      "DELETE item",
@@ -4135,6 +5248,28 @@
      "openapi/_original/entergram-openapi.json#GET /v1/accounts"
     ]
    },
+   "exact-online": {
+    "segments": [
+     "accounts"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "ID": "string",
+     "Code": "string",
+     "Name": "string",
+     "Email": "string",
+     "Phone": "string",
+     "Status": "string",
+     "Type": "string"
+    },
+    "evidence": [
+     "openapi/_original/exact-online-openapi.yml#GET /{division}/crm/Accounts",
+     "openapi/_original/exact-online-openapi.yml#POST /{division}/crm/Accounts"
+    ]
+   },
    "fixture": {
     "segments": [
      "accounts"
@@ -4175,6 +5310,43 @@
      "openapi/_original/fixture-openapi.json#GET /api/v1/accounts/{account_id}",
      "openapi/_original/fixture-openapi.json#PATCH /api/v1/accounts/{account_id}",
      "openapi/_original/fixture-openapi.json#POST /api/v1/accounts"
+    ]
+   },
+   "folk": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "fundingRaised": "string",
+     "lastFundingDate": "string",
+     "industry": "string",
+     "foundationYear": "string",
+     "employeeRange": "string",
+     "groups": "array",
+     "addresses": "array",
+     "emails": "array",
+     "phones": "array",
+     "urls": "array",
+     "createdAt": "string",
+     "createdBy": "object",
+     "customFieldValues": "object"
+    },
+    "evidence": [
+     "openapi/_original/folk-openapi.yml#DELETE /v1/companies/{companyId}",
+     "openapi/_original/folk-openapi.yml#GET /v1/companies",
+     "openapi/_original/folk-openapi.yml#GET /v1/companies/{companyId}",
+     "openapi/_original/folk-openapi.yml#PATCH /v1/companies/{companyId}",
+     "openapi/_original/folk-openapi.yml#POST /v1/companies"
     ]
    },
    "frontline": {
@@ -4550,6 +5722,87 @@
      "openapi/_original/hubspot-crm-companies-openapi.json#POST /crm/objects/2026-03/companies"
     ]
    },
+   "infusionsoft": {
+    "segments": [
+     "companies",
+     "company"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "companies": "array",
+     "next_page_token": "string",
+     "id": "string",
+     "address": "object",
+     "notes": "string",
+     "website": "string",
+     "suffix": "string",
+     "title": "string",
+     "groups": "string",
+     "company_name": "string",
+     "custom_fields": "array",
+     "email_address": "object",
+     "fax_number": "object",
+     "phone_number": "object",
+     "update_time": "string",
+     "create_time": "string",
+     "anniversary_date": "string",
+     "assistant_name": "string",
+     "assistant_phone": "string",
+     "billing_information": "string",
+     "birth_date": "string",
+     "contact_type": "string",
+     "first_name": "string",
+     "job_title": "string",
+     "last_name": "string",
+     "middle_name": "string",
+     "preferred_name": "string",
+     "owner_id": "string",
+     "referral_code": "string",
+     "spouse_name": "string",
+     "account_id": "string",
+     "created_by": "string",
+     "last_updated_by": "string",
+     "tagged_companies": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "email_opted_in": "boolean",
+     "email_status": "string",
+     "opt_in_reason": "string"
+    },
+    "evidence": [
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/companies/{company_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/companies",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/companies/{company_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/tags/{tag_id}/companies",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/companies/{company_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/companies",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#GET /v1/companies",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#GET /v1/companies/{companyId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#GET /v1/tags/{tagId}/companies",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#PATCH /v1/companies/{companyId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#POST /v1/companies",
+     "openapi/_original/infusionsoft-rest-v1-openapi-original.json#GET /rest/v1/companies"
+    ]
+   },
+   "insightly": {
+    "segments": [
+     "organisations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/insightly-openapi.yml#GET /Organisations"
+    ]
+   },
    "keap": {
     "segments": [
      "companies",
@@ -4619,6 +5872,26 @@
      "openapi/_original/keap-v2-openapi.json#POST /rest/v2/companies"
     ]
    },
+   "lawmatics": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lawmatics-openapi.yml#DELETE /v1/companies/{company_id}",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/companies",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/companies/{company_id}",
+     "openapi/_original/lawmatics-openapi.yml#POST /v1/companies",
+     "openapi/_original/lawmatics-openapi.yml#PUT /v1/companies/{company_id}"
+    ]
+   },
    "lemlist": {
     "segments": [
      "companies"
@@ -4682,8 +5955,8 @@
    },
    "lev": {
     "segments": [
-     "accounts",
-     "companies"
+     "companies",
+     "accounts"
     ],
     "operations": [
      "GET collection",
@@ -4718,6 +5991,91 @@
      "openapi/_original/lev-openapi-original.json#POST /api/external/v2/companies"
     ]
    },
+   "levitate": {
+    "segments": [
+     "companies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": [
+      "null",
+      "string"
+     ],
+     "description": [
+      "null",
+      "string"
+     ],
+     "emailDomains": [
+      "null",
+      "array"
+     ],
+     "webSite": [
+      "null",
+      "string"
+     ],
+     "logoUrl": [
+      "null",
+      "string"
+     ],
+     "phoneNumbers": [
+      "null",
+      "array"
+     ],
+     "keyFactsCollection": [
+      "null",
+      "array"
+     ],
+     "tags": [
+      "null",
+      "array"
+     ],
+     "address": null,
+     "id": [
+      "null",
+      "string"
+     ],
+     "success": "boolean",
+     "systemMessage": [
+      "null",
+      "string"
+     ],
+     "systemCode": [
+      "integer",
+      "string"
+     ],
+     "error": "object",
+     "requestId": [
+      "null",
+      "string"
+     ],
+     "values": [
+      "null",
+      "array"
+     ],
+     "pageToken": [
+      "null",
+      "string"
+     ],
+     "totalCount": [
+      "integer",
+      "string"
+     ],
+     "debug": null
+    },
+    "evidence": [
+     "openapi/_original/levitate-public-v1-openapi.json#DELETE /public/v1/Companies/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Companies",
+     "openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Companies/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#PATCH /public/v1/Companies/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#POST /public/v1/Companies"
+    ]
+   },
    "lightfield": {
     "segments": [
      "accounts"
@@ -4747,9 +6105,9 @@
    },
    "live-direct-marketing-online": {
     "segments": [
-     "account",
-     "accounts",
      "companies",
+     "accounts",
+     "account",
      "company"
     ],
     "operations": [
@@ -4873,10 +6231,6 @@
      "POST collection"
     ],
     "properties": {
-     "@odata.context": "string",
-     "@odata.count": "integer",
-     "@odata.nextLink": "string",
-     "value": "array",
      "@odata.etag": "string",
      "accountid": "string",
      "name": "string",
@@ -4981,9 +6335,6 @@
      "POST collection"
     ],
     "properties": {
-     "@odata.context": "string",
-     "value": "array",
-     "@odata.nextLink": "string",
      "accountid": "string",
      "name": "string",
      "accountnumber": "string",
@@ -5118,43 +6469,6 @@
      "openapi/_original/nutshell-api.json#GET /accounts/{id}",
      "openapi/_original/nutshell-api.json#PATCH /accounts/{id}",
      "openapi/_original/nutshell-api.json#POST /accounts"
-    ]
-   },
-   "oracle-siebel": {
-    "segments": [
-     "account"
-    ],
-    "operations": [
-     "DELETE item",
-     "GET collection",
-     "GET item",
-     "POST collection",
-     "PUT item"
-    ],
-    "properties": {
-     "Id": "string",
-     "Name": "string",
-     "Location": "string",
-     "Account Status": "string",
-     "Account Type": "string",
-     "Description": "string",
-     "Industry": "string",
-     "Primary Organization": "string",
-     "Primary Organization Id": "string",
-     "Main Phone Number": "string",
-     "Main Fax Number": "string",
-     "Email Address": "string",
-     "Home Page": "string",
-     "Current Volume": "number",
-     "Alias": "string",
-     "Link": "array"
-    },
-    "evidence": [
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Account/Account/{AccountId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Account/Account",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Account/Account/{AccountId}"
     ]
    },
    "outreach": {
@@ -5367,8 +6681,8 @@
    },
    "revert": {
     "segments": [
-     "accounts",
-     "companies"
+     "companies",
+     "accounts"
     ],
     "operations": [
      "GET collection",
@@ -5400,6 +6714,53 @@
      "openapi/_original/revert-unified-api-openapi.yml#GET /crm/companies/{id}",
      "openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/companies/{id}",
      "openapi/_original/revert-unified-api-openapi.yml#POST /crm/companies"
+    ]
+   },
+   "salesflare": {
+    "segments": [
+     "accounts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "owner": "number",
+     "name": "string",
+     "domain": "string",
+     "picture": "string",
+     "size": "number",
+     "website": "string",
+     "description": "string",
+     "address": "object",
+     "addresses": "array",
+     "email": "string",
+     "email_addresses": "array",
+     "phone_number": "string",
+     "phone_numbers": "array",
+     "social_profiles": "array",
+     "tags": "array",
+     "links": "string",
+     "customers": "array",
+     "_dirty": "boolean",
+     "parent_account": "number",
+     "custom": "object",
+     "q": "object"
+    },
+    "evidence": [
+     "openapi/_original/salesflare-api-openapi.yml#DELETE /accounts/{account_id}",
+     "openapi/_original/salesflare-api-openapi.yml#GET /accounts",
+     "openapi/_original/salesflare-api-openapi.yml#GET /accounts/{account_id}",
+     "openapi/_original/salesflare-api-openapi.yml#POST /accounts",
+     "openapi/_original/salesflare-api-openapi.yml#PUT /accounts/{account_id}",
+     "openapi/_original/salesflare-openapi.json#DELETE /accounts/{account_id}",
+     "openapi/_original/salesflare-openapi.json#GET /accounts",
+     "openapi/_original/salesflare-openapi.json#GET /accounts/{account_id}",
+     "openapi/_original/salesflare-openapi.json#POST /accounts",
+     "openapi/_original/salesflare-openapi.json#PUT /accounts/{account_id}"
     ]
    },
    "salesforce-service-cloud": {
@@ -5526,10 +6887,7 @@
      "subscriptionLengthInMonths": "integer",
      "status": "string",
      "isShared": "boolean",
-     "deepLink": "string",
-     "organizationId": "string",
-     "billingAccountId": "string",
-     "seatAllocation": "integer"
+     "deepLink": "string"
     },
     "evidence": [
      "openapi/_original/siro-external-api-openapi.json#DELETE /v1/integrations/accounts/{id}",
@@ -5686,6 +7044,24 @@
      "openapi/_original/supaglue-ticketing-api-openapi.yml#GET /accounts/{account_id}"
     ]
    },
+   "thanx": {
+    "segments": [
+     "account"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "email": "string",
+     "rewards": "array",
+     "points_products": "array",
+     "points_balances": "array"
+    },
+    "evidence": [
+     "openapi/_original/thanx-loyalty-api-openapi.yml#GET /api/account"
+    ]
+   },
    "the-mobile-first-company": {
     "segments": [
      "accounts",
@@ -5723,6 +7099,38 @@
      "openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/crm/companies",
      "openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/partner/accounts",
      "openapi/_original/the-mobile-first-company-allo-openapi.json#PUT /v2/api/crm/companies/{id}"
+    ]
+   },
+   "truto": {
+    "segments": [
+     "accounts",
+     "companies"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remoteId": "string",
+     "name": "string",
+     "domain": "string",
+     "industry": "string",
+     "employeeCount": "integer",
+     "annualRevenue": "number",
+     "phone": "string",
+     "website": "string",
+     "ownerId": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "legalName": "string",
+     "taxId": "string",
+     "primaryPhone": "string"
+    },
+    "evidence": [
+     "openapi/_original/truto-unified-crm-openapi.yml#GET /accounts",
+     "openapi/_original/truto-unified-crm-openapi.yml#POST /accounts",
+     "openapi/_original/truto-unified-hris-openapi.yml#GET /companies"
     ]
    },
    "twenty": {
@@ -5763,10 +7171,34 @@
      "openapi/_original/twenty-core-api-openapi.yml#POST /companies"
     ]
    },
+   "usergems": {
+    "segments": [
+     "account"
+    ],
+    "operations": [
+     "DELETE collection",
+     "POST collection"
+    ],
+    "properties": {
+     "message": "string",
+     "name": "string",
+     "domain": "string",
+     "reportId": "string",
+     "reportName": "string",
+     "signal": "string",
+     "salesforceId": "string",
+     "customId": "string",
+     "custom": "string"
+    },
+    "evidence": [
+     "openapi/_original/usergems-api-openapi.yml#DELETE /account",
+     "openapi/_original/usergems-api-openapi.yml#POST /account"
+    ]
+   },
    "vaultre": {
     "segments": [
-     "account",
-     "accounts"
+     "accounts",
+     "account"
     ],
     "operations": [
      "GET collection",
@@ -5902,8 +7334,8 @@
    },
    "zendesk": {
     "segments": [
-     "accounts",
-     "organizations"
+     "organizations",
+     "accounts"
     ],
     "operations": [
      "DELETE item",
@@ -6171,6 +7603,147 @@
    }
   },
   "deal": {
+   "act": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "actualCloseDate": "string",
+     "companies": "array",
+     "competitor": "string",
+     "contactNames": "string",
+     "contacts": "array",
+     "creator": "string",
+     "daysOpen": "integer",
+     "daysInStage": "integer",
+     "estimatedCloseDate": "string",
+     "stageStartDate": "string",
+     "grossMargin": "number",
+     "groups": "array",
+     "isPrivate": "boolean",
+     "acl": "string",
+     "openDate": "string",
+     "probability": "integer",
+     "productTotal": "number",
+     "product": "string",
+     "reason": "string",
+     "source": "string",
+     "sourceId": "string",
+     "stage": "object",
+     "status": "string",
+     "statusName": "string",
+     "importDate": "string",
+     "totalPerCompany": "number",
+     "totalPerContact": "number",
+     "totalPerGroup": "number",
+     "weightedTotal": "number",
+     "quickbooksInvoiceId": "string",
+     "relatedEntitiesResolver": "boolean",
+     "recordManagerID": "string",
+     "customFields": "object",
+     "created": "string",
+     "edited": "string",
+     "editedBy": "string",
+     "recordManager": "string"
+    },
+    "evidence": [
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/opportunities/{opportunityId}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/opportunities",
+     "openapi/_original/act-web-api-swagger.json#GET /api/opportunities/{opportunityId}",
+     "openapi/_original/act-web-api-swagger.json#PATCH /api/opportunities/{opportunityId}",
+     "openapi/_original/act-web-api-swagger.json#POST /api/opportunities",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/opportunities/{opportunityId}"
+    ]
+   },
+   "affinity": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "listId": "integer"
+    },
+    "evidence": [
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/opportunities",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/opportunities/{opportunityId}"
+    ]
+   },
+   "agencyzoom": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "carrierId": "integer",
+     "standardCarrierCode": "string",
+     "productLineId": "integer",
+     "standardProductLineCode": "string",
+     "status": "integer",
+     "premium": "integer",
+     "items": "integer",
+     "customFields": "array",
+     "propertyAddress": "array",
+     "message": "string",
+     "result": "boolean",
+     "expiryDate": "string",
+     "assignTo": "integer",
+     "property": "object",
+     "customerReferralId": "integer"
+    },
+    "evidence": [
+     "openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/leads/{leadId}/opportunities/{opportunityId}",
+     "openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/opportunities/{opportunityId}",
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/opportunities",
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/opportunities/{opportunityId}",
+     "openapi/_original/agencyzoom-openapi.yml#POST /v1/api/leads/{leadId}/opportunities",
+     "openapi/_original/agencyzoom-openapi.yml#POST /v1/api/opportunities",
+     "openapi/_original/agencyzoom-openapi.yml#PUT /v1/api/leads/{leadId}/opportunities",
+     "openapi/_original/agencyzoom-openapi.yml#PUT /v1/api/opportunities/{opportunityId}"
+    ]
+   },
+   "agile-crm": {
+    "segments": [
+     "opportunity",
+     "deals"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agile-crm-openapi.yml#DELETE /api/opportunity/{id}",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}/deals",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/opportunity",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{id}",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/opportunity"
+    ]
+   },
    "apollo-api-documentation": {
     "segments": [
      "opportunities"
@@ -6313,14 +7886,13 @@
      "POST collection"
     ],
     "properties": {
-     "count": "integer",
-     "next_link": "string",
-     "value": "array",
      "id": "string",
      "ask_amount": "object",
      "ask_date": "string",
      "campaign_id": "string",
      "constituent_id": "string",
+     "date_added": "string",
+     "date_modified": "string",
      "deadline": "string",
      "expected_amount": "object",
      "expected_date": "string",
@@ -6329,26 +7901,24 @@
      "funded_date": "string",
      "fundraisers": "array",
      "inactive": "boolean",
+     "linked_gifts": "array",
      "name": "string",
      "summary": "string",
      "purpose": "string",
      "status": "string",
-     "likelihood": "string",
+     "lifecycle_stage": "string",
+     "opportunity_likelihood_name": "string",
+     "opportunity_likelihood_id": "string",
      "gift_type": "string",
+     "gift_type_id": "string",
      "reason": "string",
      "original_ask_amount": "object",
      "original_ask_date": "string",
      "instrument": "string",
      "org_contact_id": "string",
+     "org_contact": "string",
      "date_rated": "string",
-     "date_added": "string",
-     "date_modified": "string",
-     "linked_gifts": "array",
-     "lifecycle_stage": "string",
-     "opportunity_likelihood_name": "string",
-     "opportunity_likelihood_id": "string",
-     "gift_type_id": "string",
-     "org_contact": "string"
+     "likelihood": "string"
     },
     "evidence": [
      "openapi/_original/blackbaud-opportunity-api-openapi.yml#DELETE /opportunities/{opportunity_id}",
@@ -6430,6 +8000,59 @@
      "openapi/_original/brevo-sales-crm-openapi.yml#POST /crm/deals"
     ]
    },
+   "capsule": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "opportunities": "array",
+     "opportunity": "object"
+    },
+    "evidence": [
+     "openapi/_original/capsule-openapi.yml#DELETE /opportunities/{opportunityId}",
+     "openapi/_original/capsule-openapi.yml#GET /opportunities",
+     "openapi/_original/capsule-openapi.yml#GET /opportunities/{opportunityId}",
+     "openapi/_original/capsule-openapi.yml#GET /parties/{partyId}/opportunities",
+     "openapi/_original/capsule-openapi.yml#POST /opportunities",
+     "openapi/_original/capsule-openapi.yml#PUT /opportunities/{opportunityId}"
+    ]
+   },
+   "capsule-crm": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "opportunities": "array",
+     "opportunity": "object"
+    },
+    "evidence": [
+     "openapi/_original/capsule-crm-openapi.yml#DELETE /opportunities/{id}",
+     "openapi/_original/capsule-crm-openapi.yml#GET /opportunities",
+     "openapi/_original/capsule-crm-openapi.yml#GET /opportunities/{id}",
+     "openapi/_original/capsule-crm-openapi.yml#POST /opportunities",
+     "openapi/_original/capsule-crm-openapi.yml#PUT /opportunities/{id}",
+     "openapi/_original/capsule-opportunities-api-openapi.yml#DELETE /opportunities/{opportunityId}",
+     "openapi/_original/capsule-opportunities-api-openapi.yml#GET /opportunities",
+     "openapi/_original/capsule-opportunities-api-openapi.yml#GET /opportunities/{opportunityId}",
+     "openapi/_original/capsule-opportunities-api-openapi.yml#GET /parties/{partyId}/opportunities",
+     "openapi/_original/capsule-opportunities-api-openapi.yml#POST /opportunities",
+     "openapi/_original/capsule-opportunities-api-openapi.yml#PUT /opportunities/{opportunityId}"
+    ]
+   },
    "clari": {
     "segments": [
      "opportunity"
@@ -6509,6 +8132,103 @@
      "openapi/_original/clickfunnels-openapi.json#GET /workspaces/{workspace_id}/sales/opportunities",
      "openapi/_original/clickfunnels-openapi.json#POST /workspaces/{workspace_id}/sales/opportunities",
      "openapi/_original/clickfunnels-openapi.json#PUT /sales/opportunities/{id}"
+    ]
+   },
+   "close": {
+    "segments": [
+     "opportunity"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "_type": "string",
+     "activity_at": null,
+     "contact_id": null,
+     "created_by": null,
+     "created_by_name": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "id": "string",
+     "lead_id": null,
+     "new_pipeline_id": "string",
+     "new_pipeline_name": "string",
+     "new_status_id": "string",
+     "new_status_label": "string",
+     "new_status_type": "string",
+     "old_pipeline_id": "string",
+     "old_pipeline_name": "string",
+     "old_status_id": "string",
+     "old_status_label": "string",
+     "old_status_type": "string",
+     "opportunity_confidence": null,
+     "opportunity_date_won": null,
+     "opportunity_id": null,
+     "opportunity_value": null,
+     "opportunity_value_currency": null,
+     "opportunity_value_formatted": null,
+     "opportunity_value_period": null,
+     "organization_id": "string",
+     "updated_by": null,
+     "updated_by_name": null,
+     "user_id": null,
+     "user_name": null,
+     "users": "array",
+     "annualized_expected_value": null,
+     "annualized_value": null,
+     "attachments": "array",
+     "comment_summary": null,
+     "confidence": "integer",
+     "contact_name": null,
+     "date_lost": null,
+     "date_won": null,
+     "expected_value": null,
+     "integration_links": "array",
+     "is_stalled": "boolean",
+     "lead_name": null,
+     "lead_primary_email": null,
+     "lead_primary_phone": null,
+     "note": null,
+     "note_html": null,
+     "pipeline_id": null,
+     "pipeline_name": null,
+     "stall_status": null,
+     "status_display_name": "string",
+     "status_id": "string",
+     "status_label": "string",
+     "status_type": "string",
+     "suggested_action": null,
+     "value": null,
+     "value_currency": null,
+     "value_formatted": null,
+     "value_period": "string",
+     "status": "string",
+     "custom_fields": [
+      "object",
+      "null"
+     ],
+     "include_activities": "boolean",
+     "include_addresses": "boolean",
+     "include_custom_objects": "boolean",
+     "include_smart_fields": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /activity/status_change/opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /custom_field/opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /status/opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /activity/status_change/opportunity/",
+     "openapi/_original/close-api-openapi.json#GET /activity/status_change/opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/opportunity/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /export/opportunity/",
+     "openapi/_original/close-api-openapi.json#GET /export/opportunity/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /opportunity/",
+     "openapi/_original/close-api-openapi.json#GET /opportunity/{id}/"
     ]
    },
    "commsharbor": {
@@ -6686,6 +8406,43 @@
      "openapi/_original/coperniq-openapi.yml#POST /opportunities"
     ]
    },
+   "copper": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "assignee_id": "integer",
+     "close_date": "string",
+     "company_id": "integer",
+     "company_name": "string",
+     "customer_source_id": "integer",
+     "details": "string",
+     "loss_reason_id": "integer",
+     "pipeline_id": "integer",
+     "pipeline_stage_id": "integer",
+     "primary_contact_id": "integer",
+     "priority": "string",
+     "status": "string",
+     "tags": "array",
+     "win_probability": "integer",
+     "monetary_value": "number",
+     "custom_fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/copper-developer-api-openapi.yml#DELETE /opportunities/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#GET /opportunities/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#POST /opportunities",
+     "openapi/_original/copper-developer-api-openapi.yml#PUT /opportunities/{id}"
+    ]
+   },
    "copper-financial": {
     "segments": [
      "opportunities"
@@ -6759,8 +8516,8 @@
    },
    "eloqua": {
     "segments": [
-     "opportunities",
-     "opportunity"
+     "opportunity",
+     "opportunities"
     ],
     "operations": [
      "GET collection",
@@ -6889,10 +8646,106 @@
      "openapi/_original/highlevel-opportunities-openapi.json#PUT /opportunities/{id}"
     ]
    },
+   "infusionsoft": {
+    "segments": [
+     "opportunities",
+     "deals"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "opportunities": "array",
+     "next_page_token": "string",
+     "id": "string",
+     "contact": "object",
+     "stage": "object",
+     "user": "object",
+     "opportunity_title": "string",
+     "next_action_time": "string",
+     "next_action_notes": "string",
+     "opportunity_notes": "string",
+     "estimated_close_time": "string",
+     "include_in_forecast": "boolean",
+     "projected_revenue_low": "number",
+     "projected_revenue_high": "number",
+     "custom_fields": "array",
+     "created_time": "string",
+     "last_updated_time": "string",
+     "affiliate_id": "string",
+     "lead_source": "string",
+     "monthly_revenue": "number",
+     "order_revenue": "number",
+     "objection": "string",
+     "status": "string",
+     "status_id": "string",
+     "stage_entrance_time": "string",
+     "last_updated_by": "string",
+     "created_by": "string",
+     "contact_id": "string",
+     "stage_id": "string",
+     "user_id": "string",
+     "deals": "array",
+     "name": "string",
+     "value": null,
+     "contact_ids": "array",
+     "stage_assignment_time": "string",
+     "owner_ids": "array",
+     "task_ids": "array",
+     "order_id": "string",
+     "closed_time": "string",
+     "contacts": "array",
+     "owners": "array",
+     "owner_id": "string",
+     "amount": "number",
+     "currency_code": "string",
+     "previous_deal_id": "string",
+     "next_deal_id": "string",
+     "estimated_close_date": "string",
+     "closed_date": "string",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "date_created": "string",
+     "last_updated": "string",
+     "next_action_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/opportunities/{opportunity_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/opportunities",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/opportunities/{opportunity_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/opportunities/{opportunity_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/opportunities",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#DELETE /v2/deals/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/deals",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/deals/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/pipelines/{id}/deals",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/stages/{id}/deals",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#PATCH /v2/deals/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#POST /v2/deals"
+    ]
+   },
+   "insightly": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/insightly-openapi.yml#GET /Opportunities"
+    ]
+   },
    "keap": {
     "segments": [
-     "deals",
-     "opportunities"
+     "opportunities",
+     "deals"
     ],
     "operations": [
      "DELETE item",
@@ -7015,6 +8868,43 @@
      "openapi/_original/lev-openapi-original.json#POST /api/external/v2/deals"
     ]
    },
+   "lever-co": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "contact": "string",
+     "headline": "string",
+     "stage": "string",
+     "location": "string",
+     "emails": "array",
+     "phones": "array",
+     "archived": "object",
+     "createdAt": "integer",
+     "updatedAt": "integer",
+     "applications": "array",
+     "sources": "array",
+     "origin": "string",
+     "owner": "string",
+     "followers": "array",
+     "tags": "array",
+     "postings": "array"
+    },
+    "evidence": [
+     "openapi/_original/lever-data-api-openapi.yml#GET /opportunities",
+     "openapi/_original/lever-data-api-openapi.yml#GET /opportunities/{id}",
+     "openapi/_original/lever-data-api-openapi.yml#POST /opportunities",
+     "openapi/_original/lever-data-api-openapi.yml#PUT /opportunities/{id}"
+    ]
+   },
    "lightfield": {
     "segments": [
      "opportunities"
@@ -7063,6 +8953,60 @@
      "openapi/_original/live-direct-marketing-online-ldm-v3-openapi_2.json#PATCH /api/leads/{id}/deal"
     ]
    },
+   "lone-wolf": {
+    "segments": [
+     "deals"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "version": "integer",
+     "createdTimestamp": "string",
+     "modifiedTimestamp": "string",
+     "culture": "string",
+     "number": "string",
+     "mlsNumber": "string",
+     "statusCode": "string",
+     "classCode": "string",
+     "name": "string",
+     "addressStreetNumber": "string",
+     "addressStreetName": "string",
+     "addressStreetDirection": "string",
+     "addressUnitNumber": "string",
+     "addressCity": "string",
+     "addressProvinceCode": "string",
+     "addressPostalCode": "string",
+     "addressCountryCode": "string",
+     "offerDate": "string",
+     "closeDate": "string",
+     "entryDate": "string",
+     "finalizeDate": "string",
+     "firmDate": "string",
+     "closePrice": "number",
+     "legalDescription": "string",
+     "classification": "object",
+     "propertyType": "object",
+     "businessContacts": "array",
+     "client-contacts": "array",
+     "conditions": "array",
+     "deposits": "array",
+     "externalAgents": "array",
+     "tiers": "array"
+    },
+    "evidence": [
+     "openapi/_original/lone-wolf-deals-api-openapi.yml#DELETE /deals/{dealId}",
+     "openapi/_original/lone-wolf-deals-api-openapi.yml#GET /deals",
+     "openapi/_original/lone-wolf-deals-api-openapi.yml#GET /deals/{dealId}",
+     "openapi/_original/lone-wolf-deals-api-openapi.yml#PATCH /deals/{dealId}",
+     "openapi/_original/lone-wolf-deals-api-openapi.yml#POST /deals"
+    ]
+   },
    "microsoft-dynamics": {
     "segments": [
      "opportunities"
@@ -7103,10 +9047,6 @@
      "POST collection"
     ],
     "properties": {
-     "@odata.context": "string",
-     "@odata.count": "integer",
-     "@odata.nextLink": "string",
-     "value": "array",
      "@odata.etag": "string",
      "opportunityid": "string",
      "name": "string",
@@ -7288,14 +9228,11 @@
      "age_in_days": "number",
      "owner_id": "string",
      "pipeline_id": "string",
-     "stage_id": "string",
-     "deals": "array",
-     "stage": "object"
+     "stage_id": "string"
     },
     "evidence": [
      "openapi/_original/nimble-openapi-original.yml#DELETE /api/v2/deals/{deal_id}",
      "openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals",
-     "openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals/pipelines/{pipeline_id}/deals",
      "openapi/_original/nimble-openapi-original.yml#GET /api/v2/deals/{deal_id}",
      "openapi/_original/nimble-openapi-original.yml#POST /api/v2/deals",
      "openapi/_original/nimble-openapi-original.yml#PUT /api/v2/deals/{deal_id}"
@@ -7306,11 +9243,7 @@
      "opportunity"
     ],
     "operations": [
-     "DELETE item",
-     "GET collection",
-     "GET item",
-     "POST collection",
-     "PUT item"
+     "GET collection"
     ],
     "properties": {
      "Id": "string",
@@ -7327,12 +9260,7 @@
      "Link": "array"
     },
     "evidence": [
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Opportunity/Opportunity/{OpportunityId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Opportunity",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Opportunity/Opportunity",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Opportunity/Opportunity/{OpportunityId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Opportunity/Opportunity",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Opportunity/Opportunity/{OpportunityId}"
+     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Account/Account/{AccountId}/Opportunity"
     ]
    },
    "outreach": {
@@ -7379,8 +9307,8 @@
    },
    "pipedrive": {
     "segments": [
-     "deal",
-     "deals"
+     "deals",
+     "deal"
     ],
     "operations": [
      "DELETE item",
@@ -7736,6 +9664,67 @@
      "openapi/_original/revert-unified-api-openapi.yml#POST /crm/deals"
     ]
    },
+   "salesflare": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "owner": "number",
+     "account": "number",
+     "stage": "number",
+     "lost_reason": "number",
+     "files": "array",
+     "lead_source": "number",
+     "start_date": "string",
+     "probability": "number",
+     "assignee": "number",
+     "creator": "number",
+     "status": "string",
+     "name": "string",
+     "value": "number",
+     "currency": "number",
+     "status_date": "string",
+     "close_date": "string",
+     "closed": "boolean",
+     "tags": "array",
+     "recurring_price_per_unit": "number",
+     "frequency": "string",
+     "units": "number",
+     "contract_start_date": "string",
+     "contract_end_date": "string",
+     "main_contact": "number",
+     "custom": "object",
+     "done": "boolean",
+     "id": "number",
+     "calculated_value": "number",
+     "last_modified_by": "number",
+     "can_edit": "boolean",
+     "modification_date": "string",
+     "creation_date": "string",
+     "pipeline": "object",
+     "last_interaction": "object",
+     "stage_updates": "array"
+    },
+    "evidence": [
+     "openapi/_original/salesflare-api-openapi.yml#DELETE /opportunities/{id}",
+     "openapi/_original/salesflare-api-openapi.yml#GET /opportunities",
+     "openapi/_original/salesflare-api-openapi.yml#GET /opportunities/{id}",
+     "openapi/_original/salesflare-api-openapi.yml#POST /opportunities",
+     "openapi/_original/salesflare-api-openapi.yml#PUT /opportunities/{id}",
+     "openapi/_original/salesflare-openapi.json#DELETE /opportunities/{id}",
+     "openapi/_original/salesflare-openapi.json#GET /opportunities",
+     "openapi/_original/salesflare-openapi.json#GET /opportunities/{id}",
+     "openapi/_original/salesflare-openapi.json#POST /opportunities",
+     "openapi/_original/salesflare-openapi.json#PUT /opportunities/{id}"
+    ]
+   },
    "salesloft": {
     "segments": [
      "opportunities"
@@ -7752,8 +9741,8 @@
    },
    "sendpulse": {
     "segments": [
-     "deal",
-     "deals"
+     "deals",
+     "deal"
     ],
     "operations": [
      "DELETE item",
@@ -7931,6 +9920,34 @@
      "openapi/_original/the-mobile-first-company-allo-openapi.json#POST /v2/api/crm/deals"
     ]
    },
+   "truto": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remoteId": "string",
+     "name": "string",
+     "status": "string",
+     "stageId": "string",
+     "accountId": "string",
+     "amount": "number",
+     "currency": "string",
+     "probability": "integer",
+     "closeDate": "string",
+     "ownerId": "string",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/truto-unified-crm-openapi.yml#GET /opportunities",
+     "openapi/_original/truto-unified-crm-openapi.yml#POST /opportunities"
+    ]
+   },
    "twenty": {
     "segments": [
      "opportunities"
@@ -8006,6 +10023,20 @@
      "openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/deal"
     ]
    },
+   "wealthbox": {
+    "segments": [
+     "opportunities"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/wealthbox-openapi.yml#GET /opportunities",
+     "openapi/_original/wealthbox-openapi.yml#POST /opportunities"
+    ]
+   },
    "zendesk-sell": {
     "segments": [
      "deals"
@@ -8037,6 +10068,108 @@
    }
   },
   "lead": {
+   "agencyzoom": {
+    "segments": [
+     "leads"
+    ],
+    "operations": [
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "firstname": "string",
+     "middlename": "string",
+     "lastname": "string",
+     "leadType": "string",
+     "email": "string",
+     "phone": "string",
+     "secondaryEmail": "string",
+     "secondaryPhone": "string",
+     "streetAddress": "string",
+     "city": "string",
+     "state": "string",
+     "country": "string",
+     "zip": "string",
+     "comments": "string",
+     "status": "integer",
+     "contactDate": "string",
+     "soldDate": "string",
+     "leadSourceId": "integer",
+     "leadSourceName": "string",
+     "xDate": "string",
+     "quoteDate": "string",
+     "createDate": "string",
+     "premium": "integer",
+     "quoted": "integer",
+     "assignedTo": "integer",
+     "assignToFirstname": "string",
+     "assignToLastname": "string",
+     "csrId": "integer",
+     "csrFirstname": "string",
+     "csrLastname": "string",
+     "creditToFirstname": "string",
+     "creditToLastname": "string",
+     "taskCount": "integer",
+     "contactFirstName": "string",
+     "contactLastName": "string",
+     "locationCode": "string",
+     "locationName": "string",
+     "departmentCode": "string",
+     "departmentName": "string",
+     "groupCode": "string",
+     "groupName": "string",
+     "workflowId": "integer",
+     "workflowName": "string",
+     "workflowStageId": "integer",
+     "workflowStageName": "string",
+     "lastActivityDate": "string",
+     "enterStageDate": "string",
+     "tagNames": "array",
+     "convertedHouseholdId": "integer",
+     "nextExpirationDate": "string",
+     "externalSystem": "string",
+     "externalId": "string",
+     "customFields": "array",
+     "opportunities": "array",
+     "otherProducers": "array",
+     "quotes": "array",
+     "totalOpportunityPremium": "integer",
+     "totalQuotePremium": "integer",
+     "totalPolicyPremium": "integer",
+     "lossReason": "string",
+     "xDateType": "string",
+     "recycleToWorkflowId": "integer",
+     "recycleToStageId": "integer",
+     "birthday": "string",
+     "nickname": "string",
+     "maritalStatus": "string",
+     "fein": "string",
+     "contactMiddleName": "string",
+     "businessEntity": "string",
+     "businessClassification": "string",
+     "businessClassificationId": "integer",
+     "businessClassificationCode": "string",
+     "yearBusinessStarted": "integer",
+     "numberOfEmployees": "integer",
+     "annualRevenue": "integer",
+     "payroll": "integer",
+     "message": "string",
+     "result": "boolean",
+     "notes": "string",
+     "pipelineId": "integer",
+     "stageId": "integer",
+     "assignmentGroupId": "integer",
+     "assignTo": "integer",
+     "streetAddressLine2": "string",
+     "agencyNumber": "string",
+     "otherCsrs": "array"
+    },
+    "evidence": [
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}",
+     "openapi/_original/agencyzoom-openapi.yml#PUT /v1/api/leads/{leadId}"
+    ]
+   },
    "alterestate": {
     "segments": [
      "leads"
@@ -8178,6 +10311,80 @@
      "openapi/_original/autoleadstar-mcp-tools-openapi.yml#GET /dealerships/{dealershipId}/leads"
     ]
    },
+   "close": {
+    "segments": [
+     "lead"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "_paused_subscriptions": "array",
+     "_type": "string",
+     "activity_at": null,
+     "contact_id": null,
+     "created_by": null,
+     "created_by_name": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "id": "string",
+     "lead_id": null,
+     "new_status_id": "string",
+     "new_status_label": "string",
+     "old_status_id": "string",
+     "old_status_label": "string",
+     "organization_id": "string",
+     "updated_by": null,
+     "updated_by_name": null,
+     "user_id": null,
+     "user_name": null,
+     "users": "array",
+     "addresses": "array",
+     "contact_ids": "array",
+     "contacts": "array",
+     "contacts_summary": "string",
+     "description": null,
+     "display_name": "string",
+     "html_url": "string",
+     "integration_links": "array",
+     "localtime": null,
+     "name": null,
+     "opportunities": "array",
+     "primary_address_full": null,
+     "primary_address_summary": null,
+     "primary_email": null,
+     "primary_phone": null,
+     "recent_calls": "array",
+     "source": null,
+     "status_id": "string",
+     "status_label": "string",
+     "summaries": "array",
+     "tasks": "array",
+     "url": null,
+     "include_activities": "boolean",
+     "include_addresses": "boolean",
+     "include_custom_objects": "boolean",
+     "include_smart_fields": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /activity/status_change/lead/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /custom_field/lead/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /lead/{id}/",
+     "openapi/_original/close-api-openapi.json#DELETE /status/lead/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /activity/status_change/lead/",
+     "openapi/_original/close-api-openapi.json#GET /activity/status_change/lead/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/lead/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/lead/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /export/lead/",
+     "openapi/_original/close-api-openapi.json#GET /export/lead/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /lead/",
+     "openapi/_original/close-api-openapi.json#GET /lead/{id}/"
+    ]
+   },
    "commsharbor": {
     "segments": [
      "leads"
@@ -8212,6 +10419,41 @@
      "openapi/_original/commsharbor-openapi_2.json#GET /api/platform/crm/leads/{lead_id}",
      "openapi/_original/commsharbor-openapi_2.json#PATCH /api/platform/crm/leads/{lead_id}",
      "openapi/_original/commsharbor-openapi_2.json#POST /api/platform/crm/leads"
+    ]
+   },
+   "copper": {
+    "segments": [
+     "leads"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "prefix": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "title": "string",
+     "company_name": "string",
+     "email": "object",
+     "phone_numbers": "array",
+     "status": "string",
+     "status_id": "integer",
+     "source_id": "integer",
+     "monetary_value": "number",
+     "details": "string",
+     "tags": "array",
+     "custom_fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/copper-developer-api-openapi.yml#DELETE /leads/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#GET /leads/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#POST /leads",
+     "openapi/_original/copper-developer-api-openapi.yml#PUT /leads/{id}"
     ]
    },
    "drippay": {
@@ -8352,6 +10594,20 @@
      "openapi/_original/fixture-openapi.json#POST /api/v1/leads"
     ]
    },
+   "holded": {
+    "segments": [
+     "leads"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/holded-openapi.yml#GET /crm/v1/leads",
+     "openapi/_original/holded-openapi.yml#POST /crm/v1/leads"
+    ]
+   },
    "hubspot": {
     "segments": [
      "leads"
@@ -8382,6 +10638,18 @@
      "openapi/_original/hubspot-crm-leads-openapi.json#GET /crm/objects/2026-03/leads/{leadsId}",
      "openapi/_original/hubspot-crm-leads-openapi.json#PATCH /crm/objects/2026-03/leads/{leadsId}",
      "openapi/_original/hubspot-crm-leads-openapi.json#POST /crm/objects/2026-03/leads"
+    ]
+   },
+   "insightly": {
+    "segments": [
+     "leads"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/insightly-openapi.yml#GET /Leads"
     ]
    },
    "lemlist": {
@@ -8737,8 +11005,8 @@
    },
    "pipedrive": {
     "segments": [
-     "lead",
-     "leads"
+     "leads",
+     "lead"
     ],
     "operations": [
      "DELETE item",
@@ -8899,6 +11167,34 @@
      "openapi/_original/revert-unified-api-openapi.yml#GET /crm/leads/{id}",
      "openapi/_original/revert-unified-api-openapi.yml#PATCH /crm/leads/{id}",
      "openapi/_original/revert-unified-api-openapi.yml#POST /crm/leads"
+    ]
+   },
+   "servicetitan": {
+    "segments": [
+     "leads"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "status": "string",
+     "customerId": "integer",
+     "locationId": "integer",
+     "businessUnitId": "integer",
+     "jobTypeId": "integer",
+     "priority": "string",
+     "summary": "string",
+     "callReasonId": "integer",
+     "campaignId": "integer",
+     "followUpDate": "string",
+     "createdOn": "string",
+     "modifiedOn": "string"
+    },
+    "evidence": [
+     "openapi/_original/servicetitan-crm-api-openapi.yml#GET /leads",
+     "openapi/_original/servicetitan-crm-api-openapi.yml#POST /leads"
     ]
    },
    "street-co": {
@@ -9124,6 +11420,45 @@
    }
   },
   "activity": {
+   "accelo": {
+    "segments": [
+     "activities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/accelo-openapi.yml#DELETE /activities/{activity_id}",
+     "openapi/_original/accelo-openapi.yml#GET /activities",
+     "openapi/_original/accelo-openapi.yml#GET /activities/{activity_id}",
+     "openapi/_original/accelo-openapi.yml#POST /activities",
+     "openapi/_original/accelo-openapi.yml#PUT /activities/{activity_id}"
+    ]
+   },
+   "act": {
+    "segments": [
+     "activities"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/act-supplemental-files-api-openapi.yml#DELETE /api/attachments/activities/{id}",
+     "openapi/_original/act-supplemental-files-api-openapi.yml#GET /api/attachments/activities/{id}",
+     "openapi/_original/act-supplemental-files-api-openapi.yml#POST /api/attachments/activities/{id}",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/attachments/activities/{id}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/attachments/activities/{id}",
+     "openapi/_original/act-web-api-swagger.json#POST /api/attachments/activities/{id}"
+    ]
+   },
    "apollo-api-documentation": {
     "segments": [
      "activities"
@@ -9310,6 +11645,33 @@
      "openapi/_original/clarify-openapi.json#GET /workspaces/{workspace}/schemas/{entity}/activities"
     ]
    },
+   "close": {
+    "segments": [
+     "activity"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /custom_field/activity/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /activity/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/activity/",
+     "openapi/_original/close-api-openapi.json#GET /custom_field/activity/{id}/",
+     "openapi/_original/close-api-openapi.json#POST /custom_field/activity/",
+     "openapi/_original/close-api-openapi.json#POST /report/activity/",
+     "openapi/_original/close-api-openapi.json#PUT /custom_field/activity/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /custom_field/activity/{id}/",
+     "openapi/_original/close-openapi.yml#GET /activity/",
+     "openapi/_original/close-openapi.yml#GET /custom_field/activity/",
+     "openapi/_original/close-openapi.yml#GET /custom_field/activity/{id}/",
+     "openapi/_original/close-openapi.yml#POST /custom_field/activity/"
+    ]
+   },
    "commsharbor": {
     "segments": [
      "activities"
@@ -9345,6 +11707,29 @@
      "openapi/_original/commsharbor-openapi.json#POST /api/platform/crm/leads/{lead_id}/activities",
      "openapi/_original/commsharbor-openapi_2.json#DELETE /api/organizations/{organization_id}/crm/activities/{activity_id}",
      "openapi/_original/commsharbor-openapi_2.json#DELETE /api/platform/crm/leads/{lead_id}/activities/{activity_id}"
+    ]
+   },
+   "copper": {
+    "segments": [
+     "activities"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "parent": "object",
+     "type": "object",
+     "details": "string",
+     "user_id": "integer",
+     "activity_date": "integer",
+     "old_value": "object",
+     "new_value": "object",
+     "date_created": "integer",
+     "date_modified": "integer"
+    },
+    "evidence": [
+     "openapi/_original/copper-developer-api-openapi.yml#POST /activities"
     ]
    },
    "copper-financial": {
@@ -9698,6 +12083,20 @@
      "openapi/_original/gofundme-pro-api-openapi.json#GET /organizations/{organization}/activity"
     ]
    },
+   "lawmatics": {
+    "segments": [
+     "activities"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/activities",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/activities/{activity_id}"
+    ]
+   },
    "lemlist": {
     "segments": [
      "activities"
@@ -9942,40 +12341,6 @@
      "openapi/_original/nutshell-api.json#GET /activities/{id}",
      "openapi/_original/nutshell-api.json#POST /activities",
      "openapi/_original/nutshell-api.json#PUT /activities/{id}"
-    ]
-   },
-   "oracle-siebel": {
-    "segments": [
-     "activity"
-    ],
-    "operations": [
-     "DELETE item",
-     "GET collection",
-     "GET item",
-     "POST collection",
-     "PUT item"
-    ],
-    "properties": {
-     "Id": "string",
-     "Type": "string",
-     "Description": "string",
-     "Status": "string",
-     "Priority": "string",
-     "Due": "string",
-     "Planned": "string",
-     "Account": "string",
-     "Account Id": "string",
-     "Contact First Name": "string",
-     "Contact Last Name": "string",
-     "Owner": "string",
-     "Link": "array"
-    },
-    "evidence": [
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#DELETE /data/Activity/Activity/{ActivityId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Activity/Activity",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#GET /data/Activity/Activity/{ActivityId}",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#POST /data/Activity/Activity",
-     "openapi/_original/oracle-siebel-rest-api-openapi.yml#PUT /data/Activity/Activity/{ActivityId}"
     ]
    },
    "pipedrive": {
@@ -10350,6 +12715,18 @@
      "openapi/_original/vendasta-marketplace-openapi-original.yml#POST /activity/"
     ]
    },
+   "wealthbox": {
+    "segments": [
+     "activity"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/wealthbox-openapi.yml#GET /activity"
+    ]
+   },
    "zendesk": {
     "segments": [
      "activities"
@@ -10404,6 +12781,168 @@
    }
   },
   "task": {
+   "accelo": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/accelo-openapi.yml#GET /tasks",
+     "openapi/_original/accelo-openapi.yml#GET /tasks/{task_id}",
+     "openapi/_original/accelo-openapi.yml#POST /tasks",
+     "openapi/_original/accelo-openapi.yml#PUT /tasks/{task_id}"
+    ]
+   },
+   "act": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
+    ],
+    "properties": {
+     "clearingTasks": "string",
+     "taskConflictChecking": "boolean",
+     "makeNewTaskPublic": "boolean",
+     "schedulingSeparateTasks": "boolean",
+     "scheduleTaskForNewContact": "boolean",
+     "id": "string",
+     "isCleared": "boolean",
+     "isAlarmCleared": "boolean",
+     "isAlarmed": "boolean",
+     "leadMinutes": "integer",
+     "alarmDue": "string",
+     "seriesID": "string",
+     "originalTime": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "duration": "string",
+     "externalId": "string",
+     "calendarUid": "string",
+     "accessorId": "string",
+     "location": "string",
+     "isTimeless": "boolean",
+     "isAllDay": "boolean",
+     "isPrivate": "boolean",
+     "isRecurring": "boolean",
+     "activityPriorityId": "integer",
+     "activityPriorityName": "string",
+     "activityTypeId": "integer",
+     "activityTypeName": "string",
+     "attachment": "object",
+     "bannerColor": "string",
+     "details": "string",
+     "subject": "string",
+     "recurSpec": "object",
+     "created": "string",
+     "edited": "string",
+     "scheduledById": "string",
+     "scheduledBy": "string",
+     "scheduledForId": "string",
+     "scheduledFor": "string",
+     "scheduledWithCompany": "string",
+     "scheduledWithEmail": "string",
+     "scheduledWithPhone": "string",
+     "scheduledWithPhoneExt": "string",
+     "companies": "array",
+     "contacts": "array",
+     "groups": "array",
+     "opportunities": "array",
+     "tasks": "array"
+    },
+    "evidence": [
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/tasks",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/tasks/{taskId}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/preferences/tasks",
+     "openapi/_original/act-web-api-swagger.json#GET /api/tasks",
+     "openapi/_original/act-web-api-swagger.json#GET /api/tasks/{taskId}",
+     "openapi/_original/act-web-api-swagger.json#PATCH /api/tasks/{taskId}",
+     "openapi/_original/act-web-api-swagger.json#POST /api/organizers/{userId}/tasks",
+     "openapi/_original/act-web-api-swagger.json#POST /api/tasks",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/organizers/{userId}/tasks/{taskId}",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/preferences/tasks",
+     "openapi/_original/act-web-api-swagger.json#PUT /api/tasks/{taskId}"
+    ]
+   },
+   "agencyzoom": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "title": "string",
+     "status": "integer",
+     "createDate": "string",
+     "dueDate": "string",
+     "taskDateTime": "string",
+     "duration": "integer",
+     "completeDate": "string",
+     "assignedDate": "string",
+     "comments": "string",
+     "assignees": "array",
+     "completedBy": "integer",
+     "isCompletedByEmployee": "boolean",
+     "timeSpecific": "boolean",
+     "customerName": "string",
+     "customerId": "integer",
+     "customerType": "string",
+     "message": "string",
+     "result": "boolean",
+     "dueDatetime": "string",
+     "assigneeId": "integer",
+     "lifeProfessionalId": "integer",
+     "contactEmail": "string",
+     "leadId": "integer",
+     "type": "string",
+     "invitees": "array"
+    },
+    "evidence": [
+     "openapi/_original/agencyzoom-openapi.yml#DELETE /v1/api/tasks/{taskId}",
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/customers/{customerId}/tasks",
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/tasks",
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/tasks/{taskId}",
+     "openapi/_original/agencyzoom-openapi.yml#POST /v1/api/tasks",
+     "openapi/_original/agencyzoom-openapi.yml#PUT /v1/api/tasks/{taskId}"
+    ]
+   },
+   "agile-crm": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agile-crm-openapi.yml#DELETE /api/tasks/{id}",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/tasks",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/tasks/{id}",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/tasks"
+    ]
+   },
    "apollo-api-documentation": {
     "segments": [
      "tasks"
@@ -10686,6 +13225,94 @@
      "openapi/_original/brevo-sales-crm-openapi.yml#POST /crm/tasks"
     ]
    },
+   "capsule": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "tasks": "array",
+     "task": "object"
+    },
+    "evidence": [
+     "openapi/_original/capsule-openapi.yml#DELETE /tasks/{taskId}",
+     "openapi/_original/capsule-openapi.yml#GET /tasks",
+     "openapi/_original/capsule-openapi.yml#GET /tasks/{taskId}",
+     "openapi/_original/capsule-openapi.yml#POST /tasks",
+     "openapi/_original/capsule-openapi.yml#PUT /tasks/{taskId}"
+    ]
+   },
+   "capsule-crm": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/capsule-crm-openapi.yml#DELETE /tasks/{id}",
+     "openapi/_original/capsule-crm-openapi.yml#GET /tasks",
+     "openapi/_original/capsule-crm-openapi.yml#GET /tasks/{id}",
+     "openapi/_original/capsule-crm-openapi.yml#POST /tasks",
+     "openapi/_original/capsule-crm-openapi.yml#PUT /tasks/{id}"
+    ]
+   },
+   "close": {
+    "segments": [
+     "task"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
+    ],
+    "properties": {
+     "_type": "string",
+     "assigned_to": null,
+     "contact_id": null,
+     "created_by": "string",
+     "date": null,
+     "date_created": null,
+     "disable_notification": "boolean",
+     "due_date": null,
+     "is_complete": "boolean",
+     "is_dateless": "boolean",
+     "lead_id": "string",
+     "organization_id": "string",
+     "priority": "string",
+     "text": "string",
+     "resolution": null,
+     "agent_config_id": null
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /task/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /task/",
+     "openapi/_original/close-api-openapi.json#GET /task/{id}/",
+     "openapi/_original/close-api-openapi.json#POST /task/",
+     "openapi/_original/close-api-openapi.json#PUT /task/",
+     "openapi/_original/close-api-openapi.json#PUT /task/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /task/{id}/",
+     "openapi/_original/close-openapi.yml#GET /task/",
+     "openapi/_original/close-openapi.yml#GET /task/{id}/",
+     "openapi/_original/close-openapi.yml#POST /task/",
+     "openapi/_original/close-openapi.yml#PUT /task/",
+     "openapi/_original/close-openapi.yml#PUT /task/{id}/"
+    ]
+   },
    "commsharbor": {
     "segments": [
      "tasks"
@@ -10723,6 +13350,37 @@
      "openapi/_original/commsharbor-openapi.json#POST /api/platform/crm/tasks",
      "openapi/_original/commsharbor-openapi_2.json#DELETE /api/organizations/{organization_id}/crm/tasks/{task_id}",
      "openapi/_original/commsharbor-openapi_2.json#DELETE /api/platform/crm/tasks/{task_id}"
+    ]
+   },
+   "copper": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "related_resource": "object",
+     "assignee_id": "integer",
+     "due_date": "integer",
+     "reminder_date": "integer",
+     "completed_date": "integer",
+     "priority": "string",
+     "status": "string",
+     "details": "string",
+     "tags": "array",
+     "custom_fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/copper-developer-api-openapi.yml#DELETE /tasks/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#GET /tasks/{id}",
+     "openapi/_original/copper-developer-api-openapi.yml#POST /tasks",
+     "openapi/_original/copper-developer-api-openapi.yml#PUT /tasks/{id}"
     ]
    },
    "erply": {
@@ -10933,6 +13591,20 @@
      "openapi/_original/highlevel-contacts-openapi.json#PUT /contacts/{contactId}/tasks/{taskId}"
     ]
    },
+   "holded": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/holded-openapi.yml#GET /projects/v1/projects/{projectId}/tasks",
+     "openapi/_original/holded-openapi.yml#POST /projects/v1/projects/{projectId}/tasks"
+    ]
+   },
    "hubflo": {
     "segments": [
      "tasks"
@@ -11013,6 +13685,69 @@
      "openapi/_original/hubspot-crm-tasks-openapi.json#POST /crm/objects/2026-03/tasks"
     ]
    },
+   "infusionsoft": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "tasks": "array",
+     "next_page_token": "string",
+     "id": "string",
+     "title": "string",
+     "description": "string",
+     "type": "string",
+     "priority": "string",
+     "completed": "boolean",
+     "create_time": "string",
+     "modification_time": "string",
+     "completion_time": "string",
+     "due_time": "string",
+     "remind_time_mins": "integer",
+     "assigned_to_user_id": "string",
+     "created_by_user_id": "string",
+     "last_updated_by_user_id": "string",
+     "contact_id": "string",
+     "opportunity_id": "string",
+     "accepted": "boolean",
+     "custom_fields": "array",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "sync_token": "string",
+     "completion_date": "string",
+     "contact": "object",
+     "creation_date": "string",
+     "due_date": "string",
+     "funnel_id": "integer",
+     "jgraph_id": "integer",
+     "modification_date": "string",
+     "remind_time": "integer",
+     "url": "string",
+     "user_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/tasks/{task_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/tasks",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/tasks/{task_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/tasks/{task_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/tasks",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#DELETE /v1/tasks/{taskId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#GET /v1/tasks",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#GET /v1/tasks/{taskId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#PATCH /v1/tasks/{taskId}",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#POST /v1/tasks",
+     "openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#PUT /v1/tasks/{taskId}",
+     "openapi/_original/infusionsoft-rest-v1-openapi-original.json#DELETE /rest/v1/tasks/{taskId}"
+    ]
+   },
    "keap": {
     "segments": [
      "tasks"
@@ -11073,6 +13808,26 @@
      "openapi/_original/keap-v2-openapi.json#GET /rest/v2/tasks/{task_id}",
      "openapi/_original/keap-v2-openapi.json#PATCH /rest/v2/tasks/{task_id}",
      "openapi/_original/keap-v2-openapi.json#POST /rest/v2/tasks"
+    ]
+   },
+   "lawmatics": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lawmatics-openapi.yml#DELETE /v1/tasks/{task_id}",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/tasks",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/tasks/{task_id}",
+     "openapi/_original/lawmatics-openapi.yml#POST /v1/tasks",
+     "openapi/_original/lawmatics-openapi.yml#PUT /v1/tasks/{task_id}"
     ]
    },
    "lemlist": {
@@ -11480,6 +14235,31 @@
      "openapi/_original/pipeliner-openapi.json#POST /entities/Tasks"
     ]
    },
+   "podio": {
+    "segments": [
+     "task"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "task_id": "integer",
+     "text": "string",
+     "description": "string",
+     "status": "string",
+     "due_date": "string",
+     "created_on": "string",
+     "link": "string",
+     "due_time": "string",
+     "responsible": null,
+     "private": "boolean",
+     "ref_type": "string",
+     "ref_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/podio-openapi.yml#POST /task/"
+    ]
+   },
    "protonai": {
     "segments": [
      "task"
@@ -11625,6 +14405,36 @@
      "openapi/_original/revert-unified-api-openapi.yml#POST /ticket/tasks"
     ]
    },
+   "salesflare": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "account": "number",
+     "description": "string",
+     "reminder_date": "string",
+     "assignees": "array",
+     "completed": "boolean",
+     "id": "number",
+     "success": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/salesflare-api-openapi.yml#DELETE /tasks/{id}",
+     "openapi/_original/salesflare-api-openapi.yml#GET /tasks",
+     "openapi/_original/salesflare-api-openapi.yml#POST /tasks",
+     "openapi/_original/salesflare-api-openapi.yml#PUT /tasks/{id}",
+     "openapi/_original/salesflare-openapi.json#DELETE /tasks/{id}",
+     "openapi/_original/salesflare-openapi.json#GET /tasks",
+     "openapi/_original/salesflare-openapi.json#POST /tasks",
+     "openapi/_original/salesflare-openapi.json#PUT /tasks/{id}"
+    ]
+   },
    "salesloft": {
     "segments": [
      "tasks"
@@ -11643,8 +14453,8 @@
    },
    "sendpulse": {
     "segments": [
-     "task",
-     "tasks"
+     "tasks",
+     "task"
     ],
     "operations": [
      "DELETE item",
@@ -11749,6 +14559,31 @@
      "openapi/_original/street-co-open-api-openapi.json#POST /todos",
      "openapi/_original/street-co-open-api-openapi.yml#GET /todos",
      "openapi/_original/street-co-open-api-openapi.yml#POST /todos"
+    ]
+   },
+   "truto": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "remoteId": "string",
+     "title": "string",
+     "status": "string",
+     "dueDate": "string",
+     "contactId": "string",
+     "accountId": "string",
+     "opportunityId": "string",
+     "assigneeId": "string",
+     "completedAt": "string",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/truto-unified-crm-openapi.yml#GET /tasks"
     ]
    },
    "twenty": {
@@ -11863,6 +14698,32 @@
      "openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/tasks",
      "openapi/_original/vessel-engagement-v1-openapi.yml#PATCH /engagement/task",
      "openapi/_original/vessel-engagement-v1-openapi.yml#POST /engagement/task"
+    ]
+   },
+   "wealthbox": {
+    "segments": [
+     "tasks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "due_date": "string",
+     "complete": "boolean",
+     "linked_to": "array"
+    },
+    "evidence": [
+     "openapi/_original/wealthbox-openapi.yml#DELETE /tasks/{id}",
+     "openapi/_original/wealthbox-openapi.yml#GET /tasks",
+     "openapi/_original/wealthbox-openapi.yml#GET /tasks/{id}",
+     "openapi/_original/wealthbox-openapi.yml#POST /tasks",
+     "openapi/_original/wealthbox-openapi.yml#PUT /tasks/{id}"
     ]
    },
    "zoho": {
@@ -12099,6 +14960,163 @@
    }
   },
   "note": {
+   "act": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "recordManager": "string",
+     "recordManagerID": "string",
+     "createUserID": "string",
+     "isPrivate": "boolean",
+     "noteText": "string",
+     "noteTypeID": "integer",
+     "displayDate": "string",
+     "created": "string",
+     "edited": "string",
+     "companies": "array",
+     "contacts": "array",
+     "groups": "array",
+     "opportunities": "array",
+     "attachment": "object"
+    },
+    "evidence": [
+     "openapi/_original/act-supplemental-files-api-openapi.yml#DELETE /api/attachments/notes/{id}",
+     "openapi/_original/act-supplemental-files-api-openapi.yml#GET /api/attachments/notes/{id}",
+     "openapi/_original/act-supplemental-files-api-openapi.yml#POST /api/attachments/notes/{id}",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/attachments/notes/{id}",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/contacts/{contactId}/notes/{id}",
+     "openapi/_original/act-web-api-swagger.json#DELETE /api/notes/{id}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/attachments/notes/{id}",
+     "openapi/_original/act-web-api-swagger.json#GET /api/companies/{id}/notes",
+     "openapi/_original/act-web-api-swagger.json#GET /api/contacts/{id}/notes",
+     "openapi/_original/act-web-api-swagger.json#GET /api/group/{id}/notes",
+     "openapi/_original/act-web-api-swagger.json#GET /api/groups/{id}/notes",
+     "openapi/_original/act-web-api-swagger.json#GET /api/notes"
+    ]
+   },
+   "affinity": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "content": "object",
+     "creator": "object",
+     "mentions": "array",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "repliesCount": "integer",
+     "permissions": "object",
+     "opportunitiesPreview": "object",
+     "personsPreview": "object",
+     "companiesPreview": "object",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/companies/{companyId}/notes",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/notes",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/notes/{noteId}",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/opportunities/{opportunityId}/notes",
+     "openapi/_original/affinity-v2-openapi.yml#GET /v2/persons/{personId}/notes"
+    ]
+   },
+   "agencyzoom": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "message": "string",
+     "id": "integer",
+     "result": "boolean",
+     "note": "string",
+     "type": "string",
+     "createDate": "string",
+     "createdBy": "string",
+     "title": "string",
+     "body": "string",
+     "attr": "object"
+    },
+    "evidence": [
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/leads/{leadId}/notes",
+     "openapi/_original/agencyzoom-openapi.yml#POST /v1/api/customers/{customerId}/notes",
+     "openapi/_original/agencyzoom-openapi.yml#POST /v1/api/leads/{leadId}/notes"
+    ]
+   },
+   "agile-crm": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agile-crm-openapi.yml#DELETE /api/contacts/{contact_id}/notes/{note_id}",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{contact_id}/notes",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{deal_id}/notes",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/tickets/notes/{ticket_id}",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/notes",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/notes/{ticket_id}",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/opportunity/deals/notes",
+     "openapi/_original/agile-crm-openapi.yml#PUT /api/opportunity/deals/notes"
+    ]
+   },
+   "agorapulse": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "notes": "array",
+     "query": "object",
+     "uid": "string",
+     "title": "string",
+     "body": "string",
+     "color": "string",
+     "startDate": "string",
+     "endDate": "string",
+     "profileUids": "array"
+    },
+    "evidence": [
+     "openapi/_original/agorapulse-open-api-openapi.yml#DELETE /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes/{uid}",
+     "openapi/_original/agorapulse-open-api-openapi.yml#GET /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes",
+     "openapi/_original/agorapulse-open-api-openapi.yml#POST /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes",
+     "openapi/_original/agorapulse-open-api-openapi.yml#PUT /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes/{uid}",
+     "openapi/_original/agorapulse-openapi.yml#DELETE /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes/{uid}",
+     "openapi/_original/agorapulse-openapi.yml#GET /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes",
+     "openapi/_original/agorapulse-openapi.yml#POST /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes",
+     "openapi/_original/agorapulse-openapi.yml#PUT /v1.0/publishing/organizations/{organizationId}/workspaces/{workspaceId}/notes/{uid}"
+    ]
+   },
    "apollo-api-documentation": {
     "segments": [
      "notes"
@@ -12184,11 +15202,10 @@
      "assign_to": "string",
      "completed_date": "string",
      "record_id": "integer",
-     "count": "integer",
-     "value": "array",
      "benefits_include_notes": "boolean",
      "parent_id": "integer",
      "benefits_notes": "string",
+     "count": "integer",
      "offset": "integer",
      "limit": "integer",
      "notes": "array",
@@ -12202,7 +15219,6 @@
      "date_modified": "string",
      "summary": "string",
      "note_type_id": "integer",
-     "next_link": "string",
      "note_date": "object",
      "note_text": "string",
      "note_type_name": "string",
@@ -12355,6 +15371,60 @@
      "openapi/_original/clickfunnels-openapi.json#PUT /sales/opportunities/notes/{id}"
     ]
    },
+   "close": {
+    "segments": [
+     "note"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "_type": "string",
+     "activity_at": null,
+     "attachments": "array",
+     "comment_summary": null,
+     "contact_id": null,
+     "created_by": null,
+     "created_by_name": null,
+     "date_created": "string",
+     "date_updated": "string",
+     "id": "string",
+     "lead_id": null,
+     "note": "string",
+     "note_html": "string",
+     "note_mentions": "array",
+     "organization_id": "string",
+     "pinned": "boolean",
+     "pinned_at": null,
+     "source": null,
+     "title": null,
+     "updated_by": null,
+     "updated_by_name": null,
+     "user_id": null,
+     "user_name": null,
+     "users": "array",
+     "created_by_id": [
+      "string",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /activity/note/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /activity/note/",
+     "openapi/_original/close-api-openapi.json#GET /activity/note/{id}/",
+     "openapi/_original/close-api-openapi.json#POST /activity/note/",
+     "openapi/_original/close-api-openapi.json#PUT /activity/note/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /activity/note/{id}/",
+     "openapi/_original/close-openapi.yml#GET /activity/note/",
+     "openapi/_original/close-openapi.yml#GET /activity/note/{id}/",
+     "openapi/_original/close-openapi.yml#POST /activity/note/",
+     "openapi/_original/close-openapi.yml#PUT /activity/note/{id}/"
+    ]
+   },
    "coperniq": {
     "segments": [
      "notes"
@@ -12469,6 +15539,34 @@
      "openapi/_original/fixture-openapi.json#DELETE /api/v1/notes/{note_id}",
      "openapi/_original/fixture-openapi.json#PATCH /api/v1/notes/{note_id}",
      "openapi/_original/fixture-openapi.json#POST /api/v1/notes"
+    ]
+   },
+   "folk": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "entity": "object",
+     "content": "string",
+     "visibility": "string",
+     "author": null,
+     "createdAt": "string",
+     "parentNote": null
+    },
+    "evidence": [
+     "openapi/_original/folk-openapi.yml#DELETE /v1/notes/{noteId}",
+     "openapi/_original/folk-openapi.yml#GET /v1/notes",
+     "openapi/_original/folk-openapi.yml#GET /v1/notes/{noteId}",
+     "openapi/_original/folk-openapi.yml#PATCH /v1/notes/{noteId}",
+     "openapi/_original/folk-openapi.yml#POST /v1/notes"
     ]
    },
    "freshsales": {
@@ -12587,6 +15685,64 @@
      "openapi/_original/hubspot-crm-notes-openapi.json#POST /crm/objects/2026-03/notes"
     ]
    },
+   "infusionsoft": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "notes": "array",
+     "next_page_token": "string",
+     "id": "string",
+     "text": "string",
+     "title": "string",
+     "type": "string",
+     "contact_id": "string",
+     "assigned_to_user": "object",
+     "create_time": "string",
+     "update_time": "string",
+     "last_updated_by_user_id": "string",
+     "pinned_at": "string",
+     "created_by_user_id": "string",
+     "custom_fields": "array",
+     "user_id": "string",
+     "is_pinned": "boolean",
+     "body": "string",
+     "deal_id": "string",
+     "created_by": "string",
+     "created_time": "string",
+     "modified_time": "string",
+     "create_success": "boolean",
+     "error_message": "string",
+     "count": "integer",
+     "next": "string",
+     "previous": "string",
+     "date_created": "string",
+     "last_updated": "string",
+     "last_updated_by": "object"
+    },
+    "evidence": [
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/contacts/{contact_id}/notes/{note_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/contacts/{contact_id}/notes",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/contacts/{contact_id}/notes/{note_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/notes",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/contacts/{contact_id}/notes/{note_id}",
+     "openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/contacts/{contact_id}/notes",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#DELETE /v2/deals/-/notes/{note_id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/deals/-/notes/{note_id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/deals/{id}/notes",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#PATCH /v2/deals/-/notes/{note_id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#POST /v2/deals/-/notes",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#POST /v2/deals/{id}/notes"
+    ]
+   },
    "keap": {
     "segments": [
      "notes"
@@ -12657,6 +15813,26 @@
      "openapi/_original/knownwell-ci-openapi-original.json#GET /v1/clients/{client_id}/notes"
     ]
    },
+   "lawmatics": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lawmatics-openapi.yml#DELETE /v1/notes/{note_id}",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/notes",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/notes/{note_id}",
+     "openapi/_original/lawmatics-openapi.yml#POST /v1/notes",
+     "openapi/_original/lawmatics-openapi.yml#PUT /v1/notes/{note_id}"
+    ]
+   },
    "lemlist": {
     "segments": [
      "notes"
@@ -12716,6 +15892,95 @@
      "openapi/_original/lev-openapi-original.json#GET /api/external/v2/placements/{placement_id}/notes",
      "openapi/_original/lev-openapi-original.json#PATCH /api/external/v2/checklist-tasks/{task_id}/notes/{note_id}",
      "openapi/_original/lev-openapi-original.json#PATCH /api/external/v2/companies/{company_id}/notes/{note_id}"
+    ]
+   },
+   "lever-co": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lever-data-api-openapi.yml#GET /opportunities/{id}/notes",
+     "openapi/_original/lever-data-api-openapi.yml#POST /opportunities/{id}/notes"
+    ]
+   },
+   "levitate": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "body": [
+      "null",
+      "string"
+     ],
+     "bodyWrapped": [
+      "null",
+      "string"
+     ],
+     "references": [
+      "null",
+      "array"
+     ],
+     "visibility": [
+      "null",
+      "string"
+     ],
+     "createdBy": null,
+     "creationDate": [
+      "null",
+      "string"
+     ],
+     "lastModifiedDate": [
+      "null",
+      "string"
+     ],
+     "id": [
+      "null",
+      "string"
+     ],
+     "success": "boolean",
+     "systemMessage": [
+      "null",
+      "string"
+     ],
+     "systemCode": [
+      "integer",
+      "string"
+     ],
+     "error": "object",
+     "requestId": [
+      "null",
+      "string"
+     ],
+     "values": [
+      "null",
+      "array"
+     ],
+     "pageToken": [
+      "null",
+      "string"
+     ],
+     "totalCount": [
+      "integer",
+      "string"
+     ],
+     "debug": null
+    },
+    "evidence": [
+     "openapi/_original/levitate-public-v1-openapi.json#DELETE /public/v1/Notes/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Notes",
+     "openapi/_original/levitate-public-v1-openapi.json#GET /public/v1/Notes/{id}",
+     "openapi/_original/levitate-public-v1-openapi.json#POST /public/v1/Notes"
     ]
    },
    "lightfield": {
@@ -13146,6 +16411,20 @@
      "openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/note"
     ]
    },
+   "wealthbox": {
+    "segments": [
+     "notes"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/wealthbox-openapi.yml#GET /notes",
+     "openapi/_original/wealthbox-openapi.yml#POST /notes"
+    ]
+   },
    "zoho": {
     "segments": [
      "notes"
@@ -13244,6 +16523,47 @@
    }
   },
   "pipeline": {
+   "act": {
+    "segments": [
+     "pipeline",
+     "pipelines"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "contactName": "string",
+     "companyName": "string",
+     "stageId": "string",
+     "stageName": "string",
+     "estCloseDate": "string",
+     "totalValue": "number",
+     "weightedValue": "number",
+     "contactCount": "integer",
+     "probabilityPct": "integer",
+     "start": "string",
+     "end": "string",
+     "dateType": "integer",
+     "valueType": "integer",
+     "probabilityValue": "integer",
+     "probabilityOperation": "string",
+     "amountValue": "number",
+     "amountOperation": "string",
+     "omitPrivate": "boolean",
+     "typeIds": "array",
+     "userIds": "array",
+     "stageIds": "array",
+     "pickListItemIds": "array",
+     "statuses": "array"
+    },
+    "evidence": [
+     "openapi/_original/act-web-api-swagger.json#GET /api/opportunities/analytics/pipeline",
+     "openapi/_original/act-web-api-swagger.json#POST /api/opportunities/analytics/pipelines"
+    ]
+   },
    "activecampaign": {
     "segments": [
      "pipelines"
@@ -13260,6 +16580,39 @@
     "evidence": [
      "openapi/_original/activecampaign-partners-api-openapi.json#GET /api/crm-reporting/v1/pipelines",
      "openapi/_original/activecampaign-partners-api-openapi.json#GET /api/crm-sync/v1/pipelines"
+    ]
+   },
+   "agencyzoom": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/agencyzoom-openapi.yml#GET /v1/api/pipelines"
+    ]
+   },
+   "agile-crm": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/agile-crm-openapi.yml#DELETE /api/milestone/pipelines/{id}",
+     "openapi/_original/agile-crm-openapi.yml#GET /api/milestone/pipelines",
+     "openapi/_original/agile-crm-openapi.yml#POST /api/milestone/pipelines",
+     "openapi/_original/agile-crm-openapi.yml#PUT /api/milestone/pipelines"
     ]
    },
    "clickfunnels": {
@@ -13305,6 +16658,30 @@
      "openapi/_original/clickfunnels-openapi.json#GET /workspaces/{workspace_id}/sales/pipelines",
      "openapi/_original/clickfunnels-openapi.json#POST /workspaces/{workspace_id}/sales/pipelines",
      "openapi/_original/clickfunnels-openapi.json#PUT /sales/pipelines/{id}"
+    ]
+   },
+   "close": {
+    "segments": [
+     "pipeline"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/close-api-openapi.json#DELETE /pipeline/{id}/",
+     "openapi/_original/close-api-openapi.json#GET /pipeline/",
+     "openapi/_original/close-api-openapi.json#GET /pipeline/{id}/",
+     "openapi/_original/close-api-openapi.json#POST /pipeline/",
+     "openapi/_original/close-api-openapi.json#PUT /pipeline/{id}/",
+     "openapi/_original/close-openapi.yml#DELETE /pipeline/{id}/",
+     "openapi/_original/close-openapi.yml#GET /pipeline/",
+     "openapi/_original/close-openapi.yml#POST /pipeline/",
+     "openapi/_original/close-openapi.yml#PUT /pipeline/{id}/"
     ]
    },
    "commsharbor": {
@@ -13440,6 +16817,37 @@
      "openapi/_original/hubspot-crm-limits-tracking-openapi.json#GET /crm/limits/2026-09/pipelines"
     ]
    },
+   "infusionsoft": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "next_page_token": "string",
+     "pipelines": "array",
+     "id": "string",
+     "name": "string",
+     "stages": "array"
+    },
+    "evidence": [
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#DELETE /v2/pipelines/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/pipelines",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#GET /v2/pipelines/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#PATCH /v2/pipelines/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi-original.yml#POST /v2/pipelines",
+     "openapi/_original/infusionsoft-pipelines-openapi.yml#DELETE /v2/pipelines/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi.yml#GET /v2/pipelines",
+     "openapi/_original/infusionsoft-pipelines-openapi.yml#GET /v2/pipelines/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi.yml#PATCH /v2/pipelines/{id}",
+     "openapi/_original/infusionsoft-pipelines-openapi.yml#POST /v2/pipelines"
+    ]
+   },
    "keap": {
     "segments": [
      "pipelines"
@@ -13466,10 +16874,24 @@
      "openapi/_original/keap-pipelines-openapi-original.yml#POST /v2/pipelines"
     ]
    },
+   "lawmatics": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/pipelines",
+     "openapi/_original/lawmatics-openapi.yml#GET /v1/pipelines/{pipeline_id}"
+    ]
+   },
    "lev": {
     "segments": [
-     "pipeline",
-     "pipelines"
+     "pipelines",
+     "pipeline"
     ],
     "operations": [
      "GET collection",
@@ -13491,8 +16913,8 @@
    },
    "live-direct-marketing-online": {
     "segments": [
-     "pipeline",
-     "pipelines"
+     "pipelines",
+     "pipeline"
     ],
     "operations": [
      "DELETE item",
@@ -13679,6 +17101,38 @@
      "openapi/_original/replyrai-platform-api-swagger.json#GET /pipelines/{pipeline_id}"
     ]
    },
+   "salesflare": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "number",
+     "team": "number",
+     "name": "string",
+     "currency": "object",
+     "follows_default_team_currency": "boolean",
+     "order": "number",
+     "stages": "array",
+     "groups": "array",
+     "recurring": "boolean",
+     "default_pipeline": "boolean",
+     "expected_customer_lifetime_months": "number",
+     "standard_price_per_unit_annually": "number",
+     "standard_price_per_unit_monthly": "number",
+     "standard_price_per_unit_weekly": "number",
+     "standard_price_per_unit_daily": "number",
+     "archived": "boolean",
+     "creation_date": "string",
+     "modification_date": "string"
+    },
+    "evidence": [
+     "openapi/_original/salesflare-api-openapi.yml#GET /pipelines",
+     "openapi/_original/salesflare-openapi.json#GET /pipelines"
+    ]
+   },
    "sendpulse": {
     "segments": [
      "pipelines"
@@ -13719,6 +17173,26 @@
     },
     "evidence": [
      "openapi/_original/snov-io-openapi.yml#GET /v1/pipelines"
+    ]
+   },
+   "streak": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/streak-openapi.yml#DELETE /pipelines/{pipelineKey}",
+     "openapi/_original/streak-openapi.yml#GET /pipelines",
+     "openapi/_original/streak-openapi.yml#GET /pipelines/{pipelineKey}",
+     "openapi/_original/streak-openapi.yml#POST /pipelines",
+     "openapi/_original/streak-openapi.yml#PUT /pipelines/{pipelineKey}"
     ]
    },
    "zoho": {
@@ -13796,9 +17270,16 @@
  "naming": {
   "path_segment": {
    "lower": [
+    "accelo",
+    "act",
     "activecampaign",
     "ada",
+    "affinity",
+    "agencyzoom",
     "agendapro",
+    "agile-crm",
+    "agorapulse",
+    "aircall",
     "aircover",
     "alterestate",
     "alto-vebra",
@@ -13808,21 +17289,28 @@
     "aptly",
     "autoleadstar",
     "badger-maps",
+    "bitrix24",
+    "bizapi",
     "blackbaud",
     "bloomerang",
     "bonterra-fka-everyaction",
     "boostup",
     "brevo",
+    "capsule",
+    "capsule-crm",
     "casafari",
+    "cdk-global",
     "chili-piper",
     "chorus-ai",
     "clari",
     "clarify",
     "clearslide",
     "clickfunnels",
+    "close",
     "commsharbor",
     "conga",
     "coperniq",
+    "copper",
     "copper-financial",
     "crm-bonus",
     "customeros",
@@ -13834,8 +17322,11 @@
     "end-game",
     "entergram",
     "erply",
+    "erpnext",
+    "exact-online",
     "fieldpulse",
     "fixture",
+    "folk",
     "freshsales",
     "frontline",
     "getresponse",
@@ -13846,19 +17337,27 @@
     "goodays",
     "highlevel",
     "hilos",
+    "holded",
     "honeybook",
     "hubflo",
     "hubspot",
+    "infusionsoft",
     "insightera",
     "jobber",
     "joblogic",
     "keap",
+    "keller-williams",
     "knownwell",
     "kustomer",
+    "lawmatics",
+    "leandata",
     "lemlist",
     "lev",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
+    "lone-wolf",
     "luxury-presence",
     "magic-moment",
     "marketo",
@@ -13874,6 +17373,8 @@
     "neonone",
     "nimble",
     "nutshell",
+    "odoo",
+    "ontraport",
     "oracle-siebel",
     "outreach",
     "paperless-parts",
@@ -13881,6 +17382,7 @@
     "persistiq",
     "pipedrive",
     "pipeliner",
+    "podio",
     "poggio-labs",
     "protonai",
     "quo",
@@ -13891,10 +17393,14 @@
     "replyrai",
     "revert",
     "revinate",
+    "salesflare",
     "salesforce",
     "salesforce-automation",
+    "salesforce-automation-system",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
     "salesforce-flow",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
     "salesforce-service-cloud",
     "salesloft",
@@ -13903,21 +17409,29 @@
     "seam-ai",
     "sendpulse",
     "service-cloud",
+    "servicetitan",
     "siro",
     "snov-io",
     "splio",
     "spotio",
+    "streak",
     "street-co",
     "supaglue",
     "surfe",
+    "synthflow",
     "talkpush",
     "teachworks",
+    "thanx",
     "the-mobile-first-company",
+    "thoughtly",
+    "truto",
     "twenty",
+    "usergems",
     "vaultre",
     "vendasta",
     "vessel",
     "wealth-x",
+    "wealthbox",
     "weclapp",
     "workiz",
     "xiaoman",
@@ -13928,14 +17442,20 @@
     "zoho-crm"
    ],
    "kebab-case": [
+    "act",
     "activecampaign",
     "ada",
+    "affinity",
+    "agencyzoom",
     "agendapro",
+    "agile-crm",
+    "agorapulse",
     "aircover",
     "alto-vebra",
     "aptly",
     "brevo",
     "casafari",
+    "cdk-global",
     "chili-piper",
     "chorus-ai",
     "clari",
@@ -13950,6 +17470,7 @@
     "erply",
     "fieldpulse",
     "fixture",
+    "folk",
     "frontline",
     "getresponse",
     "givebutter",
@@ -13960,12 +17481,16 @@
     "hilos",
     "hubflo",
     "hubspot",
+    "infusionsoft",
     "insightera",
     "keap",
+    "keller-williams",
     "knownwell",
+    "leandata",
     "lemlist",
     "lev",
     "live-direct-marketing-online",
+    "lone-wolf",
     "luxury-presence",
     "magic-moment",
     "memberclicks",
@@ -13982,9 +17507,11 @@
     "replyrai",
     "salesforce",
     "salesforce-automation",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
     "salesforce-sales-cloud",
     "sendpulse",
+    "servicetitan",
     "siro",
     "snov-io",
     "splio",
@@ -13992,7 +17519,9 @@
     "street-co",
     "supaglue",
     "surfe",
+    "synthflow",
     "the-mobile-first-company",
+    "truto",
     "twenty",
     "vaultre",
     "vendasta",
@@ -14002,6 +17531,8 @@
    ],
    "camelCase": [
     "activecampaign",
+    "agencyzoom",
+    "agile-crm",
     "alto-vebra",
     "aptly",
     "blackbaud",
@@ -14014,6 +17545,7 @@
     "elead-crm",
     "eloqua",
     "highlevel",
+    "infusionsoft",
     "keap",
     "lemlist",
     "lightfield",
@@ -14024,6 +17556,7 @@
     "mobly",
     "neonone",
     "nutshell",
+    "ontraport",
     "outreach",
     "pipedrive",
     "reonic",
@@ -14031,6 +17564,7 @@
     "salesforce",
     "salesforce-automation",
     "salesforce-experience-cloud",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
     "sendpulse",
     "siro",
@@ -14038,6 +17572,7 @@
     "vaultre",
     "vendasta",
     "vessel",
+    "wati",
     "weclapp",
     "workiz",
     "xiaoman",
@@ -14052,6 +17587,7 @@
     "boostup",
     "chorus-ai",
     "clickfunnels",
+    "close",
     "conga",
     "copper-financial",
     "crm-bonus",
@@ -14062,7 +17598,10 @@
     "honeybook",
     "hubflo",
     "hubspot",
+    "infusionsoft",
     "keap",
+    "lawmatics",
+    "lever-co",
     "magic-moment",
     "nationbuilder",
     "nimble",
@@ -14077,8 +17616,10 @@
     "snov-io",
     "splio",
     "supaglue",
+    "synthflow",
     "talkpush",
     "teachworks",
+    "thanx",
     "the-mobile-first-company",
     "vendasta",
     "xiaoman",
@@ -14088,15 +17629,22 @@
    ],
    "other": [
     "activecampaign",
+    "agorapulse",
     "aircover",
     "ashby-hq",
+    "bitrix24",
     "blackbaud",
     "chorus-ai",
     "commsharbor",
     "conga",
     "eloqua",
+    "erpnext",
+    "exact-online",
     "hubspot",
+    "infusionsoft",
     "keap",
+    "leadsquared",
+    "leandata",
     "lemlist",
     "live-direct-marketing-online",
     "marketo",
@@ -14104,6 +17652,7 @@
     "microsoft-dynamics-365",
     "microsoft-dynamics-365-sales",
     "nimble",
+    "odoo",
     "oracle-siebel",
     "peoplesoft",
     "salesforce",
@@ -14120,19 +17669,28 @@
     "zoho-crm"
    ],
    "PascalCase": [
+    "act",
     "alto-vebra",
     "blackbaud",
     "conga",
     "eci-solutions",
     "eloqua",
+    "exact-online",
+    "insightly",
     "joblogic",
+    "leadsquared",
+    "leandata",
+    "levitate",
+    "lone-wolf",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
     "oracle-siebel",
     "pipeliner",
     "salesforce",
     "salesforce-automation",
+    "salesforce-automation-system",
     "salesforce-flow",
+    "salesforce-knowledge-management",
     "salesforce-service-cloud",
     "sap-business-one",
     "sap-bydesign",
@@ -14144,9 +17702,14 @@
   },
   "path_param": {
    "lower": [
+    "act",
     "activecampaign",
     "ada",
+    "agencyzoom",
     "agendapro",
+    "agile-crm",
+    "agorapulse",
+    "aircall",
     "alto-vebra",
     "apollo-api-documentation",
     "apollo-io",
@@ -14156,14 +17719,18 @@
     "bloomerang",
     "bonterra-fka-everyaction",
     "brevo",
+    "capsule-crm",
     "casafari",
+    "cdk-global",
     "chorus-ai",
     "clari",
     "clarify",
     "clickfunnels",
+    "close",
     "commsharbor",
     "conga",
     "coperniq",
+    "copper",
     "copper-financial",
     "customeros",
     "demodesk",
@@ -14172,6 +17739,7 @@
     "eloqua",
     "end-game",
     "erply",
+    "exact-online",
     "fieldpulse",
     "freshsales",
     "frontline",
@@ -14185,10 +17753,16 @@
     "honeybook",
     "hubflo",
     "hubspot",
+    "infusionsoft",
+    "insightly",
     "keap",
+    "lawmatics",
     "lemlist",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
+    "lone-wolf",
     "luxury-presence",
     "marketo",
     "monaco",
@@ -14207,23 +17781,32 @@
     "rasayel",
     "relmcrm-com",
     "revert",
+    "salesflare",
     "salesforce",
+    "salesforce-automation-system",
+    "salesforce-knowledge-management",
     "salesloft",
     "samu",
     "sap-bydesign",
     "sendpulse",
+    "servicetitan",
     "siro",
     "snov-io",
     "splio",
     "spotio",
     "street-co",
     "surfe",
+    "synthflow",
     "talkpush",
     "teachworks",
+    "thanx",
     "the-mobile-first-company",
+    "thoughtly",
+    "truto",
     "twenty",
     "vaultre",
     "vendasta",
+    "wealthbox",
     "weclapp",
     "z-league",
     "zendesk",
@@ -14232,7 +17815,12 @@
     "zoho-crm"
    ],
    "camelCase": [
+    "act",
     "activecampaign",
+    "affinity",
+    "agencyzoom",
+    "agile-crm",
+    "agorapulse",
     "alto-vebra",
     "apache-ofbiz",
     "aptly",
@@ -14241,6 +17829,9 @@
     "bloomerang",
     "bonterra-fka-everyaction",
     "brevo",
+    "capsule",
+    "capsule-crm",
+    "cdk-global",
     "chili-piper",
     "clari",
     "clarify",
@@ -14254,6 +17845,7 @@
     "eloqua",
     "erply",
     "fieldpulse",
+    "folk",
     "frontline",
     "getresponse",
     "givebutter",
@@ -14261,11 +17853,17 @@
     "gojiberry-ai",
     "gong",
     "highlevel",
+    "holded",
     "hubspot",
+    "infusionsoft",
     "keap",
+    "keller-williams",
     "lemlist",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
+    "lone-wolf",
     "luxury-presence",
     "magic-moment",
     "marketo",
@@ -14281,26 +17879,34 @@
     "quo",
     "reonic",
     "revinate",
+    "salesflare",
     "salesforce",
     "salesforce-automation",
+    "salesforce-automation-system",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
     "salesforce-flow",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
     "salesforce-service-cloud",
     "samu",
     "sendpulse",
     "siro",
     "spotio",
+    "streak",
     "street-co",
     "vaultre",
     "vendasta",
+    "wati",
     "wealth-x",
     "zoho",
     "zoho-crm"
    ],
    "snake_case": [
+    "accelo",
     "activecampaign",
     "ada",
+    "agile-crm",
     "alterestate",
     "apollo-api-documentation",
     "apollo-io",
@@ -14311,6 +17917,7 @@
     "casafari",
     "chorus-ai",
     "clickfunnels",
+    "close",
     "commsharbor",
     "copper-financial",
     "customeros",
@@ -14323,8 +17930,11 @@
     "highlevel",
     "honeybook",
     "hubflo",
+    "infusionsoft",
     "keap",
+    "keller-williams",
     "knownwell",
+    "lawmatics",
     "lev",
     "magic-moment",
     "monaco",
@@ -14333,9 +17943,11 @@
     "persistiq",
     "pipedrive",
     "pipeliner",
+    "podio",
     "protonai",
     "rasayel",
     "replyrai",
+    "salesflare",
     "salesloft",
     "sendpulse",
     "siro",
@@ -14343,8 +17955,10 @@
     "splio",
     "street-co",
     "supaglue",
+    "synthflow",
     "talkpush",
     "the-mobile-first-company",
+    "thoughtly",
     "vendasta",
     "xiaoman",
     "zendesk",
@@ -14353,6 +17967,7 @@
    "PascalCase": [
     "conga",
     "eci-solutions",
+    "erpnext",
     "oracle-siebel",
     "salesforce",
     "sap-bydesign",
@@ -14373,9 +17988,14 @@
   },
   "query_param": {
    "lower": [
+    "act",
     "activecampaign",
     "ada",
+    "affinity",
+    "agencyzoom",
     "agendapro",
+    "agile-crm",
+    "agorapulse",
     "aircover",
     "alterestate",
     "alto-vebra",
@@ -14388,12 +18008,16 @@
     "bloomerang",
     "bonterra-fka-everyaction",
     "brevo",
+    "capsule",
+    "capsule-crm",
     "casafari",
+    "cdk-global",
     "chili-piper",
     "chorus-ai",
     "clari",
     "clarify",
     "clickfunnels",
+    "close",
     "commsharbor",
     "conga",
     "coperniq",
@@ -14406,8 +18030,10 @@
     "end-game",
     "entergram",
     "erply",
+    "erpnext",
     "fieldpulse",
     "fixture",
+    "folk",
     "freshsales",
     "frontline",
     "getresponse",
@@ -14421,14 +18047,22 @@
     "honeybook",
     "hubflo",
     "hubspot",
+    "infusionsoft",
     "insightera",
+    "insightly",
     "joblogic",
     "keap",
+    "keller-williams",
     "knownwell",
+    "lawmatics",
+    "leadsquared",
     "lemlist",
     "lev",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
+    "lone-wolf",
     "luxury-presence",
     "magic-moment",
     "marketo",
@@ -14437,12 +18071,14 @@
     "nationbuilder",
     "nimble",
     "nutshell",
+    "ontraport",
     "oracle-siebel",
     "paperless-parts",
     "peoplesoft",
     "persistiq",
     "pipedrive",
     "pipeliner",
+    "podio",
     "poggio-labs",
     "quo",
     "realtor",
@@ -14451,25 +18087,35 @@
     "replyrai",
     "revert",
     "revinate",
+    "salesflare",
     "salesforce",
     "salesforce-automation",
+    "salesforce-automation-system",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
     "salesforce-flow",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
     "salesforce-service-cloud",
     "salesloft",
     "samu",
     "sendpulse",
+    "servicetitan",
     "siro",
     "snov-io",
     "splio",
     "spotio",
     "street-co",
     "supaglue",
+    "synthflow",
     "talkpush",
     "teachworks",
+    "thanx",
     "the-mobile-first-company",
+    "thoughtly",
+    "truto",
     "twenty",
+    "usergems",
     "vaultre",
     "vendasta",
     "vessel",
@@ -14487,6 +18133,7 @@
     "activecampaign",
     "ada",
     "agendapro",
+    "agile-crm",
     "aircover",
     "alterestate",
     "alto-vebra",
@@ -14500,6 +18147,7 @@
     "casafari",
     "chorus-ai",
     "clickfunnels",
+    "close",
     "commsharbor",
     "conga",
     "coperniq",
@@ -14507,6 +18155,7 @@
     "eci-solutions",
     "entergram",
     "erply",
+    "erpnext",
     "fieldpulse",
     "fixture",
     "frontline",
@@ -14517,8 +18166,12 @@
     "hilos",
     "honeybook",
     "hubflo",
+    "infusionsoft",
+    "insightly",
     "keap",
+    "keller-williams",
     "knownwell",
+    "lawmatics",
     "lev",
     "live-direct-marketing-online",
     "magic-moment",
@@ -14527,12 +18180,14 @@
     "nationbuilder",
     "nimble",
     "nutshell",
+    "ontraport",
     "paperless-parts",
     "persistiq",
     "pipedrive",
     "realtor",
     "relmcrm-com",
     "replyrai",
+    "salesflare",
     "salesforce",
     "salesforce-service-cloud",
     "salesloft",
@@ -14540,9 +18195,13 @@
     "snov-io",
     "splio",
     "supaglue",
+    "synthflow",
     "talkpush",
     "teachworks",
+    "thanx",
     "the-mobile-first-company",
+    "thoughtly",
+    "truto",
     "twenty",
     "vaultre",
     "vendasta",
@@ -14555,7 +18214,10 @@
     "zoho-crm"
    ],
    "camelCase": [
+    "act",
     "activecampaign",
+    "affinity",
+    "agorapulse",
     "alto-vebra",
     "apache-ofbiz",
     "aptly",
@@ -14563,7 +18225,10 @@
     "bloomerang",
     "bonterra-fka-everyaction",
     "brevo",
+    "capsule",
+    "capsule-crm",
     "casafari",
+    "cdk-global",
     "chili-piper",
     "clari",
     "clarify",
@@ -14585,10 +18250,13 @@
     "gong",
     "highlevel",
     "hubspot",
+    "infusionsoft",
     "joblogic",
     "keap",
     "lemlist",
+    "levitate",
     "live-direct-marketing-online",
+    "lone-wolf",
     "luxury-presence",
     "magic-moment",
     "marketo",
@@ -14596,6 +18264,7 @@
     "mobly",
     "neonone",
     "nutshell",
+    "ontraport",
     "outreach",
     "peoplesoft",
     "poggio-labs",
@@ -14603,17 +18272,24 @@
     "reonic",
     "revert",
     "revinate",
+    "salesflare",
     "salesforce",
     "salesforce-automation",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
     "samu",
     "sendpulse",
+    "servicetitan",
     "siro",
     "spotio",
+    "thoughtly",
+    "usergems",
     "vaultre",
     "vendasta",
     "vessel",
+    "wati",
     "wealth-x",
     "weclapp",
     "z-league",
@@ -14621,6 +18297,7 @@
     "zoho-crm"
    ],
    "other": [
+    "act",
     "activecampaign",
     "apollo-api-documentation",
     "apollo-io",
@@ -14629,13 +18306,18 @@
     "chorus-ai",
     "clearslide",
     "clickfunnels",
+    "close",
     "eci-solutions",
     "eloqua",
+    "exact-online",
     "fieldpulse",
+    "folk",
     "getresponse",
     "hilos",
     "hubspot",
+    "keller-williams",
     "lev",
+    "lone-wolf",
     "magic-moment",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
@@ -14645,6 +18327,7 @@
     "nutshell",
     "pipedrive",
     "reonic",
+    "salesflare",
     "salesforce",
     "salesforce-service-cloud",
     "salesloft",
@@ -14653,6 +18336,7 @@
     "siro",
     "street-co",
     "talkpush",
+    "thanx",
     "vendasta",
     "xiaoman",
     "zendesk",
@@ -14667,6 +18351,7 @@
     "eloqua",
     "joblogic",
     "lemlist",
+    "lone-wolf",
     "marketo",
     "oracle-siebel",
     "sap-bydesign",
@@ -14677,6 +18362,7 @@
     "alto-vebra",
     "conga",
     "gong",
+    "lone-wolf",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
     "pipeliner",
@@ -14687,7 +18373,9 @@
    "limit": [
     "activecampaign",
     "ada",
+    "affinity",
     "agendapro",
+    "agorapulse",
     "apollo-api-documentation",
     "apollo-io",
     "aptly",
@@ -14695,6 +18383,7 @@
     "brevo",
     "casafari",
     "clari",
+    "close",
     "commsharbor",
     "conga",
     "demodesk",
@@ -14705,16 +18394,21 @@
     "erply",
     "fieldpulse",
     "fixture",
+    "folk",
     "frontline",
     "gofundme",
     "gojiberry-ai",
     "gong",
     "highlevel",
     "hubspot",
+    "infusionsoft",
     "keap",
+    "keller-williams",
     "knownwell",
     "lemlist",
     "lev",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
     "luxury-presence",
@@ -14725,13 +18419,19 @@
     "realtor",
     "relmcrm-com",
     "replyrai",
+    "salesflare",
     "salesforce",
+    "salesforce-einstein",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
     "samu",
     "sendpulse",
     "siro",
     "splio",
     "spotio",
+    "synthflow",
+    "thoughtly",
+    "truto",
     "twenty",
     "vessel",
     "z-league",
@@ -14746,6 +18446,9 @@
     "autoleadstar",
     "blackbaud",
     "brevo",
+    "capsule",
+    "capsule-crm",
+    "cdk-global",
     "chili-piper",
     "clarify",
     "conga",
@@ -14765,6 +18468,7 @@
     "lemlist",
     "lev",
     "live-direct-marketing-online",
+    "lone-wolf",
     "monaco",
     "nimble",
     "paperless-parts",
@@ -14773,14 +18477,19 @@
     "revinate",
     "salesforce",
     "salesforce-automation",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
     "salesloft",
     "samu",
+    "servicetitan",
     "siro",
     "snov-io",
     "talkpush",
     "teachworks",
+    "thanx",
     "the-mobile-first-company",
+    "thoughtly",
+    "truto",
     "vaultre",
     "weclapp",
     "zendesk",
@@ -14791,8 +18500,10 @@
    "page_size": [
     "activecampaign",
     "ada",
+    "agile-crm",
     "aptly",
     "blackbaud",
+    "cdk-global",
     "chili-piper",
     "chorus-ai",
     "clearslide",
@@ -14805,6 +18516,7 @@
     "goodays",
     "highlevel",
     "hilos",
+    "infusionsoft",
     "keap",
     "live-direct-marketing-online",
     "marketo",
@@ -14817,19 +18529,60 @@
     "revert",
     "salesforce",
     "salesforce-automation",
+    "salesforce-einstein",
     "salesforce-experience-cloud",
+    "salesforce-knowledge-management",
     "salesforce-sales-cloud",
+    "servicetitan",
     "siro",
     "spotio",
     "street-co",
     "supaglue",
+    "synthflow",
     "vendasta",
+    "wati",
     "weclapp",
     "xiaoman",
     "zendesk"
    ],
+   "offset": [
+    "agorapulse",
+    "aptly",
+    "blackbaud",
+    "brevo",
+    "casafari",
+    "drippay",
+    "eloqua",
+    "entergram",
+    "highlevel",
+    "hubspot",
+    "infusionsoft",
+    "keap",
+    "keller-williams",
+    "knownwell",
+    "lemlist",
+    "lev",
+    "lever-co",
+    "lightfield",
+    "live-direct-marketing-online",
+    "luxury-presence",
+    "marketo",
+    "mobly",
+    "peoplesoft",
+    "realtor",
+    "replyrai",
+    "salesflare",
+    "salesforce-einstein",
+    "samu",
+    "sendpulse",
+    "synthflow",
+    "workiz",
+    "z-league"
+   ],
    "cursor": [
     "ada",
+    "affinity",
+    "agile-crm",
     "casafari",
     "commsharbor",
     "conga",
@@ -14838,6 +18591,7 @@
     "eci-solutions",
     "end-game",
     "fixture",
+    "folk",
     "frontline",
     "gong",
     "goodays",
@@ -14850,36 +18604,11 @@
     "samu",
     "siro",
     "supaglue",
+    "synthflow",
+    "truto",
     "vaultre",
     "vendasta",
     "vessel",
-    "z-league"
-   ],
-   "offset": [
-    "aptly",
-    "blackbaud",
-    "brevo",
-    "casafari",
-    "drippay",
-    "eloqua",
-    "entergram",
-    "highlevel",
-    "hubspot",
-    "keap",
-    "knownwell",
-    "lemlist",
-    "lev",
-    "lightfield",
-    "live-direct-marketing-online",
-    "luxury-presence",
-    "marketo",
-    "mobly",
-    "peoplesoft",
-    "realtor",
-    "replyrai",
-    "samu",
-    "sendpulse",
-    "workiz",
     "z-league"
    ],
    "per_page": [
@@ -14888,6 +18617,8 @@
     "apollo-api-documentation",
     "apollo-io",
     "autoleadstar",
+    "capsule",
+    "capsule-crm",
     "clickfunnels",
     "getresponse",
     "gofundme",
@@ -14901,6 +18632,7 @@
     "spotio",
     "talkpush",
     "teachworks",
+    "thanx",
     "zendesk",
     "zendesk-sell",
     "zoho",
@@ -14914,12 +18646,17 @@
     "bloomerang",
     "bonterra-fka-everyaction",
     "clari",
+    "close",
     "conga",
     "eci-solutions",
     "eloqua",
     "erply",
+    "exact-online",
     "highlevel",
+    "insightly",
     "lemlist",
+    "lever-co",
+    "lone-wolf",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
     "sap-business-one",
@@ -14927,10 +18664,13 @@
     "sendpulse"
    ],
    "start": [
+    "act",
     "blackbaud",
     "chili-piper",
+    "close",
     "highlevel",
     "live-direct-marketing-online",
+    "ontraport",
     "pipedrive",
     "salesforce",
     "sendpulse",
@@ -14940,6 +18680,9 @@
     "bonterra-fka-everyaction",
     "eci-solutions",
     "eloqua",
+    "exact-online",
+    "insightly",
+    "lone-wolf",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
     "microsoft-dynamics-365-sales",
@@ -14953,6 +18696,7 @@
     "entergram",
     "hubspot",
     "pipeliner",
+    "salesflare",
     "splio",
     "vaultre"
    ],
@@ -14961,15 +18705,28 @@
     "eci-solutions",
     "eloqua",
     "microsoft-dynamics-365",
+    "salesforce-einstein",
     "sendpulse",
     "vendasta",
     "xiaoman",
     "zoho"
    ],
+   "page_token": [
+    "infusionsoft",
+    "keap",
+    "levitate",
+    "quo",
+    "salesforce",
+    "salesforce-experience-cloud",
+    "salesforce-sales-cloud",
+    "zoho",
+    "zoho-crm"
+   ],
    "size": [
     "blackbaud",
     "getresponse",
     "hubspot",
+    "lone-wolf",
     "revinate",
     "sendpulse",
     "the-mobile-first-company",
@@ -14981,17 +18738,9 @@
     "entergram",
     "hubspot",
     "pipeliner",
+    "salesflare",
     "samu",
     "splio"
-   ],
-   "page_token": [
-    "keap",
-    "quo",
-    "salesforce",
-    "salesforce-experience-cloud",
-    "salesforce-sales-cloud",
-    "zoho",
-    "zoho-crm"
    ],
    "max_results": [
     "alto-vebra",
@@ -15012,7 +18761,11 @@
   },
   "property": {
    "lower": [
+    "act",
     "activecampaign",
+    "affinity",
+    "agencyzoom",
+    "agorapulse",
     "alterestate",
     "alto-vebra",
     "apollo-api-documentation",
@@ -15023,11 +18776,15 @@
     "bonterra-fka-everyaction",
     "boostup",
     "brevo",
+    "capsule",
+    "capsule-crm",
     "clari",
     "clarify",
     "clickfunnels",
+    "close",
     "commsharbor",
     "coperniq",
+    "copper",
     "copper-financial",
     "customeros",
     "eci-solutions",
@@ -15036,6 +18793,7 @@
     "entergram",
     "erply",
     "fixture",
+    "folk",
     "frontline",
     "getresponse",
     "givebutter",
@@ -15047,12 +18805,17 @@
     "honeybook",
     "hubflo",
     "hubspot",
+    "infusionsoft",
     "joblogic",
     "keap",
+    "keller-williams",
     "lemlist",
     "lev",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
+    "lone-wolf",
     "marketo",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
@@ -15067,25 +18830,34 @@
     "persistiq",
     "pipedrive",
     "pipeliner",
+    "podio",
     "poggio-labs",
     "quo",
     "relmcrm-com",
     "reonic",
     "replyrai",
     "revert",
+    "salesflare",
     "salesforce-service-cloud",
     "sendpulse",
+    "servicetitan",
     "siro",
     "snov-io",
     "splio",
     "spotio",
     "street-co",
     "supaglue",
+    "synthflow",
+    "thanx",
     "the-mobile-first-company",
+    "thoughtly",
+    "truto",
     "twenty",
+    "usergems",
     "vaultre",
     "vendasta",
     "vessel",
+    "wealthbox",
     "z-league",
     "zendesk",
     "zendesk-sell",
@@ -15102,7 +18874,9 @@
     "boostup",
     "brevo",
     "clickfunnels",
+    "close",
     "commsharbor",
+    "copper",
     "copper-financial",
     "eci-solutions",
     "fixture",
@@ -15113,7 +18887,9 @@
     "hilos",
     "honeybook",
     "hubflo",
+    "infusionsoft",
     "keap",
+    "keller-williams",
     "lev",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
@@ -15123,15 +18899,20 @@
     "persistiq",
     "pipedrive",
     "pipeliner",
+    "podio",
     "relmcrm-com",
     "replyrai",
+    "salesflare",
     "sendpulse",
     "snov-io",
     "splio",
     "street-co",
     "supaglue",
+    "synthflow",
+    "thanx",
     "the-mobile-first-company",
     "vendasta",
+    "wealthbox",
     "z-league",
     "zendesk",
     "zendesk-sell",
@@ -15139,6 +18920,10 @@
     "zoho-crm"
    ],
    "camelCase": [
+    "act",
+    "affinity",
+    "agencyzoom",
+    "agorapulse",
     "alto-vebra",
     "aptly",
     "bonterra-fka-everyaction",
@@ -15151,6 +18936,7 @@
     "eloqua",
     "entergram",
     "erply",
+    "folk",
     "frontline",
     "getresponse",
     "gojiberry-ai",
@@ -15159,8 +18945,11 @@
     "hubspot",
     "joblogic",
     "lemlist",
+    "lever-co",
+    "levitate",
     "lightfield",
     "live-direct-marketing-online",
+    "lone-wolf",
     "marketo",
     "microsoft-dynamics",
     "microsoft-dynamics-365",
@@ -15171,12 +18960,14 @@
     "quo",
     "reonic",
     "revert",
-    "salesforce",
     "salesforce-service-cloud",
     "sendpulse",
+    "servicetitan",
     "siro",
     "spotio",
+    "truto",
     "twenty",
+    "usergems",
     "vaultre",
     "vessel",
     "zoho"
@@ -15184,12 +18975,15 @@
    "other": [
     "aptly",
     "bonterra-fka-everyaction",
+    "close",
     "eci-solutions",
     "highlevel",
+    "insightly",
     "lemlist",
     "microsoft-dynamics-365",
     "microsoft-dynamics-365-sales",
     "oracle-siebel",
+    "salesflare",
     "zoho",
     "zoho-crm"
    ],
@@ -15197,9 +18991,16 @@
     "bloomerang",
     "conga",
     "eci-solutions",
+    "exact-online",
+    "infusionsoft",
+    "insightly",
     "oracle-siebel",
     "salesforce-service-cloud",
     "supaglue"
+   ],
+   "kebab-case": [
+    "lone-wolf",
+    "salesflare"
    ]
   }
  }

@@ -5,8 +5,8 @@ generated: '2026-11-10'
 concepts:
   contact:
     path_segment:
-    - contact
     - contacts
+    - contact
     properties:
       email: email
       id: id
@@ -17,23 +17,22 @@ concepts:
     evidence:
     - openapi/_original/brevo-contact-management-openapi.yml#DELETE /contacts/{identifier}
     - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts
-    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/lists/{listId}/contacts
     - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/{identifier}
     - openapi/_original/brevo-contact-management-openapi.yml#POST /contacts
+    - openapi/_original/brevo-contact-management-openapi.yml#PUT /contacts/{identifier}
   company:
     path_segment:
-    - account
     - companies
+    - account
     properties:
-      id: id
       name:
       - companyName
       - name
+      id: id
       address: address
       custom_fields: attributes
       owner_id: user_id
-      email: email
-    core_coverage: 0.4
+    core_coverage: 0.667
     evidence:
     - openapi/_original/brevo-accounts-and-settings-openapi.yml#GET /account
     - openapi/_original/brevo-sales-crm-openapi.yml#DELETE /companies/{id}
@@ -44,8 +43,8 @@ concepts:
     path_segment:
     - deals
     properties:
-      name: name
       id: id
+      name: name
       custom_fields: attributes
     core_coverage: 0.5
     evidence:

@@ -9,8 +9,8 @@ concepts:
     properties:
       due_at: dueDate
       status: status
-      owner_id: userId
       priority: priority
+      owner_id: userId
     core_coverage: 0.333
     evidence:
     - openapi/_original/gong-openapi.json#PATCH /v2/tasks/{taskId}

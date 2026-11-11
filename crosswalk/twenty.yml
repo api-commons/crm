@@ -14,8 +14,8 @@ concepts:
       - jobTitle
       - position
       created_at: createdAt
-      updated_at: updatedAt
       full_name: name
+      updated_at: updatedAt
       company_id: companyId
     core_coverage: 0.625
     evidence:
@@ -28,13 +28,13 @@ concepts:
     path_segment:
     - companies
     properties:
-      id: id
       name: name
+      id: id
       created_at: createdAt
       updated_at: updatedAt
       address: address
       domain: domainName
-    core_coverage: 0.8
+    core_coverage: 1.0
     evidence:
     - openapi/_original/twenty-core-api-openapi.yml#DELETE /companies/{id}
     - openapi/_original/twenty-core-api-openapi.yml#GET /companies
@@ -45,13 +45,13 @@ concepts:
     path_segment:
     - opportunities
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       updated_at: updatedAt
       stage_id: stage
-      company_id: companyId
       close_date: closeDate
+      company_id: companyId
       owner_id: ownerId
       amount: amount
     core_coverage: 1.0
@@ -67,11 +67,11 @@ concepts:
     properties:
       id: id
       subject: title
-      created_at: createdAt
       due_at: dueAt
+      created_at: createdAt
       status: status
-      updated_at: updatedAt
       assignee_id: assigneeId
+      updated_at: updatedAt
       created_by: createdBy
     core_coverage: 0.833
     evidence:
@@ -89,7 +89,7 @@ concepts:
       updated_at: updatedAt
       created_by: createdBy
       subject: title
-    core_coverage: 0.75
+    core_coverage: 0.667
     evidence:
     - openapi/_original/twenty-core-api-openapi.yml#DELETE /notes/{id}
     - openapi/_original/twenty-core-api-openapi.yml#GET /notes

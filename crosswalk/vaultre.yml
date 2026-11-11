@@ -5,8 +5,8 @@ generated: '2026-11-10'
 concepts:
   contact:
     path_segment:
-    - contact
     - contacts
+    - contact
     properties:
       email: emails
       last_name: lastName
@@ -21,7 +21,6 @@ concepts:
       - displayName
       address: address
       company_name: company
-      is_deleted: archived
     core_coverage: 0.75
     evidence:
     - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /contacts/{id}
@@ -35,7 +34,7 @@ concepts:
     properties:
       id: id
       source: source
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/vaultre-api-v1-3-openapi.yml#GET /fms/leads
     - openapi/_original/vaultre-api-v1-3-openapi.yml#POST /fms/leads
@@ -60,9 +59,9 @@ concepts:
     properties:
       id: id
       content: body
-      subject: name
       type: type
-    core_coverage: 0.5
+      subject: name
+    core_coverage: 0.667
     evidence:
     - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /contacts/{contactid}/notes/{id}
     - openapi/_original/vaultre-api-v1-1-openapi.yml#DELETE /properties/{propertyid}/notes/{id}

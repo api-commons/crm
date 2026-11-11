@@ -1,0 +1,35 @@
+provider: capsule
+apis_io: https://apis.io/providers/capsule/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - people
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/capsule-openapi.yml#GET /parties/{partyId}/people
+    - openapi/_original/capsule-parties-api-openapi.yml#GET /parties/{partyId}/people
+  deal:
+    path_segment:
+    - opportunities
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/capsule-openapi.yml#DELETE /opportunities/{opportunityId}
+    - openapi/_original/capsule-openapi.yml#GET /opportunities
+    - openapi/_original/capsule-openapi.yml#GET /opportunities/{opportunityId}
+    - openapi/_original/capsule-openapi.yml#GET /parties/{partyId}/opportunities
+    - openapi/_original/capsule-openapi.yml#POST /opportunities
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/capsule-openapi.yml#DELETE /tasks/{taskId}
+    - openapi/_original/capsule-openapi.yml#GET /tasks
+    - openapi/_original/capsule-openapi.yml#GET /tasks/{taskId}
+    - openapi/_original/capsule-openapi.yml#POST /tasks
+    - openapi/_original/capsule-openapi.yml#PUT /tasks/{taskId}

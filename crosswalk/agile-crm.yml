@@ -1,0 +1,58 @@
+provider: agile-crm
+apis_io: https://apis.io/providers/agile-crm/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#DELETE /api/contacts/{id}
+    - openapi/_original/agile-crm-openapi.yml#GET /api/contacts
+    - openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}
+    - openapi/_original/agile-crm-openapi.yml#POST /api/contacts
+  deal:
+    path_segment:
+    - opportunity
+    - deals
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#DELETE /api/opportunity/{id}
+    - openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}/deals
+    - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity
+    - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{id}
+    - openapi/_original/agile-crm-openapi.yml#POST /api/opportunity
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#DELETE /api/tasks/{id}
+    - openapi/_original/agile-crm-openapi.yml#GET /api/tasks
+    - openapi/_original/agile-crm-openapi.yml#GET /api/tasks/{id}
+    - openapi/_original/agile-crm-openapi.yml#POST /api/tasks
+  note:
+    path_segment:
+    - notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#DELETE /api/contacts/{contact_id}/notes/{note_id}
+    - openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{contact_id}/notes
+    - openapi/_original/agile-crm-openapi.yml#GET /api/opportunity/{deal_id}/notes
+    - openapi/_original/agile-crm-openapi.yml#GET /api/tickets/notes/{ticket_id}
+    - openapi/_original/agile-crm-openapi.yml#POST /api/notes
+  pipeline:
+    path_segment:
+    - pipelines
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#DELETE /api/milestone/pipelines/{id}
+    - openapi/_original/agile-crm-openapi.yml#GET /api/milestone/pipelines
+    - openapi/_original/agile-crm-openapi.yml#POST /api/milestone/pipelines
+    - openapi/_original/agile-crm-openapi.yml#PUT /api/milestone/pipelines

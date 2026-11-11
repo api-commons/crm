@@ -1,0 +1,30 @@
+provider: usergems
+apis_io: https://apis.io/providers/usergems/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contact
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      custom_fields: custom
+      full_name: fullName
+      company_name: company
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/usergems-api-openapi.yml#DELETE /contact
+    - openapi/_original/usergems-api-openapi.yml#POST /contact
+  company:
+    path_segment:
+    - account
+    properties:
+      name: name
+      custom_fields: custom
+      domain: domain
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/usergems-api-openapi.yml#DELETE /account
+    - openapi/_original/usergems-api-openapi.yml#POST /account

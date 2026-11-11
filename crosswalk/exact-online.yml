@@ -1,0 +1,30 @@
+provider: exact-online
+apis_io: https://apis.io/providers/exact-online/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: Email
+      last_name: LastName
+      first_name: FirstName
+      id: ID
+      phone: Phone
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/exact-online-openapi.yml#GET /{division}/crm/Contacts
+    - openapi/_original/exact-online-openapi.yml#POST /{division}/crm/Contacts
+  company:
+    path_segment:
+    - accounts
+    properties:
+      name: Name
+      id: ID
+      phone: Phone
+      type: Type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/exact-online-openapi.yml#GET /{division}/crm/Accounts
+    - openapi/_original/exact-online-openapi.yml#POST /{division}/crm/Accounts

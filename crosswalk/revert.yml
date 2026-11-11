@@ -24,11 +24,11 @@ concepts:
     - openapi/_original/revert-unified-api-openapi.yml#POST /crm/contacts
   company:
     path_segment:
-    - accounts
     - companies
+    - accounts
     properties:
-      id: id
       name: name
+      id: id
       created_at: createdAt
       updated_at: updatedAt
       website: website
@@ -46,18 +46,18 @@ concepts:
     path_segment:
     - deals
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       updated_at: updatedAt
-      stage_id: stage
-      company_id: companyId
       status: status
+      stage_id: stage
       close_date: closeDate
+      company_id: companyId
+      contact_id: contactId
       currency: currency
       owner_id: ownerId
       amount: amount
-      contact_id: contactId
       probability: probability
     core_coverage: 1.0
     evidence:
@@ -71,13 +71,13 @@ concepts:
     properties:
       id: id
       created_at: createdAt
+      status: status
       source: source
       email: email
-      status: status
-      updated_at: updatedAt
       first_name: firstName
       last_name: lastName
       phone: phone
+      updated_at: updatedAt
       company_name: company
     core_coverage: 1.0
     evidence:
@@ -93,14 +93,14 @@ concepts:
       subject:
       - subject
       - title
-      created_at: createdAt
       due_at: dueDate
-      status: status
+      created_at: createdAt
       description: description
-      updated_at: updatedAt
+      status: status
       assignee_id: assigneeId
-      owner_id: ownerId
+      updated_at: updatedAt
       priority: priority
+      owner_id: ownerId
       contact_id: contactId
     core_coverage: 1.0
     evidence:
@@ -119,7 +119,6 @@ concepts:
       updated_at: updatedAt
       contact_id: contactId
       company_id: companyId
-      deal_id: dealId
     core_coverage: 1.0
     evidence:
     - openapi/_original/revert-unified-api-openapi.yml#GET /crm/notes

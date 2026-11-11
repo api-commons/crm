@@ -10,8 +10,8 @@ concepts:
       id: id
       subject: name
       created_at: created_time
-      status: status
       description: details
+      status: status
       created_by: created_by
     core_coverage: 0.833
     evidence:
@@ -25,7 +25,7 @@ concepts:
     - notes
     properties:
       id: id
-    core_coverage: 0.25
+    core_coverage: 0.333
     evidence:
     - openapi/_original/zoho-crm-notes-openapi.json#DELETE /Notes
     - openapi/_original/zoho-crm-notes-openapi.json#DELETE /Notes/{id}
@@ -38,7 +38,6 @@ concepts:
     properties:
       id: id
       is_default: default
-      description: details
     core_coverage: 0.5
     evidence:
     - openapi/_original/zoho-crm-pipeline-openapi.json#GET /settings/pipeline

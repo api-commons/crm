@@ -14,34 +14,38 @@ concepts:
       job_title: jobtitle
       created_at: createdon
       updated_at: modifiedon
-      mobile_phone: mobilephone
     core_coverage: 0.75
     evidence:
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#GET /contacts
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#POST /contacts
     - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#GET /contacts
     - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#POST /contacts
+    - openapi/_original/microsoft-dynamics-365-sales-openapi.yml#GET /contacts
   company:
     path_segment:
     - accounts
     - companies
     properties:
-      id: id
       name:
       - name
       - displayName
+      id: id
       created_at: createdon
       updated_at: modifiedon
-      website: websiteurl
       address: address1_line1
-      description: description
+      website: websiteurl
       phone: telephone1
+      description: description
+      type: accountType
       city: address1_city
       country: address1_country
-      email: emailaddress1
     core_coverage: 1.0
     evidence:
+    - openapi/_original/microsoft-dynamics-business-central-openapi.yml#GET /companies
+    - openapi/_original/microsoft-dynamics-business-central-openapi.yml#GET /companies({companyId})/accounts
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#GET /accounts
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#POST /accounts
     - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#GET /accounts
-    - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#POST /accounts
-    - openapi/_original/microsoft-dynamics-companies-api-openapi.yml#GET /companies
   deal:
     path_segment:
     - opportunities
@@ -52,24 +56,30 @@ concepts:
       description: description
     core_coverage: 0.75
     evidence:
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#GET /opportunities
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#POST /opportunities
     - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#GET /opportunities
     - openapi/_original/microsoft-dynamics-365-dataverse-web-api-openapi.yml#POST /opportunities
+    - openapi/_original/microsoft-dynamics-365-sales-openapi.yml#GET /opportunities
   lead:
     path_segment:
     - leads
     properties:
       created_at: createdon
       email: emailaddress1
-      updated_at: modifiedon
       first_name: firstname
       last_name: lastname
       phone: telephone1
+      updated_at: modifiedon
       company_name: companyname
       job_title: jobtitle
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#GET /leads
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#POST /leads
     - openapi/_original/microsoft-dynamics-leads-api-openapi.yml#GET /leads
     - openapi/_original/microsoft-dynamics-leads-api-openapi.yml#POST /leads
+    - openapi/_original/microsoft-dynamics-365-sales-openapi.yml#GET /leads
   activity:
     path_segment:
     - activities
@@ -80,4 +90,13 @@ concepts:
       description: description
     core_coverage: 0.333
     evidence:
+    - openapi/_original/microsoft-dynamics-dataverse-openapi.yml#GET /activities
     - openapi/_original/microsoft-dynamics-activities-api-openapi.yml#GET /activities
+  task:
+    path_segment:
+    - tasks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/microsoft-dynamics-365-sales-openapi.yml#GET /tasks
+    - openapi/_original/microsoft-dynamics-365-sales-openapi.yml#POST /tasks

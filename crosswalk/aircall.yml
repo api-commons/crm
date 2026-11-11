@@ -1,0 +1,16 @@
+provider: aircall
+apis_io: https://apis.io/providers/aircall/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/aircall-openapi.yml#DELETE /contacts/{id}
+    - openapi/_original/aircall-openapi.yml#GET /contacts
+    - openapi/_original/aircall-openapi.yml#GET /contacts/{id}
+    - openapi/_original/aircall-openapi.yml#POST /contacts
+    - openapi/_original/aircall-openapi.yml#PUT /contacts/{id}

@@ -23,13 +23,12 @@ concepts:
     - tasks
     properties:
       subject: title
-      created_at: createdAt
       due_at: dueDate
+      created_at: createdAt
       description: description
-      done: completed
       assignee_id: assignedTo
+      done: completed
       created_by: createdBy
-      is_deleted: isDeleted
     core_coverage: 0.667
     evidence:
     - openapi/_original/quo-public-api-v1.json#DELETE /v1/tasks/{taskId}

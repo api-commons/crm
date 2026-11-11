@@ -24,20 +24,19 @@ concepts:
     - tasks
     properties:
       id: id
-      created_at: created_at
       due_at:
       - due_date
       - dueDate
+      created_at: created_at
+      assignee_id:
+      - assignee_ids
+      - assigneeIds
       done:
       - completed
       - completed_at
       updated_at: updated_at
-      assignee_id:
-      - assignee_ids
-      - assigneeIds
       created_by: created_by
       note: content
-      is_deleted: deleted
     core_coverage: 0.5
     evidence:
     - openapi/_original/frontline-openapi-original.yml#DELETE /public/v1/objects/{name}/tasks/{id}

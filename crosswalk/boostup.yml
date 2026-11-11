@@ -9,7 +9,7 @@ concepts:
     properties:
       created_at: created_date
       updated_at: updated_at
-    core_coverage: 0.4
+    core_coverage: 0.333
     evidence:
     - openapi/_original/boostup-openapi-original.json#POST /export/account
   deal:

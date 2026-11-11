@@ -1,0 +1,58 @@
+provider: wealthbox
+apis_io: https://apis.io/providers/wealthbox/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email_addresses
+      last_name: last_name
+      first_name: first_name
+      id: id
+      phone: phone_numbers
+    core_coverage: 0.625
+    evidence:
+    - openapi/_original/wealthbox-openapi.yml#DELETE /contacts/{id}
+    - openapi/_original/wealthbox-openapi.yml#GET /contacts
+    - openapi/_original/wealthbox-openapi.yml#GET /contacts/{id}
+    - openapi/_original/wealthbox-openapi.yml#POST /contacts
+    - openapi/_original/wealthbox-openapi.yml#PUT /contacts/{id}
+  deal:
+    path_segment:
+    - opportunities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wealthbox-openapi.yml#GET /opportunities
+    - openapi/_original/wealthbox-openapi.yml#POST /opportunities
+  activity:
+    path_segment:
+    - activity
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wealthbox-openapi.yml#GET /activity
+  task:
+    path_segment:
+    - tasks
+    properties:
+      id: id
+      subject: name
+      due_at: due_date
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/wealthbox-openapi.yml#DELETE /tasks/{id}
+    - openapi/_original/wealthbox-openapi.yml#GET /tasks
+    - openapi/_original/wealthbox-openapi.yml#GET /tasks/{id}
+    - openapi/_original/wealthbox-openapi.yml#POST /tasks
+    - openapi/_original/wealthbox-openapi.yml#PUT /tasks/{id}
+  note:
+    path_segment:
+    - notes
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wealthbox-openapi.yml#GET /notes
+    - openapi/_original/wealthbox-openapi.yml#POST /notes

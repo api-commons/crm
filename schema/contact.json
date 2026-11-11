@@ -2,73 +2,75 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/crm/main/schema/contact.json",
   "title": "Contact",
-  "description": "The common contact in Customer Relationship Management, distilled from 57 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common contact in Customer Relationship Management, distilled from 70 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.807,
-      "x-commons-providers": 46,
+      "x-commons-share": 0.814,
+      "x-commons-providers": 57,
       "x-commons-spellings": [
         "email",
         "emails",
         "Email",
-        "email_address",
         "emailAddress",
         "email_addresses",
-        "emailaddress1",
-        "emailAddresses"
+        "emailAddresses",
+        "email_address",
+        "primary_email"
       ],
       "format": "email"
     },
     "last_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.772,
-      "x-commons-providers": 44,
+      "x-commons-share": 0.757,
+      "x-commons-providers": 53,
       "x-commons-spellings": [
-        "last_name",
         "lastName",
+        "last_name",
         "lastname",
         "LastName",
-        "surname",
         "family_name",
+        "LAST_NAME",
         "Last Name"
       ]
     },
     "first_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.737,
-      "x-commons-providers": 42,
+      "x-commons-share": 0.743,
+      "x-commons-providers": 52,
       "x-commons-spellings": [
-        "first_name",
         "firstName",
+        "first_name",
         "firstname",
         "FirstName",
         "given_name",
+        "FIRST_NAME",
         "First Name"
       ]
     },
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.737,
-      "x-commons-providers": 42,
+      "x-commons-share": 0.743,
+      "x-commons-providers": 52,
       "x-commons-spellings": [
         "id",
         "_id",
         "Id",
         "uuid",
-        "record_id"
+        "record_id",
+        "ID"
       ]
     },
     "phone": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.649,
-      "x-commons-providers": 37,
+      "x-commons-share": 0.643,
+      "x-commons-providers": 45,
       "x-commons-spellings": [
         "phone",
         "phones",
@@ -76,109 +78,110 @@
         "phone_number",
         "Phone",
         "phoneNumbers",
-        "telephone1",
-        "phoneNumber"
+        "phoneNumber",
+        "PHONE"
       ]
     },
     "job_title": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.579,
-      "x-commons-providers": 33,
+      "x-commons-share": 0.543,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "title",
+        "jobTitle",
         "position",
         "job_title",
-        "jobTitle",
-        "jobtitle",
         "Title",
+        "jobtitle",
         "Job Title"
       ]
     },
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.544,
-      "x-commons-providers": 31,
+      "x-commons-share": 0.514,
+      "x-commons-providers": 36,
       "x-commons-spellings": [
-        "created_at",
         "createdAt",
-        "createdon",
+        "created_at",
         "created",
+        "date_created",
+        "creation_date",
         "createdTime",
         "createdDate",
-        "create_time",
-        "add_time"
+        "create_time"
       ],
       "format": "date-time"
     },
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "core",
-      "x-commons-share": 0.509,
-      "x-commons-providers": 29,
+      "x-commons-share": 0.514,
+      "x-commons-providers": 36,
       "x-commons-spellings": [
         "custom_fields",
         "customFields",
-        "attributes",
         "fields",
-        "customProperties",
+        "attributes",
         "customFieldValues",
-        "properties",
-        "custom_properties"
+        "custom",
+        "customProperties",
+        "properties"
+      ]
+    },
+    "full_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.443,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "name",
+        "fullName",
+        "full_name",
+        "display_name",
+        "Name",
+        "displayName"
       ]
     },
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.491,
+      "x-commons-share": 0.4,
       "x-commons-providers": 28,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
         "update_time",
-        "modifiedon",
         "modifiedDate",
         "modifiedAt",
+        "date_modified",
         "lastUpdated",
-        "updated"
+        "last_updated"
       ],
       "format": "date-time"
-    },
-    "full_name": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.421,
-      "x-commons-providers": 24,
-      "x-commons-spellings": [
-        "name",
-        "fullName",
-        "full_name",
-        "Name",
-        "displayName"
-      ]
     },
     "company_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.386,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.357,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
-        "account_id",
         "company_id",
+        "account_id",
         "companyId",
-        "AccountId",
-        "organizationID",
         "accountId",
-        "accountID",
-        "Account Id"
+        "AccountId",
+        "companyID",
+        "organization_id",
+        "organizationID"
       ]
     },
     "address": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.351,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.343,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "address",
         "addresses",
@@ -189,70 +192,41 @@
     "company_name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.298,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.3,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
         "company",
         "company_name",
         "companyName",
-        "organization_name",
         "organization",
+        "organization_name",
         "accountName"
       ]
     },
     "tags": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.298,
-      "x-commons-providers": 17,
+      "x-commons-share": 0.271,
+      "x-commons-providers": 19,
       "x-commons-spellings": [
         "tags",
-        "label_ids",
         "tag_ids",
+        "label_ids",
         "labels"
       ]
     },
     "owner_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.246,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.214,
+      "x-commons-providers": 15,
       "x-commons-spellings": [
         "owner_id",
         "userId",
+        "ownerId",
         "assignedTo",
         "user_id",
-        "ownerId",
         "OwnerId"
-      ]
-    },
-    "is_deleted": {
-      "type": "boolean",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.211,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "is_deleted",
-        "archived",
-        "deleted",
-        "is_archived",
-        "IsDeleted",
-        "isDeleted"
-      ]
-    },
-    "mobile_phone": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.211,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "mobilephone",
-        "mobile",
-        "mobile_phone",
-        "MobilePhone",
-        "mobilePhone",
-        "cellPhone",
-        "cell_phone"
       ]
     }
   },
@@ -262,7 +236,7 @@
   "x-commons": {
     "context": "crm",
     "concept": "contact",
-    "providers": 57,
+    "providers": 70,
     "generated": "2026-11-10"
   }
 }

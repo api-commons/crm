@@ -34,16 +34,15 @@ concepts:
       id: _id
       subject: title
       due_at: dueAt
-      status: status
       description: description
+      status: status
       assignee_id:
       - assigneeId
       - assignee
-      owner_id: userId
       priority: priority
-      note: note
+      owner_id: userId
       type: type
-      is_deleted: archived
+      note: note
     core_coverage: 0.833
     evidence:
     - openapi/_original/aptly-openapi.yml#GET /api/tasks/{taskId}

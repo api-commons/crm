@@ -10,9 +10,9 @@ concepts:
       id: id
       created_at: created_at
       status: status
-      updated_at: updated_at
       custom_fields: custom_fields
-    core_coverage: 0.667
+      updated_at: updated_at
+    core_coverage: 0.75
     evidence:
     - openapi/_original/z-league-crm-lead-openapi.json#GET /api/agents/crm/leads
     - openapi/_original/z-league-crm-lead-openapi.json#POST /api/agents/crm/leads

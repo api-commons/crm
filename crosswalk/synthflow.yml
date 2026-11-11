@@ -1,0 +1,19 @@
+provider: synthflow
+apis_io: https://apis.io/providers/synthflow/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      phone: phone_number
+      full_name: name
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/synthflow-openapi.json#DELETE /contacts/{contact_id}
+    - openapi/_original/synthflow-openapi.json#GET /contacts
+    - openapi/_original/synthflow-openapi.json#GET /contacts/{contact_id}
+    - openapi/_original/synthflow-openapi.json#PATCH /contacts/{contact_id}
+    - openapi/_original/synthflow-openapi.json#POST /contacts

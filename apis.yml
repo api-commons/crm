@@ -1,8 +1,8 @@
 aid: common-crm
-name: CRM
+name: Customer Relationship Management
 type: Common
-description: 'The common Customer Relationship Management vocabulary, distilled from the harvested OpenAPI of 134
-  CRM providers in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from
+description: 'The common Customer Relationship Management vocabulary, distilled from the harvested OpenAPI of 177
+  providers in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from
   the common names to each provider''s own.'
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -17,11 +17,12 @@ url: https://raw.githubusercontent.com/api-commons/crm/main/apis.yml
 specificationVersion: '0.20'
 apis:
 - aid: common-crm:crm
-  name: Common CRM Interface
-  description: The CRM interface the market already shares, measured.
+  name: Common Customer Relationship Management Interface
+  description: The Customer Relationship Management interface the market already shares, measured.
   humanURL: https://github.com/api-commons/crm
   tags:
   - CRM
+  - Customer Relationship Management
   properties:
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-commons/crm/main/openapi.yml

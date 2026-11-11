@@ -30,8 +30,8 @@ concepts:
     path_segment:
     - opportunities
     properties:
-      name: name
       id: id
+      name: name
       description: description
     core_coverage: 0.5
     evidence:

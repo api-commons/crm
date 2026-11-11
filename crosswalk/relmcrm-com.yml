@@ -16,7 +16,6 @@ concepts:
       custom_fields: custom_fields
       updated_at: updated_at
       company_id: company_id
-      is_deleted: deleted
     core_coverage: 0.875
     evidence:
     - openapi/_original/relmcrm-com-openapi.json#DELETE /contacts/{id}
@@ -28,13 +27,13 @@ concepts:
     path_segment:
     - companies
     properties:
-      id: id
       name: name
+      id: id
       created_at: created_at
       updated_at: updated_at
       custom_fields: custom_fields
       domain: domain
-    core_coverage: 0.8
+    core_coverage: 1.0
     evidence:
     - openapi/_original/relmcrm-com-openapi.json#DELETE /companies/{id}
     - openapi/_original/relmcrm-com-openapi.json#GET /companies
@@ -45,16 +44,16 @@ concepts:
     path_segment:
     - deals
     properties:
-      name: title
       id: id
+      name: title
       created_at: created_at
       updated_at: updated_at
-      stage_id: stage
-      company_id: company_id
       custom_fields: custom_fields
+      stage_id: stage
       close_date: close_date
-      currency: currency
+      company_id: company_id
       contact_id: primary_contact_id
+      currency: currency
       pipeline_id: pipeline
     core_coverage: 1.0
     evidence:

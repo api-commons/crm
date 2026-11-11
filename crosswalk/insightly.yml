@@ -1,0 +1,41 @@
+provider: insightly
+apis_io: https://apis.io/providers/insightly/
+context: crm
+generated: '2026-11-10'
+concepts:
+  contact:
+    path_segment:
+    - contacts
+    properties:
+      email: EMAIL_ADDRESS
+      last_name: LAST_NAME
+      first_name: FIRST_NAME
+      phone: PHONE
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/insightly-openapi.yml#DELETE /Contacts/{id}
+    - openapi/_original/insightly-openapi.yml#GET /Contacts
+    - openapi/_original/insightly-openapi.yml#GET /Contacts/{id}
+    - openapi/_original/insightly-openapi.yml#POST /Contacts
+    - openapi/_original/insightly-openapi.yml#PUT /Contacts/{id}
+  company:
+    path_segment:
+    - organisations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/insightly-openapi.yml#GET /Organisations
+  deal:
+    path_segment:
+    - opportunities
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/insightly-openapi.yml#GET /Opportunities
+  lead:
+    path_segment:
+    - leads
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/insightly-openapi.yml#GET /Leads

@@ -17,7 +17,6 @@ concepts:
       company_name: companyName
       tags: tags
       owner_id: assignedTo
-      is_deleted: deleted
     core_coverage: 0.75
     evidence:
     - openapi/_original/highlevel-contacts-openapi.json#DELETE /contacts/{contactId}
@@ -30,20 +29,19 @@ concepts:
     - accounts
     - companies
     properties:
+      name: name
       id:
       - id
       - _id
-      name: name
       created_at: createdAt
       updated_at: updatedAt
-      website: website
       address: address
+      website: website
       phone: phone
+      type: type
+      domain: domain
       city: city
       country: country
-      type: type
-      email: email
-      domain: domain
     core_coverage: 1.0
     evidence:
     - openapi/_original/highlevel-companies-openapi.json#GET /companies/{companyId}
@@ -55,15 +53,15 @@ concepts:
     path_segment:
     - opportunities
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       updated_at: updatedAt
-      stage_id: pipelineStageId
-      custom_fields: customFields
       status: status
-      owner_id: assignedTo
+      custom_fields: customFields
+      stage_id: pipelineStageId
       contact_id: contactId
+      owner_id: assignedTo
       pipeline_id: pipelineId
     core_coverage: 1.0
     evidence:
@@ -78,8 +76,8 @@ concepts:
       id: id
       subject: title
       due_at: dueDate
-      done: completed
       assignee_id: assignedTo
+      done: completed
       note: body
       contact_id: contactId
     core_coverage: 0.5
@@ -95,11 +93,11 @@ concepts:
     properties:
       id: id
       content: body
-      contact_id: contactId
       created_by: createdBy
-      owner_id: userId
       subject: title
-    core_coverage: 0.5
+      contact_id: contactId
+      owner_id: userId
+    core_coverage: 0.667
     evidence:
     - openapi/_original/highlevel-calendars-openapi.json#DELETE /calendars/appointments/{appointmentId}/notes/{noteId}
     - openapi/_original/highlevel-calendars-openapi.json#GET /calendars/appointments/{appointmentId}/notes

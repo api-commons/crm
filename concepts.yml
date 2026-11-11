@@ -13,7 +13,7 @@ name: Customer Relationship Management
 tags: [CRM, Customer Relationship Management]
 
 # Response envelopes and paging wrappers, not resource fields.
-envelope: [data, success, errors, warnings, count, total, page, meta, links, value, results,
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links, value, results,
            next, previous, has_more, message, status_code, ids]
 
 common_fields:
@@ -149,7 +149,31 @@ exclude:
     givebutter: /sso/v1/account is the signed-in user's own organization
     getresponse: /accounts is the API user's own account settings
     vaultre: /account is the API user's own agency account
+    close: /organization/{id} is the Close tenant organization
+    agorapulse: /core/organizations are the social-media tool's tenant organizations
+    thanx: /api/account is a loyalty member's own account
   contact:
     marketo: /subscriptions/{id}/persons is a dedupe subscription, not a person resource
+    lever-co: recruiting (ATS) contacts of candidates
+    keller-williams: /listings/orgs/{id}/people are real-estate agents
+    servicetitan: /customers/{id}/contacts are contact methods (type + value)
   deal:
     drippay: /integrations/salesforce/{id}/sync/opportunities is a sync trigger
+    lever-co: /opportunities are recruiting candidates in a hiring pipeline
+  activity:
+    act: /api/attachments/activities are attachments
+    close: /custom_field/activity is a custom-field definition
+  task:
+    holded: /projects/{id}/tasks are project-management tasks
+  note:
+    agorapulse: publishing-calendar notes in a social-media tool
+    lever-co: recruiting notes on candidates
+  pipeline:
+    act: /opportunities/analytics/pipeline is a report
+
+# One company, several catalog listings: merged under the first slug.
+duplicates:
+  keap: [infusionsoft]
+  capsule: [capsule-crm]
+  apollo-io: [apollo-api-documentation]
+  microsoft-dynamics-365: [microsoft-dynamics, microsoft-dynamics-365-sales]

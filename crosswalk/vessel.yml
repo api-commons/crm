@@ -21,7 +21,6 @@ concepts:
       created_at: createdTime
       custom_fields: customFields
       address: address
-      mobile_phone: mobilePhone
     core_coverage: 1.0
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contact
@@ -34,15 +33,15 @@ concepts:
     - account
     - accounts
     properties:
-      id: id
       name: name
+      id: id
       created_at: createdTime
-      website: website
       address: address
-      description: description
+      website: website
       phone: phone
+      description: description
       industry: industry
-    core_coverage: 0.8
+    core_coverage: 1.0
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/account
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/accounts
@@ -54,8 +53,8 @@ concepts:
     - deal
     - deals
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdTime
       stage_id: stage
       close_date: closeDate
@@ -79,7 +78,7 @@ concepts:
       last_name: lastName
       phone: phone
       job_title: jobTitle
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/lead
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/leads
@@ -92,13 +91,13 @@ concepts:
     properties:
       id: id
       subject: subject
-      created_at: createdTime
       due_at: dueDate
+      created_at: createdTime
       status: status
       done: isDone
       priority: priority
-      note: body
       type: type
+      note: body
     core_coverage: 0.833
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/task
@@ -113,7 +112,7 @@ concepts:
     properties:
       id: id
       created_at: createdTime
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/note
     - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/notes
